@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinematics &amp; Mechanics Formulas – JEE Class 11 Complete Notes | StudyHub</title>
+  <meta name="description" content="Complete kinematics and mechanics for JEE and Class 11. Equations of motion, projectile motion, circular motion, relative motion – all formulas with 20 solved examples.">
+  <meta name="keywords" content="kinematics formulas JEE, class 11 kinematics, projectile motion, circular motion, equations of motion, relative motion, Newton's laws, mechanics JEE NEET">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">&#128218; StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main-content">
+  <div class="container">
+
+    <div class="page-header">
+      <h1>Kinematics &amp; Mechanics – Complete Notes</h1>
+      <p class="subtitle">JEE Main | JEE Advanced | Class 11 Physics | NEET</p>
+      <div class="topic-tags">
+        <span class="tag">Equations of Motion</span>
+        <span class="tag">Projectile Motion</span>
+        <span class="tag">Circular Motion</span>
+        <span class="tag">Relative Motion</span>
+        <span class="tag">Newton's Laws</span>
+      </div>
+    </div>
+
+    <div class="toc-box">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="#eom">Equations of Motion (1D, Constant Acceleration)</a></li>
+        <li><a href="#graphs">Kinematics Graphs</a></li>
+        <li><a href="#projectile">Projectile Motion</a></li>
+        <li><a href="#circular">Circular Motion</a></li>
+        <li><a href="#relative">Relative Motion</a></li>
+        <li><a href="#newtons">Newton's Laws – Applications</a></li>
+        <li><a href="#practice-all">Practice Problems (All Topics)</a></li>
+      </ol>
+    </div>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <section id="eom">
+      <h2>1. Equations of Motion (Constant Acceleration)</h2>
+      <p>When a body moves along a straight line with <strong>constant (uniform) acceleration</strong>, four kinematic equations relate displacement <em>s</em>, initial velocity <em>u</em>, final velocity <em>v</em>, acceleration <em>a</em>, and time <em>t</em>.</p>
+
+      <h3>1.1 The Four Standard Equations</h3>
+      <div class="formula-box">
+        <table class="formula-table">
+          <thead><tr><th>#</th><th>Equation</th><th>Quantity NOT involved</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><strong>v = u + at</strong></td><td>displacement s</td></tr>
+            <tr><td>2</td><td><strong>s = ut + &frac12;at&sup2;</strong></td><td>final velocity v</td></tr>
+            <tr><td>3</td><td><strong>v&sup2; = u&sup2; + 2as</strong></td><td>time t</td></tr>
+            <tr><td>4</td><td><strong>s<sub>n</sub> = u + a(2n&minus;1)/2</strong></td><td>–</td></tr>
+          </tbody>
+        </table>
+        <p class="formula-note">s<sub>n</sub> = displacement in the n-th second (not total displacement). This is especially useful in JEE/NEET single-second questions.</p>
+      </div>
+
+      <h3>1.2 Derivations</h3>
+      <div class="derivation-block">
+        <p><strong>Equation 1 (v = u + at):</strong> By definition, acceleration a = (v&minus;u)/t. Rearranging: v = u + at.</p>
+        <p><strong>Equation 2 (s = ut + &frac12;at&sup2;):</strong> Average velocity = (u+v)/2. s = average velocity &times; t = [(u+v)/2]&times;t. Substitute v = u+at: s = [(u+u+at)/2]&times;t = ut + &frac12;at&sup2;.</p>
+        <p><strong>Equation 3 (v&sup2; = u&sup2; + 2as):</strong> From eq.1: t = (v&minus;u)/a. Substitute in eq.2: s = u(v&minus;u)/a + &frac12;a&times;(v&minus;u)&sup2;/a&sup2;. Multiply by 2a: 2as = 2u(v&minus;u) + (v&minus;u)&sup2; = v&sup2;&minus;u&sup2;. Hence v&sup2; = u&sup2; + 2as.</p>
+        <p><strong>Equation 4 (s<sub>n</sub> derivation):</strong> s<sub>n</sub> = s(up to n sec) &minus; s(up to n&minus;1 sec) = [un + &frac12;an&sup2;] &minus; [u(n&minus;1) + &frac12;a(n&minus;1)&sup2;] = u + a(2n&minus;1)/2.</p>
+      </div>
+
+      <h3>1.3 Sign Convention (Very Important for JEE)</h3>
+      <div class="note-box">
+        <p>Choose a positive direction at the start of the problem. Usually: upward = positive, downward = negative for vertical problems; rightward = positive for horizontal.</p>
+        <ul>
+          <li>If initial velocity and acceleration have the <em>same</em> sign &rarr; body speeds up.</li>
+          <li>If they have <em>opposite</em> signs &rarr; body slows down, stops, then reverses.</li>
+          <li>For a ball thrown upward: u = +20 m/s, a = &minus;10 m/s&sup2; (g downward).</li>
+          <li>Displacement <em>s</em> can be negative (means the body ended up on the negative side).</li>
+          <li>Distance &ne; |displacement|; if the body reverses, calculate each segment separately.</li>
+        </ul>
+      </div>
+
+      <h3>1.4 Solved Examples</h3>
+
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Car Accelerating from Rest</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A car starts from rest and accelerates uniformly at 2 m/s&sup2;. Find (a) velocity after 5 s, (b) distance covered in 5 s, (c) distance in the 5th second.</p>
+          <p><strong>Given:</strong> u = 0, a = 2 m/s&sup2;, t = 5 s</p>
+          <p><strong>(a) v = u + at</strong> = 0 + 2&times;5 = <strong>10 m/s</strong></p>
+          <p><strong>(b) s = ut + &frac12;at&sup2;</strong> = 0 + &frac12;&times;2&times;25 = <strong>25 m</strong></p>
+          <p><strong>(c) s<sub>5</sub> = u + a(2&times;5&minus;1)/2</strong> = 0 + 2&times;9/2 = <strong>9 m</strong></p>
+          <p class="check-note">Check: s<sub>1</sub>=1, s<sub>2</sub>=3, s<sub>3</sub>=5, s<sub>4</sub>=7, s<sub>5</sub>=9. Sum = 25 m ✓</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Ball Thrown Upward</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A ball is thrown vertically upward with u = 20 m/s. Find (a) max height, (b) time to reach top, (c) total flight time. (g = 10 m/s&sup2;)</p>
+          <p><strong>Given:</strong> u = +20 m/s, a = &minus;10 m/s&sup2; (upward positive)</p>
+          <p><strong>(a)</strong> At max height, v = 0. Using v&sup2; = u&sup2; + 2as:<br>
+          0 = 400 &minus; 20H &rarr; H = <strong>20 m</strong></p>
+          <p><strong>(b)</strong> v = u + at &rarr; 0 = 20 &minus; 10t &rarr; t = <strong>2 s</strong></p>
+          <p><strong>(c)</strong> Total time = 2t<sub>up</sub> = <strong>4 s</strong> (symmetric for same level; or: s=0 in s=20t&minus;5t&sup2; gives t=4 s)</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Two Trains (Relative Motion Preview)</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Train A moves at 72 km/h and train B moves at 36 km/h in the same direction. Train B is 200 m ahead of A. When will A catch B, and how far does A travel?</p>
+          <p><strong>Convert:</strong> v<sub>A</sub> = 20 m/s, v<sub>B</sub> = 10 m/s. Relative velocity of A w.r.t. B = 20&minus;10 = 10 m/s.</p>
+          <p><strong>Time to close 200 m gap:</strong> t = 200/10 = <strong>20 s</strong></p>
+          <p><strong>Distance by A:</strong> 20&times;20 = <strong>400 m</strong></p>
+        </div>
+      </div>
+
+      <h3>1.5 Practice Problems – Equations of Motion</h3>
+      <div class="practice-box">
+        <ol>
+          <li>A body decelerates from 30 m/s to rest in 6 s. Find deceleration and distance. <em>[Ans: 5 m/s&sup2;, 90 m]</em></li>
+          <li>A stone is dropped from 80 m height. Find velocity when it hits ground (g=10). <em>[Ans: 40 m/s]</em></li>
+          <li>A bullet travels 0.1 m through a board and loses half its velocity. How much further can it go? <em>[Ans: 0.033 m]</em></li>
+          <li>Find distance covered by a body in the 10th second if u=5 m/s, a=2 m/s&sup2;. <em>[Ans: 24 m]</em></li>
+          <li>A body travels 10 m in first 2 s and 28 m in next 4 s. Find initial velocity and acceleration. <em>[Ans: u=2 m/s, a=3 m/s&sup2;]</em></li>
+          <li>Two balls A and B are thrown upward simultaneously with speeds 20 m/s and 10 m/s from the same point. After how long is A twice as high as B? <em>[Ans: 2 s]</em></li>
+          <li>A train 100 m long passes a platform 150 m long in 25 s. Find speed of train. <em>[Ans: 10 m/s]</em></li>
+          <li>A car starts from rest and achieves 72 km/h in 10 s. Find (a) acceleration (b) distance (c) distance in 8th second. <em>[Ans: 2 m/s&sup2;, 100 m, 15 m]</em></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <section id="graphs">
+      <h2>2. Kinematics Graphs</h2>
+      <p>Graphs are a favourite topic in JEE and board exams. The ability to extract physical information from a graph is essential.</p>
+
+      <h3>2.1 Position–Time (x–t) Graph</h3>
+      <div class="graph-description">
+        <table class="data-table">
+          <thead><tr><th>Shape of x–t graph</th><th>Physical meaning</th></tr></thead>
+          <tbody>
+            <tr><td>Horizontal straight line</td><td>Body at rest (x = constant)</td></tr>
+            <tr><td>Straight line with +ve slope</td><td>Constant positive velocity (uniform motion)</td></tr>
+            <tr><td>Straight line with &minus;ve slope</td><td>Constant negative velocity (moving backward)</td></tr>
+            <tr><td>Upward-opening parabola</td><td>Positive constant acceleration (starting from rest)</td></tr>
+            <tr><td>Curve with increasing slope</td><td>Increasing velocity (acceleration)</td></tr>
+            <tr><td>Curve with decreasing slope</td><td>Decreasing velocity (deceleration)</td></tr>
+          </tbody>
+        </table>
+        <div class="key-rule">
+          <p><strong>Key rule:</strong> The slope (gradient) of the x–t graph at any point = instantaneous velocity at that point.</p>
+          <p><strong>For uniform acceleration:</strong> x = x<sub>0</sub> + ut + &frac12;at&sup2; is a parabola on the x–t graph.</p>
+        </div>
+      </div>
+
+      <h3>2.2 Velocity–Time (v–t) Graph</h3>
+      <div class="graph-description">
+        <table class="data-table">
+          <thead><tr><th>Shape of v–t graph</th><th>Physical meaning</th></tr></thead>
+          <tbody>
+            <tr><td>Horizontal straight line</td><td>Constant velocity (zero acceleration)</td></tr>
+            <tr><td>Straight line with +ve slope</td><td>Uniform positive acceleration</td></tr>
+            <tr><td>Straight line with &minus;ve slope</td><td>Uniform deceleration</td></tr>
+            <tr><td>Curve (concave up)</td><td>Increasing acceleration</td></tr>
+            <tr><td>Curve (concave down)</td><td>Decreasing acceleration</td></tr>
+            <tr><td>v crosses zero axis</td><td>Body reverses direction</td></tr>
+          </tbody>
+        </table>
+        <div class="key-rule">
+          <p><strong>Slope of v–t graph = instantaneous acceleration.</strong></p>
+          <p><strong>Area under v–t graph = displacement</strong> (signed area; area below x-axis = negative displacement).</p>
+          <p><strong>Total distance</strong> = sum of absolute areas of all regions (above + below axis).</p>
+        </div>
+      </div>
+
+      <h3>2.3 Acceleration–Time (a–t) Graph</h3>
+      <div class="graph-description">
+        <table class="data-table">
+          <thead><tr><th>Feature</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>Horizontal line at a = constant</td><td>Uniform acceleration</td></tr>
+            <tr><td>Horizontal line at a = 0</td><td>Uniform velocity</td></tr>
+            <tr><td>Area under a–t graph</td><td>Change in velocity: &Delta;v = &int;a dt</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2.4 How to Read Complex Graphs – Step-by-Step Method</h3>
+      <div class="method-box">
+        <p><strong>Step 1:</strong> Identify axis labels and units.</p>
+        <p><strong>Step 2:</strong> Divide the graph into regions with distinct shapes.</p>
+        <p><strong>Step 3:</strong> For each region, find slope = velocity (if x–t) or acceleration (if v–t).</p>
+        <p><strong>Step 4:</strong> Calculate areas (triangles, rectangles, trapezoids) for displacement.</p>
+        <p><strong>Step 5:</strong> Note where the curve crosses zero – that is where velocity or position changes sign.</p>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3 ==================== -->
+    <section id="projectile">
+      <h2>3. Projectile Motion</h2>
+      <p>A projectile moves under <strong>gravity alone</strong> (no air resistance). The horizontal and vertical motions are <em>independent</em>. Horizontal: uniform velocity. Vertical: uniform acceleration g downward.</p>
+
+      <h3>3.1 General Equations (Projection at angle &theta; with horizontal)</h3>
+      <div class="formula-box">
+        <p><strong>Initial components:</strong> u<sub>x</sub> = u cos&theta;, u<sub>y</sub> = u sin&theta;</p>
+        <p><strong>At time t:</strong></p>
+        <ul>
+          <li>Horizontal: x = u cos&theta; &middot; t &nbsp;&nbsp; (v<sub>x</sub> = u cos&theta; = constant)</li>
+          <li>Vertical: y = u sin&theta; &middot; t &minus; &frac12;gt&sup2; &nbsp;&nbsp; (v<sub>y</sub> = u sin&theta; &minus; gt)</li>
+          <li>Resultant speed: v = &radic;(v<sub>x</sub>&sup2; + v<sub>y</sub>&sup2;)</li>
+          <li>Angle with horizontal: tan&phi; = v<sub>y</sub>/v<sub>x</sub></li>
+        </ul>
+      </div>
+
+      <h3>3.2 Key Derived Formulas</h3>
+      <div class="formula-box">
+        <table class="formula-table">
+          <thead><tr><th>Quantity</th><th>Formula</th><th>Special cases</th></tr></thead>
+          <tbody>
+            <tr><td>Time of flight T</td><td>T = 2u sin&theta;/g</td><td>&theta;=90&deg;: T=2u/g (straight up)</td></tr>
+            <tr><td>Maximum height H</td><td>H = u&sup2;sin&sup2;&theta;/(2g)</td><td>&theta;=90&deg;: H=u&sup2;/(2g)</td></tr>
+            <tr><td>Horizontal range R</td><td>R = u&sup2;sin2&theta;/g</td><td>Max R at &theta;=45&deg;: R<sub>max</sub>=u&sup2;/g</td></tr>
+            <tr><td>Range identity</td><td>R(&theta;) = R(90&deg;&minus;&theta;)</td><td>e.g. 30&deg; and 60&deg; give same R</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>3.3 Equation of Trajectory</h3>
+      <div class="formula-box">
+        <p>Eliminate t from x and y equations:</p>
+        <p class="big-formula">y = x tan&theta; &minus; gx&sup2; / (2u&sup2;cos&sup2;&theta;)</p>
+        <p>This is a <strong>parabola</strong> opening downward. It can be rewritten as:</p>
+        <p>y = x tan&theta; (1 &minus; x/R) &nbsp; where R = u&sup2;sin2&theta;/g</p>
+      </div>
+
+      <h3>3.4 Solved Examples</h3>
+
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Standard Projection at 30&deg;</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A ball is projected at 20 m/s at 30&deg; to horizontal. Find T, H, R (g=10 m/s&sup2;).</p>
+          <p>u<sub>x</sub> = 20cos30&deg; = 20&times;&radic;3/2 = 10&radic;3 m/s &nbsp;|&nbsp; u<sub>y</sub> = 20sin30&deg; = 10 m/s</p>
+          <p><strong>T</strong> = 2&times;10/10 = <strong>2 s</strong></p>
+          <p><strong>H</strong> = 10&sup2;/(2&times;10) = <strong>5 m</strong></p>
+          <p><strong>R</strong> = 20&sup2;&times;sin60&deg;/10 = 400&times;&radic;3/2&divide;10 = 20&radic;3 &asymp; <strong>34.6 m</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Horizontal Projection from a Cliff</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A stone is thrown horizontally at 15 m/s from a cliff 45 m high. Find (a) time to hit ground, (b) horizontal distance, (c) velocity on impact. (g=10)</p>
+          <p><strong>(a)</strong> Vertical: 45 = &frac12;&times;10&times;t&sup2; &rarr; t&sup2; = 9 &rarr; t = <strong>3 s</strong></p>
+          <p><strong>(b)</strong> x = 15&times;3 = <strong>45 m</strong></p>
+          <p><strong>(c)</strong> v<sub>x</sub> = 15 m/s; v<sub>y</sub> = 10&times;3 = 30 m/s; v = &radic;(225+900) = &radic;1125 = 15&radic;5 &asymp; <strong>33.5 m/s</strong></p>
+          <p>Angle: tan&phi; = 30/15 = 2 &rarr; &phi; = tan&minus;&sup1;(2) &asymp; 63.4&deg; below horizontal</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Ball Thrown from Top of Building</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A ball is thrown at 10 m/s horizontally from the top of a 20 m building. Find where it lands (horizontal distance from the base).</p>
+          <p>Time to fall 20 m: 20 = &frac12;&times;10&times;t&sup2; &rarr; t = 2 s</p>
+          <p>Horizontal distance = 10&times;2 = <strong>20 m from the base</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 4 – Maximum Range Condition</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A cannon can fire shells at 100 m/s. What is the maximum range on a horizontal plane? At what angle must it be fired to hit a target 500 m away?</p>
+          <p><strong>Max range:</strong> R<sub>max</sub> = u&sup2;/g = 10000/10 = <strong>1000 m</strong> at 45&deg;</p>
+          <p><strong>For 500 m:</strong> R = u&sup2;sin2&theta;/g &rarr; 500 = 10000 sin2&theta;/10 &rarr; sin2&theta; = 0.5 &rarr; 2&theta; = 30&deg; or 150&deg; &rarr; &theta; = <strong>15&deg; or 75&deg;</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 5 – Tricky JEE Type: River Crossing (Minimum Distance)</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A river of width d flows with velocity v<sub>r</sub>. A swimmer can swim at v<sub>s</sub> in still water. Find the angle to cross in minimum distance.</p>
+          <p>For minimum distance (shortest path = perpendicular to opposite bank), the swimmer must direct his velocity upstream so that resultant is perpendicular to bank.</p>
+          <p>Let swimmer aim at angle &alpha; upstream. Resultant vertical velocity = v<sub>s</sub>cos&alpha;. Drift = 0 requires: v<sub>r</sub> = v<sub>s</sub>sin&alpha;</p>
+          <p>&alpha; = sin&minus;&sup1;(v<sub>r</sub>/v<sub>s</sub>) upstream from perpendicular. Minimum distance = d (width only, no drift).</p>
+          <p><strong>Condition:</strong> Only possible if v<sub>s</sub> &gt; v<sub>r</sub>.</p>
+        </div>
+      </div>
+
+      <h3>3.5 Practice Problems – Projectile Motion</h3>
+      <div class="practice-box">
+        <ol>
+          <li>A body is projected at 45&deg; with 10&radic;2 m/s. Find R and H. <em>[Ans: R=20 m, H=5 m]</em></li>
+          <li>Two balls projected at 30&deg; and 60&deg; with same speed. Find ratio of ranges. <em>[Ans: 1:1]</em></li>
+          <li>A projectile has range 3 times max height. Find angle. <em>[Ans: &theta; = tan&minus;&sup1;(4/3) &asymp; 53&deg;]</em></li>
+          <li>A ball is thrown at 30 m/s at 60&deg;. Find velocity after 2 s. <em>[Ans: v<sub>x</sub>=15, v<sub>y</sub>=6 m/s, v&asymp;16.2 m/s]</em></li>
+          <li>Particle lands at half the maximum range. Find angle of projection. <em>[Ans: 15&deg; or 75&deg;]</em></li>
+          <li>A bomb is dropped from a plane flying at 100 m/s horizontally at 500 m altitude. How far from a point directly below does it land? <em>[Ans: 1000 m]</em></li>
+          <li>Show that the trajectory is a parabola by eliminating t from the equations of motion.</li>
+          <li>A shot is fired at 30&deg; and hits a target at the same height 300 m away. Find initial speed. <em>[Ans: &asymp;58.3 m/s]</em></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4 ==================== -->
+    <section id="circular">
+      <h2>4. Circular Motion</h2>
+
+      <h3>4.1 Angular Quantities</h3>
+      <div class="formula-box">
+        <table class="formula-table">
+          <thead><tr><th>Quantity</th><th>Symbol</th><th>Relation</th></tr></thead>
+          <tbody>
+            <tr><td>Angular displacement</td><td>&theta;</td><td>radians; 1 rev = 2&pi; rad</td></tr>
+            <tr><td>Angular velocity</td><td>&omega; = d&theta;/dt</td><td>v = r&omega;</td></tr>
+            <tr><td>Angular acceleration</td><td>&alpha; = d&omega;/dt</td><td>a<sub>tangential</sub> = r&alpha;</td></tr>
+            <tr><td>Period</td><td>T = 2&pi;/&omega;</td><td>f = 1/T = &omega;/2&pi;</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Rotational equations</strong> (analogous to linear, for constant &alpha;):</p>
+        <ul>
+          <li>&omega; = &omega;<sub>0</sub> + &alpha;t</li>
+          <li>&theta; = &omega;<sub>0</sub>t + &frac12;&alpha;t&sup2;</li>
+          <li>&omega;&sup2; = &omega;<sub>0</sub>&sup2; + 2&alpha;&theta;</li>
+        </ul>
+      </div>
+
+      <h3>4.2 Centripetal Acceleration and Force</h3>
+      <div class="formula-box">
+        <p><strong>Centripetal acceleration:</strong> a<sub>c</sub> = v&sup2;/r = r&omega;&sup2; (directed toward centre)</p>
+        <p><strong>Centripetal force:</strong> F<sub>c</sub> = mv&sup2;/r = mr&omega;&sup2;</p>
+        <p class="formula-note">Centripetal force is NOT a new force – it is the net inward force provided by tension, gravity, normal force, friction etc. depending on the problem.</p>
+      </div>
+
+      <h3>4.3 Non-Uniform Circular Motion</h3>
+      <div class="formula-box">
+        <p>Two acceleration components exist simultaneously:</p>
+        <ul>
+          <li><strong>Centripetal (radial):</strong> a<sub>c</sub> = v&sup2;/r (toward centre)</li>
+          <li><strong>Tangential:</strong> a<sub>t</sub> = r&alpha; = dv/dt (along tangent)</li>
+          <li><strong>Net acceleration:</strong> a = &radic;(a<sub>c</sub>&sup2; + a<sub>t</sub>&sup2;)</li>
+        </ul>
+      </div>
+
+      <h3>4.4 Banking of Roads</h3>
+      <div class="formula-box">
+        <p>For a banked curve of angle &theta; (no friction): <strong>tan&theta; = v&sup2;/(rg)</strong></p>
+        <p><strong>Optimal speed:</strong> v = &radic;(rg tan&theta;)</p>
+        <p>With friction (coefficient &mu;):</p>
+        <ul>
+          <li>Maximum safe speed: v<sub>max</sub> = &radic;[rg(tan&theta;+&mu;)/(1&minus;&mu;tan&theta;)]</li>
+          <li>Minimum safe speed: v<sub>min</sub> = &radic;[rg(tan&theta;&minus;&mu;)/(1+&mu;tan&theta;)]</li>
+        </ul>
+      </div>
+
+      <h3>4.5 Vertical Circular Motion</h3>
+      <div class="formula-box">
+        <p>For a ball on a string of length r moving in a vertical circle:</p>
+        <table class="formula-table">
+          <thead><tr><th>Position</th><th>Minimum Speed</th><th>Tension</th></tr></thead>
+          <tbody>
+            <tr><td>Top of circle</td><td>v<sub>top</sub> = &radic;(gr)</td><td>T<sub>top</sub> = mv&sup2;/r &minus; mg (= 0 at minimum)</td></tr>
+            <tr><td>Bottom of circle</td><td>v<sub>bottom</sub> = &radic;(5gr)</td><td>T<sub>bottom</sub> = mv&sup2;/r + mg</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Derivation of v<sub>bottom</sub>:</strong> By energy conservation from top to bottom:<br>
+        &frac12;mv<sub>b</sub>&sup2; = &frac12;mv<sub>t</sub>&sup2; + mg(2r)<br>
+        v<sub>b</sub>&sup2; = v<sub>t</sub>&sup2; + 4gr = gr + 4gr = 5gr &rarr; v<sub>b</sub> = &radic;(5gr)</p>
+        <p>Tension difference: T<sub>bottom</sub> &minus; T<sub>top</sub> = 6mg (always, at same radius)</p>
+      </div>
+
+      <h3>4.6 Solved Examples</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Car on Banked Road</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A road is banked at 30&deg;. Find the optimal speed for a vehicle on a curve of radius 100 m. (g = 10)</p>
+          <p>v = &radic;(rg tan&theta;) = &radic;(100&times;10&times;tan30&deg;) = &radic;(1000/&radic;3) &asymp; &radic;577 &asymp; <strong>24 m/s (86.4 km/h)</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Ball on String in Vertical Circle</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A stone of mass 0.5 kg is tied to a string of length 1 m. What is the minimum speed at the bottom to complete a vertical circle? What is tension at bottom?</p>
+          <p><strong>Min speed at bottom:</strong> v = &radic;(5gr) = &radic;(5&times;10&times;1) = &radic;50 = 5&radic;2 &asymp; <strong>7.07 m/s</strong></p>
+          <p><strong>Tension at bottom:</strong> T = mv<sub>b</sub>&sup2;/r + mg = 0.5&times;50/1 + 0.5&times;10 = 25 + 5 = <strong>30 N</strong></p>
+          <p>Alternatively: T<sub>bottom</sub> = T<sub>top</sub> + 6mg = 0 + 6&times;0.5&times;10 = 30 N ✓</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Conical Pendulum</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A conical pendulum has string length 1 m and makes angle 60&deg; with vertical. Find period and tension.</p>
+          <p>Horizontal: T sin60&deg; = mr&omega;&sup2; where r = L sin60&deg; = &radic;3/2 m</p>
+          <p>Vertical: T cos60&deg; = mg &rarr; T = mg/cos60&deg; = 2mg</p>
+          <p>&omega;&sup2; = T sin60&deg;/(mr) = 2g sin60&deg;/(L sin60&deg;) = 2g/L = 20 &rarr; &omega; = 2&radic;5 rad/s</p>
+          <p>T = 2&pi;/&omega; = 2&pi;/(2&radic;5) = &pi;/&radic;5 &asymp; <strong>1.41 s</strong></p>
+        </div>
+      </div>
+
+      <h3>4.7 Practice Problems – Circular Motion</h3>
+      <div class="practice-box">
+        <ol>
+          <li>A body of mass 2 kg moves in a circle of radius 4 m at 3 m/s. Find centripetal force. <em>[Ans: 4.5 N]</em></li>
+          <li>A car moves at 20 m/s on a circular road of radius 100 m. Find the friction needed (flat road). <em>[Ans: &mu;min = 0.4]</em></li>
+          <li>A particle completes 5 revolutions per second in radius 0.2 m. Find centripetal acceleration. <em>[Ans: 197 m/s&sup2;]</em></li>
+          <li>Find the minimum height h from which a roller coaster must start to complete a loop of radius r. <em>[Ans: h = 5r/2]</em></li>
+          <li>A string can withstand 50 N tension. A mass of 1 kg is whirled in a vertical circle of 1 m. Find max angular velocity. <em>[Ans: &omega; &asymp; 6.3 rad/s]</em></li>
+          <li>A cyclist takes a circular turn of radius 20 m at 10 m/s. What is the angle of lean? <em>[Ans: tan&theta; = 0.5, &theta; &asymp; 26.6&deg;]</em></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5 ==================== -->
+    <section id="relative">
+      <h2>5. Relative Motion</h2>
+
+      <h3>5.1 Relative Velocity Formula</h3>
+      <div class="formula-box">
+        <p>Velocity of A relative to B: <strong>v&#x20D7;<sub>AB</sub> = v&#x20D7;<sub>A</sub> &minus; v&#x20D7;<sub>B</sub></strong></p>
+        <p>In component form: v<sub>AB,x</sub> = v<sub>Ax</sub> &minus; v<sub>Bx</sub>, and similarly for y-component.</p>
+        <p>To solve problems: <em>make one object (usually B) appear stationary</em> by subtracting its velocity from both objects.</p>
+      </div>
+
+      <h3>5.2 Rain-Man Problem</h3>
+      <div class="formula-box">
+        <p>Rain falls vertically at speed v<sub>r</sub>. Man walks at speed v<sub>m</sub>. Relative velocity of rain w.r.t. man:</p>
+        <p>v&#x20D7;<sub>rain,man</sub> = v&#x20D7;<sub>rain</sub> &minus; v&#x20D7;<sub>man</sub></p>
+        <p>Since v<sub>rain</sub> is downward and v<sub>man</sub> is horizontal, the relative velocity has both components.</p>
+        <p><strong>Angle of umbrella</strong> with vertical = arctan(v<sub>m</sub>/v<sub>r</sub>).</p>
+        <p>The umbrella must be tilted <em>toward the direction of motion</em>.</p>
+      </div>
+
+      <h3>5.3 River Crossing Problems</h3>
+      <div class="formula-box">
+        <p>Let river width = d, river velocity = v<sub>r</sub> (along river), swimmer speed = v<sub>s</sub> (in still water).</p>
+        <p><strong>Case 1 – Minimum Time:</strong> Swim perpendicular to bank (no upstream angle).</p>
+        <ul>
+          <li>Time = d/v<sub>s</sub></li>
+          <li>Drift downstream = v<sub>r</sub> &times; d/v<sub>s</sub></li>
+        </ul>
+        <p><strong>Case 2 – Minimum Drift (Shortest Path):</strong> Aim upstream at angle &alpha; = sin&minus;&sup1;(v<sub>r</sub>/v<sub>s</sub>) from perpendicular.</p>
+        <ul>
+          <li>Only possible if v<sub>s</sub> &gt; v<sub>r</sub>.</li>
+          <li>If v<sub>s</sub> &lt; v<sub>r</sub>: minimum drift angle = 90&deg; &minus; cos&minus;&sup1;(v<sub>s</sub>/v<sub>r</sub>).</li>
+        </ul>
+      </div>
+
+      <h3>5.4 Solved Examples</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Two Cars</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Car A moves east at 60 km/h, car B moves north at 80 km/h. Find velocity of B relative to A.</p>
+          <p>v&#x20D7;<sub>BA</sub> = v&#x20D7;<sub>B</sub> &minus; v&#x20D7;<sub>A</sub> = (0,80) &minus; (60,0) = (&minus;60, 80)</p>
+          <p>|v<sub>BA</sub>| = &radic;(3600+6400) = &radic;10000 = <strong>100 km/h</strong></p>
+          <p>Direction: arctan(80/60) = arctan(4/3) &asymp; 53.1&deg; north of west.</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – River Minimum Time</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> River 100 m wide flows at 4 m/s. Swimmer can swim at 3 m/s in still water. Find minimum time to cross and drift.</p>
+          <p><strong>Min time:</strong> swim perpendicular. t = 100/3 = <strong>33.3 s</strong></p>
+          <p><strong>Drift:</strong> 4 &times; 100/3 = <strong>133.3 m</strong></p>
+          <p>Note: Since v<sub>r</sub> &gt; v<sub>s</sub>, zero-drift crossing is not possible.</p>
+        </div>
+      </div>
+
+      <h3>5.5 Practice Problems – Relative Motion</h3>
+      <div class="practice-box">
+        <ol>
+          <li>A train moves north at 30 m/s. A man in it throws a ball east at 10 m/s. Find velocity of ball for ground observer. <em>[Ans: &radic;1000 &asymp; 31.6 m/s, tan&theta;=1/3]</em></li>
+          <li>Rain falls at 45&deg; to vertical in still air. Man walks at 2 m/s into rain. If rain appears vertical, find rain speed. <em>[Ans: 2 m/s]</em></li>
+          <li>Swimmer swims at 5 m/s. River is 200 m wide, flowing at 3 m/s. Find (a) min time, (b) min drift. <em>[Ans: 40 s; 150 m, time 50 s]</em></li>
+          <li>Two cars A and B start from the same point. A goes north at 20 km/h and B goes east at 15 km/h. After 2 h, what is relative displacement of B from A? <em>[Ans: 50 km]</em></li>
+          <li>A plane flies at 300 km/h in still air. Wind blows from north at 50 km/h. What heading gives east-directed flight? <em>[Ans: sin&minus;&sup1;(50/300) &asymp; 9.6&deg; north of east]</em></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 6 ==================== -->
+    <section id="newtons">
+      <h2>6. Newton's Laws – Applications</h2>
+
+      <h3>6.1 Newton's Three Laws</h3>
+      <div class="note-box">
+        <p><strong>First Law (Inertia):</strong> A body remains at rest or in uniform motion unless acted on by a net external force.</p>
+        <p><strong>Second Law:</strong> F&#x20D7;<sub>net</sub> = ma&#x20D7;. The net force equals mass times acceleration.</p>
+        <p><strong>Third Law:</strong> For every action force, there is an equal and opposite reaction force (on a different body).</p>
+      </div>
+
+      <h3>6.2 Free Body Diagram (FBD) Method</h3>
+      <div class="method-box">
+        <p><strong>Step 1:</strong> Isolate each body.</p>
+        <p><strong>Step 2:</strong> Draw all forces (gravity mg downward, normal N perpendicular to surface, tension T along string, friction f opposing motion).</p>
+        <p><strong>Step 3:</strong> Choose axes conveniently (usually along and perpendicular to direction of motion).</p>
+        <p><strong>Step 4:</strong> Apply F = ma along each axis.</p>
+        <p><strong>Step 5:</strong> Solve simultaneous equations for unknowns (a, T, N).</p>
+      </div>
+
+      <h3>6.3 Atwood Machine</h3>
+      <div class="formula-box">
+        <p>Two masses m<sub>1</sub> &gt; m<sub>2</sub> connected by a string over a frictionless pulley.</p>
+        <p><strong>Acceleration:</strong> a = (m<sub>1</sub>&minus;m<sub>2</sub>)g / (m<sub>1</sub>+m<sub>2</sub>)</p>
+        <p><strong>Tension:</strong> T = 2m<sub>1</sub>m<sub>2</sub>g / (m<sub>1</sub>+m<sub>2</sub>)</p>
+        <p><strong>Derivation:</strong> For m<sub>1</sub>: m<sub>1</sub>g &minus; T = m<sub>1</sub>a. For m<sub>2</sub>: T &minus; m<sub>2</sub>g = m<sub>2</sub>a. Add: (m<sub>1</sub>&minus;m<sub>2</sub>)g = (m<sub>1</sub>+m<sub>2</sub>)a.</p>
+      </div>
+
+      <h3>6.4 Inclined Plane</h3>
+      <div class="formula-box">
+        <p><strong>Smooth incline (no friction):</strong> a = g sin&theta;; Normal = mg cos&theta;</p>
+        <p><strong>Rough incline (friction &mu;):</strong></p>
+        <ul>
+          <li>Sliding down: a = g(sin&theta; &minus; &mu;cos&theta;)</li>
+          <li>Sliding up: a = g(sin&theta; + &mu;cos&theta;) (deceleration)</li>
+          <li>For no sliding: &mu; &ge; tan&theta;</li>
+        </ul>
+      </div>
+
+      <h3>6.5 Elevator Problems (Apparent Weight)</h3>
+      <div class="formula-box">
+        <table class="formula-table">
+          <thead><tr><th>Elevator state</th><th>Apparent weight</th></tr></thead>
+          <tbody>
+            <tr><td>At rest or uniform velocity</td><td>W' = mg (normal weight)</td></tr>
+            <tr><td>Accelerating upward (a)</td><td>W' = m(g + a) [heavier]</td></tr>
+            <tr><td>Accelerating downward (a)</td><td>W' = m(g &minus; a) [lighter]</td></tr>
+            <tr><td>Free fall (a = g)</td><td>W' = 0 (weightlessness)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>6.6 Solved Examples</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Block on Incline with Friction</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A 5 kg block on a 30&deg; incline (&mu;=0.3). Does it slide? If yes, find acceleration and tension if connected to a 3 kg hanging mass via frictionless pulley.</p>
+          <p>tan30&deg; &asymp; 0.577 &gt; &mu;=0.3 so it SLIDES.</p>
+          <p>System: (m<sub>1</sub>=5 kg on incline, m<sub>2</sub>=3 kg hanging)</p>
+          <p>Net force = m<sub>2</sub>g &minus; m<sub>1</sub>g(sin30&deg; &minus; &mu;cos30&deg;) [assuming m<sub>2</sub> pulls m<sub>1</sub> up the incline]</p>
+          <p>= 3&times;10 &minus; 5&times;10&times;(0.5 &minus; 0.3&times;0.866) = 30 &minus; 5&times;10&times;0.24 = 30 &minus; 12 = 18 N</p>
+          <p>a = 18/(5+3) = <strong>2.25 m/s&sup2;</strong></p>
+          <p>T = m<sub>2</sub>(g&minus;a) = 3&times;(10&minus;2.25) = <strong>23.25 N</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Atwood Machine</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Masses 8 kg and 4 kg in an Atwood machine. Find acceleration and tension.</p>
+          <p>a = (8&minus;4)&times;10/(8+4) = 40/12 = <strong>10/3 &asymp; 3.33 m/s&sup2;</strong></p>
+          <p>T = 2&times;8&times;4&times;10/(8+4) = 640/12 = <strong>160/3 &asymp; 53.3 N</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Elevator</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A 60 kg person stands in an elevator. The elevator accelerates upward at 2 m/s&sup2;. Find the reading on the weighing scale.</p>
+          <p>W' = m(g+a) = 60&times;(10+2) = 60&times;12 = <strong>720 N</strong> (about 73.5 kg on scale)</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 4 – Connected Blocks on a Table</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A 10 kg block A is on a smooth table. It is connected by a string over the edge to a 4 kg hanging block B, and also connected to a 2 kg block C on the other side of the table (also hanging). Find the acceleration and tensions T<sub>1</sub> (between C and A) and T<sub>2</sub> (between A and B).</p>
+          <p>Net force = m<sub>B</sub>g &minus; m<sub>C</sub>g = (4&minus;2)&times;10 = 20 N (B heavier, pulls A toward B)</p>
+          <p>Total mass = 10+4+2 = 16 kg; a = 20/16 = <strong>1.25 m/s&sup2;</strong></p>
+          <p>T<sub>1</sub> = m<sub>C</sub>(g+a) = 2&times;11.25 = <strong>22.5 N</strong></p>
+          <p>T<sub>2</sub> = m<sub>B</sub>(g&minus;a) = 4&times;8.75 = <strong>35 N</strong></p>
+        </div>
+      </div>
+
+      <h3>6.7 Practice Problems – Newton's Laws</h3>
+      <div class="practice-box">
+        <ol>
+          <li>Find the least force to pull a 50 kg block on a surface with &mu;=0.2. <em>[Ans: 100 N]</em></li>
+          <li>Masses 6 kg and 4 kg in Atwood machine. Find a and T. <em>[Ans: a=2 m/s&sup2;, T=48 N]</em></li>
+          <li>A 40 kg girl stands in a lift moving down at constant 2 m/s. What is normal force? <em>[Ans: 400 N – same as rest]</em></li>
+          <li>Two blocks 5 kg and 3 kg on a frictionless surface, pushed by a 16 N force. Find acceleration and contact force. <em>[Ans: a=2 m/s&sup2;, F=6 N]</em></li>
+          <li>A block rests on a rough incline of angle 45&deg;. What is minimum &mu; needed? <em>[Ans: &mu; = tan45&deg; = 1]</em></li>
+          <li>Three blocks of 2, 3, 5 kg are connected in series and pulled by 50 N on a frictionless surface. Find all tensions. <em>[Ans: a=5 m/s&sup2;; T1=40 N, T2=25 N]</em></li>
+          <li>A 10 kg block is pulled up a 30&deg; incline at constant speed by a force parallel to incline. &mu;=0.2. Find force. <em>[Ans: &asymp;67.3 N]</em></li>
+          <li>A lift descends with acceleration 5 m/s&sup2;. A 50 kg person is inside. Find apparent weight. <em>[Ans: 250 N]</em></li>
+          <li>A monkey of mass 20 kg holds a rope in an Atwood machine with a 30 kg bag. Find acceleration and tension. <em>[Ans: a=2 m/s&sup2;, T=240 N]</em></li>
+          <li>A 2 kg block is on a frictionless table and is connected to two masses (3 kg left, 5 kg right) via strings over pulleys. Find acceleration. <em>[Ans: a=2 m/s&sup2;, toward right]</em></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== ALL PRACTICE ==================== -->
+    <section id="practice-all">
+      <h2>7. Mixed Practice Problems</h2>
+      <div class="practice-box">
+        <p><strong>JEE-Level Mixed Problems:</strong></p>
+        <ol>
+          <li>A particle moves in x–y plane. x = 2t, y = t&sup2; &minus; 4. Find velocity and acceleration at t=2. <em>[Ans: v=(2,0), a=(0,2)]</em></li>
+          <li>A ball is projected from ground at 45&deg;. It just clears a wall 5 m high at a horizontal distance 20 m. Find initial speed. <em>[Ans: &asymp;17.3 m/s]</em></li>
+          <li>In a vertical circular loop of radius 2 m, find the speed at the top for maintaining contact (minimum). <em>[Ans: &radic;20 &asymp; 4.47 m/s]</em></li>
+          <li>A block of mass 3 kg moves on a smooth surface. Force F = 6t N acts on it. Starting from rest, find velocity at t=4 s. <em>[Ans: 16 m/s]</em></li>
+          <li>Two trains 200 m and 300 m long, travelling in opposite directions at 60 km/h each, cross each other. Find time taken. <em>[Ans: 15 s]</em></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="work-energy">
+      <h2>8. Work, Energy &amp; Power (Quick Reference)</h2>
+      <p>These topics are closely linked to mechanics and often tested alongside Newton's laws in JEE.</p>
+      <div class="formula-box">
+        <table class="formula-table">
+          <thead><tr><th>Quantity</th><th>Formula</th><th>Unit</th></tr></thead>
+          <tbody>
+            <tr><td>Work (constant force)</td><td>W = F&#x20D7;&middot;d&#x20D7; = Fd cos&theta;</td><td>Joule (J)</td></tr>
+            <tr><td>Kinetic energy</td><td>KE = &frac12;mv&sup2;</td><td>J</td></tr>
+            <tr><td>Work-energy theorem</td><td>W<sub>net</sub> = &Delta;KE</td><td>–</td></tr>
+            <tr><td>Potential energy (gravity)</td><td>PE = mgh</td><td>J</td></tr>
+            <tr><td>Elastic PE (spring)</td><td>PE = &frac12;kx&sup2;</td><td>J (k = spring constant)</td></tr>
+            <tr><td>Power</td><td>P = W/t = Fv cos&theta;</td><td>Watt (W)</td></tr>
+            <tr><td>Efficiency</td><td>&eta; = P<sub>output</sub>/P<sub>input</sub> &times; 100%</td><td>%</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Conservation of Mechanical Energy:</strong> KE + PE = constant (when only conservative forces act)</p>
+        <p><strong>Spring-mass system:</strong> v<sub>max</sub> = A&omega; = A&radic;(k/m) (at equilibrium); v=0 at extremes.</p>
+      </div>
+
+      <h3>Impulse and Momentum</h3>
+      <div class="formula-box">
+        <p><strong>Linear momentum:</strong> p&#x20D7; = mv&#x20D7;</p>
+        <p><strong>Impulse:</strong> J&#x20D7; = F&#x20D7;&Delta;t = &Delta;p&#x20D7;</p>
+        <p><strong>Conservation of momentum:</strong> If F<sub>net</sub> = 0, then p&#x20D7; = constant.</p>
+        <p><strong>Coefficient of restitution (e):</strong> e = (relative speed after) / (relative speed before)</p>
+        <p>Perfectly elastic: e=1 (KE conserved); Perfectly inelastic: e=0 (bodies stick together)</p>
+      </div>
+
+      <h3>Solved Problems – Work &amp; Energy</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Block Sliding Down Incline</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A 5 kg block slides down a smooth 4 m long, 30&deg; incline from rest. Find speed at bottom.</p>
+          <p>Using energy conservation: mgh = &frac12;mv&sup2;</p>
+          <p>h = 4 sin30&deg; = 2 m; v = &radic;(2gh) = &radic;(2&times;10&times;2) = <strong>&radic;40 &asymp; 6.32 m/s</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Car Power</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A car of mass 1500 kg moves at constant 72 km/h against friction force 3000 N. Find power of engine.</p>
+          <p>v = 20 m/s; At constant speed, F<sub>engine</sub> = F<sub>friction</sub> = 3000 N</p>
+          <p>P = Fv = 3000&times;20 = <strong>60,000 W = 60 kW</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="summary-box">
+      <h2>Key Formulas Quick Reference</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <h4>Equations of Motion</h4>
+          <p>v = u + at</p>
+          <p>s = ut + &frac12;at&sup2;</p>
+          <p>v&sup2; = u&sup2; + 2as</p>
+        </div>
+        <div class="formula-card">
+          <h4>Projectile</h4>
+          <p>T = 2u sin&theta;/g</p>
+          <p>H = u&sup2;sin&sup2;&theta;/(2g)</p>
+          <p>R = u&sup2;sin2&theta;/g</p>
+        </div>
+        <div class="formula-card">
+          <h4>Circular Motion</h4>
+          <p>a<sub>c</sub> = v&sup2;/r = r&omega;&sup2;</p>
+          <p>F<sub>c</sub> = mv&sup2;/r</p>
+          <p>v<sub>bottom</sub> = &radic;(5gr)</p>
+        </div>
+        <div class="formula-card">
+          <h4>Newton's Laws</h4>
+          <p>F = ma</p>
+          <p>a = (m<sub>1</sub>&minus;m<sub>2</sub>)g/(m<sub>1</sub>+m<sub>2</sub>)</p>
+          <p>W' = m(g&plusmn;a)</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

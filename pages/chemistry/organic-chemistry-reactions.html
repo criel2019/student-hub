@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organic Chemistry Reactions – Named Reactions, Mechanisms | JEE NEET | StudyHub</title>
+  <meta name="description" content="Complete organic chemistry reactions guide for JEE and NEET. All named reactions with mechanisms, SN1/SN2, elimination, addition reactions – with 20 solved problems." />
+  <meta name="keywords" content="organic chemistry reactions JEE, named reactions chemistry, SN1 SN2 mechanism, aldol condensation, Grignard reaction, Cannizzaro, Diels-Alder" />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">📚 StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main-content">
+  <div class="container">
+
+    <header class="page-header">
+      <h1>Organic Chemistry Reactions</h1>
+      <p class="page-subtitle">Named Reactions, Mechanisms, SN1/SN2, Elimination, Addition – Complete Guide for JEE &amp; NEET</p>
+      <div class="breadcrumb">
+        <a href="../../index.html">Home</a> &rsaquo;
+        <a href="../chemistry.html">Chemistry</a> &rsaquo;
+        <span>Organic Chemistry Reactions</span>
+      </div>
+    </header>
+
+    <!-- Quick Navigation -->
+    <div class="quick-nav card">
+      <h2>Quick Navigation</h2>
+      <ul class="quick-nav-list">
+        <li><a href="#reaction-types">1. Reaction Types Overview</a></li>
+        <li><a href="#nucleophilic-substitution">2. Nucleophilic Substitution (SN1 &amp; SN2)</a></li>
+        <li><a href="#elimination">3. Elimination Reactions (E1 &amp; E2)</a></li>
+        <li><a href="#electrophilic-addition">4. Electrophilic Addition to Alkenes</a></li>
+        <li><a href="#eas">5. Electrophilic Aromatic Substitution (EAS)</a></li>
+        <li><a href="#named-reactions">6. Important Named Reactions</a></li>
+        <li><a href="#carbonyl-reactions">7. Carbonyl Reactions Summary</a></li>
+        <li><a href="#oxidation-reduction">8. Oxidation–Reduction Summary</a></li>
+        <li><a href="#practice-problems">Practice Problems (15)</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1: Reaction Types -->
+    <section id="reaction-types" class="section">
+      <h2>1. Reaction Types Overview</h2>
+      <p>Organic reactions can be broadly classified into five categories based on what happens to the bonds and atoms during the transformation:</p>
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Reaction Type</th>
+              <th>Description</th>
+              <th>Key Examples</th>
+              <th>Bond Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Substitution</strong></td>
+              <td>One atom or group is replaced by another</td>
+              <td>SN1, SN2, EAS (electrophilic aromatic substitution)</td>
+              <td>One bond broken, one formed</td>
+            </tr>
+            <tr>
+              <td><strong>Addition</strong></td>
+              <td>Atoms added across a multiple bond (C=C or C=O)</td>
+              <td>Hydrohalogenation, Hydrogenation, Halogenation, Hydration</td>
+              <td>Pi bond broken, two sigma bonds formed</td>
+            </tr>
+            <tr>
+              <td><strong>Elimination</strong></td>
+              <td>Atoms removed to form a double or triple bond</td>
+              <td>E1, E2, Dehydration of alcohols, Dehydrohalogenation</td>
+              <td>Two sigma bonds broken, one pi bond formed</td>
+            </tr>
+            <tr>
+              <td><strong>Oxidation–Reduction</strong></td>
+              <td>Change in oxidation state of carbon</td>
+              <td>KMnO4 oxidation, NaBH4 reduction, Jones oxidation, Swern</td>
+              <td>Electron transfer; C–H broken or C–O formed</td>
+            </tr>
+            <tr>
+              <td><strong>Rearrangement</strong></td>
+              <td>Carbon skeleton reorganizes; isomers interconvert</td>
+              <td>Beckmann, Baeyer–Villiger, Wagner–Meerwein, Pinacol</td>
+              <td>Migration of group to adjacent carbon</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="highlight-box">
+        <strong>Tip for JEE/NEET:</strong> Always identify the reaction type first. Ask: Is there a leaving group? (Substitution or Elimination) Is there a pi bond? (Addition) Is there a carbonyl? (Nucleophilic addition or named reaction)
+      </div>
+    </section>
+
+    <!-- Section 2: Nucleophilic Substitution -->
+    <section id="nucleophilic-substitution" class="section">
+      <h2>2. Nucleophilic Substitution Reactions</h2>
+
+      <h3>2.1 SN2 Mechanism (Substitution Nucleophilic Bimolecular)</h3>
+      <div class="mechanism-box">
+        <h4>Mechanism (Concerted, One Step)</h4>
+        <pre class="code-block">
+  Nu:⁻  +  C–LG  ──────→  [Nu---C---LG]‡  ──────→  Nu–C  +  LG⁻
+          (back-side attack)   (transition state)      (inverted product)
+
+  Example:  HO⁻  +  CH3–Br  →  HO–CH3  +  Br⁻
+        </pre>
+        <ul>
+          <li><strong>Rate:</strong> Rate = k[substrate][Nu] &nbsp; (Second order; depends on both)</li>
+          <li><strong>Mechanism:</strong> Single concerted step – nucleophile attacks the back side of the C–LG bond simultaneously as LG departs</li>
+          <li><strong>Stereochemistry:</strong> 100% Walden Inversion (R → S or S → R at the reacting carbon)</li>
+          <li><strong>Substrate Reactivity:</strong> CH3X &gt; 1° &gt; 2° &gt;&gt; 3° (steric hindrance increases with substitution)</li>
+          <li><strong>Best Solvents:</strong> Polar aprotic – DMSO, DMF, acetone, acetonitrile (dissolves cation, does NOT solvate anion → nucleophile is "naked" and reactive)</li>
+          <li><strong>Good Nucleophiles:</strong> I⁻, CN⁻, RS⁻, HO⁻, RO⁻, N3⁻, Br⁻, NH3</li>
+          <li><strong>Leaving Group Order:</strong> I⁻ &gt; Br⁻ &gt; Cl⁻ &gt;&gt; F⁻ (better LG = weaker conjugate base)</li>
+          <li><strong>Neopentyl and bridgehead halides:</strong> Extremely slow or unreactive in SN2 due to steric hindrance</li>
+        </ul>
+      </div>
+
+      <h4>Solved Example 1 – Simple SN2</h4>
+      <div class="solved-example">
+        <p><strong>Q:</strong> CH3CH2Br + NaOH (aqueous DMSO) → ?</p>
+        <p><strong>Solution:</strong> Primary substrate + strong nucleophile (OH⁻) + polar aprotic solvent → SN2.</p>
+        <p>OH⁻ attacks back side of C–Br bond → CH3CH2OH + Br⁻ (ethanol). No rearrangement; inversion at sp3 carbon (for primary, stereochemistry not an issue as product is achiral).</p>
+        <p><strong>Answer:</strong> CH3CH2OH (ethanol)</p>
+      </div>
+
+      <h4>Solved Example 2 – Stereochemistry in SN2</h4>
+      <div class="solved-example">
+        <p><strong>Q:</strong> (R)-2-bromobutane + CN⁻ (DMSO) → ?</p>
+        <p><strong>Solution:</strong> 2° substrate. CN⁻ is a good nucleophile. Polar aprotic solvent. → SN2 occurs.</p>
+        <p>Back-side attack at C2 → complete inversion → (S)-2-methylbutanenitrile.</p>
+        <p><strong>Answer:</strong> (S)-2-methylbutanenitrile (100% inversion of configuration)</p>
+      </div>
+
+      <h4>Solved Example 3 – SN2 or SN1?</h4>
+      <div class="solved-example">
+        <p><strong>Q:</strong> Predict whether (CH3)2CHBr reacts by SN1 or SN2 with: (a) NaCN/DMSO, (b) H2O (no added nucleophile)</p>
+        <p><strong>Solution:</strong> (a) Strong nucleophile, polar aprotic → SN2 (2° substrate can do SN2 with good Nu).</p>
+        <p>(b) Weak nucleophile (H2O), polar protic → SN1 (2° substrate can ionize slowly).</p>
+      </div>
+
+      <h3>2.2 SN1 Mechanism (Substitution Nucleophilic Unimolecular)</h3>
+      <div class="mechanism-box">
+        <h4>Mechanism (Two Steps)</h4>
+        <pre class="code-block">
+  Step 1 (RDS, slow):  R–LG  →  R⁺  +  LG⁻  (ionization; forms carbocation)
+  Step 2 (fast):        R⁺  +  Nu  →  R–Nu   (nucleophile attacks flat carbocation)
+        </pre>
+        <ul>
+          <li><strong>Rate:</strong> Rate = k[substrate] &nbsp; (First order; only depends on substrate)</li>
+          <li><strong>Substrate Reactivity:</strong> 3° &gt; 2° &gt; 1° &gt;&gt; CH3 (based on carbocation stability)</li>
+          <li><strong>Stereochemistry:</strong> Racemization (flat carbocation attacked from both sides), sometimes slight inversion if ion pair partially shields one face</li>
+          <li><strong>Best Solvents:</strong> Polar protic – H2O, ROH, RCOOH (solvate and stabilize the leaving group and carbocation)</li>
+          <li><strong>Carbocation Stability:</strong> 3° &gt; 2° &gt; allylic/benzylic &gt; 1° &gt; CH3⁺</li>
+          <li><strong>Rearrangements possible:</strong> Carbocation intermediate can rearrange via hydride shift or methyl shift to give more stable carbocation → unexpected products</li>
+        </ul>
+      </div>
+
+      <h4>Solved Example 4 – SN1 with Racemization</h4>
+      <div class="solved-example">
+        <p><strong>Q:</strong> (R)-3-chloro-3-methylpentane + H2O → ?</p>
+        <p><strong>Solution:</strong> 3° substrate, weak nucleophile (H2O), polar protic solvent → SN1.</p>
+        <p>Forms a stable 3° carbocation (flat, sp2) → H2O attacks from both faces equally → racemic mixture of (R) and (S)-3-methyl-3-pentanol.</p>
+        <p><strong>Answer:</strong> Racemic 3-methyl-3-pentanol (50:50 R and S)</p>
+      </div>
+
+      <h4>Solved Example 5 – Rearrangement in SN1</h4>
+      <div class="solved-example">
+        <p><strong>Q:</strong> 3-chloro-2,2-dimethylbutane + AgNO3/EtOH → major product?</p>
+        <p><strong>Solution:</strong> 3° substrate → SN1 → forms 3° carbocation at C3. Adjacent C2 has a methyl group. Methyl shift from C2 to C3 → more stable (still 3°) but now (CH3)3C–CH+(CH3) type. OEt⁻ attacks → ether product. In water → rearranged alcohol is major product.</p>
+      </div>
+
+      <h4>Solved Example 6 – Predict SN1 Product Stereochemistry</h4>
+      <div class="solved-example">
+        <p><strong>Q:</strong> (S)-2-bromobutane undergoes SN1 with CH3OH. What stereochemistry of product?</p>
+        <p><strong>Answer:</strong> Racemic mixture of (R)- and (S)-2-methoxybutane (since flat carbocation is attacked from both sides equally).</p>
+      </div>
+
+      <h3>2.3 SN1 vs SN2 – Complete Comparison</h3>
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr><th>Feature</th><th>SN1</th><th>SN2</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Steps</td><td>2 (stepwise)</td><td>1 (concerted)</td></tr>
+            <tr><td>Rate law</td><td>Rate = k[RX] (1st order)</td><td>Rate = k[RX][Nu] (2nd order)</td></tr>
+            <tr><td>Rate-determining step</td><td>Ionization (C–LG bond breaking)</td><td>The single concerted step</td></tr>
+            <tr><td>Intermediate</td><td>Carbocation</td><td>No intermediate (transition state only)</td></tr>
+            <tr><td>Substrate</td><td>3° &gt; 2° (requires stable carbocation)</td><td>CH3 &gt; 1° &gt; 2° (steric control)</td></tr>
+            <tr><td>Nucleophile strength</td><td>Weak nucleophile acceptable</td><td>Strong nucleophile required</td></tr>
+            <tr><td>Stereochemistry</td><td>Racemization</td><td>Complete inversion (Walden)</td></tr>
+            <tr><td>Solvent</td><td>Polar protic (H2O, ROH)</td><td>Polar aprotic (DMSO, DMF)</td></tr>
+            <tr><td>Rearrangement</td><td>Possible (via carbocation)</td><td>Not possible</td></tr>
+            <tr><td>Temperature effect</td><td>Higher temp can favor E1</td><td>Higher temp can favor E2</td></tr>
+            <tr><td>Best leaving groups</td><td>I⁻ &gt; Br⁻ &gt; Cl⁻ (same as SN2)</td><td>I⁻ &gt; Br⁻ &gt; Cl⁻</td></tr>
+            <tr><td>Favored by allyl/benzyl</td><td>Yes (resonance-stabilized carbocation)</td><td>Yes (less hindered)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: Elimination -->
+    <section id="elimination" class="section">
+      <h2>3. Elimination Reactions</h2>
+
+      <h3>3.1 E2 Mechanism (Elimination Bimolecular)</h3>
+      <div class="mechanism-box">
+        <ul>
+          <li><strong>Mechanism:</strong> Single concerted step – base removes β-H simultaneously as LG leaves; π bond forms</li>
+          <li><strong>Geometry required:</strong> Anti-periplanar arrangement (H and LG must be 180° apart; trans or anti-coplanar)</li>
+          <li><strong>Rate:</strong> Rate = k[substrate][base] (2nd order)</li>
+          <li><strong>Zaitsev's Rule:</strong> Major product = more substituted alkene (more stable, more hyperconjugation)</li>
+          <li><strong>Hofmann's Rule:</strong> When a bulky base (t-BuO⁻) is used → less substituted alkene (less hindered β-H removed)</li>
+          <li><strong>Favored by:</strong> 2°, 3° substrates + strong, non-bulky base + high temperature</li>
+          <li><strong>Strong bases for E2:</strong> t-BuO⁻ (Hofmann), NaOH, KOH, RO⁻</li>
+        </ul>
+      </div>
+
+      <h4>Solved Example – E2 (Zaitsev vs Hofmann)</h4>
+      <div class="solved-example">
+        <p><strong>Q:</strong> 2-bromobutane + (a) KOH/EtOH, (b) KO-t-Bu/t-BuOH → products?</p>
+        <p><strong>(a) KOH/EtOH (small base):</strong> E2 → Zaitsev product → but-2-ene (more substituted, major) + but-1-ene (minor). Predominantly trans-but-2-ene.</p>
+        <p><strong>(b) KO-t-Bu/t-BuOH (bulky base):</strong> E2 → Hofmann product → but-1-ene (less substituted, less hindered β-H, major).</p>
+      </div>
+
+      <h3>3.2 E1 Mechanism (Elimination Unimolecular)</h3>
+      <div class="mechanism-box">
+        <ul>
+          <li><strong>Step 1 (RDS):</strong> Ionization → carbocation (same first step as SN1)</li>
+          <li><strong>Step 2:</strong> Base (or solvent) removes β-H → alkene formed</li>
+          <li><strong>Rate:</strong> Rate = k[substrate] (1st order)</li>
+          <li><strong>Regioselectivity:</strong> Follows Zaitsev's rule (more stable alkene major)</li>
+          <li><strong>Competes with SN1:</strong> Both form carbocation; higher temperature → more elimination</li>
+          <li><strong>Substrate:</strong> 3° &gt; 2°; requires stable carbocation</li>
+        </ul>
+      </div>
+
+      <h3>3.3 Decision Chart: SN1 vs SN2 vs E1 vs E2</h3>
+      <div class="flowchart-box">
+        <pre class="code-block">
+  START: What is the substrate?
+  │
+  ├─ Methyl (CH3X) or Primary (1°)
+  │   └─ Strong nucleophile/base? → SN2 (fast)
+  │   └─ Very bulky strong base? → E2 (rare for methyl)
+  │
+  ├─ Secondary (2°)
+  │   ├─ Strong nucleophile, polar aprotic → SN2
+  │   ├─ Strong bulky base, high temp → E2 (major)
+  │   └─ Weak nucleophile/base, polar protic → SN1 + E1 mixture
+  │
+  └─ Tertiary (3°)
+      ├─ Strong base (KOH/EtOH), high temp → E2
+      ├─ Weak nucleophile (H2O), polar protic → SN1 + E1
+      └─ Strong Nu, low temp → SN1 still dominates (steric!)
+         (Note: 3° never does SN2 – too hindered)
+
+  Temperature: High temperature always favors elimination over substitution.
+  Solvent: Polar aprotic → SN2; Polar protic → SN1/E1
+        </pre>
+      </div>
+    </section>
+
+    <!-- Section 4: Electrophilic Addition -->
+    <section id="electrophilic-addition" class="section">
+      <h2>4. Electrophilic Addition to Alkenes</h2>
+
+      <h3>4.1 Hydrohalogenation (HX Addition)</h3>
+      <div class="mechanism-box">
+        <ul>
+          <li><strong>Reagent:</strong> HCl, HBr, HI</li>
+          <li><strong>Markovnikov's Rule:</strong> H adds to the carbon bearing more hydrogens (less substituted); X adds to the more substituted carbon (more stable carbocation intermediate)</li>
+          <li><strong>Mechanism:</strong> Proton (E⁺) attacks π bond → more stable carbocation → halide attacks carbocation</li>
+          <li><strong>Reactivity of HX:</strong> HI &gt; HBr &gt; HCl (bond dissociation energy decreases)</li>
+          <li><strong>Anti-Markovnikov (Peroxide effect):</strong> HBr + ROOR (peroxides) → radical mechanism → Br adds to less substituted carbon (H adds to more substituted)</li>
+          <li><strong>Note:</strong> Anti-Markovnikov only works with HBr (HCl and HI do not give anti-Markovnikov even with peroxides)</li>
+        </ul>
+      </div>
+      <div class="solved-example">
+        <p><strong>Solved Example:</strong> CH2=CHCH3 + HBr → ? (a) Normal conditions (b) Peroxide conditions</p>
+        <p><strong>(a)</strong> Markovnikov: Br adds to C2 (more substituted) → CH3CHBrCH3 (2-bromopropane)</p>
+        <p><strong>(b)</strong> Anti-Markovnikov (peroxide): Br adds to C1 (less substituted) → BrCH2CH2CH3 (1-bromopropane)</p>
+      </div>
+
+      <h3>4.2 Halogenation (Br2 or Cl2 Addition)</h3>
+      <div class="mechanism-box">
+        <ul>
+          <li><strong>Reagent:</strong> Br2/CCl4 or Cl2/CCl4</li>
+          <li><strong>Mechanism:</strong> Cyclic halonium ion (3-membered ring) intermediate → nucleophile attacks back side → <em>anti</em> addition (trans product)</li>
+          <li><strong>Stereochemistry:</strong> Anti addition (vicinal dihalide, trans/anti configuration)</li>
+          <li><strong>Test:</strong> Br2/CCl4 solution turns from brown to colorless → confirms presence of C=C double bond</li>
+          <li><strong>Product:</strong> Vicinal dihalide (halogen on adjacent carbons)</li>
+        </ul>
+      </div>
+      <div class="solved-example">
+        <p><strong>Solved Example:</strong> cis-2-butene + Br2/CCl4 → ?</p>
+        <p>Anti addition via bromonium ion → (2R,3S)-2,3-dibromobutane (meso compound). Trans-2-butene + Br2 → (2R,3R) + (2S,3S) racemic mixture.</p>
+      </div>
+
+      <h3>4.3 Acid-Catalyzed Hydration (H2O/H3O⁺)</h3>
+      <div class="mechanism-box">
+        <ul>
+          <li><strong>Reagent:</strong> H2O + H3O⁺ (dilute H2SO4)</li>
+          <li><strong>Rule:</strong> Markovnikov addition (OH adds to more substituted carbon)</li>
+          <li><strong>Mechanism:</strong> H⁺ adds to less substituted C → carbocation at more substituted C → H2O attacks</li>
+          <li><strong>Rearrangements:</strong> Possible if less stable to more stable carbocation interconversion occurs</li>
+        </ul>
+      </div>
+
+      <h3>4.4 Catalytic Hydrogenation (H2/Pd or Pt or Ni)</h3>
+      <div class="mechanism-box">
+        <ul>
+          <li><strong>Mechanism:</strong> Syn addition (both H atoms add to same face of double bond)</li>
+          <li><strong>Catalyst:</strong> Pd/C, PtO2 (Adams), Ni (Raney Ni); heterogeneous surface catalysis</li>
+          <li><strong>Result:</strong> Alkene → alkane (reduction)</li>
+          <li><strong>Stereochemistry:</strong> Syn (cis) addition</li>
+        </ul>
+      </div>
+
+      <h3>4.5 Ozonolysis</h3>
+      <div class="mechanism-box">
+        <ul>
+          <li><strong>Step 1:</strong> O3 reacts with alkene → ozonide (molozonide → ozonide)</li>
+          <li><strong>Oxidative workup (H2O2):</strong> Ozonide → carboxylic acids (terminal CH2= → CO2 + H2O; internal R-CH= → RCOOH; R2C= → R2CO ketone stays)</li>
+          <li><strong>Reductive workup (Zn/H2O or Me2S or PPh3):</strong> Ozonide → aldehydes (R-CH=) or ketones (R2C=)</li>
+        </ul>
+        <table class="data-table">
+          <thead><tr><th>Alkene Structure</th><th>Reductive Products</th><th>Oxidative Products</th></tr></thead>
+          <tbody>
+            <tr><td>R–CH=CH–R (internal)</td><td>2 × RCHO (aldehydes)</td><td>2 × RCOOH (carboxylic acids)</td></tr>
+            <tr><td>R2C=CH2 (terminal)</td><td>R2C=O (ketone) + HCHO</td><td>R2C=O + CO2 + H2O</td></tr>
+            <tr><td>R2C=CR2</td><td>2 × R2C=O (ketones)</td><td>2 × R2C=O (unchanged)</td></tr>
+            <tr><td>CH2=CH2</td><td>2 × HCHO</td><td>2 × CO2 + H2O</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 5: EAS -->
+    <section id="eas" class="section">
+      <h2>5. Electrophilic Aromatic Substitution (EAS)</h2>
+      <p>In EAS, the aromatic ring acts as the nucleophile. The electrophile attacks the ring, forming an unstable arenium ion (σ-complex), which then loses H⁺ to restore aromaticity.</p>
+
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr><th>Reaction</th><th>Reagents</th><th>Electrophile Generated</th><th>Product</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Halogenation</td><td>Cl2/FeCl3 or Br2/FeBr3</td><td>Cl⁺ or Br⁺ (activated by Lewis acid)</td><td>Chloro- or Bromobenzene</td></tr>
+            <tr><td>Nitration</td><td>HNO3 + H2SO4 (conc.)</td><td>NO2⁺ (nitronium ion)</td><td>Nitrobenzene</td></tr>
+            <tr><td>Sulfonation</td><td>SO3 + H2SO4 (fuming)</td><td>SO3 (or H2S2O7)</td><td>Benzenesulfonic acid</td></tr>
+            <tr><td>Friedel-Crafts Alkylation</td><td>RCl + AlCl3</td><td>R⁺ (carbocation)</td><td>Alkylbenzene</td></tr>
+            <tr><td>Friedel-Crafts Acylation</td><td>RCOCl + AlCl3</td><td>RCO⁺ (acylium ion)</td><td>Aryl ketone (e.g., acetophenone)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-box">
+        <strong>Why Acylation is preferred over Alkylation in synthesis:</strong>
+        <ul>
+          <li>Alkylation: Polyalkylation occurs (product is more reactive than starting material); carbocation rearrangements give unexpected products</li>
+          <li>Acylation: Product (ketone) deactivates the ring → monosubstitution only; no rearrangements (acylium ion is stable); can reduce the carbonyl afterward (Clemmensen or Wolff-Kishner) to get alkylated product cleanly</li>
+        </ul>
+      </div>
+
+      <h3>5.1 Directing Effects of Substituents</h3>
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr><th>Substituent</th><th>Effect on Ring</th><th>Directs To</th><th>Examples</th><th>Mechanism</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>–OH, –OR, –NH2, –NHR, –NR2</td><td>Strongly activating</td><td>ortho / para</td><td>Phenol, aniline, anisole</td><td>+M effect (lone pair donation into ring)</td></tr>
+            <tr><td>–OCOCH3 (ester linked to ring)</td><td>Weakly activating</td><td>ortho / para</td><td>Phenyl acetate</td><td>+M dominates over –I</td></tr>
+            <tr><td>Alkyl (–CH3, –C2H5, etc.)</td><td>Weakly activating</td><td>ortho / para</td><td>Toluene, xylene, cumene</td><td>Hyperconjugation (+H), +I</td></tr>
+            <tr><td>–F, –Cl, –Br, –I</td><td>Weakly deactivating</td><td>ortho / para</td><td>Halobenzenes</td><td>–I &gt; +M (deactivate but direct o/p)</td></tr>
+            <tr><td>–NO2, –CN, –COOH, –CHO, –COR, –SO3H</td><td>Strongly deactivating</td><td>meta</td><td>Nitrobenzene, benzaldehyde</td><td>–M (withdraw electrons from ring)</td></tr>
+            <tr><td>–CF3, –CCl3, –N(CH3)3⁺</td><td>Strongly deactivating</td><td>meta</td><td>Trifluoromethylbenzene</td><td>–I (strong inductive withdrawal)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 6: Named Reactions -->
+    <section id="named-reactions" class="section">
+      <h2>6. Important Named Reactions – Complete Reference</h2>
+
+      <h3>6.1 Aldol Condensation</h3>
+      <div class="named-reaction-box">
+        <p><strong>Reagents / Conditions:</strong> Dilute NaOH or KOH (base-catalyzed); or dilute acid</p>
+        <p><strong>Requirements:</strong> Carbonyl compound must have α-hydrogen (at least one H adjacent to C=O)</p>
+        <p><strong>Reaction:</strong></p>
+        <pre class="code-block">
+  2 CH3CHO  ──NaOH/H2O──→  CH3CH(OH)CH2CHO  (aldol; β-hydroxy aldehyde)
+                  −H2O (heat)
+                 ──────────→  CH3CH=CHCHO  (crotonaldehyde; α,β-unsaturated aldehyde)
+        </pre>
+        <p><strong>Key Points:</strong></p>
+        <ul>
+          <li>Aldol = <strong>ald</strong>ehyde + alc<strong>ol</strong> (has both –OH and –CHO)</li>
+          <li>Dehydration (on heating) gives α,β-unsaturated carbonyl compound (enal or enone)</li>
+          <li><strong>Mixed (Claisen-Schmidt):</strong> Aromatic aldehyde (no α-H) + ketone + base → chalcone (only one partner has α-H, so mixed aldol is clean)</li>
+          <li><strong>Intramolecular aldol:</strong> Forms 5- or 6-membered rings (thermodynamically preferred)</li>
+        </ul>
+        <div class="solved-example">
+          <p><strong>Solved Example:</strong> CH3COCH3 (acetone) + base → ?</p>
+          <p>Self-aldol: diacetone alcohol → mesityl oxide (dehydration). But with NaOH/cold: CH3COCH2CH(OH)CH3 (wait – both carbonyl compounds are acetone). Enolate of one acetone attacks carbonyl of another → 4-hydroxy-4-methylpentan-2-one (diacetone alcohol).</p>
+        </div>
+      </div>
+
+      <h3>6.2 Cannizzaro Reaction</h3>
+      <div class="named-reaction-box">
+        <p><strong>Reagents / Conditions:</strong> Concentrated NaOH or KOH (no heat needed)</p>
+        <p><strong>Requirements:</strong> Aldehyde with NO α-hydrogen (HCHO, PhCHO, (CH3)3CCHO, R-CHO where R has no α-H)</p>
+        <pre class="code-block">
+  2 HCHO  ──conc. NaOH──→  CH3OH  +  HCOONa
+  (formaldehyde)           (methanol)  (sodium formate)
+
+  2 C6H5CHO  ──NaOH──→  C6H5CH2OH  +  C6H5COONa
+  (benzaldehyde)           (benzyl alcohol) (sodium benzoate)
+        </pre>
+        <p><strong>Key Points:</strong></p>
+        <ul>
+          <li>Disproportionation: one molecule oxidized (→ carboxylate), one reduced (→ alcohol)</li>
+          <li>Hydride transfer mechanism: OH⁻ attacks carbonyl → alkoxide with hydride; hydride transferred to second aldehyde molecule</li>
+          <li><strong>Crossed Cannizzaro:</strong> HCHO + ArCHO + NaOH → ArCH2OH + HCOONa (HCHO is always the one oxidized to formate; ArCHO is reduced to ArCH2OH)</li>
+        </ul>
+        <div class="solved-example">
+          <p><strong>Solved Example:</strong> PhCHO + HCHO + conc. KOH → ? (crossed Cannizzaro)</p>
+          <p>HCHO (better hydride donor, more reactive) acts as reducing agent → oxidized to HCOOK. PhCHO reduced → PhCH2OH (benzyl alcohol).</p>
+          <p><strong>Answer:</strong> Benzyl alcohol + potassium formate</p>
+        </div>
+      </div>
+
+      <h3>6.3 Claisen Condensation</h3>
+      <div class="named-reaction-box">
+        <p><strong>Reagents / Conditions:</strong> NaOEt (sodium ethoxide, strong base) in ethanol</p>
+        <pre class="code-block">
+  2 CH3COOC2H5  ──NaOEt──→  CH3COCH2COOC2H5  +  C2H5OH
+  (ethyl acetate)              (ethyl acetoacetate, a β-ketoester)
+        </pre>
+        <ul>
+          <li>Requires ester with α-H; two ester molecules condense</li>
+          <li>Product: β-ketoester (one α-H between two carbonyls → very acidic, pKa ~11)</li>
+          <li><strong>Dieckmann cyclization:</strong> Intramolecular Claisen → cyclic β-ketoester; used to make 5- and 6-membered rings</li>
+          <li><strong>Mixed Claisen:</strong> One ester has no α-H (e.g., ethyl benzoate) + one ester with α-H → mixed β-ketoester (clean reaction)</li>
+        </ul>
+      </div>
+
+      <h3>6.4 Grignard Reaction</h3>
+      <div class="named-reaction-box">
+        <p><strong>Reagent:</strong> RMgX (alkyl or aryl magnesium halide; Grignard reagent)</p>
+        <p><strong>Conditions:</strong> Dry ether (Et2O) or THF; strictly anhydrous, moisture-free!</p>
+        <p><strong>Key Reactions:</strong></p>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead><tr><th>Carbonyl Compound</th><th>Product (after hydrolysis)</th><th>Alcohol Type</th></tr></thead>
+            <tbody>
+              <tr><td>HCHO (formaldehyde)</td><td>RCH2OH</td><td>Primary alcohol</td></tr>
+              <tr><td>RCHO (aldehyde)</td><td>R'CH(OH)R</td><td>Secondary alcohol</td></tr>
+              <tr><td>R2CO (ketone)</td><td>R'C(OH)R2</td><td>Tertiary alcohol</td></tr>
+              <tr><td>CO2 (carbon dioxide)</td><td>RCOOH</td><td>Carboxylic acid</td></tr>
+              <tr><td>Ester RCOOR' (2 eq. RMgX)</td><td>R''C(OH)R2</td><td>Tertiary alcohol</td></tr>
+              <tr><td>Epoxide</td><td>Ring-opened alcohol</td><td>Primary alcohol (attack at less hindered C)</td></tr>
+              <tr><td>Nitrile (RCN)</td><td>After hydrolysis → RCOR'</td><td>Ketone then secondary alcohol</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="solved-example">
+          <p><strong>Solved Example 1:</strong> Prepare (CH3)3COH from Grignard reagent.</p>
+          <p>Use CH3MgBr (3 equivalents not needed; use CH3MgBr + acetone → (CH3)2C(OH)CH3). Wait: (CH3)3COH is t-butanol. Use CH3MgBr + (CH3)2CO → (CH3)3COH. Yes! Methyl Grignard + acetone → t-butanol.</p>
+        </div>
+        <div class="solved-example">
+          <p><strong>Solved Example 2:</strong> PhMgBr + CO2 → ? (after H3O⁺ workup)</p>
+          <p>PhMgBr acts as carbanion (Ph⁻) → attacks CO2 → Ph–COO⁻MgBr⁺ → H3O⁺ → PhCOOH (benzoic acid).</p>
+        </div>
+        <div class="solved-example">
+          <p><strong>Solved Example 3:</strong> Grignard reagent from 1-bromopentane + HCHO → product?</p>
+          <p>1-bromopentane + Mg/ether → n-PentylMgBr. + HCHO → n-PentylCH2OH (1-hexanol, primary alcohol).</p>
+        </div>
+      </div>
+
+      <h3>6.5 Diels-Alder Reaction</h3>
+      <div class="named-reaction-box">
+        <p><strong>Type:</strong> [4+2] Cycloaddition (pericyclic, concerted, thermally allowed by Woodward–Hoffmann)</p>
+        <p><strong>Components:</strong> Diene (4π system) + dienophile (2π system) → cyclohexene</p>
+        <pre class="code-block">
+  CH2=CH–CH=CH2  +  CH2=CH2  →  Cyclohexene
+  (1,3-butadiene)   (ethylene)
+        </pre>
+        <ul>
+          <li><strong>Diene requirement:</strong> Must be in s-cis conformation (both double bonds on same side); s-trans diene is unreactive</li>
+          <li><strong>Dienophile:</strong> Electron-poor dienophiles react fastest: maleic anhydride, acrylonitrile, TCNE, acrolein, maleic acid; simple alkenes react slowly</li>
+          <li><strong>Stereospecificity:</strong> Syn addition; substituents on dienophile retain their relative orientation in product (cis dienophile → cis product)</li>
+          <li><strong>Endo Rule:</strong> In bicyclic products, the endo product is kinetically preferred (secondary orbital interactions stabilize TS); exo is thermodynamic product</li>
+          <li><strong>Retro Diels-Alder:</strong> Reverse reaction at high temperatures; used in synthesis</li>
+        </ul>
+        <div class="solved-example">
+          <p><strong>Solved Example:</strong> Cyclopentadiene + maleic anhydride → ?</p>
+          <p>Cyclopentadiene is locked in s-cis. Maleic anhydride is excellent dienophile (two electron-withdrawing groups). Endo product = bicyclo[2.2.1]hept-5-ene-2,3-dicarboxylic anhydride (norbornene anhydride, endo isomer major).</p>
+        </div>
+      </div>
+
+      <h3>6.6 Wolff-Kishner Reduction</h3>
+      <div class="named-reaction-box">
+        <pre class="code-block">
+  R2C=O  ──NH2NH2, KOH, Ethylene glycol, Δ──→  R2CH2
+  (carbonyl)                                     (methylene)
+        </pre>
+        <ul>
+          <li><strong>Conditions:</strong> Basic (KOH or NaOH), ethylene glycol solvent, high temperature</li>
+          <li><strong>Mechanism:</strong> Carbonyl → hydrazone (C=NNH2) → base removes H from N → diazene intermediate → N2 lost → carbanion → protonated → CH2</li>
+          <li><strong>Use:</strong> Removes ketone/aldehyde to give methylene group; good when substrate is acid-sensitive</li>
+          <li><strong>Huang Minlon modification:</strong> Uses excess KOH in ethylene glycol without isolation of hydrazone</li>
+        </ul>
+      </div>
+
+      <h3>6.7 Clemmensen Reduction</h3>
+      <div class="named-reaction-box">
+        <pre class="code-block">
+  R2C=O  ──Zn(Hg), conc. HCl, Δ──→  R2CH2
+        </pre>
+        <ul>
+          <li><strong>Conditions:</strong> Acidic (conc. HCl), zinc amalgam catalyst</li>
+          <li><strong>Complementary to Wolff-Kishner:</strong> Use Clemmensen for base-sensitive substrates; use Wolff-Kishner for acid-sensitive substrates</li>
+          <li><strong>Application:</strong> Synthesis of alkylbenzenes via Friedel-Crafts acylation + Clemmensen reduction (avoids rearrangement of Friedel-Crafts alkylation)</li>
+        </ul>
+        <div class="solved-example">
+          <p><strong>Application:</strong> Synthesize n-propylbenzene from benzene.</p>
+          <p>Benzene + propanoyl chloride + AlCl3 → propiophenone (C6H5COCH2CH3). Then Clemmensen reduction → n-propylbenzene (C6H5CH2CH2CH3).</p>
+        </div>
+      </div>
+
+      <h3>6.8 Baeyer-Villiger Oxidation</h3>
+      <div class="named-reaction-box">
+        <pre class="code-block">
+  Ketone + mCPBA (or peracid)  →  Ester  (or Lactone from cyclic ketone)
+  R-CO-R'  →  R-CO-O-R'  or  R-O-CO-R'  (depends on migratory aptitude)
+        </pre>
+        <ul>
+          <li><strong>Reagents:</strong> mCPBA, peracetic acid (CH3CO3H), perbenzoic acid, H2O2/H2SO4</li>
+          <li><strong>Migratory Aptitude:</strong> 3° alkyl &gt; cyclohexyl &gt; 2° alkyl &gt; Ph &gt; 1° alkyl &gt; CH3 &gt; H</li>
+          <li><strong>Rule:</strong> The group with higher migratory aptitude migrates preferentially → ends up on oxygen side of ester (becomes the alkoxy group)</li>
+          <li><strong>Cyclic ketones → Lactones:</strong> Cyclohexanone → ε-caprolactone (7-membered ring); cyclopentanone → δ-valerolactone</li>
+          <li><strong>Retention of configuration:</strong> Migrating group retains its stereochemistry</li>
+        </ul>
+      </div>
+
+      <h3>6.9 Beckmann Rearrangement</h3>
+      <div class="named-reaction-box">
+        <pre class="code-block">
+  Ketoxime (R2C=NOH)  ──H⁺ or PCl5──→  Amide (R-CO-NHR')
+  Example: Cyclohexanone oxime  →  ε-Caprolactam  (Nylon-6 precursor!)
+        </pre>
+        <ul>
+          <li><strong>Conditions:</strong> Acid catalyst (H2SO4, PCl5, BF3)</li>
+          <li><strong>Mechanism:</strong> OH protonated → OH leaves; group anti to OH migrates → nitrilium ion → H2O attacks → amide</li>
+          <li><strong>Stereochemistry:</strong> The group anti (trans) to the –OH migrates (anti periplanar migration)</li>
+          <li><strong>Industrial importance:</strong> Cyclohexanone → cyclohexanone oxime → Beckmann → ε-caprolactam → Nylon-6 by ring-opening polymerization</li>
+        </ul>
+      </div>
+
+      <h3>6.10 Hell-Volhard-Zelinsky (HVZ) Reaction</h3>
+      <div class="named-reaction-box">
+        <pre class="code-block">
+  RCOOH  ──Br2, PBr3 (cat.)──→  RCH(Br)COOH
+  (carboxylic acid)              (α-bromo acid)
+        </pre>
+        <ul>
+          <li>α-bromination of carboxylic acids using Br2 + red phosphorus (or PBr3 as catalyst)</li>
+          <li>Only works for carboxylic acids (not esters or amides)</li>
+          <li>Useful for preparing α-amino acids via Gabriel synthesis after bromination</li>
+        </ul>
+      </div>
+
+      <h3>6.11 Wittig Reaction</h3>
+      <div class="named-reaction-box">
+        <pre class="code-block">
+  Ph3P=CHR  +  R'2C=O  →  R'2C=CHR  +  Ph3P=O
+  (phosphonium ylide)  (carbonyl)   (alkene)  (triphenylphosphine oxide)
+        </pre>
+        <ul>
+          <li><strong>Conditions:</strong> Room temperature, mild</li>
+          <li><strong>Advantage over Grignard:</strong> Does not react with OH, COOH, ester, halide groups; very selective for C=O</li>
+          <li><strong>Stereochemistry:</strong> Non-stabilized ylides → cis (Z) alkenes; stabilized ylides (with Ph or carbonyl) → trans (E) alkenes</li>
+          <li><strong>Ylide preparation:</strong> Ph3P + RX → Ph3P⁺–CH2R X⁻ (phosphonium salt) → strong base (n-BuLi) → Ph3P=CHR</li>
+        </ul>
+        <div class="solved-example">
+          <p><strong>Solved Example:</strong> Synthesize (Z)-2-butene using Wittig reaction.</p>
+          <p>Use CH3CHO + Ph3P=CHCH3 (non-stabilized ylide) → Z-selective → (Z)-CH3CH=CHCH3 + Ph3P=O.</p>
+        </div>
+      </div>
+
+      <h3>6.12 Reformatsky Reaction</h3>
+      <div class="named-reaction-box">
+        <pre class="code-block">
+  α-Bromoester + Zn  →  Reformatsky reagent (zinc enolate)
+  Zinc enolate + RCHO  →  (after hydrolysis)  β-Hydroxy ester
+        </pre>
+        <ul>
+          <li>Similar to Grignard but milder; zinc carbanion is less reactive than Grignard</li>
+          <li>Does not react with ester groups in molecule → useful for substrates with esters</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 7: Carbonyl Reactions Summary -->
+    <section id="carbonyl-reactions" class="section">
+      <h2>7. Carbonyl Reactions Summary Table</h2>
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr><th>Reagent</th><th>Aldehyde Product</th><th>Ketone Product</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>HCN (cyanide)</td><td>Cyanohydrin (α-hydroxy nitrile)</td><td>Cyanohydrin</td><td>Addition of HCN; base catalysis</td></tr>
+            <tr><td>NaHSO3 (sodium bisulfite)</td><td>Bisulfite adduct (crystalline)</td><td>Only methyl/cyclic ketones react</td><td>Used to separate/purify aldehydes</td></tr>
+            <tr><td>RMgX (Grignard)</td><td>Secondary alcohol (2°)</td><td>Tertiary alcohol (3°)</td><td>With HCHO → primary; with CO2 → acid</td></tr>
+            <tr><td>LiAlH4 (LAH)</td><td>Primary alcohol</td><td>Secondary alcohol</td><td>Strong reducing agent; reduces esters, acids too</td></tr>
+            <tr><td>NaBH4</td><td>Primary alcohol</td><td>Secondary alcohol</td><td>Milder; does NOT reduce esters, acids, C=C</td></tr>
+            <tr><td>H2/Ni (catalytic)</td><td>Primary alcohol</td><td>Secondary alcohol</td><td>Heterogeneous hydrogenation</td></tr>
+            <tr><td>RNH2 (1° amine)</td><td>Imine (Schiff base, R-CH=NR)</td><td>Imine</td><td>-H2O; reversible; acid catalysis</td></tr>
+            <tr><td>R2NH (2° amine)</td><td>Enamine</td><td>Enamine</td><td>Ketones via enamine synthesis</td></tr>
+            <tr><td>NH2OH (hydroxylamine)</td><td>Oxime (R-CH=NOH)</td><td>Oxime</td><td>Beckmann rearrangement substrate</td></tr>
+            <tr><td>N2H4 (hydrazine)</td><td>Hydrazone (R-CH=NNH2)</td><td>Hydrazone</td><td>Wolff-Kishner precursor</td></tr>
+            <tr><td>PhNHNH2 (phenylhydrazine)</td><td>Phenylhydrazone</td><td>Phenylhydrazone</td><td>Characterization, osazone with sugars</td></tr>
+            <tr><td>Tollens' (Ag(NH3)2⁺)</td><td>Silver mirror (carboxylate)</td><td>No reaction</td><td>Distinguishes aldehyde from ketone</td></tr>
+            <tr><td>Fehling's (Cu2+)</td><td>Cu2O precipitate (brick red)</td><td>No reaction (aromatic also no rxn)</td><td>Aliphatic aldehydes only</td></tr>
+            <tr><td>Alcohol + H⁺</td><td>Acetal (R-CH(OR)2)</td><td>Ketal (R2C(OR)2)</td><td>Reversible; protects carbonyl</td></tr>
+            <tr><td>Zn(Hg)/HCl (Clemmensen)</td><td>CH3– (deoxygenated)</td><td>–CH2– (deoxygenated)</td><td>Removes C=O; acid conditions</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 8: Oxidation-Reduction -->
+    <section id="oxidation-reduction" class="section">
+      <h2>8. Oxidation State Changes – Summary</h2>
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr><th>Starting Material</th><th>Product</th><th>Reagent(s)</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Primary alcohol (RCH2OH)</td><td>Aldehyde (RCHO)</td><td>PCC (pyridinium chlorochromate), Swern oxidation, MnO2</td><td>Controlled; stops at aldehyde</td></tr>
+            <tr><td>Primary alcohol (RCH2OH)</td><td>Carboxylic acid (RCOOH)</td><td>KMnO4/H⁺, CrO3/H2SO4, K2Cr2O7/H2SO4</td><td>Strong oxidant; goes all the way to acid</td></tr>
+            <tr><td>Secondary alcohol (R2CHOH)</td><td>Ketone (R2C=O)</td><td>PCC, Swern, KMnO4, CrO3, Jones (CrO3/H2SO4/acetone)</td><td>Cannot oxidize further under normal conditions</td></tr>
+            <tr><td>Tertiary alcohol (R3COH)</td><td>No reaction</td><td>—</td><td>No α-H adjacent to OH from carbon bearing OH</td></tr>
+            <tr><td>Aldehyde (RCHO)</td><td>Carboxylic acid (RCOOH)</td><td>Tollens', Fehling's, KMnO4, Ag2O, CrO3</td><td>Even mild oxidants oxidize aldehydes</td></tr>
+            <tr><td>Alkene (C=C)</td><td>Diol (cis)</td><td>OsO4 (catalytic), cold dilute KMnO4 (Baeyer's test)</td><td>Syn dihydroxylation; KMnO4 → purple to brown/colorless</td></tr>
+            <tr><td>Alkene (C=C)</td><td>Diol (trans)</td><td>mCPBA then H3O⁺ (epoxidation then ring opening)</td><td>Anti dihydroxylation via epoxide</td></tr>
+            <tr><td>Alkene (C=C)</td><td>Carboxylic acids or ketones</td><td>Ozonolysis (O3) then oxidative workup (H2O2)</td><td>Cleaves C=C completely</td></tr>
+            <tr><td>Alkyl benzene (ArCH3)</td><td>Benzoic acid (ArCOOH)</td><td>KMnO4/H⁺/heat</td><td>Any alkyl substituent → COOH (requires benzylic H)</td></tr>
+            <tr><td>Aldehyde or ketone (C=O)</td><td>Alkane (–CH2–)</td><td>Clemmensen (Zn(Hg)/HCl) or Wolff-Kishner (N2H4/KOH)</td><td>Deoxygenation; removes oxygen from carbonyl</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Practice Problems -->
+    <section id="practice-problems" class="section">
+      <h2>Practice Problems (15 Questions)</h2>
+
+      <div class="practice-problem">
+        <p><strong>Q1.</strong> Which of the following substrates reacts fastest by SN2 with NaCN in DMSO?<br>
+        (A) (CH3)3CCl &nbsp; (B) (CH3)2CHCl &nbsp; (C) CH3CH2Cl &nbsp; (D) CH3Cl</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: (D) CH3Cl</strong> – SN2 favors least hindered substrate. Methyl chloride is least hindered; tertiary is most hindered and does not react via SN2 at all.</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q2.</strong> (R)-2-bromobutane reacts with NaOH in DMSO. What is the stereochemistry of the product?</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: (S)-butan-2-ol</strong> – SN2 (2° substrate, good nucleophile, polar aprotic solvent) → 100% inversion → configuration changes from R to S.</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q3.</strong> An aldehyde X reacts with conc. NaOH to give benzyl alcohol and sodium benzoate. Identify X.</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: Benzaldehyde (C6H5CHO)</strong> – Cannizzaro reaction; benzaldehyde has no α-H. Under conc. NaOH it disproportionates: one PhCHO → PhCH2OH (reduced), one PhCHO → PhCOO⁻Na⁺ (oxidized).</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q4.</strong> What is the major product of 2-methylbut-2-ene + HBr (no peroxide)?</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: 2-bromo-2-methylbutane</strong> – Markovnikov addition. H adds to C3 (has 1H), Br adds to C2 (no H, more substituted, forms 3° carbocation).</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q5.</strong> Give the product of: Cyclohexanone + NH2OH → (product A) + H2SO4 → ?</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: ε-Caprolactam</strong> – Cyclohexanone + NH2OH → cyclohexanone oxime (A). Then Beckmann rearrangement with H2SO4 → ε-caprolactam (Nylon-6 precursor). The C–C bond anti to OH migrates to N.</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q6.</strong> Which reagent converts PhCOCH3 (acetophenone) to PhCH2CH3 (ethylbenzene)?</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: Zn(Hg)/conc. HCl (Clemmensen reduction)</strong> or alternatively N2H4/KOH (Wolff-Kishner). Both remove the carbonyl oxygen to give a methylene group.</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q7.</strong> Identify the product: 1,3-butadiene + acrolein (CH2=CHCHO) [Diels-Alder].</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: Cyclohex-3-enecarbaldehyde (3-cyclohexene-1-carbaldehyde)</strong> – Diels-Alder [4+2] cycloaddition; acrolein is an electron-poor dienophile; CHO group ends up in the ring as substituent on the cyclohexene ring.</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q8.</strong> What is the product of ozonolysis (reductive workup, Zn/H2O) of (Z)-4-octene?</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: 2 × butanal (CH3CH2CH2CHO)</strong> – Internal alkene, symmetric; both sides give CH3CH2CH2CHO. Reductive workup gives aldehyde, not acid.</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q9.</strong> CH3CH2MgBr + CO2 → [H3O⁺] → ?</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: Propanoic acid (CH3CH2COOH)</strong> – Grignard adds to CO2 → RCOOMgBr → acidic workup → RCOOH. Ethyl Grignard + CO2 → propanoic acid.</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q10.</strong> Which direction does –NO2 group direct in EAS, and why?</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: Meta direction</strong> – –NO2 is a strong electron-withdrawing group via –M effect (resonance withdrawal). Ortho and para positions are made electron-poor; meta position retains relatively more electron density → electrophile attacks meta.</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q11.</strong> In E2 elimination of 2-bromobutane with KOH/EtOH, what is the major alkene product?</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: but-2-ene (major, Zaitsev)</strong> – E2 with non-bulky base follows Zaitsev's rule. More substituted alkene (but-2-ene) is thermodynamically more stable than but-1-ene. trans-But-2-ene is preferred over cis-but-2-ene.</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q12.</strong> What product is formed when ethyl acetate undergoes Claisen condensation with NaOEt?</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: Ethyl acetoacetate (CH3COCH2COOEt)</strong> – Two molecules of ethyl acetate condense; one loses α-H as enolate attacks the ester carbonyl of the other → β-ketoester (ethyl 3-oxobutanoate) + EtOH.</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q13.</strong> Cyclopentanone + mCPBA → product? (Baeyer-Villiger)</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: δ-Valerolactone (oxacyclohexan-2-one, 6-membered lactone)</strong> – Baeyer-Villiger inserts an oxygen adjacent to carbonyl. Cyclic ketone → ring expansion → one carbon larger lactone. Cyclopentanone → 6-membered lactone.</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q14.</strong> What does Ph3P=CHCOOC2H5 (stabilized ylide) + benzaldehyde (PhCHO) give?</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: trans (E)-ethyl cinnamate (PhCH=CHCOOC2H5)</strong> – Wittig with stabilized ylide (ester group) → trans alkene (E-selective). Product is ethyl (E)-3-phenylacrylate (trans-ethyl cinnamate).</p></details>
+      </div>
+
+      <div class="practice-problem">
+        <p><strong>Q15.</strong> A compound X reacts with Tollens' but not Fehling's reagent. What type of compound is X?</p>
+        <details><summary>Show Answer</summary>
+        <p><strong>Answer: Aromatic aldehyde (e.g., benzaldehyde)</strong> – Tollens' (Ag(NH3)2⁺) oxidizes both aliphatic and aromatic aldehydes. Fehling's (Cu2+ in alkaline tartrate) only oxidizes aliphatic (alpha-hydroxy) aldehydes; aromatic aldehydes do not reduce Fehling's reagent.</p></details>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <h2>Frequently Asked Questions (FAQ)</h2>
+
+      <div class="faq-item">
+        <h3>Q: How do I decide between SN1, SN2, E1, E2 quickly in an exam?</h3>
+        <p>Use the "TESS" checklist: <strong>T</strong>ertiary → SN1/E1 (weak Nu) or E2 (strong base, high temp); <strong>E</strong>xcess strong base + high temp → elimination; <strong>S</strong>econdary → depends on conditions; <strong>S</strong>trong Nu + polar aprotic → SN2. Methyl/primary always go SN2 unless very bulky base forces E2. The key shortcuts: no SN2 at 3°; no E1 or SN1 at methyl/1°; high temp always favors elimination.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: Why does NaBH4 not reduce esters and carboxylic acids but LiAlH4 does?</h3>
+        <p>LiAlH4 (hydride source with Al–H) is much more powerful: the hydride is more nucleophilic and the reaction is irreversible. NaBH4 is a milder hydride donor: the hydride attacks only highly electrophilic carbonyls (aldehydes and ketones). Esters and carboxylic acids are less electrophilic (resonance donation from O reduces C=O electrophilicity) and require the stronger LAH to reduce.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: What is the difference between Aldol condensation and Claisen condensation?</h3>
+        <p>Both involve enolate formation and nucleophilic addition to a carbonyl. <strong>Aldol condensation</strong> involves two carbonyl compounds (both carbonyl; at least one must have α-H); the product is a β-hydroxy carbonyl compound (aldol), which can dehydrate to an α,β-unsaturated carbonyl. <strong>Claisen condensation</strong> involves two esters (or ester + ketone); the product is a β-ketoester (or 1,3-diketone). The driving force in Claisen is the deprotonation of the acidic α-H of the β-ketoester product.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: Why is the Diels-Alder reaction stereospecific?</h3>
+        <p>The Diels-Alder is a concerted pericyclic reaction (all bonds form and break simultaneously in one step via a cyclic transition state). Because it is concerted, there is no carbocation or radical intermediate that could rotate. The relative stereochemistry of dienophile substituents is therefore <em>preserved</em> in the product (cis dienophile → cis ring substituents; trans dienophile → trans ring substituents). The endo product is kinetically favored due to secondary orbital interactions in the TS.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: When should I use Wolff-Kishner vs Clemmensen reduction?</h3>
+        <p>Both convert C=O to CH2. <strong>Clemmensen</strong> uses acidic conditions (Zn(Hg)/conc. HCl) – use this when the substrate is base-sensitive (e.g., contains acetal, β-hydroxy carbonyl, or other groups unstable to base). <strong>Wolff-Kishner</strong> uses basic conditions (N2H4, KOH, Δ) – use this when the substrate is acid-sensitive (e.g., acid-labile double bonds, acetals). For JEE/NEET, remember: Clemmensen = acid; Wolff-Kishner = base. Both remove oxygen from carbonyl. After Friedel-Crafts acylation, use Clemmensen to get alkylbenzene without rearrangement.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>StudyHub</h3>
+        <p>Comprehensive study material for JEE, NEET and competitive exams.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Chemistry</h3>
+        <ul>
+          <li><a href="organic-chemistry-reactions.html">Organic Reactions</a></li>
+          <li><a href="periodic-table-trends.html">Periodic Table Trends</a></li>
+          <li><a href="../chemistry.html">All Chemistry Topics</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../math.html">Mathematics</a></li>
+          <li><a href="../physics.html">Physics</a></li>
+          <li><a href="../biology.html">Biology</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2025 StudyHub. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

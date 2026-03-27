@@ -1,91 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Home -->
-  <url>
-    <loc>https://criel2019.github.io/student-hub/index.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://criel2019.github.io/student-hub/</loc><lastmod>2026-03-27</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
 
-  <!-- Core subjects (priority 0.9) -->
-  <url>
-    <loc>https://criel2019.github.io/student-hub/pages/math.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- Category hubs -->
+  <url><loc>https://criel2019.github.io/student-hub/pages/math.html</loc><lastmod>2026-03-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/physics.html</loc><lastmod>2026-03-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/chemistry.html</loc><lastmod>2026-03-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/biology.html</loc><lastmod>2026-03-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/english.html</loc><lastmod>2026-03-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/programming.html</loc><lastmod>2026-03-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/competitive-exams.html</loc><lastmod>2026-03-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/career.html</loc><lastmod>2026-03-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/gk.html</loc><lastmod>2026-03-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
-  <url>
-    <loc>https://criel2019.github.io/student-hub/pages/physics.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- Mathematics individual pages -->
+  <url><loc>https://criel2019.github.io/student-hub/pages/math/integration-formulas.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/math/trigonometry-formulas.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/math/quadratic-equations.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/math/coordinate-geometry.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/math/probability-statistics.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
-  <url>
-    <loc>https://criel2019.github.io/student-hub/pages/chemistry.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- Physics individual pages -->
+  <url><loc>https://criel2019.github.io/student-hub/pages/physics/mechanics-kinematics.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/physics/electrostatics-formulas.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/physics/waves-optics.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/physics/modern-physics-notes.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
-  <url>
-    <loc>https://criel2019.github.io/student-hub/pages/biology.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- Chemistry individual pages -->
+  <url><loc>https://criel2019.github.io/student-hub/pages/chemistry/organic-chemistry-reactions.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/chemistry/periodic-table-trends.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
-  <url>
-    <loc>https://criel2019.github.io/student-hub/pages/english.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- Biology individual pages -->
+  <url><loc>https://criel2019.github.io/student-hub/pages/biology/genetics-notes.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/biology/human-physiology-notes.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
-  <url>
-    <loc>https://criel2019.github.io/student-hub/pages/programming.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- English individual pages -->
+  <url><loc>https://criel2019.github.io/student-hub/pages/english/ielts-writing-task2.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/english/english-grammar-tenses.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/english/ielts-vocabulary-list.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/english/cet4-cet6-vocabulary.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
-  <url>
-    <loc>https://criel2019.github.io/student-hub/pages/competitive-exams.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- Programming individual pages -->
+  <url><loc>https://criel2019.github.io/student-hub/pages/programming/python-tutorial-beginners.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/programming/data-structures-algorithms.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/programming/sql-tutorial.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
-  <!-- Secondary pages (priority 0.8) -->
-  <url>
-    <loc>https://criel2019.github.io/student-hub/pages/career.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- Exam preparation guides -->
+  <url><loc>https://criel2019.github.io/student-hub/pages/exams/jee-preparation-guide.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://criel2019.github.io/student-hub/pages/exams/neet-preparation-guide.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
-  <url>
-    <loc>https://criel2019.github.io/student-hub/pages/gk.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://criel2019.github.io/student-hub/pages/hindi.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://criel2019.github.io/student-hub/pages/current-affairs.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- GK individual pages -->
+  <url><loc>https://criel2019.github.io/student-hub/pages/gk/world-capitals-currencies.html</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>

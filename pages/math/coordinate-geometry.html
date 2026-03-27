@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coordinate Geometry Formulas – Lines, Circles, Parabola, Ellipse | JEE Class 11 12 | StudyHub</title>
+  <meta name="description" content="Complete coordinate geometry formulas and notes for JEE Main, Advanced and Class 11-12. Straight lines, circles, conic sections with derivations and 20 solved examples." />
+  <meta name="keywords" content="coordinate geometry formulas, straight lines JEE, circle equation, parabola, ellipse, hyperbola, conic sections class 11 12, JEE coordinate geometry" />
+  <link rel="canonical" href="https://studyhub.example.com/pages/math/coordinate-geometry.html" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .page-hero{background:linear-gradient(135deg,#1e3a5f 0%,#2a5298 100%);color:#fff;padding:60px 24px 40px;text-align:center}
+    .page-hero h1{font-size:2.2rem;margin-bottom:12px;line-height:1.3}
+    .page-hero p{font-size:1.05rem;opacity:.88;max-width:720px;margin:0 auto}
+    .content-wrap{max-width:900px;margin:0 auto;padding:40px 20px 80px}
+    .toc{background:#eaf0fb;border:1px solid #c3d0e8;border-radius:10px;padding:22px 28px;margin-bottom:40px}
+    .toc h2{font-size:1.1rem;color:#1e3a5f;margin-bottom:12px}
+    .toc ol{margin-left:20px;line-height:2}
+    .toc a{color:#2a5298;text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .section{margin-bottom:56px}
+    .section h2{font-size:1.6rem;color:#1e3a5f;border-bottom:3px solid #2a5298;padding-bottom:8px;margin-bottom:24px}
+    .section h3{font-size:1.2rem;color:#2a5298;margin:28px 0 12px}
+    .section h4{font-size:1.05rem;color:#1a1a2e;margin:18px 0 8px}
+    .formula-table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:.92rem}
+    .formula-table th{background:#1e3a5f;color:#fff;padding:10px 14px;text-align:left}
+    .formula-table td{padding:9px 14px;border-bottom:1px solid #dce1ec;vertical-align:top}
+    .formula-table tr:nth-child(even) td{background:#f4f6f9}
+    .formula-cell{font-family:'Courier New',monospace;font-size:.9rem;font-weight:600;color:#1e3a5f}
+    .example-box{background:#fff;border-left:4px solid #2a5298;border-radius:0 8px 8px 0;padding:18px 22px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+    .example-box .label{font-size:.78rem;font-weight:700;text-transform:uppercase;color:#2a5298;letter-spacing:.08em;margin-bottom:6px}
+    .example-box .problem{font-weight:600;color:#1a1a2e;margin-bottom:10px;font-size:1.01rem}
+    .example-box .solution{color:#333;line-height:1.8}
+    .example-box .solution .step{display:block;margin:4px 0;padding-left:12px}
+    .highlight{background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:12px 16px;margin:14px 0;font-size:.95rem}
+    .practice-box{background:#f0f8f0;border:1px solid #27ae60;border-radius:8px;padding:18px 22px;margin:20px 0}
+    .practice-box h4{color:#1e8449;margin-bottom:12px}
+    .practice-box ol{margin-left:20px;line-height:2.1}
+    .practice-box .answers{margin-top:12px;font-size:.87rem;color:#555;border-top:1px solid #c3e6cb;padding-top:10px}
+    .rule-box{background:#fef9e7;border:1px solid #f39c12;border-radius:8px;padding:16px 20px;margin:16px 0}
+    .math{font-family:'Courier New',monospace;font-size:.97rem;background:#f0f0f0;padding:1px 5px;border-radius:3px}
+    .big-formula{display:block;text-align:center;font-family:'Courier New',monospace;font-size:1.05rem;background:#1e3a5f;color:#fff;padding:14px 20px;border-radius:8px;margin:16px 0;letter-spacing:.03em}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+    @media(max-width:640px){.two-col{grid-template-columns:1fr}}
+    .formula-card{background:#eaf0fb;border:1px solid #c3d0e8;border-radius:8px;padding:12px 16px;font-family:'Courier New',monospace;font-size:.88rem;color:#1e3a5f;line-height:1.7}
+    .conic-header{background:#2a5298;color:#fff;padding:12px 18px;border-radius:8px 8px 0 0;font-weight:700;font-size:1.05rem;margin-top:24px;margin-bottom:0}
+    .conic-body{background:#f4f8ff;border:1px solid #c3d0e8;border-radius:0 0 8px 8px;padding:16px 18px;margin-bottom:20px}
+    .conic-body table{width:100%;border-collapse:collapse;font-size:.9rem}
+    .conic-body td{padding:7px 12px;border-bottom:1px solid #dce1ec}
+    .conic-body tr:last-child td{border-bottom:none}
+    .conic-body td:first-child{font-weight:600;color:#1e3a5f;width:40%}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">📚 StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>Coordinate Geometry Formulas</h1>
+  <p>Complete reference for JEE Main, JEE Advanced and Class 11–12 — straight lines, circles, parabola, ellipse, and hyperbola with all derivations, properties, and 36 solved examples.</p>
+</div>
+
+<div class="content-wrap">
+
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#basics">Distance, Section, Midpoint &amp; Area Formulas</a></li>
+      <li><a href="#triangle-centers">Triangle Centers (Centroid, Incenter, Circumcenter)</a></li>
+      <li><a href="#straight-lines">Straight Lines — All Forms</a></li>
+      <li><a href="#circles">Circles</a></li>
+      <li><a href="#parabola">Parabola</a></li>
+      <li><a href="#ellipse">Ellipse</a></li>
+      <li><a href="#hyperbola">Hyperbola</a></li>
+      <li><a href="#practice">Practice Problems (25 Questions)</a></li>
+    </ol>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="basics">
+    <h2>1. Distance, Section, Midpoint &amp; Area Formulas</h2>
+
+    <table class="formula-table">
+      <thead><tr><th>Formula</th><th>Expression</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Distance between P₁(x₁,y₁) and P₂(x₂,y₂)</strong></td>
+          <td class="formula-cell">d = √[(x₂−x₁)² + (y₂−y₁)²]</td>
+          <td>Pythagoras in the plane</td>
+        </tr>
+        <tr>
+          <td><strong>Midpoint of P₁P₂</strong></td>
+          <td class="formula-cell">M = ((x₁+x₂)/2, (y₁+y₂)/2)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>Section formula (internal division)</strong> &mdash; ratio m:n</td>
+          <td class="formula-cell">P = ((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n))</td>
+          <td>Midpoint is m=n=1</td>
+        </tr>
+        <tr>
+          <td><strong>Section formula (external division)</strong> &mdash; ratio m:n</td>
+          <td class="formula-cell">P = ((mx₂−nx₁)/(m−n), (my₂−ny₁)/(m−n))</td>
+          <td>m ≠ n</td>
+        </tr>
+        <tr>
+          <td><strong>Area of triangle</strong> with vertices (x₁,y₁), (x₂,y₂), (x₃,y₃)</td>
+          <td class="formula-cell">A = (1/2)|x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)|</td>
+          <td>Absolute value ensures positivity</td>
+        </tr>
+        <tr>
+          <td><strong>Collinearity condition</strong></td>
+          <td class="formula-cell">x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂) = 0</td>
+          <td>Area = 0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <div class="label">Example 1</div>
+      <div class="problem">A(1,2), B(4,6). Find midpoint M, distance AB, and point P that divides AB in ratio 2:1.</div>
+      <div class="solution">
+        <span class="step">Midpoint: M = ((1+4)/2, (2+6)/2) = (2.5, 4)</span>
+        <span class="step">Distance: AB = √[(4−1)²+(6−2)²] = √[9+16] = √25 = 5</span>
+        <span class="step">P (2:1): = ((2·4+1·1)/(3), (2·6+1·2)/3) = (9/3, 14/3) = (3, 14/3)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="triangle-centers">
+    <h2>2. Triangle Centers</h2>
+    <table class="formula-table">
+      <thead><tr><th>Center</th><th>Formula</th><th>Property</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Centroid G</strong></td>
+          <td class="formula-cell">G = ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3)</td>
+          <td>Intersection of medians; divides each median 2:1 from vertex</td>
+        </tr>
+        <tr>
+          <td><strong>Circumcenter O</strong></td>
+          <td>Equidistant from all 3 vertices; solve OA² = OB² = OC²</td>
+          <td>Center of circumscribed circle</td>
+        </tr>
+        <tr>
+          <td><strong>Incenter I</strong></td>
+          <td class="formula-cell">I = ((ax₁+bx₂+cx₃)/(a+b+c), (ay₁+by₂+cy₃)/(a+b+c))</td>
+          <td>a, b, c are lengths of sides opposite to vertices A, B, C</td>
+        </tr>
+        <tr>
+          <td><strong>Orthocenter H</strong></td>
+          <td>Intersection of altitudes; solve altitude equations</td>
+          <td>In equilateral triangle: G = O = H = I</td>
+        </tr>
+        <tr>
+          <td><strong>Euler's Line</strong></td>
+          <td class="formula-cell">O, G, H are collinear; OG:GH = 1:2</td>
+          <td>Important JEE result</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="straight-lines">
+    <h2>3. Straight Lines</h2>
+
+    <h3>All Standard Forms</h3>
+    <table class="formula-table">
+      <thead><tr><th>Form</th><th>Equation</th><th>When to use</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Slope-intercept</strong></td><td class="formula-cell">y = mx + c</td><td>Slope m and y-intercept c known</td></tr>
+        <tr><td><strong>Point-slope</strong></td><td class="formula-cell">y − y₁ = m(x − x₁)</td><td>Slope m and one point (x₁,y₁) known</td></tr>
+        <tr><td><strong>Two-point</strong></td><td class="formula-cell">(y−y₁)/(y₂−y₁) = (x−x₁)/(x₂−x₁)</td><td>Two points known</td></tr>
+        <tr><td><strong>Intercept form</strong></td><td class="formula-cell">x/a + y/b = 1</td><td>x-intercept a, y-intercept b known; a,b ≠ 0</td></tr>
+        <tr><td><strong>Normal form</strong></td><td class="formula-cell">x cosα + y sinα = p</td><td>p = perpendicular distance from origin, α = angle of normal</td></tr>
+        <tr><td><strong>Parametric form</strong></td><td class="formula-cell">x = x₁ + r cosθ, y = y₁ + r sinθ</td><td>r = distance from (x₁,y₁) along direction θ</td></tr>
+        <tr><td><strong>General form</strong></td><td class="formula-cell">ax + by + c = 0</td><td>Slope = −a/b; most general</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Results for Straight Lines</h3>
+    <table class="formula-table">
+      <thead><tr><th>Property</th><th>Formula</th></tr></thead>
+      <tbody>
+        <tr><td>Slope of line ax+by+c=0</td><td class="formula-cell">m = −a/b</td></tr>
+        <tr><td>Angle between lines with slopes m₁, m₂</td><td class="formula-cell">tan θ = |(m₁−m₂)/(1+m₁m₂)|</td></tr>
+        <tr><td>Parallel lines condition</td><td class="formula-cell">m₁ = m₂ (slopes equal)</td></tr>
+        <tr><td>Perpendicular lines condition</td><td class="formula-cell">m₁ · m₂ = −1</td></tr>
+        <tr><td>Distance from point (x₀,y₀) to line ax+by+c=0</td><td class="formula-cell">d = |ax₀+by₀+c| / √(a²+b²)</td></tr>
+        <tr><td>Distance between parallel lines ax+by+c₁=0 and ax+by+c₂=0</td><td class="formula-cell">d = |c₁−c₂| / √(a²+b²)</td></tr>
+        <tr><td>Foot of perpendicular from (x₁,y₁) to ax+by+c=0</td><td class="formula-cell">(x₁−a·λ, y₁−b·λ) where λ = (ax₁+by₁+c)/(a²+b²)</td></tr>
+        <tr><td>Image (reflection) of (x₁,y₁) in ax+by+c=0</td><td class="formula-cell">(x₁−2aλ, y₁−2bλ) where λ = (ax₁+by₁+c)/(a²+b²)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Family of Lines</h3>
+    <div class="rule-box">
+      Any line through the intersection of L₁: a₁x+b₁y+c₁=0 and L₂: a₂x+b₂y+c₂=0 is:<br>
+      <strong>L₁ + λL₂ = 0</strong>, i.e., (a₁x+b₁y+c₁) + λ(a₂x+b₂y+c₂) = 0 for some λ.<br>
+      Choose λ to satisfy any additional condition on the line.
+    </div>
+
+    <h3>Pair of Straight Lines through Origin</h3>
+    <p>The equation ax² + 2hxy + by² = 0 represents a pair of lines through the origin. If slopes m₁, m₂:</p>
+    <div class="two-col">
+      <div class="formula-card">m₁ + m₂ = −2h/b<br>m₁ · m₂ = a/b</div>
+      <div class="formula-card">Angle between them:<br>tan θ = 2√(h²−ab)/(a+b)</div>
+    </div>
+    <p>The pair of angle bisectors of ax²+2hxy+by²=0 is: (x²−y²)/(a−b) = xy/h</p>
+
+    <div class="example-box">
+      <div class="label">Example 1 — Distance and Perpendicular</div>
+      <div class="problem">Find the distance from (3, −4) to the line 3x − 4y + 10 = 0 and the foot of the perpendicular.</div>
+      <div class="solution">
+        <span class="step">Distance = |3(3) − 4(−4) + 10| / √(9+16) = |9+16+10|/5 = 35/5 = <strong>7 units</strong></span>
+        <span class="step">λ = (ax₁+by₁+c)/(a²+b²) = (9+16+10)/25 = 35/25 = 7/5</span>
+        <span class="step">Foot = (3 − 3·(7/5), −4 − (−4)·(7/5)) = (3−21/5, −4+28/5) = (−6/5, 8/5)</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Family of Lines</div>
+      <div class="problem">Find the line through the intersection of 2x+y−3=0 and x−3y+4=0 that passes through (1,1).</div>
+      <div class="solution">
+        <span class="step">Family: (2x+y−3) + λ(x−3y+4) = 0</span>
+        <span class="step">Substitute (1,1): (2+1−3) + λ(1−3+4) = 0 → 0 + 2λ = 0 → λ = 0</span>
+        <span class="step">Answer: 2x + y − 3 = 0 (the first line itself passes through (1,1))</span>
+        <span class="step">Verify: 2(1)+1−3 = 0 ✓</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3 — Image in a line</div>
+      <div class="problem">Find the image of point (1, 2) in the line x − y + 1 = 0.</div>
+      <div class="solution">
+        <span class="step">a=1, b=−1, c=1, (x₁,y₁)=(1,2)</span>
+        <span class="step">λ = (1·1 + (−1)·2 + 1)/(1+1) = (1−2+1)/2 = 0</span>
+        <span class="step">Image = (1−2(1)(0), 2−2(−1)(0)) = (1, 2) — the point is ON the line!</span>
+        <span class="step">Check: 1−2+1 = 0 ✓. So the image of a point on the line is itself.</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 4 — Angle bisectors</div>
+      <div class="problem">Find the equations of the bisectors of angles between 3x−4y+7=0 and 12x+5y−2=0.</div>
+      <div class="solution">
+        <span class="step">Angle bisectors: (3x−4y+7)/√(9+16) = ±(12x+5y−2)/√(144+25)</span>
+        <span class="step">(3x−4y+7)/5 = ±(12x+5y−2)/13</span>
+        <span class="step">+ve: 13(3x−4y+7) = 5(12x+5y−2) → 39x−52y+91 = 60x+25y−10 → 21x+77y = 101 → (simplify)</span>
+        <span class="step">−ve: 13(3x−4y+7) = −5(12x+5y−2) → 39x−52y+91 = −60x−25y+10 → 99x−27y+81=0 → 11x−3y+9=0</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Examples 5–10 (condensed)</div>
+      <div class="problem">Area of triangle formed by lines x+y=1, 2x−y=4, x−2y+1=0.</div>
+      <div class="solution">
+        <span class="step">Find the three intersection points:</span>
+        <span class="step">L1∩L2: x+y=1 and 2x−y=4 → 3x=5 → x=5/3, y=−2/3 → P₁=(5/3,−2/3)</span>
+        <span class="step">L2∩L3: 2x−y=4 and x−2y=−1 → from 1st: y=2x−4; sub: x−2(2x−4)=−1 → x=3, y=2 → P₂=(3,2)</span>
+        <span class="step">L1∩L3: x+y=1 and x−2y=−1 → 3y=2 → y=2/3, x=1/3 → P₃=(1/3,2/3)</span>
+        <span class="step">Area = (1/2)|5/3(2−2/3)+3(2/3+2/3)+1/3(−2/3−2)|</span>
+        <span class="step">= (1/2)|5/3·4/3 + 3·4/3 + 1/3·(−8/3)| = (1/2)|20/9 + 4 − 8/9| = (1/2)|12/9+4| = (1/2)|16/3| = 8/3</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="circles">
+    <h2>4. Circles</h2>
+
+    <div class="conic-header">Standard Equations of a Circle</div>
+    <div class="conic-body">
+      <table>
+        <tr><td>Centre (0,0), radius r</td><td class="formula-cell">x² + y² = r²</td></tr>
+        <tr><td>Centre (h,k), radius r</td><td class="formula-cell">(x−h)² + (y−k)² = r²</td></tr>
+        <tr><td>General equation</td><td class="formula-cell">x² + y² + 2gx + 2fy + c = 0</td></tr>
+        <tr><td>Centre of general circle</td><td class="formula-cell">(−g, −f)</td></tr>
+        <tr><td>Radius of general circle</td><td class="formula-cell">r = √(g²+f²−c) &nbsp; [real if g²+f²−c &gt; 0]</td></tr>
+        <tr><td>Diametric form (endpoints A(x₁,y₁), B(x₂,y₂))</td><td class="formula-cell">(x−x₁)(x−x₂)+(y−y₁)(y−y₂)=0</td></tr>
+      </table>
+    </div>
+
+    <h3>Lines and Circles</h3>
+    <table class="formula-table">
+      <thead><tr><th>Concept</th><th>Formula</th></tr></thead>
+      <tbody>
+        <tr><td>Tangent at point (x₁,y₁) on x²+y²=r²</td><td class="formula-cell">xx₁ + yy₁ = r²</td></tr>
+        <tr><td>Tangent at (x₁,y₁) on x²+y²+2gx+2fy+c=0</td><td class="formula-cell">xx₁+yy₁+g(x+x₁)+f(y+y₁)+c=0</td></tr>
+        <tr><td>Length of tangent from external point (x₁,y₁) to x²+y²+2gx+2fy+c=0</td><td class="formula-cell">L = √(x₁²+y₁²+2gx₁+2fy₁+c)</td></tr>
+        <tr><td>Chord of contact from external point (x₁,y₁)</td><td class="formula-cell">xx₁+yy₁+g(x+x₁)+f(y+y₁)+c=0</td></tr>
+        <tr><td>Pair of tangents from (x₁,y₁): SS₁ = T²</td><td class="formula-cell">where S=x²+y²+2gx+2fy+c, S₁=S at (x₁,y₁), T=chord of contact</td></tr>
+        <tr><td>Radical axis of two circles S₁=0, S₂=0</td><td class="formula-cell">S₁ − S₂ = 0 (linear equation)</td></tr>
+        <tr><td>Common tangents (external): distance between centres = d</td><td class="formula-cell">Length = √(d²−(r₁−r₂)²)</td></tr>
+        <tr><td>Common tangents (internal)</td><td class="formula-cell">Length = √(d²−(r₁+r₂)²)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Condition for Line y=mx+c to be Tangent to Circle x²+y²=r²</h3>
+    <span class="big-formula">c² = r²(1 + m²) &nbsp; or &nbsp; c = ±r√(1+m²)</span>
+
+    <div class="example-box">
+      <div class="label">Example 1 — Circle through three points</div>
+      <div class="problem">Find the circle passing through (1,0), (0,1) and (0,0).</div>
+      <div class="solution">
+        <span class="step">General: x²+y²+2gx+2fy+c=0. Through (0,0): c=0.</span>
+        <span class="step">Through (1,0): 1+2g+c=0 → 1+2g=0 → g=−1/2</span>
+        <span class="step">Through (0,1): 1+2f+c=0 → f=−1/2</span>
+        <span class="step"><strong>Circle: x²+y²−x−y=0. Centre=(1/2,1/2), r=√(1/4+1/4)=1/√2</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Length of tangent</div>
+      <div class="problem">Find the length of the tangent from (5,4) to the circle x²+y²−3x+4y+1=0.</div>
+      <div class="solution">
+        <span class="step">L = √(x₁²+y₁²+2gx₁+2fy₁+c) with 2g=−3, 2f=4, c=1, (x₁,y₁)=(5,4)</span>
+        <span class="step">= √(25+16−15+16+1) = √43</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3 — Radical Axis</div>
+      <div class="problem">Find the radical axis of x²+y²−3x+4y−1=0 and x²+y²−x+2y+3=0.</div>
+      <div class="solution">
+        <span class="step">S₁−S₂ = (−3x+4y−1)−(−x+2y+3) = −2x+2y−4 = 0 → x−y+2=0</span>
+        <span class="step"><strong>Radical axis: x − y + 2 = 0</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 4 — Family of circles</div>
+      <div class="problem">Write the family of circles through the intersection of x²+y²−4=0 and x+y−2=0.</div>
+      <div class="solution">
+        <span class="step">Family: (x²+y²−4) + λ(x+y−2) = 0</span>
+        <span class="step">= x²+y²+λx+λy−(4+2λ)=0</span>
+        <span class="step">Centre=(−λ/2, −λ/2), r²=λ²/4+λ²/4+(4+2λ)=λ²/2+4+2λ</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="parabola">
+    <h2>5. Parabola</h2>
+
+    <div class="conic-header">Standard Forms of Parabola</div>
+    <div class="conic-body">
+      <table>
+        <tr><td>Equation</td><td>y² = 4ax</td><td>y² = −4ax</td><td>x² = 4ay</td><td>x² = −4ay</td></tr>
+        <tr><td>Opens</td><td>Right (→)</td><td>Left (←)</td><td>Up (↑)</td><td>Down (↓)</td></tr>
+        <tr><td>Vertex</td><td colspan="4" style="text-align:center">(0, 0)</td></tr>
+        <tr><td>Focus</td><td>(a,0)</td><td>(−a,0)</td><td>(0,a)</td><td>(0,−a)</td></tr>
+        <tr><td>Directrix</td><td>x=−a</td><td>x=a</td><td>y=−a</td><td>y=a</td></tr>
+        <tr><td>Axis</td><td>y=0</td><td>y=0</td><td>x=0</td><td>x=0</td></tr>
+        <tr><td>Latus rectum length</td><td colspan="4" style="text-align:center">4a</td></tr>
+      </table>
+    </div>
+
+    <h3>Parametric Form (y² = 4ax)</h3>
+    <p>Any point on y² = 4ax: <strong>(at², 2at)</strong> for parameter t ∈ ℝ.</p>
+
+    <h3>Important Lines for Parabola y² = 4ax</h3>
+    <table class="formula-table">
+      <thead><tr><th>Line</th><th>Equation</th></tr></thead>
+      <tbody>
+        <tr><td>Tangent at (at², 2at)</td><td class="formula-cell">ty = x + at²</td></tr>
+        <tr><td>Tangent at point (x₁,y₁)</td><td class="formula-cell">yy₁ = 2a(x + x₁)</td></tr>
+        <tr><td>Normal at (at², 2at)</td><td class="formula-cell">y = −tx + 2at + at³</td></tr>
+        <tr><td>Chord joining t₁ and t₂</td><td class="formula-cell">y(t₁+t₂) = 2x + 2at₁t₂</td></tr>
+        <tr><td>Focal chord (t₁t₂ = −1)</td><td class="formula-cell">t₁t₂ = −1 always for focal chord</td></tr>
+        <tr><td>Chord of contact from (x₁,y₁)</td><td class="formula-cell">yy₁ = 2a(x+x₁)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      <strong>Focal Chord Property:</strong> If one end of a focal chord is at parameter t, the other end is at parameter −1/t.<br>
+      <strong>Sum of reciprocals of distances:</strong> If SP and SQ are the two focal segments (S = focus), then 1/SP + 1/SQ = 1/a.
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 1 — Tangent and Normal</div>
+      <div class="problem">Find the tangent and normal to y² = 8x at the point (2, 4).</div>
+      <div class="solution">
+        <span class="step">Here 4a = 8, so a = 2. Check: (2,4) → 4² = 16, 8·2 = 16 ✓. So (x₁,y₁)=(2,4).</span>
+        <span class="step">Tangent: yy₁ = 2a(x+x₁) → 4y = 4(x+2) → y = x + 2</span>
+        <span class="step">Slope of tangent = 1. Slope of normal = −1.</span>
+        <span class="step">Normal: y−4 = −1(x−2) → y = −x + 6 → x + y = 6</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Focal chord</div>
+      <div class="problem">For y² = 4x, if one end of a focal chord is at (1/4, −1), find the other end.</div>
+      <div class="solution">
+        <span class="step">a=1. Point (1/4, −1) = (at², 2at) → 2at = −1 → t = −1/2.</span>
+        <span class="step">Other end: t₂ = −1/t₁ = 2.</span>
+        <span class="step">Other end point: (at₂², 2at₂) = (4, 4).</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3 — Parabola and straight line</div>
+      <div class="problem">Find the condition for y = mx + c to be tangent to y² = 4ax.</div>
+      <div class="solution">
+        <span class="step">Substitute y = mx + c into y² = 4ax: (mx+c)² = 4ax → m²x²+(2mc−4a)x+c²=0</span>
+        <span class="step">For tangency: discriminant = 0 → (2mc−4a)² − 4m²c² = 0</span>
+        <span class="step">4m²c²−16amc+16a²−4m²c² = 0 → 16a(a−mc) = 0 → c = a/m</span>
+        <span class="step"><strong>Condition: c = a/m</strong></span>
+        <span class="step">Tangent: y = mx + a/m (standard tangent to y²=4ax with slope m)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="ellipse">
+    <h2>6. Ellipse</h2>
+
+    <div class="conic-header">Standard Ellipse: x²/a² + y²/b² = 1 (a &gt; b &gt; 0)</div>
+    <div class="conic-body">
+      <table>
+        <tr><td>Major axis</td><td>Along x-axis, length 2a</td></tr>
+        <tr><td>Minor axis</td><td>Along y-axis, length 2b</td></tr>
+        <tr><td>Foci</td><td>(±c, 0) where c² = a² − b²</td></tr>
+        <tr><td>Vertices</td><td>(±a, 0) and (0, ±b)</td></tr>
+        <tr><td>Eccentricity</td><td>e = c/a &nbsp; (0 &lt; e &lt; 1)</td></tr>
+        <tr><td>Directrices</td><td>x = ±a/e = ±a²/c</td></tr>
+        <tr><td>Latus rectum</td><td>x = ±c, length = 2b²/a</td></tr>
+        <tr><td>Focal radii</td><td>SP = a − ex, S'P = a + ex (S,S' are foci)</td></tr>
+        <tr><td>SP + S'P = 2a</td><td>(definition of ellipse)</td></tr>
+      </table>
+    </div>
+
+    <h3>Parametric Form</h3>
+    <p>Any point on the ellipse: <strong>(a cosθ, b sinθ)</strong> for θ ∈ [0, 2π).</p>
+
+    <h3>Lines and Tangents</h3>
+    <table class="formula-table">
+      <thead><tr><th>Line</th><th>Equation</th></tr></thead>
+      <tbody>
+        <tr><td>Tangent at (x₁,y₁)</td><td class="formula-cell">xx₁/a² + yy₁/b² = 1</td></tr>
+        <tr><td>Tangent in slope form (slope m)</td><td class="formula-cell">y = mx ± √(a²m² + b²)</td></tr>
+        <tr><td>Normal at (x₁,y₁)</td><td class="formula-cell">a²x/x₁ − b²y/y₁ = a²−b²</td></tr>
+        <tr><td>Chord of contact from (x₁,y₁)</td><td class="formula-cell">xx₁/a² + yy₁/b² = 1</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <div class="label">Example 1 — Foci and eccentricity</div>
+      <div class="problem">For x²/25 + y²/16 = 1, find foci, eccentricity, and length of latus rectum.</div>
+      <div class="solution">
+        <span class="step">a² = 25, b² = 16, so a=5, b=4. c² = 25−16 = 9 → c = 3.</span>
+        <span class="step">Foci: (±3, 0). Eccentricity: e = 3/5.</span>
+        <span class="step">Latus rectum length = 2b²/a = 2(16)/5 = 32/5.</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Tangent to ellipse</div>
+      <div class="problem">Find the tangent to x²/9 + y²/4 = 1 at the point (√3, 2/√3)... or find tangent with slope 1.</div>
+      <div class="solution">
+        <span class="step">Tangent with slope m=1: y = x ± √(a²m²+b²) = x ± √(9+4) = x ± √13</span>
+        <span class="step"><strong>Tangents: y = x + √13 and y = x − √13</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3 — Area of ellipse</div>
+      <div class="problem">Show that the area enclosed by x²/a² + y²/b² = 1 is πab.</div>
+      <div class="solution">
+        <span class="step">y = (b/a)√(a²−x²). Total area = 4·∫₀ᵃ (b/a)√(a²−x²)dx</span>
+        <span class="step">Let x = a sinθ: = 4(b/a)∫₀^(π/2) a cosθ · a cosθ dθ = 4ab∫₀^(π/2) cos²θ dθ</span>
+        <span class="step">= 4ab · π/4 = πab ✓</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="hyperbola">
+    <h2>7. Hyperbola</h2>
+
+    <div class="conic-header">Standard Hyperbola: x²/a² − y²/b² = 1</div>
+    <div class="conic-body">
+      <table>
+        <tr><td>Foci</td><td>(±c, 0) where c² = a² + b²</td></tr>
+        <tr><td>Vertices</td><td>(±a, 0)</td></tr>
+        <tr><td>Eccentricity</td><td>e = c/a &gt; 1</td></tr>
+        <tr><td>Asymptotes</td><td>y = ±(b/a)x</td></tr>
+        <tr><td>Directrices</td><td>x = ±a/e</td></tr>
+        <tr><td>Latus rectum</td><td>2b²/a</td></tr>
+        <tr><td>Conjugate hyperbola</td><td>−x²/a² + y²/b² = 1 (foci on y-axis)</td></tr>
+        <tr><td>Focal radii</td><td>|SP − S'P| = 2a (definition)</td></tr>
+        <tr><td>Rectangular hyperbola</td><td>xy = c² (asymptotes perpendicular)</td></tr>
+      </table>
+    </div>
+
+    <h3>Rectangular Hyperbola xy = c²</h3>
+    <div class="two-col">
+      <div class="formula-card">Parametric: (ct, c/t)</div>
+      <div class="formula-card">Tangent at (ct, c/t):<br>x/t² + yt = 2c &nbsp; or &nbsp; x + yt² = 2ct</div>
+      <div class="formula-card">Normal at (ct, c/t):<br>xt³ − yt − ct⁴ + c = 0</div>
+      <div class="formula-card">Asymptotes: x=0, y=0<br>e = √2 always</div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 1 — Hyperbola foci</div>
+      <div class="problem">For x²/16 − y²/9 = 1, find foci, eccentricity, and asymptotes.</div>
+      <div class="solution">
+        <span class="step">a²=16, b²=9 → a=4, b=3, c=√(16+9)=5</span>
+        <span class="step">Foci: (±5, 0). Eccentricity: e = 5/4.</span>
+        <span class="step">Asymptotes: y = ±(3/4)x → 3x−4y=0 and 3x+4y=0.</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Conjugate hyperbola</div>
+      <div class="problem">If sum of reciprocals of eccentricities of a hyperbola and its conjugate is 1, find eccentricities.</div>
+      <div class="solution">
+        <span class="step">For hyperbola: e₁ = √(1+b²/a²); conjugate: e₂ = √(1+a²/b²)</span>
+        <span class="step">1/e₁ + 1/e₂ = 1. Using identity: 1/e₁² + 1/e₂² = 1 is a known result.</span>
+        <span class="step">Let 1/e₁ = x, 1/e₂ = 1−x. Also 1/e₁² + 1/e₂² = 1: x²+(1−x)² = 1 → 2x²−2x=0 → x(x−1)=0</span>
+        <span class="step">But both must be between 0 and 1. This system requires more constraints. For e₁=e₂=√2: 1/√2+1/√2=√2≠1. So the relationship depends on a, b.</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3 — Rectangular hyperbola chord</div>
+      <div class="problem">Show that the chord joining (ct₁, c/t₁) and (ct₂, c/t₂) on xy=c² has equation: x + yt₁t₂ = c(t₁+t₂).</div>
+      <div class="solution">
+        <span class="step">Slope of chord = (c/t₁ − c/t₂)/(ct₁ − ct₂) = c(t₂−t₁)/(t₁t₂) / c(t₁−t₂) = −1/(t₁t₂)</span>
+        <span class="step">Equation: y − c/t₁ = (−1/(t₁t₂))(x − ct₁)</span>
+        <span class="step">y·t₁t₂ − ct₂ = −x + ct₁ → x + yt₁t₂ = c(t₁+t₂) ✓</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="practice">
+    <h2>8. Practice Problems (25 Questions)</h2>
+    <div class="practice-box">
+      <h4>Lines &amp; Basics</h4>
+      <ol>
+        <li>Find the equation of the line through (3,−2) perpendicular to 4x−3y+5=0.</li>
+        <li>Show that (1,2), (3,0), (−1,4) are collinear.</li>
+        <li>Find the image of (3,4) in the line x+2y−5=0.</li>
+        <li>Two lines through origin make equal angles with x+y=1. Write their equations.</li>
+        <li>Find k if 3x+ky−2=0 and 2x+y+3=0 are parallel.</li>
+        <li>Find the area of the triangle bounded by x=0, y=0 and 3x+4y=12.</li>
+        <li>Find the angle between lines 2x−y+3=0 and x+3y−2=0.</li>
+        <li>Find the locus of point equidistant from lines x+y=1 and x+y=3.</li>
+      </ol>
+      <h4 style="margin-top:12px">Circles</h4>
+      <ol start="9">
+        <li>Find the circle with diameter endpoints (−3,2) and (1,4).</li>
+        <li>Find the length of the chord of x²+y²=25 cut off by 3x−4y=0.</li>
+        <li>Show that x²+y²−6x+4y=0 and x²+y²+2x−8y+8=0 intersect at two points. Find the common chord.</li>
+        <li>Find the two common tangents to circles x²+y²=4 and x²+(y−3)²=1.</li>
+      </ol>
+      <h4 style="margin-top:12px">Parabola</h4>
+      <ol start="13">
+        <li>Find the focus, directrix, and latus rectum of y² = 12x.</li>
+        <li>Find the equation of the normal to y² = 4x at (1,2).</li>
+        <li>Find the chord of contact from (−1,1) to the parabola y² = 8x.</li>
+        <li>If t₁ and t₂ are the parameters of two normals to y²=4ax that intersect on the parabola, show t₁t₂ = 2.</li>
+        <li>Find the locus of midpoints of chords of y²=4ax that pass through the focus.</li>
+      </ol>
+      <h4 style="margin-top:12px">Ellipse &amp; Hyperbola</h4>
+      <ol start="18">
+        <li>Find the equation of the ellipse with foci (±2,0) and e = 2/3.</li>
+        <li>Prove that the sum of squares of the distances of any point on the ellipse from the two foci is 2a²+2b²−2a²e² = 2b²+c² (simplify).</li>
+        <li>Find the tangent to x²/4+y²/3=1 parallel to y=2x+1.</li>
+        <li>Find the condition for lx+my+n=0 to be tangent to x²/a²−y²/b²=1.</li>
+        <li>For xy=16, find the tangent at (4,4). Also find where it meets the coordinate axes.</li>
+        <li>Find the asymptotes of 2x²+5xy+3y²+6x+7y+4=0 (pair of lines).</li>
+        <li>An ellipse has semi-major axis 5, semi-minor axis 3. Find the equation if centre is at origin, major axis along x-axis. Then find eccentricity.</li>
+        <li>Find the eccentricity of a hyperbola if the angle between asymptotes is 60°.</li>
+      </ol>
+      <div class="answers">
+        <strong>Selected Answers:</strong> (1) 3x+4y−1=0 &nbsp; (5) k=3/2 &nbsp; (6) 6 sq. units &nbsp; (7) 45° &nbsp; (8) x+y=2 &nbsp; (9) x²+y²+2x−6y−2=0 &nbsp; (10) 10 &nbsp; (13) focus=(3,0), directrix x=−3, LR=12 &nbsp; (14) x+y=3 &nbsp; (18) x²/9+y²/5=1 &nbsp; (20) y=2x±√19 &nbsp; (21) a²l²−b²m²=n² &nbsp; (24) x²/25+y²/9=1, e=4/5 &nbsp; (25) e=2/√3
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

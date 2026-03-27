@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Physics Notes – Photoelectric Effect, Bohr Model, Nuclear Physics | JEE NEET | StudyHub</title>
+  <meta name="description" content="Complete modern physics for JEE and NEET. Dual nature of matter, Bohr model, hydrogen spectrum, radioactivity, nuclear reactions – formulas, derivations and solved problems.">
+  <meta name="keywords" content="modern physics notes JEE NEET, photoelectric effect, Bohr model, hydrogen spectrum, nuclear physics, radioactivity, de Broglie wavelength, class 12 modern physics">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">&#128218; StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main-content">
+  <div class="container">
+
+    <div class="page-header">
+      <h1>Modern Physics – Complete Notes</h1>
+      <p class="subtitle">JEE Main | JEE Advanced | NEET | Class 12 Physics</p>
+      <div class="topic-tags">
+        <span class="tag">Photoelectric Effect</span>
+        <span class="tag">de Broglie</span>
+        <span class="tag">Bohr Model</span>
+        <span class="tag">Nuclear Physics</span>
+        <span class="tag">Radioactivity</span>
+        <span class="tag">X-rays</span>
+      </div>
+    </div>
+
+    <div class="toc-box">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="#dual">Dual Nature of Radiation &amp; Matter</a></li>
+        <li><a href="#bohr">Bohr's Atomic Model &amp; Hydrogen Spectrum</a></li>
+        <li><a href="#nuclear">Nuclear Physics – Structure &amp; Binding Energy</a></li>
+        <li><a href="#radioactivity">Radioactive Decay</a></li>
+        <li><a href="#xrays">X-rays &amp; Moseley's Law</a></li>
+        <li><a href="#semiconductors">Semiconductor Basics</a></li>
+        <li><a href="#practice-mp">Practice Problems</a></li>
+      </ol>
+    </div>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <section id="dual">
+      <h2>1. Dual Nature of Radiation &amp; Matter</h2>
+
+      <h3>1.1 Photon – Particle Nature of Light</h3>
+      <div class="formula-box">
+        <p><strong>Photon energy:</strong> E = hf = hc/&lambda;</p>
+        <p><strong>Photon momentum:</strong> p = E/c = h/&lambda; = hf/c</p>
+        <p><strong>Planck's constant:</strong> h = 6.626 &times; 10<sup>&minus;34</sup> J&middot;s = 4.136 &times; 10<sup>&minus;15</sup> eV&middot;s</p>
+        <p><strong>hc = 1240 eV&middot;nm</strong> (very useful for quick calculations)</p>
+        <p>1 eV = 1.6 &times; 10<sup>&minus;19</sup> J; c = 3&times;10<sup>8</sup> m/s</p>
+      </div>
+
+      <h3>1.2 Photoelectric Effect</h3>
+      <p>When light of frequency above a threshold falls on a metal surface, electrons are emitted. Einstein (1905) explained this using photon concept (Nobel Prize 1921).</p>
+      <div class="formula-box">
+        <p class="big-formula">KE<sub>max</sub> = hf &minus; &phi; = hf &minus; hf<sub>0</sub></p>
+        <p>where &phi; = work function = minimum energy to remove an electron from the surface.</p>
+        <table class="formula-table">
+          <thead><tr><th>Quantity</th><th>Formula</th><th>Physical Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>Work function &phi;</td><td>&phi; = hf<sub>0</sub></td><td>Energy to remove electron from surface</td></tr>
+            <tr><td>Threshold frequency f<sub>0</sub></td><td>f<sub>0</sub> = &phi;/h</td><td>Min frequency for photoelectric effect</td></tr>
+            <tr><td>Threshold wavelength &lambda;<sub>0</sub></td><td>&lambda;<sub>0</sub> = hc/&phi;</td><td>Max wavelength for photoelectric effect</td></tr>
+            <tr><td>Stopping potential V<sub>0</sub></td><td>eV<sub>0</sub> = KE<sub>max</sub></td><td>V needed to stop fastest electrons</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>1.3 Key Observations (JEE/NEET Important)</h3>
+      <div class="note-box">
+        <ul>
+          <li><strong>KE<sub>max</sub> depends on frequency, NOT intensity.</strong> Higher intensity = more electrons, same KE.</li>
+          <li>Photocurrent is proportional to intensity (more photons = more electrons).</li>
+          <li>No time delay between illumination and electron emission (quantum effect).</li>
+          <li>Below threshold frequency: no emission regardless of how intense the light is.</li>
+          <li>Stopping potential depends on frequency, not intensity.</li>
+        </ul>
+      </div>
+
+      <h3>1.4 Work Function Table</h3>
+      <div class="formula-box">
+        <table class="data-table">
+          <thead><tr><th>Metal</th><th>Work Function (eV)</th><th>Threshold Wavelength (nm)</th></tr></thead>
+          <tbody>
+            <tr><td>Cesium (Cs)</td><td>2.0</td><td>620 (red)</td></tr>
+            <tr><td>Sodium (Na)</td><td>2.3</td><td>539</td></tr>
+            <tr><td>Potassium (K)</td><td>2.3</td><td>539</td></tr>
+            <tr><td>Calcium (Ca)</td><td>2.9</td><td>428</td></tr>
+            <tr><td>Zinc (Zn)</td><td>4.3</td><td>289</td></tr>
+            <tr><td>Aluminum (Al)</td><td>4.1</td><td>302</td></tr>
+            <tr><td>Silver (Ag)</td><td>4.3</td><td>289</td></tr>
+            <tr><td>Copper (Cu)</td><td>4.5</td><td>276</td></tr>
+            <tr><td>Gold (Au)</td><td>5.1</td><td>243 (UV needed)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>1.5 Solved Problems – Photoelectric Effect</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Stopping Potential</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Light of wavelength 300 nm falls on sodium (&phi;=2.3 eV). Find KE<sub>max</sub> and stopping potential.</p>
+          <p>hf = hc/&lambda; = 1240/300 = <strong>4.13 eV</strong></p>
+          <p>KE<sub>max</sub> = 4.13 &minus; 2.3 = <strong>1.83 eV</strong></p>
+          <p>Stopping potential V<sub>0</sub> = KE<sub>max</sub>/e = <strong>1.83 V</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Threshold Wavelength</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Work function of tungsten is 4.52 eV. Find (a) threshold wavelength, (b) max KE for light of 200 nm.</p>
+          <p>(a) &lambda;<sub>0</sub> = hc/&phi; = 1240/4.52 = <strong>274 nm</strong> (ultraviolet)</p>
+          <p>(b) hf = hc/&lambda; = 1240/200 = 6.2 eV; KE<sub>max</sub> = 6.2 &minus; 4.52 = <strong>1.68 eV</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Comparing Two Metals</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Light of 350 nm falls on metals A (&phi;=1.9 eV) and B (&phi;=4.0 eV). Which shows photoelectric effect? Compare stopping potentials.</p>
+          <p>Photon energy = 1240/350 = 3.54 eV</p>
+          <p>Metal A: KE = 3.54&minus;1.9 = 1.64 eV &gt; 0 &rarr; <strong>shows PE effect; V<sub>0</sub> = 1.64 V</strong></p>
+          <p>Metal B: 3.54 &lt; 4.0 &rarr; <strong>no photoelectric effect</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 4 – Effect of Intensity</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> In a photoelectric experiment, the intensity of light is doubled. What happens to (a) photocurrent, (b) KE<sub>max</sub>, (c) stopping potential?</p>
+          <p>(a) Photocurrent doubles (more photons &rarr; more electrons)</p>
+          <p>(b) KE<sub>max</sub> remains unchanged (depends only on frequency)</p>
+          <p>(c) Stopping potential remains unchanged (V<sub>0</sub> = KE<sub>max</sub>/e, unchanged)</p>
+        </div>
+      </div>
+
+      <h3>1.6 de Broglie Wavelength (Wave Nature of Matter)</h3>
+      <div class="formula-box">
+        <p>Louis de Broglie (1924): Matter also has wave-particle duality.</p>
+        <p class="big-formula">&lambda; = h/p = h/(mv)</p>
+        <p>For a particle of mass m, velocity v, or kinetic energy KE:</p>
+        <p>&lambda; = h/&radic;(2mKE)</p>
+        <p><strong>Electron accelerated through potential V:</strong></p>
+        <p>&lambda; = h/&radic;(2meV) = 12.27/&radic;V &Aring; &nbsp; (&lambda; in &Aring;ngstrom, V in volts)</p>
+        <p>Or: &lambda; = 1.227/&radic;V nm</p>
+        <p>At room temperature T (thermal de Broglie): &lambda; = h/&radic;(3mkT)</p>
+      </div>
+
+      <h3>1.7 Heisenberg Uncertainty Principle</h3>
+      <div class="formula-box">
+        <p>It is impossible to simultaneously know the exact position and momentum of a particle:</p>
+        <p class="big-formula">&Delta;x &middot; &Delta;p &ge; &hbar;/2 = h/(4&pi;)</p>
+        <p>Energy–time uncertainty: &Delta;E &middot; &Delta;t &ge; &hbar;/2</p>
+        <p>Angular momentum: &Delta;L<sub>z</sub> &middot; &Delta;&theta; &ge; &hbar;/2</p>
+        <p><em>This is a fundamental quantum limit, NOT due to measurement imperfection.</em></p>
+      </div>
+
+      <h3>1.8 Solved Problems – de Broglie</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Electron de Broglie Wavelength</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> An electron is accelerated through 100 V. Find its de Broglie wavelength.</p>
+          <p>&lambda; = 12.27/&radic;100 = 12.27/10 = <strong>1.227 &Aring; = 0.1227 nm</strong></p>
+          <p>This is similar to X-ray wavelengths &rarr; electrons can be diffracted by crystal lattices (Davisson-Germer experiment).</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Macroscopic Body</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A 0.1 kg ball moves at 30 m/s. Find de Broglie wavelength.</p>
+          <p>&lambda; = h/mv = 6.626&times;10<sup>&minus;34</sup>/(0.1&times;30) = 6.626&times;10<sup>&minus;34</sup>/3 = <strong>2.2&times;10<sup>&minus;34</sup> m</strong></p>
+          <p>This is undetectably small – wave nature of macroscopic objects is negligible.</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Uncertainty Principle</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> An electron's position is measured to &plusmn;0.1 nm. What is minimum uncertainty in momentum?</p>
+          <p>&Delta;p &ge; h/(4&pi;&Delta;x) = 6.626&times;10<sup>&minus;34</sup>/(4&pi;&times;10<sup>&minus;10</sup>) = <strong>5.27&times;10<sup>&minus;25</sup> kg&middot;m/s</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <section id="bohr">
+      <h2>2. Bohr's Atomic Model</h2>
+
+      <h3>2.1 Bohr's Postulates</h3>
+      <div class="note-box">
+        <ol>
+          <li><strong>Stable orbits:</strong> Electrons revolve in certain stable circular orbits without emitting radiation (contrary to classical EM theory).</li>
+          <li><strong>Quantization of angular momentum:</strong> L = mvr = nℏ = nh/(2&pi;), where n = 1, 2, 3, &hellip; (principal quantum number)</li>
+          <li><strong>Energy quantization:</strong> Each orbit has a definite energy. Electrons in these orbits don't radiate.</li>
+          <li><strong>Radiation condition:</strong> When an electron jumps from higher orbit n<sub>2</sub> to lower orbit n<sub>1</sub>, it emits a photon: hf = E<sub>n2</sub> &minus; E<sub>n1</sub>.</li>
+        </ol>
+      </div>
+
+      <h3>2.2 Key Formulas for Hydrogen-like Atoms</h3>
+      <div class="formula-box">
+        <table class="formula-table">
+          <thead><tr><th>Quantity</th><th>Formula</th><th>For H (Z=1, n=1)</th></tr></thead>
+          <tbody>
+            <tr><td>Orbital radius r<sub>n</sub></td><td>r<sub>n</sub> = n&sup2;a<sub>0</sub>/Z</td><td>a<sub>0</sub> = 0.529 &Aring; (Bohr radius)</td></tr>
+            <tr><td>Energy E<sub>n</sub></td><td>E<sub>n</sub> = &minus;13.6Z&sup2;/n&sup2; eV</td><td>E<sub>1</sub> = &minus;13.6 eV (ground state)</td></tr>
+            <tr><td>Velocity v<sub>n</sub></td><td>v<sub>n</sub> = 2.18&times;10&sup6; &times; Z/n m/s</td><td>v<sub>1</sub> &asymp; c/137</td></tr>
+            <tr><td>Angular momentum L<sub>n</sub></td><td>L<sub>n</sub> = nℏ = nh/(2&pi;)</td><td>L<sub>1</sub> = 1.055&times;10<sup>&minus;34</sup> J&middot;s</td></tr>
+            <tr><td>KE of electron</td><td>KE<sub>n</sub> = +13.6Z&sup2;/n&sup2; eV</td><td>KE = &minus;E<sub>n</sub> (always positive)</td></tr>
+            <tr><td>PE of electron</td><td>PE<sub>n</sub> = &minus;27.2Z&sup2;/n&sup2; eV</td><td>PE = 2E<sub>n</sub> (always negative)</td></tr>
+          </tbody>
+        </table>
+        <p class="formula-note">Note: Total energy = KE + PE = E<sub>n</sub>. Ionization energy from ground state = 13.6 eV for H, 54.4 eV for He<sup>+</sup>, etc.</p>
+      </div>
+
+      <h3>2.3 Hydrogen Spectral Series</h3>
+      <p>The wavelength of emitted photons follows the Rydberg formula:</p>
+      <div class="formula-box">
+        <p class="big-formula">1/&lambda; = R<sub>H</sub> Z&sup2; (1/n<sub>1</sub>&sup2; &minus; 1/n<sub>2</sub>&sup2;)</p>
+        <p>R<sub>H</sub> = 1.097 &times; 10<sup>7</sup> m<sup>&minus;1</sup> (Rydberg constant); n<sub>2</sub> &gt; n<sub>1</sub></p>
+        <table class="data-table">
+          <thead><tr><th>Series Name</th><th>n<sub>1</sub></th><th>n<sub>2</sub></th><th>Region</th><th>First line (&alpha;)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Lyman</strong></td><td>1</td><td>2, 3, 4, &hellip;</td><td>Ultraviolet</td><td>121.6 nm</td></tr>
+            <tr><td><strong>Balmer</strong></td><td>2</td><td>3, 4, 5, &hellip;</td><td>Visible (some UV)</td><td>656.3 nm (red)</td></tr>
+            <tr><td><strong>Paschen</strong></td><td>3</td><td>4, 5, 6, &hellip;</td><td>Infrared</td><td>1875 nm</td></tr>
+            <tr><td><strong>Brackett</strong></td><td>4</td><td>5, 6, 7, &hellip;</td><td>Far Infrared</td><td>4050 nm</td></tr>
+            <tr><td><strong>Pfund</strong></td><td>5</td><td>6, 7, 8, &hellip;</td><td>Far Infrared</td><td>7460 nm</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Series limit</strong> (&lambda;<sub>min</sub>): when n<sub>2</sub> &rarr; &infin;, i.e. 1/&lambda;<sub>min</sub> = R<sub>H</sub>/n<sub>1</sub>&sup2;</p>
+        <p><strong>Number of spectral lines</strong> when electron drops from n to ground state: n(n&minus;1)/2</p>
+      </div>
+
+      <h3>2.4 Energy Level Diagram for Hydrogen</h3>
+      <div class="note-box">
+        <p>Energy levels: E<sub>n</sub> = &minus;13.6/n&sup2; eV</p>
+        <ul>
+          <li>n=1: E = &minus;13.6 eV (ground state)</li>
+          <li>n=2: E = &minus;3.4 eV (first excited)</li>
+          <li>n=3: E = &minus;1.51 eV (second excited)</li>
+          <li>n=4: E = &minus;0.85 eV</li>
+          <li>n=&infin;: E = 0 (ionization level)</li>
+        </ul>
+        <p>Ionization energy = 13.6 eV (energy to remove electron from n=1 to n=&infin;)</p>
+        <p>Excitation energy = difference between energy levels</p>
+      </div>
+
+      <h3>2.5 Limitations of Bohr's Model</h3>
+      <div class="note-box">
+        <ul>
+          <li>Explains only hydrogen and hydrogen-like (one-electron) species.</li>
+          <li>Cannot explain fine structure (splitting of spectral lines in magnetic fields – Zeeman effect).</li>
+          <li>Cannot explain multi-electron atoms.</li>
+          <li>Violates Heisenberg uncertainty principle (assumes definite orbit).</li>
+          <li>Does not explain relative intensities of spectral lines.</li>
+          <li>Replaced by quantum mechanical model (Schr&ouml;dinger equation).</li>
+        </ul>
+      </div>
+
+      <h3>2.6 Solved Problems – Bohr Model</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Wavelength of H&alpha; Line (Balmer Series)</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Find the wavelength of the first line of the Balmer series (H&alpha;, n=3&rarr;2) in hydrogen.</p>
+          <p>1/&lambda; = R<sub>H</sub>(1/2&sup2; &minus; 1/3&sup2;) = 1.097&times;10&sup7; &times; (1/4 &minus; 1/9)</p>
+          <p>= 1.097&times;10&sup7; &times; (9&minus;4)/36 = 1.097&times;10&sup7; &times; 5/36 = 1.524&times;10&sup6; m<sup>&minus;1</sup></p>
+          <p>&lambda; = 1/(1.524&times;10&sup6;) = <strong>656.3 nm (red light)</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Energy of Emitted Photon</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A hydrogen atom transitions from n=4 to n=2. Find energy and wavelength of emitted photon.</p>
+          <p>E<sub>4</sub> = &minus;13.6/16 = &minus;0.85 eV; E<sub>2</sub> = &minus;13.6/4 = &minus;3.4 eV</p>
+          <p>&Delta;E = E<sub>4</sub> &minus; E<sub>2</sub> = &minus;0.85 &minus; (&minus;3.4) = <strong>2.55 eV</strong></p>
+          <p>&lambda; = hc/E = 1240/2.55 = <strong>486.3 nm (blue-green)</strong> (Balmer series, H&beta; line)</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Find n Given Radius</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> For He<sup>+</sup> (Z=2), the radius of an orbit is 0.529 &Aring;. Find n.</p>
+          <p>r<sub>n</sub> = n&sup2;a<sub>0</sub>/Z &rarr; 0.529 = n&sup2;&times;0.529/2 &rarr; n&sup2; = 2 &rarr; n = &radic;2 &hellip;</p>
+          <p>Wait: r<sub>n</sub> = 0.529 n&sup2;/Z &Aring; &rarr; 0.529 = 0.529n&sup2;/2 &rarr; n&sup2; = 2. This doesn't give integer n.</p>
+          <p>If radius = 2.116 &Aring;: 2.116 = 0.529n&sup2;/2 &rarr; n&sup2; = 4&times;2.116/0.529/4 = 4 &rarr; <strong>n = 2</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 4 – Ionization Energy of He<sup>+</sup></div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Find ionization energy of He<sup>+</sup> in ground state.</p>
+          <p>E<sub>1</sub>(He<sup>+</sup>) = &minus;13.6&times;Z&sup2;/1&sup2; = &minus;13.6&times;4 = &minus;54.4 eV</p>
+          <p>Ionization energy = <strong>54.4 eV</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 5 – Spectral Lines from n=4</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> How many spectral lines can a hydrogen atom emit when excited to n=4?</p>
+          <p>Number of lines = n(n&minus;1)/2 = 4&times;3/2 = <strong>6 lines</strong></p>
+          <p>Transitions: 4&rarr;3, 4&rarr;2, 4&rarr;1, 3&rarr;2, 3&rarr;1, 2&rarr;1</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3 ==================== -->
+    <section id="nuclear">
+      <h2>3. Nuclear Physics – Structure &amp; Binding Energy</h2>
+
+      <h3>3.1 Nuclear Nomenclature</h3>
+      <div class="formula-box">
+        <p>Nucleus <sup>A</sup><sub>Z</sub>X has:</p>
+        <ul>
+          <li>Z = proton number (atomic number)</li>
+          <li>N = neutron number</li>
+          <li>A = Z + N (mass number)</li>
+        </ul>
+        <p>Example: <sup>235</sup><sub>92</sub>U has 92 protons, 143 neutrons, mass number 235.</p>
+        <p><strong>Isotopes:</strong> Same Z, different N (same element, different mass)</p>
+        <p><strong>Isobars:</strong> Same A, different Z</p>
+        <p><strong>Isotones:</strong> Same N, different Z</p>
+      </div>
+
+      <h3>3.2 Nuclear Size and Density</h3>
+      <div class="formula-box">
+        <p><strong>Nuclear radius:</strong> R = R<sub>0</sub>A<sup>1/3</sup></p>
+        <p>R<sub>0</sub> = 1.2 &times; 10<sup>&minus;15</sup> m = 1.2 fm (femtometers)</p>
+        <p>Nuclear volume &propto; A (proportional to mass number)</p>
+        <p><strong>Nuclear density:</strong> &rho; &asymp; 2.3 &times; 10<sup>17</sup> kg/m&sup3;</p>
+        <p>This density is <em>the same for all nuclei</em> – remarkable result from R &propto; A<sup>1/3</sup>.</p>
+        <p>Compare: density of water = 1000 kg/m&sup3;; nuclear density is 10<sup>14</sup> times greater.</p>
+      </div>
+
+      <h3>3.3 Mass Defect and Binding Energy</h3>
+      <div class="formula-box">
+        <p>Actual nuclear mass is always <em>less</em> than the sum of constituent nucleon masses. This difference is the <strong>mass defect &Delta;m</strong>:</p>
+        <p class="big-formula">&Delta;m = Z&middot;m<sub>p</sub> + N&middot;m<sub>n</sub> &minus; M<sub>nucleus</sub></p>
+        <p>where m<sub>p</sub> = 1.007276 amu, m<sub>n</sub> = 1.008665 amu, 1 amu = 931.5 MeV/c&sup2;</p>
+        <p><strong>Binding energy:</strong> BE = &Delta;m &times; 931.5 MeV &nbsp;(energy that holds the nucleus together)</p>
+        <p><strong>Binding energy per nucleon:</strong> BE/A (measures nuclear stability)</p>
+      </div>
+
+      <h3>3.4 Binding Energy per Nucleon Curve</h3>
+      <div class="note-box">
+        <p>The BE/nucleon curve (plot of BE/A vs mass number A) has these key features:</p>
+        <ul>
+          <li>Rises steeply for light nuclei (H, He, Li &hellip;)</li>
+          <li>Reaches maximum near <strong>Fe-56: &asymp;8.8 MeV/nucleon</strong> (most stable nucleus)</li>
+          <li>Gradually decreases for heavy nuclei (Uranium &asymp;7.6 MeV/nucleon)</li>
+          <li><strong>Fusion (light nuclei):</strong> Combining light nuclei increases BE/A &rarr; releases energy</li>
+          <li><strong>Fission (heavy nuclei):</strong> Splitting heavy nucleus increases BE/A of products &rarr; releases energy</li>
+          <li>Notable peaks: <sup>4</sup>He (7.07 MeV), <sup>12</sup>C (7.68 MeV), <sup>16</sup>O (7.98 MeV)</li>
+        </ul>
+      </div>
+
+      <h3>3.5 Important Units and Constants</h3>
+      <div class="formula-box">
+        <table class="data-table">
+          <thead><tr><th>Quantity</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>1 atomic mass unit (amu)</td><td>1.66054 &times; 10<sup>&minus;27</sup> kg = 931.5 MeV/c&sup2;</td></tr>
+            <tr><td>Proton mass m<sub>p</sub></td><td>1.007276 amu = 938.3 MeV/c&sup2;</td></tr>
+            <tr><td>Neutron mass m<sub>n</sub></td><td>1.008665 amu = 939.6 MeV/c&sup2;</td></tr>
+            <tr><td>Electron mass m<sub>e</sub></td><td>0.000549 amu = 0.511 MeV/c&sup2;</td></tr>
+            <tr><td>1 fermi (fm)</td><td>10<sup>&minus;15</sup> m</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>3.6 Solved Problems – Nuclear Structure</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Binding Energy of Helium-4</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Find the binding energy of <sup>4</sup><sub>2</sub>He. m(<sup>4</sup>He) = 4.002602 amu.</p>
+          <p>&Delta;m = 2m<sub>p</sub> + 2m<sub>n</sub> &minus; m(He-4)</p>
+          <p>= 2(1.007276) + 2(1.008665) &minus; 4.002602</p>
+          <p>= 2.014552 + 2.017330 &minus; 4.002602 = 0.029280 amu</p>
+          <p>BE = 0.029280 &times; 931.5 = <strong>27.28 MeV</strong></p>
+          <p>BE/A = 27.28/4 = <strong>6.82 MeV/nucleon</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Nuclear Radius Ratio</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Compare the radii of nuclei <sup>27</sup>Al and <sup>64</sup>Cu.</p>
+          <p>R &propto; A<sup>1/3</sup>: R<sub>Al</sub>/R<sub>Cu</sub> = (27/64)<sup>1/3</sup> = (3/4)<sup>1</sup> = <strong>3:4</strong></p>
+          <p>(Since 27 = 3&sup3; and 64 = 4&sup3;, the cube roots are exactly 3 and 4)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4 ==================== -->
+    <section id="radioactivity">
+      <h2>4. Radioactive Decay</h2>
+
+      <h3>4.1 Types of Radioactive Decay</h3>
+      <div class="formula-box">
+        <table class="formula-table">
+          <thead><tr><th>Decay Type</th><th>Nuclear Reaction</th><th>Change in Z, A</th></tr></thead>
+          <tbody>
+            <tr><td><strong>&alpha; decay</strong></td><td><sup>A</sup><sub>Z</sub>X &rarr; <sup>A&minus;4</sup><sub>Z&minus;2</sub>Y + <sup>4</sup><sub>2</sub>He</td><td>Z&minus;2, A&minus;4</td></tr>
+            <tr><td><strong>&beta;<sup>&minus;</sup> decay</strong></td><td><sup>A</sup><sub>Z</sub>X &rarr; <sup>A</sup><sub>Z+1</sub>Y + e<sup>&minus;</sup> + &nu;&#x0305;<sub>e</sub></td><td>Z+1, A same; n&rarr;p</td></tr>
+            <tr><td><strong>&beta;<sup>+</sup> decay</strong></td><td><sup>A</sup><sub>Z</sub>X &rarr; <sup>A</sup><sub>Z&minus;1</sub>Y + e<sup>+</sup> + &nu;<sub>e</sub></td><td>Z&minus;1, A same; p&rarr;n</td></tr>
+            <tr><td><strong>&gamma; decay</strong></td><td><sup>A</sup><sub>Z</sub>X* &rarr; <sup>A</sup><sub>Z</sub>X + &gamma;</td><td>No change; excited nucleus</td></tr>
+            <tr><td><strong>Electron capture</strong></td><td>e<sup>&minus;</sup> + <sup>A</sup><sub>Z</sub>X &rarr; <sup>A</sup><sub>Z&minus;1</sub>Y + &nu;<sub>e</sub></td><td>Z&minus;1, A same; p&rarr;n</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Conservation laws:</strong> Mass number (A), charge number (Z), energy, momentum, lepton number – all conserved.</p>
+      </div>
+
+      <h3>4.2 Radioactive Decay Law</h3>
+      <div class="formula-box">
+        <p>The number of nuclei decreases exponentially:</p>
+        <p class="big-formula">N(t) = N<sub>0</sub> e<sup>&minus;&lambda;t</sup></p>
+        <p><strong>Activity:</strong> A(t) = |dN/dt| = &lambda;N(t) = A<sub>0</sub>e<sup>&minus;&lambda;t</sup></p>
+        <p>Unit of activity: Becquerel (Bq) = 1 decay/s; Curie (Ci) = 3.7&times;10<sup>10</sup> Bq</p>
+        <table class="formula-table">
+          <thead><tr><th>Quantity</th><th>Formula</th></tr></thead>
+          <tbody>
+            <tr><td>Decay constant &lambda;</td><td>&lambda; = 0.693/T<sub>1/2</sub></td></tr>
+            <tr><td>Half-life T<sub>1/2</sub></td><td>T<sub>1/2</sub> = 0.693/&lambda; = ln2/&lambda;</td></tr>
+            <tr><td>Mean (average) life &tau;</td><td>&tau; = 1/&lambda; = T<sub>1/2</sub>/0.693 = 1.44 T<sub>1/2</sub></td></tr>
+            <tr><td>After n half-lives</td><td>N = N<sub>0</sub>/2<sup>n</sup></td></tr>
+            <tr><td>Fraction remaining</td><td>N/N<sub>0</sub> = (1/2)<sup>n</sup> = e<sup>&minus;&lambda;t</sup></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>4.3 Radioactive Series</h3>
+      <div class="note-box">
+        <p>Heavy nuclei decay in a series of steps until they reach a stable nucleus. Three major series:</p>
+        <ul>
+          <li><strong>Uranium series (4n+2):</strong> <sup>238</sup>U &rarr; &hellip; &rarr; <sup>206</sup>Pb (14 steps)</li>
+          <li><strong>Thorium series (4n):</strong> <sup>232</sup>Th &rarr; &hellip; &rarr; <sup>208</sup>Pb</li>
+          <li><strong>Actinium series (4n+3):</strong> <sup>235</sup>U &rarr; &hellip; &rarr; <sup>207</sup>Pb</li>
+        </ul>
+        <p>The stable end products are all lead isotopes.</p>
+      </div>
+
+      <h3>4.4 Solved Problems – Radioactivity</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Finding Half-life from Activity Data</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> The activity of a radioactive sample drops from 1200 dpm to 150 dpm in 6 hours. Find the half-life.</p>
+          <p>1200 &rarr; 600 &rarr; 300 &rarr; 150: three half-lives in 6 hours.</p>
+          <p>T<sub>1/2</sub> = 6/3 = <strong>2 hours</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Carbon Dating</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A piece of wood has 25% of the <sup>14</sup>C activity of living wood. Estimate its age. (T<sub>1/2</sub> of <sup>14</sup>C = 5730 years)</p>
+          <p>25% = (1/2)&sup2; &rarr; 2 half-lives have passed.</p>
+          <p>Age = 2 &times; 5730 = <strong>11,460 years</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Alpha Decay</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> <sup>238</sup><sub>92</sub>U undergoes alpha decay. Write the equation and identify the daughter nucleus.</p>
+          <p><sup>238</sup><sub>92</sub>U &rarr; <sup>234</sup><sub>90</sub>Th + <sup>4</sup><sub>2</sub>He</p>
+          <p>Daughter: <strong>Thorium-234</strong> (Z=90, A=234)</p>
+          <p>Check: Z: 92 = 90 + 2 ✓; A: 238 = 234 + 4 ✓</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 4 – Activity Calculation</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A sample of <sup>60</sup>Co (T<sub>1/2</sub> = 5.27 years) has mass 1 mg. Find its activity.</p>
+          <p>N = (m/M) &times; N<sub>A</sub> = (10<sup>&minus;6</sup>/60) &times; 6.022&times;10<sup>23</sup> = 1.004&times;10<sup>16</sup> nuclei</p>
+          <p>&lambda; = 0.693/T<sub>1/2</sub> = 0.693/(5.27&times;365&times;24&times;3600) = 4.17&times;10<sup>&minus;9</sup> s<sup>&minus;1</sup></p>
+          <p>A = &lambda;N = 4.17&times;10<sup>&minus;9</sup>&times;1.004&times;10<sup>16</sup> = <strong>4.19&times;10<sup>7</sup> Bq &asymp; 1.13 mCi</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 5 – Fraction Remaining</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> T<sub>1/2</sub> of radioactive substance is 10 days. What fraction remains after 40 days?</p>
+          <p>n = 40/10 = 4 half-lives</p>
+          <p>Fraction = (1/2)<sup>4</sup> = 1/16 = <strong>6.25%</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5 ==================== -->
+    <section id="xrays">
+      <h2>5. X-rays</h2>
+
+      <h3>5.1 Production of X-rays</h3>
+      <div class="note-box">
+        <p>X-rays are produced when high-energy electrons hit a metal target. Two mechanisms:</p>
+        <ol>
+          <li><strong>Bremsstrahlung (braking radiation):</strong> Continuous X-ray spectrum. Electrons are decelerated and lose energy as X-ray photons. Produces a continuous range of wavelengths.</li>
+          <li><strong>Characteristic X-rays:</strong> Line spectrum. Incoming electron knocks out inner-shell electron; outer electrons fill the vacancy, emitting photons of specific energies.</li>
+        </ol>
+      </div>
+
+      <h3>5.2 Key Formulas</h3>
+      <div class="formula-box">
+        <p><strong>Minimum wavelength (Duane-Hunt law):</strong> All KE converted to photon energy:</p>
+        <p class="big-formula">&lambda;<sub>min</sub> = hc/(eV) = 1240/V nm &nbsp; (V in volts)</p>
+        <p>This is the shortest wavelength in the continuous spectrum.</p>
+        <p><strong>Moseley's Law</strong> (for characteristic X-ray frequency f):</p>
+        <p class="big-formula">&radic;f = a(Z &minus; b)</p>
+        <p>where a and b are constants for a given series (K, L, &hellip;). Z = atomic number.</p>
+        <p>This provided strong experimental evidence for the concept of atomic number.</p>
+      </div>
+
+      <h3>5.3 Solved Problems – X-rays</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Minimum Wavelength</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> An X-ray tube operates at 50 kV. Find the minimum wavelength of X-rays produced.</p>
+          <p>&lambda;<sub>min</sub> = hc/(eV) = 1240 eV&middot;nm / (50,000 eV) = 0.0248 nm = <strong>0.248 &Aring;</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 6 ==================== -->
+    <section id="semiconductors">
+      <h2>6. Semiconductor Basics (JEE/NEET)</h2>
+
+      <h3>6.1 Intrinsic and Extrinsic Semiconductors</h3>
+      <div class="note-box">
+        <p><strong>Intrinsic semiconductor:</strong> Pure Si or Ge. Both holes and electrons carry current. n<sub>e</sub> = n<sub>h</sub>.</p>
+        <p><strong>n-type:</strong> Doped with pentavalent atoms (P, As, Sb). Extra electrons. n<sub>e</sub> &gt;&gt; n<sub>h</sub>.</p>
+        <p><strong>p-type:</strong> Doped with trivalent atoms (B, Al, In). Extra holes. n<sub>h</sub> &gt;&gt; n<sub>e</sub>.</p>
+        <p><strong>Mass action law:</strong> n<sub>e</sub> &times; n<sub>h</sub> = n<sub>i</sub>&sup2; (constant at given temperature)</p>
+      </div>
+
+      <h3>6.2 p-n Junction Diode</h3>
+      <div class="note-box">
+        <ul>
+          <li><strong>Depletion region:</strong> Near junction, carriers recombine leaving fixed ions. Creates built-in electric field (barrier potential V<sub>0</sub> &asymp; 0.3 V for Ge, 0.7 V for Si).</li>
+          <li><strong>Forward bias:</strong> p-side to +ve terminal. Barrier reduced. Large current flows (exponential: I = I<sub>0</sub>(e<sup>eV/kT</sup> &minus;1)).</li>
+          <li><strong>Reverse bias:</strong> p-side to &minus;ve terminal. Barrier increased. Very small reverse saturation current I<sub>0</sub>.</li>
+          <li>At <strong>breakdown voltage</strong> (Zener breakdown or avalanche): large reverse current.</li>
+        </ul>
+      </div>
+
+      <h3>6.3 Special Diodes</h3>
+      <div class="formula-box">
+        <table class="data-table">
+          <thead><tr><th>Device</th><th>Function</th><th>Key Feature</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Zener diode</strong></td><td>Voltage regulation</td><td>Used in reverse bias at breakdown</td></tr>
+            <tr><td><strong>LED</strong></td><td>Emits light</td><td>Forward biased; photon emitted when e-h recombine</td></tr>
+            <tr><td><strong>Photodiode</strong></td><td>Detects light</td><td>Reverse biased; incident photons create e-h pairs</td></tr>
+            <tr><td><strong>Solar cell</strong></td><td>Converts light to electricity</td><td>p-n junction; no external bias needed</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>6.4 Solved Problems – Semiconductors</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Carrier Concentration</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> In n-type Si, n<sub>e</sub> = 5&times;10<sup>16</sup>/cm&sup3;. If n<sub>i</sub> = 1.5&times;10<sup>10</sup>/cm&sup3;, find n<sub>h</sub>.</p>
+          <p>n<sub>e</sub>&times;n<sub>h</sub> = n<sub>i</sub>&sup2; &rarr; n<sub>h</sub> = n<sub>i</sub>&sup2;/n<sub>e</sub> = (1.5&times;10<sup>10</sup>)&sup2;/(5&times;10<sup>16</sup>)</p>
+          <p>= 2.25&times;10<sup>20</sup>/5&times;10<sup>16</sup> = <strong>4.5&times;10<sup>3</sup>/cm&sup3;</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="practice-mp">
+      <h2>7. Practice Problems</h2>
+      <div class="practice-box">
+        <p><strong>Dual Nature:</strong></p>
+        <ol>
+          <li>Light of frequency 6&times;10<sup>14</sup> Hz hits a metal with &phi;=2 eV. Find KE<sub>max</sub> and V<sub>0</sub>. <em>[Ans: KE=0.48 eV, V<sub>0</sub>=0.48 V]</em></li>
+          <li>Find de Broglie wavelength of proton with KE = 10 MeV. <em>[Ans: &asymp;9.05&times;10<sup>&minus;15</sup> m]</em></li>
+          <li>UV light (&lambda;=200 nm) hits zinc (&phi;=4.3 eV). Find stopping potential. <em>[Ans: V<sub>0</sub>=1.9 V]</em></li>
+          <li>What voltage must accelerate electrons to get &lambda;=0.1 nm? <em>[Ans: 150.7 V]</em></li>
+        </ol>
+        <p><strong>Bohr Model:</strong></p>
+        <ol start="5">
+          <li>Find radius of 3rd orbit of Li<sup>2+</sup> (Z=3). <em>[Ans: r=0.529&times;9/3=1.587 &Aring;]</em></li>
+          <li>Find energy of photon emitted in Lyman-alpha (n=2&rarr;1) for H. <em>[Ans: 10.2 eV, 121.6 nm]</em></li>
+          <li>Ionization energy of H in ground state is 13.6 eV. What is energy to excite from n=1 to n=3? <em>[Ans: 12.09 eV]</em></li>
+          <li>How many lines in Paschen series of H up to n=6? <em>[Ans: 3 lines: 6→3, 5→3, 4→3]</em></li>
+        </ol>
+        <p><strong>Nuclear Physics &amp; Radioactivity:</strong></p>
+        <ol start="9">
+          <li>Find BE/nucleon of <sup>56</sup>Fe. (m=55.9349 amu) <em>[Ans: &asymp;8.79 MeV/nucleon]</em></li>
+          <li>A radioactive sample has T<sub>1/2</sub>=2.5 h. After 10 h, what fraction remains? <em>[Ans: (1/2)<sup>4</sup>=1/16]</em></li>
+          <li><sup>226</sup><sub>88</sub>Ra undergoes alpha decay. Write equation. <em>[Ans: &rarr;<sup>222</sup><sub>86</sub>Rn + &alpha;]</em></li>
+          <li>Carbon-14 has T<sub>1/2</sub>=5730 yr. A sample has 6.25% of original activity. How old? <em>[Ans: 4 half-lives = 22920 yr]</em></li>
+          <li>What is wavelength of X-rays from 40 kV tube? <em>[Ans: &lambda;<sub>min</sub>=0.031 nm]</em></li>
+          <li>In n-type Si with n<sub>e</sub>=10<sup>17</sup>/cm&sup3;, if n<sub>i</sub>=10<sup>10</sup>/cm&sup3;, find n<sub>h</sub>. <em>[Ans: 10<sup>3</sup>/cm&sup3;]</em></li>
+          <li>Find kinetic energy of alpha particle emitted from <sup>220</sup>Rn (if Q-value = 6.4 MeV). <em>[Ans: &asymp;6.28 MeV by momentum conservation]</em></li>
+          <li>Prove that mean life = 1/&lambda; from the definition &tau; = &int;&infin;<sub>0</sub> t &lambda;N<sub>0</sub>e<sup>&minus;&lambda;t</sup>dt / N<sub>0</sub>. <em>[Derivation exercise]</em></li>
+          <li>An X-ray tube emits K&alpha; line at 0.071 nm. Find energy of photon. <em>[Ans: E=hc/&lambda;=1240/0.071 eV&middot;nm = 17.46 keV]</em></li>
+          <li>A proton and an &alpha;-particle have same de Broglie wavelength. Find ratio of their KEs. <em>[Ans: KE<sub>p</sub>/KE<sub>&alpha;</sub> = m<sub>&alpha;</sub>/m<sub>p</sub> = 4]</em></li>
+          <li>Stopping potential for a metal is 1.5 V when illuminated by 300 nm light. Find work function. <em>[Ans: &phi; = 4.13&minus;1.5 = 2.63 eV]</em></li>
+          <li>A nucleus <sup>A</sup><sub>Z</sub>X emits 2 alpha and 3 beta<sup>&minus;</sup> particles. Find resulting Z' and A'. <em>[Ans: A'=A&minus;8; Z'=Z&minus;4+3=Z&minus;1]</em></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="nuclear-reactions">
+      <h2>8. Nuclear Reactions &amp; Energy</h2>
+
+      <h3>8.1 Nuclear Fission</h3>
+      <div class="note-box">
+        <p>A heavy nucleus splits into two lighter nuclei with release of enormous energy and 2–3 neutrons.</p>
+        <p><strong>Example:</strong> <sup>235</sup><sub>92</sub>U + n &rarr; <sup>141</sup><sub>56</sub>Ba + <sup>92</sup><sub>36</sub>Kr + 3n + 200 MeV</p>
+        <p><strong>Chain reaction:</strong> The neutrons produced cause further fissions. Uncontrolled &rarr; atomic bomb; controlled (in reactor) &rarr; nuclear power.</p>
+        <p><strong>Critical mass:</strong> Minimum mass for self-sustained chain reaction (for <sup>235</sup>U &asymp; 1–50 kg depending on geometry and reflector).</p>
+      </div>
+
+      <h3>8.2 Nuclear Fusion</h3>
+      <div class="note-box">
+        <p>Two light nuclei combine to form a heavier nucleus with release of energy.</p>
+        <p><strong>Example (in the Sun):</strong> 4<sup>1</sup>H &rarr; <sup>4</sup>He + 2e<sup>+</sup> + 2&nu;<sub>e</sub> + 26.7 MeV</p>
+        <p><strong>D-T reaction</strong> (most promising for fusion reactors):</p>
+        <p><sup>2</sup>H + <sup>3</sup>H &rarr; <sup>4</sup>He + n + 17.6 MeV</p>
+        <p><strong>Why fusion needs high temperature:</strong> Both nuclei are positively charged; thermal energy must overcome the Coulomb barrier (&asymp;10<sup>8</sup> K needed).</p>
+        <p>Energy per unit mass is higher in fusion than fission. Stars are powered by fusion.</p>
+      </div>
+
+      <h3>8.3 Mass-Energy Equivalence</h3>
+      <div class="formula-box">
+        <p>Einstein's famous relation:</p>
+        <p class="big-formula">E = mc&sup2;</p>
+        <p>Energy released when mass &Delta;m is converted: &Delta;E = &Delta;mc&sup2;</p>
+        <p>For nuclear reactions: &Delta;m is typically in amu; use 1 amu = 931.5 MeV/c&sup2;</p>
+        <p>The Q-value of a reaction: Q = (&Sigma;m<sub>reactants</sub> &minus; &Sigma;m<sub>products</sub>) &times; 931.5 MeV</p>
+        <p>Q &gt; 0: exothermic (energy released); Q &lt; 0: endothermic (energy absorbed)</p>
+      </div>
+
+      <h3>8.4 Particle Physics Basics</h3>
+      <div class="note-box">
+        <p><strong>Fundamental particles:</strong></p>
+        <ul>
+          <li>Quarks: up (u), down (d), charm (c), strange (s), top (t), bottom (b)</li>
+          <li>Proton = uud; Neutron = udd (quark composition)</li>
+          <li>Leptons: electron, muon, tau, and their neutrinos</li>
+          <li>Force carriers: photon (&gamma;, EM), W&plusmn;/Z (weak), gluons (strong), graviton (gravity, unconfirmed)</li>
+        </ul>
+        <p><strong>Antiparticles:</strong> Every particle has an antiparticle with opposite charge. Positron e<sup>+</sup> is antielectron.</p>
+        <p><strong>Pair production:</strong> &gamma; &rarr; e<sup>&minus;</sup> + e<sup>+</sup> (requires E&gamma; &ge; 2m<sub>e</sub>c&sup2; = 1.022 MeV)</p>
+        <p><strong>Pair annihilation:</strong> e<sup>&minus;</sup> + e<sup>+</sup> &rarr; 2&gamma; (each photon has E = 0.511 MeV)</p>
+      </div>
+
+      <h3>8.5 Solved Problems – Nuclear Reactions</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Q-value of a Reaction</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Find Q-value: <sup>7</sup><sub>3</sub>Li + <sup>1</sup><sub>1</sub>H &rarr; 2 <sup>4</sup><sub>2</sub>He</p>
+          <p>Masses (amu): m(<sup>7</sup>Li)=7.01601, m(<sup>1</sup>H)=1.00783, m(<sup>4</sup>He)=4.00260</p>
+          <p>&Delta;m = (7.01601+1.00783) &minus; 2(4.00260) = 8.02384 &minus; 8.00520 = 0.01864 amu</p>
+          <p>Q = 0.01864 &times; 931.5 = <strong>17.36 MeV</strong> (exothermic – energy released)</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Fission Energy</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> How much energy (in MWh) is released by fission of 1 g of <sup>235</sup>U? (200 MeV per fission)</p>
+          <p>N = N<sub>A</sub>&times;m/M = 6.022&times;10<sup>23</sup>&times;0.001/235 = 2.563&times;10<sup>18</sup> atoms (fissions)</p>
+          <p>Total energy = 2.563&times;10<sup>18</sup>&times;200&times;10&sup6;&times;1.6&times;10<sup>&minus;19</sup> J = 2.563&times;10<sup>18</sup>&times;3.2&times;10<sup>&minus;11</sup> J</p>
+          <p>= 8.2&times;10&sup7; J = 82 MJ &asymp; <strong>22.8 kWh &asymp; 0.023 MWh</strong></p>
+          <p>This is enough to power a 100W bulb for &asymp;228 hours from just 1 gram!</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="summary-box">
+      <h2>Key Formulas Quick Reference</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <h4>Photoelectric</h4>
+          <p>KE = hf &minus; &phi;</p>
+          <p>eV<sub>0</sub> = hf &minus; &phi;</p>
+          <p>&lambda;<sub>0</sub> = hc/&phi;</p>
+        </div>
+        <div class="formula-card">
+          <h4>Bohr Model</h4>
+          <p>r<sub>n</sub> = 0.529n&sup2;/Z &Aring;</p>
+          <p>E<sub>n</sub> = &minus;13.6Z&sup2;/n&sup2; eV</p>
+          <p>L = nℏ</p>
+        </div>
+        <div class="formula-card">
+          <h4>Nuclear</h4>
+          <p>R = 1.2A<sup>1/3</sup> fm</p>
+          <p>BE = &Delta;m &times; 931.5 MeV</p>
+          <p>N = N<sub>0</sub>e<sup>&minus;&lambda;t</sup></p>
+        </div>
+        <div class="formula-card">
+          <h4>Radioactivity</h4>
+          <p>T<sub>1/2</sub> = 0.693/&lambda;</p>
+          <p>&tau; = 1/&lambda;</p>
+          <p>N = N<sub>0</sub>/2<sup>n</sup></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

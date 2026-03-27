@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waves &amp; Optics Formulas – Reflection, Refraction, Interference | JEE NEET Class 12 | StudyHub</title>
+  <meta name="description" content="Complete waves and optics notes for JEE and NEET. Sound waves, reflection, refraction, Snell's law, lenses, mirrors, Young's double slit, diffraction with solved examples.">
+  <meta name="keywords" content="waves and optics formulas JEE NEET class 12, sound waves, reflection refraction, Snell's law, lens mirror formula, Young's double slit, diffraction, polarization">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">&#128218; StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main-content">
+  <div class="container">
+
+    <div class="page-header">
+      <h1>Waves &amp; Optics – Complete Notes</h1>
+      <p class="subtitle">JEE Main | JEE Advanced | NEET | Class 11–12 Physics</p>
+      <div class="topic-tags">
+        <span class="tag">Wave Motion</span>
+        <span class="tag">Standing Waves</span>
+        <span class="tag">Doppler Effect</span>
+        <span class="tag">Ray Optics</span>
+        <span class="tag">Wave Optics</span>
+        <span class="tag">YDSE</span>
+      </div>
+    </div>
+
+    <div class="toc-box">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="#wavemotion">Wave Motion – Basics</a></li>
+        <li><a href="#standing">Superposition &amp; Standing Waves</a></li>
+        <li><a href="#sound">Sound, Intensity &amp; Doppler Effect</a></li>
+        <li><a href="#reflection">Ray Optics – Reflection &amp; Mirrors</a></li>
+        <li><a href="#refraction">Refraction, Lenses &amp; Prisms</a></li>
+        <li><a href="#waveoptics">Wave Optics – Interference, Diffraction, Polarization</a></li>
+        <li><a href="#practice-wo">Practice Problems</a></li>
+      </ol>
+    </div>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <section id="wavemotion">
+      <h2>1. Wave Motion – Basics</h2>
+
+      <h3>1.1 Types of Waves</h3>
+      <div class="note-box">
+        <p><strong>Transverse waves:</strong> Displacement perpendicular to direction of propagation. Examples: light, string waves. Can be polarized.</p>
+        <p><strong>Longitudinal waves:</strong> Displacement parallel to propagation. Examples: sound, compression waves in air. Cannot be polarized.</p>
+        <p><strong>Mechanical waves</strong> need a medium; <strong>Electromagnetic waves</strong> do not.</p>
+      </div>
+
+      <h3>1.2 Wave Equation</h3>
+      <div class="formula-box">
+        <p>General equation for a sinusoidal transverse wave traveling in +x direction:</p>
+        <p class="big-formula">y(x, t) = A sin(kx &minus; &omega;t + &phi;)</p>
+        <table class="formula-table">
+          <thead><tr><th>Symbol</th><th>Name</th><th>Formula / Value</th></tr></thead>
+          <tbody>
+            <tr><td>A</td><td>Amplitude</td><td>Maximum displacement</td></tr>
+            <tr><td>k = 2&pi;/&lambda;</td><td>Wave number</td><td>rad/m</td></tr>
+            <tr><td>&omega; = 2&pi;f = 2&pi;/T</td><td>Angular frequency</td><td>rad/s</td></tr>
+            <tr><td>&phi;</td><td>Initial phase</td><td>radians</td></tr>
+            <tr><td>v = f&lambda; = &omega;/k</td><td>Wave speed</td><td>m/s</td></tr>
+            <tr><td>T = 1/f = 2&pi;/&omega;</td><td>Time period</td><td>s</td></tr>
+          </tbody>
+        </table>
+        <p>For wave traveling in &minus;x direction: y = A sin(kx + &omega;t + &phi;)</p>
+      </div>
+
+      <h3>1.3 Wave Speed in Different Media</h3>
+      <div class="formula-box">
+        <table class="formula-table">
+          <thead><tr><th>Medium</th><th>Formula</th><th>Symbols</th></tr></thead>
+          <tbody>
+            <tr><td>Stretched string</td><td>v = &radic;(T/&mu;)</td><td>T = tension, &mu; = linear mass density (kg/m)</td></tr>
+            <tr><td>Liquid (bulk modulus B)</td><td>v = &radic;(B/&rho;)</td><td>&rho; = density</td></tr>
+            <tr><td>Solid (Young's modulus Y)</td><td>v = &radic;(Y/&rho;)</td><td>longitudinal wave</td></tr>
+            <tr><td>Gas (sound)</td><td>v = &radic;(&gamma;P/&rho;) = &radic;(&gamma;RT/M)</td><td>&gamma;=C<sub>p</sub>/C<sub>v</sub></td></tr>
+            <tr><td>Air (approx)</td><td>v &asymp; 331 + 0.6T m/s</td><td>T = temperature in &deg;C</td></tr>
+          </tbody>
+        </table>
+        <p>At 0&deg;C: v<sub>sound</sub> = 331 m/s; at 25&deg;C: v &asymp; 346 m/s</p>
+      </div>
+
+      <h3>1.4 Intensity and Power</h3>
+      <div class="formula-box">
+        <p><strong>Intensity:</strong> I = P/A = &frac12;&rho;&omega;&sup2;A&sup2;v (energy per unit time per unit area)</p>
+        <p>I &propto; A&sup2; (intensity proportional to square of amplitude)</p>
+        <p>I &propto; f&sup2; (intensity proportional to square of frequency)</p>
+        <p>For a point source: I &propto; 1/r&sup2; (inverse square law)</p>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <section id="standing">
+      <h2>2. Superposition &amp; Standing Waves</h2>
+
+      <h3>2.1 Principle of Superposition</h3>
+      <div class="note-box">
+        <p>When two or more waves pass through the same medium simultaneously, the net displacement at any point is the <strong>algebraic sum</strong> of displacements due to individual waves.</p>
+        <p>This is valid for linear media (most mechanical and EM waves in normal conditions).</p>
+      </div>
+
+      <h3>2.2 Standing (Stationary) Waves</h3>
+      <div class="formula-box">
+        <p>Two waves with same amplitude and frequency, traveling in opposite directions:</p>
+        <p>y<sub>1</sub> = A sin(kx&minus;&omega;t), &nbsp; y<sub>2</sub> = A sin(kx+&omega;t)</p>
+        <p>Superposition: y = y<sub>1</sub> + y<sub>2</sub> = <strong>2A sin(kx) cos(&omega;t)</strong></p>
+        <p>This is NOT a traveling wave – it is a standing wave.</p>
+        <table class="formula-table">
+          <thead><tr><th>Feature</th><th>Location</th><th>Condition</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Nodes</strong> (zero amplitude)</td><td>kx = n&pi;</td><td>x = n&lambda;/2 (n = 0,1,2,&hellip;)</td></tr>
+            <tr><td><strong>Antinodes</strong> (max amplitude)</td><td>kx = (2n+1)&pi;/2</td><td>x = (2n+1)&lambda;/4</td></tr>
+            <tr><td>Node-to-node distance</td><td>&lambda;/2</td><td>&mdash;</td></tr>
+            <tr><td>Antinode-to-antinode</td><td>&lambda;/2</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2.3 Modes of Vibration</h3>
+      <div class="formula-box">
+        <p><strong>String fixed at both ends</strong> (both ends are nodes):</p>
+        <p>Condition: L = n&lambda;/2 &rarr; &lambda;<sub>n</sub> = 2L/n</p>
+        <p class="big-formula">f<sub>n</sub> = nv/(2L) = n/(2L) &times; &radic;(T/&mu;)</p>
+        <p>n=1: fundamental (1st harmonic); n=2: 1st overtone (2nd harmonic); etc.</p>
+        <hr>
+        <p><strong>Open pipe</strong> (both ends open, antinodes at both ends):</p>
+        <p class="big-formula">f<sub>n</sub> = nv/(2L), &nbsp; n = 1, 2, 3, &hellip; (all harmonics)</p>
+        <hr>
+        <p><strong>Closed pipe</strong> (one end closed = node, one end open = antinode):</p>
+        <p>Condition: L = (2n&minus;1)&lambda;/4</p>
+        <p class="big-formula">f<sub>n</sub> = (2n&minus;1)v/(4L), &nbsp; n = 1, 2, 3, &hellip; (odd harmonics only)</p>
+        <p>Fundamental of closed pipe = &frac12; fundamental of open pipe (same L).</p>
+        <p>Closed pipe: only odd harmonics (1st, 3rd, 5th, &hellip;)</p>
+      </div>
+
+      <h3>2.4 End Correction for Pipes</h3>
+      <div class="note-box">
+        <p>In practice, the antinode at an open end is slightly beyond the pipe end. The effective length:</p>
+        <p>L<sub>eff</sub> = L + e &nbsp; for each open end, where e &asymp; 0.6r (r = radius of pipe)</p>
+        <p>For open pipe: L<sub>eff</sub> = L + 2e; for closed pipe: L<sub>eff</sub> = L + e</p>
+      </div>
+
+      <h3>2.5 Solved Problems – Standing Waves</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – String Frequency</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A string of length 0.5 m, mass 5 g, is under tension 80 N. Find the fundamental frequency and first three harmonics.</p>
+          <p>&mu; = 0.005/0.5 = 0.01 kg/m</p>
+          <p>v = &radic;(T/&mu;) = &radic;(80/0.01) = &radic;8000 = 20&radic;20 &asymp; 89.4 m/s</p>
+          <p>f<sub>1</sub> = v/(2L) = 89.4/1 = <strong>89.4 Hz</strong></p>
+          <p>f<sub>2</sub> = 178.8 Hz; f<sub>3</sub> = 268.3 Hz</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Closed vs Open Pipe</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> An open pipe of length 0.5 m and a closed pipe of length 0.5 m both use v=340 m/s. Find their fundamentals and first overtones.</p>
+          <p><strong>Open pipe:</strong> f<sub>1</sub> = 340/(2&times;0.5) = <strong>340 Hz</strong>; f<sub>2</sub> = 680 Hz</p>
+          <p><strong>Closed pipe:</strong> f<sub>1</sub> = 340/(4&times;0.5) = <strong>170 Hz</strong>; first overtone = 3rd harmonic = 3&times;170 = 510 Hz</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3 ==================== -->
+    <section id="sound">
+      <h2>3. Sound, Intensity &amp; Doppler Effect</h2>
+
+      <h3>3.1 Sound Intensity Level</h3>
+      <div class="formula-box">
+        <p class="big-formula">&beta; = 10 log<sub>10</sub>(I/I<sub>0</sub>) &nbsp; decibels (dB)</p>
+        <p>Reference intensity: I<sub>0</sub> = 10<sup>&minus;12</sup> W/m&sup2; (threshold of hearing)</p>
+        <table class="data-table">
+          <thead><tr><th>Source</th><th>Approx. dB</th></tr></thead>
+          <tbody>
+            <tr><td>Threshold of hearing</td><td>0 dB</td></tr>
+            <tr><td>Whisper</td><td>20–30 dB</td></tr>
+            <tr><td>Normal conversation</td><td>60 dB</td></tr>
+            <tr><td>City traffic</td><td>80 dB</td></tr>
+            <tr><td>Concert/rock music</td><td>110–120 dB</td></tr>
+            <tr><td>Threshold of pain</td><td>120–130 dB</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>3.2 Doppler Effect</h3>
+      <div class="formula-box">
+        <p>Apparent frequency when source and observer are in relative motion:</p>
+        <p class="big-formula">f' = f &times; (v &plusmn; v<sub>o</sub>) / (v &mnplus; v<sub>s</sub>)</p>
+        <table class="formula-table">
+          <thead><tr><th>Case</th><th>Sign choice</th></tr></thead>
+          <tbody>
+            <tr><td>Observer moves <em>toward</em> source</td><td>Use <strong>+v<sub>o</sub></strong> in numerator</td></tr>
+            <tr><td>Observer moves <em>away</em> from source</td><td>Use <strong>&minus;v<sub>o</sub></strong> in numerator</td></tr>
+            <tr><td>Source moves <em>toward</em> observer</td><td>Use <strong>&minus;v<sub>s</sub></strong> in denominator</td></tr>
+            <tr><td>Source moves <em>away</em> from observer</td><td>Use <strong>+v<sub>s</sub></strong> in denominator</td></tr>
+          </tbody>
+        </table>
+        <p class="formula-note"><strong>Mnemonic:</strong> Approaching = frequency increases (+ in numerator, &minus; in denominator). Receding = decreases.</p>
+      </div>
+
+      <h3>3.3 Beats</h3>
+      <div class="formula-box">
+        <p>When two sound waves of slightly different frequencies f<sub>1</sub> and f<sub>2</sub> interfere:</p>
+        <p class="big-formula">f<sub>beat</sub> = |f<sub>1</sub> &minus; f<sub>2</sub>|</p>
+        <p>Maximum beats audible: &asymp;10 beats/sec (human ear perception limit).</p>
+        <p>Amplitude varies sinusoidally with frequency f<sub>beat</sub>/2.</p>
+        <p><strong>Tuning a musical instrument:</strong> Beat frequency decreases as you approach correct pitch.</p>
+      </div>
+
+      <h3>3.4 Solved Problems – Sound &amp; Doppler</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Train Whistles</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A train moves at 20 m/s toward a station blowing a 500 Hz whistle. v<sub>sound</sub> = 340 m/s. Find apparent frequency at station.</p>
+          <p>Observer stationary, source approaching: f' = f &times; v/(v&minus;v<sub>s</sub>) = 500&times;340/(340&minus;20) = 500&times;340/320 = <strong>531.25 Hz</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Both Moving</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A source (f=400 Hz) moves at 30 m/s toward an observer who moves at 20 m/s away from the source. v=340 m/s.</p>
+          <p>f' = 400 &times; (340&minus;20)/(340&minus;30) = 400&times;320/310 = <strong>412.9 Hz</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Intensity Level</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> The intensity at 10 m from a point source is 10<sup>&minus;6</sup> W/m&sup2;. Find (a) sound level in dB, (b) intensity at 20 m.</p>
+          <p>(a) &beta; = 10 log(10<sup>&minus;6</sup>/10<sup>&minus;12</sup>) = 10 log(10&sup6;) = 10&times;6 = <strong>60 dB</strong></p>
+          <p>(b) I &propto; 1/r&sup2;: I<sub>20</sub> = 10<sup>&minus;6</sup>&times;(10/20)&sup2; = <strong>2.5&times;10<sup>&minus;7</sup> W/m&sup2;</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 4 – Beats</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A tuning fork of 256 Hz produces 4 beats/s with another fork. When wax is applied to the second fork, beats become 2/s. Find frequency of second fork.</p>
+          <p>Initial: second fork is 256&plusmn;4 = 252 Hz or 260 Hz.</p>
+          <p>Wax reduces frequency. If it was 260: after wax, gets closer to 256 &rarr; fewer beats. &rarr; <strong>260 Hz</strong>.</p>
+          <p>If it was 252: after wax, goes further from 256 &rarr; more beats. Not consistent.</p>
+          <p>Answer: Second fork = <strong>260 Hz</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 5 – Resonance in Closed Pipe</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A closed pipe resonates at 340 Hz (fundamental). Find (a) length (b) next resonant frequency. v=340 m/s.</p>
+          <p>(a) f<sub>1</sub> = v/(4L) &rarr; L = v/(4f) = 340/(4&times;340) = <strong>0.25 m</strong></p>
+          <p>(b) Next resonance for closed pipe = 3rd harmonic: 3&times;340 = <strong>1020 Hz</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4 ==================== -->
+    <section id="reflection">
+      <h2>4. Ray Optics – Reflection &amp; Mirrors</h2>
+
+      <h3>4.1 Laws of Reflection</h3>
+      <div class="note-box">
+        <ol>
+          <li>Incident ray, normal, and reflected ray are coplanar.</li>
+          <li>Angle of incidence = Angle of reflection (both measured from normal).</li>
+        </ol>
+        <p>These hold for both plane and curved mirrors.</p>
+      </div>
+
+      <h3>4.2 Sign Convention (New Cartesian)</h3>
+      <div class="note-box">
+        <ul>
+          <li>All distances measured from the pole (center) of the mirror/lens.</li>
+          <li>Distances in the direction of incident light (usually left to right): <strong>positive</strong>.</li>
+          <li>Distances opposite to incident light: <strong>negative</strong>.</li>
+          <li>Heights above principal axis: positive; below: negative.</li>
+          <li>For mirrors: incident light comes from the left; object is in front of mirror (left side = negative u).</li>
+        </ul>
+      </div>
+
+      <h3>4.3 Mirror Formula and Magnification</h3>
+      <div class="formula-box">
+        <p class="big-formula">1/v + 1/u = 1/f = 2/R</p>
+        <p>f = focal length = R/2 (R = radius of curvature)</p>
+        <p><strong>Concave mirror:</strong> f is negative (using sign convention: f = &minus;|f|)</p>
+        <p><strong>Convex mirror:</strong> f is positive (f = +|f|)</p>
+        <p><strong>Linear magnification:</strong> m = &minus;v/u = h'/h</p>
+        <table class="data-table">
+          <thead><tr><th>Mirror type</th><th>Image nature</th><th>m sign</th></tr></thead>
+          <tbody>
+            <tr><td>Concave, u &gt; 2f</td><td>Real, inverted, diminished</td><td>m: negative, |m|&lt;1</td></tr>
+            <tr><td>Concave, u = 2f</td><td>Real, inverted, same size</td><td>m = &minus;1</td></tr>
+            <tr><td>Concave, f &lt; u &lt; 2f</td><td>Real, inverted, magnified</td><td>m: negative, |m|&gt;1</td></tr>
+            <tr><td>Concave, u &lt; f</td><td>Virtual, erect, magnified</td><td>m: positive, |m|&gt;1</td></tr>
+            <tr><td>Convex (all positions)</td><td>Virtual, erect, diminished</td><td>m: positive, |m|&lt;1</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>4.4 Solved Problems – Mirrors</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Concave Mirror</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> An object is placed 20 cm in front of a concave mirror of focal length 15 cm. Find image position, nature and magnification.</p>
+          <p>u = &minus;20 cm, f = &minus;15 cm (concave, sign convention)</p>
+          <p>1/v = 1/f &minus; 1/u = 1/(&minus;15) &minus; 1/(&minus;20) = &minus;1/15 + 1/20 = (&minus;4+3)/60 = &minus;1/60</p>
+          <p>v = <strong>&minus;60 cm</strong> (real, in front of mirror)</p>
+          <p>m = &minus;v/u = &minus;(&minus;60)/(&minus;20) = &minus;3 &rarr; real, inverted, 3x magnified</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Convex Mirror</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A convex mirror has f = +20 cm. Object is at 30 cm. Find image.</p>
+          <p>u = &minus;30 cm, f = +20 cm</p>
+          <p>1/v = 1/f &minus; 1/u = 1/20 &minus; 1/(&minus;30) = 1/20 + 1/30 = (3+2)/60 = 5/60 = 1/12</p>
+          <p>v = <strong>+12 cm</strong> (virtual, behind mirror)</p>
+          <p>m = &minus;v/u = &minus;12/(&minus;30) = +0.4 (erect, diminished)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5 ==================== -->
+    <section id="refraction">
+      <h2>5. Refraction, Lenses &amp; Prisms</h2>
+
+      <h3>5.1 Snell's Law of Refraction</h3>
+      <div class="formula-box">
+        <p class="big-formula">n<sub>1</sub> sin&theta;<sub>1</sub> = n<sub>2</sub> sin&theta;<sub>2</sub></p>
+        <p>Refractive index: n = c/v = speed of light in vacuum / speed in medium</p>
+        <p>When going from medium 1 to 2: n<sub>1</sub> sin&theta;<sub>1</sub> = n<sub>2</sub> sin&theta;<sub>2</sub></p>
+        <p><strong>Optical density and speed:</strong> Higher n &rarr; slower light &rarr; bends toward normal when entering.</p>
+        <p><strong>Cauchy's equation:</strong> n = A + B/&lambda;&sup2; (dispersion – shorter &lambda; has higher n)</p>
+      </div>
+
+      <h3>5.2 Total Internal Reflection (TIR)</h3>
+      <div class="formula-box">
+        <p>TIR occurs when light travels from denser to rarer medium and angle of incidence exceeds the critical angle C:</p>
+        <p class="big-formula">sin C = n<sub>2</sub>/n<sub>1</sub> &nbsp; (where n<sub>1</sub> &gt; n<sub>2</sub>)</p>
+        <p>For glass (n=1.5) to air: sin C = 1/1.5 = 2/3 &rarr; C = 41.8&deg;</p>
+        <p>For diamond (n=2.42): C = 24.4&deg; (very small – explains brilliance)</p>
+        <p><strong>Applications:</strong> optical fibers, endoscopes, diamond brilliance, mirage, prism periscopes.</p>
+      </div>
+
+      <h3>5.3 Refraction at Spherical Surfaces</h3>
+      <div class="formula-box">
+        <p>For refraction from medium n<sub>1</sub> to n<sub>2</sub> at spherical surface of radius R:</p>
+        <p class="big-formula">n<sub>2</sub>/v &minus; n<sub>1</sub>/u = (n<sub>2</sub> &minus; n<sub>1</sub>)/R</p>
+        <p>Sign convention: same as mirrors. R positive if center of curvature is on transmission side.</p>
+      </div>
+
+      <h3>5.4 Thin Lens Formula</h3>
+      <div class="formula-box">
+        <p class="big-formula">1/v &minus; 1/u = 1/f</p>
+        <p><strong>Lens Maker's Equation:</strong></p>
+        <p class="big-formula">1/f = (n &minus; 1)(1/R<sub>1</sub> &minus; 1/R<sub>2</sub>)</p>
+        <p>n = refractive index of lens material; R<sub>1</sub>, R<sub>2</sub> = radii of curvature of the two surfaces.</p>
+        <p><strong>Power:</strong> P = 1/f(m) &nbsp; Unit: Dioptre (D)</p>
+        <p><strong>Magnification:</strong> m = v/u = f/(f+u) = (f&minus;v)/f</p>
+        <p><strong>Lenses in contact:</strong> 1/f = 1/f<sub>1</sub> + 1/f<sub>2</sub> + &hellip; (P = P<sub>1</sub> + P<sub>2</sub>)</p>
+      </div>
+
+      <h3>5.5 Types of Lenses – Image Summary</h3>
+      <div class="formula-box">
+        <table class="data-table">
+          <thead><tr><th>Convex Lens</th><th>Object position</th><th>Image</th></tr></thead>
+          <tbody>
+            <tr><td>&mdash;</td><td>u &gt; 2f (beyond C)</td><td>Real, inverted, diminished, between F and C</td></tr>
+            <tr><td>&mdash;</td><td>u = 2f (at C)</td><td>Real, inverted, same size, at C</td></tr>
+            <tr><td>&mdash;</td><td>f &lt; u &lt; 2f</td><td>Real, inverted, magnified, beyond C</td></tr>
+            <tr><td>&mdash;</td><td>u = f</td><td>Image at infinity</td></tr>
+            <tr><td>&mdash;</td><td>u &lt; f</td><td>Virtual, erect, magnified, same side as object</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Concave lens:</strong> Always produces virtual, erect, diminished image on same side as object.</p>
+      </div>
+
+      <h3>5.6 Prism</h3>
+      <div class="formula-box">
+        <p><strong>Deviation:</strong> &delta; = i<sub>1</sub> + i<sub>2</sub> &minus; A</p>
+        <p>where A = apex angle, i<sub>1</sub> = angle of incidence, i<sub>2</sub> = angle of emergence.</p>
+        <p>Also: r<sub>1</sub> + r<sub>2</sub> = A (angles of refraction at two surfaces sum to apex angle)</p>
+        <p><strong>Minimum deviation (D<sub>m</sub>):</strong> At D<sub>m</sub>, i<sub>1</sub> = i<sub>2</sub> = i and r<sub>1</sub> = r<sub>2</sub> = A/2 (symmetrical path).</p>
+        <p class="big-formula">n = sin[(A + D<sub>m</sub>)/2] / sin(A/2)</p>
+        <p><strong>Thin prism (&delta; = (n&minus;1)A):</strong> Valid for small apex angles.</p>
+        <p><strong>Dispersion:</strong> White light splits into spectrum because n depends on &lambda;.</p>
+        <p>Angular dispersion: &theta; = (n<sub>v</sub> &minus; n<sub>r</sub>)A</p>
+        <p>Dispersive power: &omega; = (n<sub>v</sub> &minus; n<sub>r</sub>)/(n<sub>y</sub> &minus; 1)</p>
+      </div>
+
+      <h3>5.7 Solved Problems – Refraction &amp; Lenses</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Lens Image</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A convex lens (f=20 cm). Object at 30 cm. Find image position and magnification.</p>
+          <p>u = &minus;30 cm, f = +20 cm (convex lens, sign convention)</p>
+          <p>1/v = 1/f + 1/u = 1/20 + 1/(&minus;30) = 1/20 &minus; 1/30 = (3&minus;2)/60 = 1/60</p>
+          <p>v = <strong>+60 cm</strong> (real, on other side)</p>
+          <p>m = v/u = 60/(&minus;30) = <strong>&minus;2</strong> (inverted, 2x magnified)</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Combination of Lenses</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A convex lens of f = +40 cm and a concave lens of f = &minus;20 cm are in contact. Find combined focal length and power.</p>
+          <p>1/f = 1/40 + 1/(&minus;20) = 1/40 &minus; 2/40 = &minus;1/40</p>
+          <p>f = <strong>&minus;40 cm</strong> (concave combination)</p>
+          <p>P = 100/f(cm) = 100/(&minus;40) = <strong>&minus;2.5 D</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Critical Angle and TIR</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A glass-water interface. n<sub>glass</sub>=1.5, n<sub>water</sub>=1.33. Find critical angle for TIR.</p>
+          <p>sin C = n<sub>water</sub>/n<sub>glass</sub> = 1.33/1.5 = 0.887</p>
+          <p>C = sin<sup>&minus;1</sup>(0.887) &asymp; <strong>62.4&deg;</strong></p>
+          <p>Light in glass hitting the interface at more than 62.4&deg; undergoes TIR.</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 4 – Prism Minimum Deviation</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A prism of apex angle 60&deg; has minimum deviation 30&deg;. Find refractive index.</p>
+          <p>n = sin[(A+D<sub>m</sub>)/2] / sin(A/2) = sin[(60+30)/2] / sin(30)</p>
+          <p>= sin 45&deg; / sin 30&deg; = (&radic;2/2)/(1/2) = &radic;2 &asymp; <strong>1.414</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 5 – Lens Maker's Equation</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A biconvex lens has both radii = 20 cm and n=1.5. Find focal length.</p>
+          <p>1/f = (n&minus;1)(1/R<sub>1</sub> &minus; 1/R<sub>2</sub>) = (1.5&minus;1)(1/20 &minus; 1/(&minus;20)) = 0.5&times;(1/20+1/20) = 0.5&times;2/20 = 1/20</p>
+          <p>f = <strong>20 cm</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 6 ==================== -->
+    <section id="waveoptics">
+      <h2>6. Wave Optics</h2>
+
+      <h3>6.1 Young's Double Slit Experiment (YDSE)</h3>
+      <p>This is the most important topic in wave optics for JEE and NEET.</p>
+      <div class="formula-box">
+        <p><strong>Setup:</strong> Two slits S<sub>1</sub> and S<sub>2</sub>, separation d. Screen at distance D.</p>
+        <p><strong>Path difference</strong> for a point P at height y from center:</p>
+        <p class="big-formula">&Delta; = y &times; d / D &nbsp; (for D &gt;&gt; d)</p>
+        <table class="formula-table">
+          <thead><tr><th>Condition</th><th>Path difference &Delta;</th><th>Position y</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Bright fringe</strong> (constructive)</td><td>&Delta; = n&lambda; (n=0,&plusmn;1,&plusmn;2,...)</td><td>y<sub>n</sub> = n&lambda;D/d</td></tr>
+            <tr><td><strong>Dark fringe</strong> (destructive)</td><td>&Delta; = (2n&minus;1)&lambda;/2</td><td>y<sub>n</sub> = (2n&minus;1)&lambda;D/(2d)</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Fringe width (spacing between adjacent bright fringes):</strong></p>
+        <p class="big-formula">&beta; = &lambda;D / d</p>
+        <p>Note: fringe width is the same for bright and dark fringes, and equals &beta;.</p>
+      </div>
+
+      <h3>6.2 Intensity in YDSE</h3>
+      <div class="formula-box">
+        <p>Phase difference &delta; corresponds to path difference &Delta; by: &delta; = 2&pi;&Delta;/&lambda;</p>
+        <p>General intensity at phase difference &delta;:</p>
+        <p class="big-formula">I = I<sub>1</sub> + I<sub>2</sub> + 2&radic;(I<sub>1</sub>I<sub>2</sub>) cos&delta;</p>
+        <p>For equal slits I<sub>1</sub> = I<sub>2</sub> = I<sub>0</sub>:</p>
+        <p class="big-formula">I = 4I<sub>0</sub> cos&sup2;(&delta;/2)</p>
+        <p>I<sub>max</sub> = 4I<sub>0</sub> (when &delta; = 0, 2&pi;, 4&pi;...)</p>
+        <p>I<sub>min</sub> = 0 (when &delta; = &pi;, 3&pi;...)</p>
+        <p><strong>Ratio:</strong> I<sub>max</sub>/I<sub>min</sub> = (&radic;I<sub>1</sub> + &radic;I<sub>2</sub>)&sup2; / (&radic;I<sub>1</sub> &minus; &radic;I<sub>2</sub>)&sup2;</p>
+      </div>
+
+      <h3>6.3 Coherence</h3>
+      <div class="note-box">
+        <p><strong>Coherent sources:</strong> Sources with a constant phase difference. Required for sustained interference.</p>
+        <p><strong>Temporal coherence:</strong> Related to monochromaticity of source.</p>
+        <p><strong>Spatial coherence:</strong> Related to size of source.</p>
+        <p>Laser light is highly coherent. Sunlight is incoherent for interference.</p>
+        <p>In YDSE, coherence is achieved by deriving both beams from the same source through two slits.</p>
+      </div>
+
+      <h3>6.4 Single Slit Diffraction</h3>
+      <div class="formula-box">
+        <p>Diffraction of light around a single slit of width a:</p>
+        <p><strong>Minima (dark fringes):</strong></p>
+        <p class="big-formula">a sin&theta; = n&lambda; &nbsp; (n = &plusmn;1, &plusmn;2, &plusmn;3, &hellip;)</p>
+        <p><strong>Central maximum:</strong> Width = 2&lambda;/a (angular); linear width = 2&lambda;D/a</p>
+        <p><strong>Secondary maxima:</strong> at a sin&theta; = (2n+1)&lambda;/2</p>
+        <p>Each secondary maximum is about 1/22 of the intensity of the central maximum.</p>
+        <p>Width of secondary maxima = &lambda;/a (half the central maximum).</p>
+      </div>
+
+      <h3>6.5 Resolving Power</h3>
+      <div class="formula-box">
+        <p><strong>Rayleigh criterion:</strong> Two sources are just resolved when the principal maximum of one falls on the first minimum of the other.</p>
+        <p>Minimum angular resolution: &theta;<sub>min</sub> = 1.22&lambda;/D (D = aperture)</p>
+        <p><strong>Telescope:</strong> Resolving power = D/(1.22&lambda;)</p>
+        <p><strong>Microscope:</strong> Limit of resolution = 0.61&lambda;/n sin&alpha; (n sin&alpha; = numerical aperture)</p>
+      </div>
+
+      <h3>6.6 Polarization</h3>
+      <div class="formula-box">
+        <p><strong>Malus's Law:</strong> When polarized light of intensity I<sub>0</sub> passes through a polarizer at angle &theta; to polarization axis:</p>
+        <p class="big-formula">I = I<sub>0</sub> cos&sup2;&theta;</p>
+        <p><strong>Brewster's Angle (i<sub>B</sub>):</strong></p>
+        <p class="big-formula">tan i<sub>B</sub> = n<sub>2</sub>/n<sub>1</sub></p>
+        <p>At Brewster's angle, the reflected ray is completely plane-polarized (perpendicular to plane of incidence). The reflected and refracted rays are perpendicular: i<sub>B</sub> + r = 90&deg;.</p>
+        <p>For glass (n=1.5): i<sub>B</sub> = arctan(1.5) &asymp; 56.3&deg;</p>
+        <p><strong>Unpolarized light:</strong> When passed through a polarizer, intensity becomes I<sub>0</sub>/2.</p>
+        <p><strong>Polarization methods:</strong> Reflection (Brewster's angle), scattering, double refraction (birefringence), using polaroids.</p>
+      </div>
+
+      <h3>6.7 Solved Problems – Wave Optics</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – YDSE Fringe Width</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> In YDSE, d=0.5 mm, D=100 cm, &lambda;=500 nm. Find fringe width and position of 3rd bright fringe.</p>
+          <p>&beta; = &lambda;D/d = 500&times;10<sup>&minus;9</sup>&times;1/(0.5&times;10<sup>&minus;3</sup>) = 500&times;10<sup>&minus;9</sup>/5&times;10<sup>&minus;4</sup> = <strong>10<sup>&minus;3</sup> m = 1 mm</strong></p>
+          <p>3rd bright fringe: y<sub>3</sub> = 3&beta; = <strong>3 mm</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Intensity at a Point</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> In YDSE with equal slits, what is the intensity at a point where path difference = &lambda;/3? (I<sub>max</sub> = I)</p>
+          <p>&delta; = 2&pi;&times;(&lambda;/3)/&lambda; = 2&pi;/3</p>
+          <p>I = I<sub>max</sub>&times;cos&sup2;(&delta;/2) = I&times;cos&sup2;(&pi;/3) = I&times;(0.5)&sup2; = <strong>I/4</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – YDSE with Changed Medium</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> YDSE setup is submerged in water (n=1.33). How does fringe width change?</p>
+          <p>&lambda;<sub>water</sub> = &lambda;<sub>air</sub>/n = &lambda;/1.33</p>
+          <p>&beta;<sub>water</sub> = &lambda;<sub>water</sub>D/d = &beta;<sub>air</sub>/1.33</p>
+          <p>Fringe width <strong>decreases by factor 1.33</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 4 – Diffraction Central Maximum Width</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Light of 600 nm falls on a slit 0.2 mm wide. Screen at 1.5 m. Find width of central maximum.</p>
+          <p>Width = 2&lambda;D/a = 2&times;600&times;10<sup>&minus;9</sup>&times;1.5/(0.2&times;10<sup>&minus;3</sup>)</p>
+          <p>= 2&times;600&times;10<sup>&minus;9</sup>&times;1.5/2&times;10<sup>&minus;4</sup> = 1800&times;10<sup>&minus;9</sup>/10<sup>&minus;4</sup> = <strong>9&times;10<sup>&minus;3</sup> m = 9 mm</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 5 – Malus's Law</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Polarized light of intensity 100 W/m&sup2; passes through a polaroid at 30&deg;. What emerges?</p>
+          <p>I = I<sub>0</sub>cos&sup2;&theta; = 100&times;cos&sup2;30&deg; = 100&times;(3/4) = <strong>75 W/m&sup2;</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 6 – Brewster's Angle</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Light from water (n<sub>1</sub>=1.33) hits glass (n<sub>2</sub>=1.5). Find Brewster's angle.</p>
+          <p>tan i<sub>B</sub> = n<sub>2</sub>/n<sub>1</sub> = 1.5/1.33 = 1.128</p>
+          <p>i<sub>B</sub> = arctan(1.128) &asymp; <strong>48.4&deg;</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PRACTICE ==================== -->
+    <section id="practice-wo">
+      <h2>7. Practice Problems</h2>
+      <div class="practice-box">
+        <p><strong>Wave Motion &amp; Sound:</strong></p>
+        <ol>
+          <li>A string 2 m long has mass 20 g under 50 N tension. Find wave speed and fundamental frequency. <em>[Ans: v=70.7 m/s, f=17.7 Hz]</em></li>
+          <li>A closed organ pipe 0.3 m long. v=330 m/s. Find fundamental and first two overtones. <em>[Ans: 275 Hz, 825 Hz, 1375 Hz]</em></li>
+          <li>Two tuning forks produce 5 beats/s. One has 300 Hz. Find possible frequencies of other. <em>[Ans: 295 or 305 Hz]</em></li>
+          <li>An ambulance horn (f=500 Hz) approaches at 30 m/s. v=340 m/s. Find apparent frequency. <em>[Ans: 548.4 Hz]</em></li>
+          <li>Sound intensity at 5 m from source is 10<sup>&minus;5</sup> W/m&sup2;. Find level in dB and intensity at 10 m. <em>[Ans: 70 dB; 2.5&times;10<sup>&minus;6</sup> W/m&sup2;]</em></li>
+        </ol>
+        <p><strong>Ray Optics:</strong></p>
+        <ol start="6">
+          <li>Concave mirror f=10 cm. Object at 15 cm. Find image. <em>[Ans: v=&minus;30 cm, real, inverted, m=&minus;2]</em></li>
+          <li>A convex lens of f=25 cm forms an image at 75 cm from lens. Find object distance. <em>[Ans: u=&minus;37.5 cm]</em></li>
+          <li>A glass slab (n=1.5, thickness=3 cm). Find lateral shift for 45&deg; incidence. <em>[Ans: use shift formula &asymp;1.13 cm]</em></li>
+          <li>Two lenses +20 D and &minus;8 D in contact. Find f and nature. <em>[Ans: P=+12 D, f=8.33 cm, converging]</em></li>
+          <li>Critical angle for diamond-air is 24.4&deg;. Find n of diamond. <em>[Ans: n=1/sin24.4&deg; &asymp;2.42]</em></li>
+        </ol>
+        <p><strong>Wave Optics:</strong></p>
+        <ol start="11">
+          <li>YDSE: &lambda;=600 nm, d=0.3 mm, D=0.8 m. Find fringe width and 5th dark fringe position. <em>[Ans: &beta;=1.6 mm; y<sub>5</sub>=7.2 mm]</em></li>
+          <li>In YDSE, path diff = 2.5&lambda;. Is it bright or dark? Find intensity ratio to maximum. <em>[Ans: dark; I=0]</em></li>
+          <li>Two coherent sources have intensities in ratio 4:1. Find I<sub>max</sub>/I<sub>min</sub>. <em>[Ans: (2+1)&sup2;/(2&minus;1)&sup2; = 9]</em></li>
+          <li>Slit of width 0.1 mm, screen 2 m, &lambda;=500 nm. Find 2nd dark fringe position. <em>[Ans: y=2&lambda;D/a=20 mm]</em></li>
+          <li>Unpolarized light I<sub>0</sub> passes through two crossed polaroids with 45&deg; in between. Final intensity? <em>[Ans: I<sub>0</sub>/8 (first: I<sub>0</sub>/2; then cos&sup2;45=1/2; then cos&sup2;45=1/2 &rarr; I<sub>0</sub>/8)]</em></li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="summary-box">
+      <h2>Key Formulas Quick Reference</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <h4>Wave Motion</h4>
+          <p>v = f&lambda; = &omega;/k</p>
+          <p>v<sub>string</sub> = &radic;(T/&mu;)</p>
+          <p>f<sub>n</sub>(open) = nv/2L</p>
+        </div>
+        <div class="formula-card">
+          <h4>Doppler &amp; Sound</h4>
+          <p>f' = f(v&plusmn;v<sub>o</sub>)/(v&mnplus;v<sub>s</sub>)</p>
+          <p>&beta; = 10 log(I/I<sub>0</sub>)</p>
+          <p>f<sub>beat</sub> = |f<sub>1</sub>&minus;f<sub>2</sub>|</p>
+        </div>
+        <div class="formula-card">
+          <h4>Ray Optics</h4>
+          <p>1/v + 1/u = 1/f</p>
+          <p>n<sub>1</sub>sin&theta;<sub>1</sub> = n<sub>2</sub>sin&theta;<sub>2</sub></p>
+          <p>sin C = n<sub>2</sub>/n<sub>1</sub></p>
+        </div>
+        <div class="formula-card">
+          <h4>Wave Optics</h4>
+          <p>&beta; = &lambda;D/d (YDSE)</p>
+          <p>I = I<sub>0</sub>cos&sup2;&theta; (Malus)</p>
+          <p>tan i<sub>B</sub> = n (Brewster)</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

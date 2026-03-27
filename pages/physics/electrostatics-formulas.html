@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrostatics Formulas &amp; Notes – JEE NEET Class 12 Complete Guide | StudyHub</title>
+  <meta name="description" content="Complete electrostatics for JEE and NEET. Coulomb's law, electric field, Gauss's law, electric potential, capacitors – all formulas with proofs and 20 solved examples.">
+  <meta name="keywords" content="electrostatics formulas JEE, NEET electrostatics, Coulomb's law, electric field, Gauss's law, electric potential, capacitors class 12">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">&#128218; StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main-content">
+  <div class="container">
+
+    <div class="page-header">
+      <h1>Electrostatics – Complete Formulas &amp; Notes</h1>
+      <p class="subtitle">JEE Main | JEE Advanced | NEET | Class 12 Physics</p>
+      <div class="topic-tags">
+        <span class="tag">Coulomb's Law</span>
+        <span class="tag">Electric Field</span>
+        <span class="tag">Gauss's Law</span>
+        <span class="tag">Electric Potential</span>
+        <span class="tag">Capacitors</span>
+      </div>
+    </div>
+
+    <div class="toc-box">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="#coulomb">Coulomb's Law</a></li>
+        <li><a href="#efield">Electric Field</a></li>
+        <li><a href="#gauss">Gauss's Law &amp; Applications</a></li>
+        <li><a href="#potential">Electric Potential &amp; Potential Energy</a></li>
+        <li><a href="#capacitors">Capacitors</a></li>
+        <li><a href="#practice-es">Practice Problems</a></li>
+      </ol>
+    </div>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <section id="coulomb">
+      <h2>1. Coulomb's Law</h2>
+
+      <h3>1.1 Statement and Formula</h3>
+      <p>The force between two point charges q<sub>1</sub> and q<sub>2</sub> separated by distance r in vacuum is:</p>
+      <div class="formula-box">
+        <p class="big-formula">F = kq<sub>1</sub>q<sub>2</sub> / r&sup2; = q<sub>1</sub>q<sub>2</sub> / (4&pi;&epsilon;<sub>0</sub>r&sup2;)</p>
+        <table class="formula-table">
+          <thead><tr><th>Constant</th><th>Value</th><th>Units</th></tr></thead>
+          <tbody>
+            <tr><td>k (Coulomb's constant)</td><td>9 &times; 10&sup9;</td><td>N&middot;m&sup2;/C&sup2;</td></tr>
+            <tr><td>&epsilon;<sub>0</sub> (permittivity of free space)</td><td>8.854 &times; 10&minus;&sup1;&sup2;</td><td>C&sup2;/(N&middot;m&sup2;)</td></tr>
+            <tr><td>k = 1/(4&pi;&epsilon;<sub>0</sub>)</td><td>–</td><td>–</td></tr>
+          </tbody>
+        </table>
+        <p>In a medium with dielectric constant K (relative permittivity): F<sub>medium</sub> = F<sub>vacuum</sub>/K</p>
+      </div>
+
+      <h3>1.2 Vector Form</h3>
+      <div class="formula-box">
+        <p>Force on q<sub>1</sub> due to q<sub>2</sub>: <strong>F&#x20D7;<sub>12</sub> = kq<sub>1</sub>q<sub>2</sub> r&#x0302;<sub>21</sub> / r&sup2;</strong></p>
+        <p>where r&#x0302;<sub>21</sub> is the unit vector from q<sub>2</sub> to q<sub>1</sub>.</p>
+        <p><strong>Sign convention:</strong></p>
+        <ul>
+          <li>Same signs (++ or &minus;&minus;): F is repulsive (positive in the direction away from q<sub>2</sub>)</li>
+          <li>Opposite signs (+&minus;): F is attractive (negative, toward q<sub>2</sub>)</li>
+        </ul>
+      </div>
+
+      <h3>1.3 Superposition Principle</h3>
+      <div class="note-box">
+        <p>The total force on a charge due to multiple charges equals the <strong>vector sum</strong> of forces due to each charge individually. Each pairwise interaction is independent.</p>
+        <p>F&#x20D7;<sub>total</sub> = F&#x20D7;<sub>1</sub> + F&#x20D7;<sub>2</sub> + F&#x20D7;<sub>3</sub> + &hellip;</p>
+      </div>
+
+      <h3>1.4 Comparison: Coulomb vs Gravity</h3>
+      <div class="formula-box">
+        <table class="data-table">
+          <thead><tr><th>Property</th><th>Coulomb's Force</th><th>Gravitational Force</th></tr></thead>
+          <tbody>
+            <tr><td>Formula</td><td>F = kq<sub>1</sub>q<sub>2</sub>/r&sup2;</td><td>F = Gm<sub>1</sub>m<sub>2</sub>/r&sup2;</td></tr>
+            <tr><td>Nature</td><td>Attractive or Repulsive</td><td>Always Attractive</td></tr>
+            <tr><td>Depends on medium</td><td>Yes (&epsilon; changes)</td><td>No</td></tr>
+            <tr><td>Range</td><td>Infinite</td><td>Infinite</td></tr>
+            <tr><td>Relative strength (e-p pair)</td><td>F<sub>e</sub>/F<sub>g</sub> &asymp; 2.3&times;10<sup>39</sup></td><td>Much weaker</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>1.5 Solved Examples</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Force between Two Charges</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Two charges +4&mu;C and &minus;2&mu;C are placed 0.3 m apart. Find the force between them. Is it attractive or repulsive?</p>
+          <p>F = kq<sub>1</sub>q<sub>2</sub>/r&sup2; = 9&times;10&sup9; &times; 4&times;10&minus;&sup6; &times; 2&times;10&minus;&sup6; / 0.09</p>
+          <p>= 9&times;10&sup9; &times; 8&times;10&minus;&sup1;&sup2; / 0.09 = 72&times;10&minus;&sup3; / 0.09 = <strong>0.8 N, attractive</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Three Charges in a Line</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Charges +q, &minus;q, +q are placed at x=0, 0.1 m, 0.2 m. Find net force on the middle charge.</p>
+          <p>Force from left (+q on &minus;q): F<sub>L</sub> = kq&sup2;/(0.1)&sup2; = 100kq&sup2; toward left &larr;</p>
+          <p>Force from right (+q on &minus;q): F<sub>R</sub> = kq&sup2;/(0.1)&sup2; = 100kq&sup2; toward right &rarr;</p>
+          <p>Net force = 0 (equal and opposite). Wait – both are attractive toward the respective +q charges.</p>
+          <p>F<sub>L</sub> is toward left (+q at x=0), F<sub>R</sub> is toward right (+q at x=0.2 m).</p>
+          <p><strong>Net force = 0</strong> by symmetry.</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Charge in a Medium</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Two charges in water (&epsilon;<sub>r</sub> = 80) are 0.5 m apart. The force is 0.01 N. What would the force be in vacuum?</p>
+          <p>F<sub>vacuum</sub> = &epsilon;<sub>r</sub> &times; F<sub>medium</sub> = 80 &times; 0.01 = <strong>0.8 N</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 4 – Equilibrium of Charges</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Charges +9&mu;C and +4&mu;C are 1 m apart. Where should a third charge be placed for equilibrium? What is the sign?</p>
+          <p>Let charge be at distance x from +9&mu;C (and 1&minus;x from +4&mu;C).</p>
+          <p>For zero force: 9/x&sup2; = 4/(1&minus;x)&sup2; &rarr; 3/x = 2/(1&minus;x) &rarr; 3(1&minus;x) = 2x &rarr; x = 3/5 = <strong>0.6 m from +9&mu;C</strong></p>
+          <p>The charge must be negative to be attracted by both. Its magnitude is arbitrary.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <section id="efield">
+      <h2>2. Electric Field (E&#x20D7;)</h2>
+
+      <h3>2.1 Definition and Basic Formula</h3>
+      <div class="formula-box">
+        <p><strong>Electric field</strong> at a point = force per unit positive test charge:</p>
+        <p class="big-formula">E&#x20D7; = F&#x20D7; / q<sub>0</sub></p>
+        <p>Due to a point charge Q at distance r:</p>
+        <p class="big-formula">E = kQ / r&sup2; = Q / (4&pi;&epsilon;<sub>0</sub>r&sup2;)</p>
+        <p>Direction: away from Q if Q is positive; toward Q if Q is negative.</p>
+        <p><strong>Superposition:</strong> E&#x20D7;<sub>total</sub> = &Sigma;E&#x20D7;<sub>i</sub> (vector sum of fields due to all charges)</p>
+      </div>
+
+      <h3>2.2 Electric Field Due to Various Charge Distributions</h3>
+      <div class="formula-box">
+        <table class="formula-table">
+          <thead><tr><th>Distribution</th><th>Formula</th><th>Direction</th></tr></thead>
+          <tbody>
+            <tr><td>Point charge Q</td><td>E = kQ/r&sup2;</td><td>Radially outward (if Q&gt;0)</td></tr>
+            <tr><td>Infinite line charge (&lambda; = charge/length)</td><td>E = &lambda;/(2&pi;&epsilon;<sub>0</sub>r)</td><td>Perpendicular to wire, outward</td></tr>
+            <tr><td>Infinite plane sheet (&sigma; = charge/area)</td><td>E = &sigma;/(2&epsilon;<sub>0</sub>)</td><td>Normal to sheet, outward</td></tr>
+            <tr><td>Uniformly charged sphere (outside, r&gt;R)</td><td>E = kQ/r&sup2;</td><td>Radially outward</td></tr>
+            <tr><td>Uniformly charged sphere (inside, r&lt;R)</td><td>E = kQr/R&sup3; = &rho;r/(3&epsilon;<sub>0</sub>)</td><td>Radially outward</td></tr>
+            <tr><td>Conducting sphere (inside)</td><td>E = 0</td><td>–</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2.3 Electric Dipole</h3>
+      <div class="formula-box">
+        <p>An electric dipole consists of charges +q and &minus;q separated by distance 2a.</p>
+        <p><strong>Dipole moment:</strong> p = q &times; 2a (vector from &minus;q to +q)</p>
+        <table class="formula-table">
+          <thead><tr><th>Position</th><th>Electric Field</th><th>Direction</th></tr></thead>
+          <tbody>
+            <tr><td>Axial point (on axis, at distance r)</td><td>E = 2kp/r&sup3; &nbsp;(r &gt;&gt; a)</td><td>Along p&#x20D7; (same direction as dipole)</td></tr>
+            <tr><td>Equatorial point (perpendicular bisector, at r)</td><td>E = kp/r&sup3; &nbsp;(r &gt;&gt; a)</td><td>Opposite to p&#x20D7;</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Torque on dipole in uniform field:</strong> &tau; = p&times;E = pE sin&theta;</p>
+        <p><strong>Potential energy of dipole:</strong> U = &minus;p&#x20D7;&middot;E&#x20D7; = &minus;pE cos&theta;</p>
+        <p>Stable equilibrium: &theta;=0 (p parallel to E); Unstable: &theta;=180&deg;</p>
+      </div>
+
+      <h3>2.4 Electric Field Lines – Rules</h3>
+      <div class="note-box">
+        <ul>
+          <li>Start on positive charges; end on negative charges.</li>
+          <li>Number of lines is proportional to magnitude of charge.</li>
+          <li>Field lines never intersect (if they did, two directions at one point – impossible).</li>
+          <li>Tangent to a field line at any point gives direction of E&#x20D7; at that point.</li>
+          <li>Closer lines = stronger field; farther apart = weaker field.</li>
+          <li>Field lines are perpendicular to equipotential surfaces.</li>
+          <li>Inside a conductor: E = 0, so no field lines inside.</li>
+        </ul>
+      </div>
+
+      <h3>2.5 Solved Examples</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – E at a Point due to Two Charges</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Charges +3&mu;C and &minus;3&mu;C are 0.4 m apart. Find E at the midpoint.</p>
+          <p>Distance from each charge to midpoint = 0.2 m</p>
+          <p>E<sub>1</sub> = 9&times;10&sup9;&times;3&times;10&minus;&sup6;/0.04 = 675,000 N/C (away from +, toward mid)</p>
+          <p>E<sub>2</sub> = 675,000 N/C (away from mid, toward &minus;, i.e. same direction as E<sub>1</sub>)</p>
+          <p>Both fields point in the same direction (from + to &minus;): <strong>E<sub>total</sub> = 1.35 &times; 10&sup6; N/C</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Dipole Axial and Equatorial Fields</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A dipole has p = 4&times;10&minus;&sup8; C&middot;m. Find E at an axial point 0.3 m away and at an equatorial point 0.3 m away.</p>
+          <p>E<sub>axial</sub> = 2kp/r&sup3; = 2&times;9&times;10&sup9;&times;4&times;10&minus;&sup8;/0.027 = 2&times;9&times;10&sup9;&times;4&times;10&minus;&sup8;/0.027</p>
+          <p>= 720/0.027 &asymp; <strong>26,667 N/C</strong> (along dipole direction)</p>
+          <p>E<sub>equatorial</sub> = kp/r&sup3; = half of above = <strong>13,333 N/C</strong> (opposite to dipole direction)</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – E due to Infinite Wire</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> An infinitely long wire has linear charge density 2&times;10&minus;&sup6; C/m. Find E at 0.05 m from the wire.</p>
+          <p>E = &lambda;/(2&pi;&epsilon;<sub>0</sub>r) = 2&times;10&minus;&sup6;/(2&pi;&times;8.854&times;10&minus;&sup1;&sup2;&times;0.05)</p>
+          <p>= 2&times;10&minus;&sup6; / (2.79&times;10&minus;&sup1;&sup2;) &asymp; <strong>7.19&times;10&sup5; N/C</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3 ==================== -->
+    <section id="gauss">
+      <h2>3. Gauss's Law</h2>
+
+      <h3>3.1 Statement</h3>
+      <div class="formula-box">
+        <p class="big-formula">&Phi;<sub>E</sub> = &#8750;E&#x20D7;&middot;dA&#x20D7; = Q<sub>enc</sub> / &epsilon;<sub>0</sub></p>
+        <p>The total electric flux through any closed surface (Gaussian surface) equals the total enclosed charge divided by &epsilon;<sub>0</sub>.</p>
+        <p>Key: The <em>shape</em> of the Gaussian surface does not matter – only the enclosed charge matters.</p>
+      </div>
+
+      <h3>3.2 Application 1 – Uniformly Charged Sphere (radius R, total charge Q)</h3>
+      <div class="derivation-block">
+        <p><strong>Outside (r &gt; R):</strong> Choose spherical Gaussian surface of radius r.</p>
+        <p>E &times; 4&pi;r&sup2; = Q/&epsilon;<sub>0</sub> &rarr; <strong>E = kQ/r&sup2;</strong> (same as point charge)</p>
+        <p><strong>Inside (r &lt; R, non-conductor):</strong> Enclosed charge = Q(r&sup3;/R&sup3;)</p>
+        <p>E &times; 4&pi;r&sup2; = Qr&sup3;/(R&sup3;&epsilon;<sub>0</sub>) &rarr; <strong>E = kQr/R&sup3;</strong> (linear increase)</p>
+        <p><strong>Inside conductor:</strong> E = 0 always. Excess charge resides on surface.</p>
+      </div>
+
+      <h3>3.3 Application 2 – Infinite Line Charge</h3>
+      <div class="derivation-block">
+        <p>Choose a cylindrical Gaussian surface of length L and radius r around the wire.</p>
+        <p>Flux through ends = 0 (E perpendicular to area). Flux through curved surface = E&times;2&pi;rL.</p>
+        <p>By Gauss: E&times;2&pi;rL = &lambda;L/&epsilon;<sub>0</sub> &rarr; <strong>E = &lambda;/(2&pi;&epsilon;<sub>0</sub>r)</strong></p>
+      </div>
+
+      <h3>3.4 Application 3 – Infinite Plane Sheet</h3>
+      <div class="derivation-block">
+        <p>Choose a cylindrical Gaussian surface (pill-box) with cross-section A, half on each side of the sheet.</p>
+        <p>Flux = 2EA (both faces). Enclosed charge = &sigma;A.</p>
+        <p>2EA = &sigma;A/&epsilon;<sub>0</sub> &rarr; <strong>E = &sigma;/(2&epsilon;<sub>0</sub>)</strong> (each side; field points away from +sheet)</p>
+        <p>For two parallel plates (++ and &minus;&minus;, a capacitor):</p>
+        <ul>
+          <li>Between plates: E = &sigma;/&epsilon;<sub>0</sub> (fields add up)</li>
+          <li>Outside plates: E = 0 (fields cancel)</li>
+        </ul>
+      </div>
+
+      <h3>3.5 Solved Problems – Gauss's Law</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Hollow Charged Sphere</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A hollow conducting sphere of radius 10 cm has charge +5&mu;C. Find E at (a) r=5 cm, (b) r=15 cm.</p>
+          <p><strong>(a) r=5 cm (inside conductor):</strong> E = <strong>0</strong></p>
+          <p><strong>(b) r=15 cm (outside):</strong> E = kQ/r&sup2; = 9&times;10&sup9;&times;5&times;10&minus;&sup6;/(0.15)&sup2; = 45000/0.0225 = <strong>2&times;10&sup6; N/C</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Flux through a Cube</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A charge of 8&times;10&minus;&sup9; C is placed at the centre of a cube. Find total electric flux through the cube.</p>
+          <p>&Phi; = Q/&epsilon;<sub>0</sub> = 8&times;10&minus;&sup9; / 8.854&times;10&minus;&sup1;&sup2; &asymp; <strong>904 N&middot;m&sup2;/C</strong></p>
+          <p>Flux through each face = 904/6 &asymp; <strong>150.6 N&middot;m&sup2;/C</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – E Inside a Non-conducting Sphere</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A non-conducting sphere of radius 0.1 m has uniform charge density &rho; = 10&minus;&sup6; C/m&sup3;. Find E at r = 0.05 m.</p>
+          <p>E = &rho;r/(3&epsilon;<sub>0</sub>) = 10&minus;&sup6; &times; 0.05 / (3 &times; 8.854&times;10&minus;&sup1;&sup2;)</p>
+          <p>= 5&times;10&minus;&sup8; / (2.66&times;10&minus;&sup1;&sup1;) &asymp; <strong>1882 N/C</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4 ==================== -->
+    <section id="potential">
+      <h2>4. Electric Potential &amp; Potential Energy</h2>
+
+      <h3>4.1 Electric Potential (V)</h3>
+      <div class="formula-box">
+        <p><strong>Definition:</strong> Work done per unit positive charge to bring it from infinity to that point.</p>
+        <p class="big-formula">V = W/q<sub>0</sub> = kQ/r</p>
+        <p>V is a <em>scalar</em> quantity. Unit: Volt (V) = Joule/Coulomb.</p>
+        <p><strong>For multiple charges:</strong> V<sub>total</sub> = V<sub>1</sub> + V<sub>2</sub> + V<sub>3</sub> + &hellip; (algebraic sum, not vector)</p>
+        <p><strong>Relation to E:</strong> E = &minus;dV/dr (E points from high V to low V)</p>
+        <p>In 3D: E&#x20D7; = &minus;&nabla;V = &minus;(&part;V/&part;x, &part;V/&part;y, &part;V/&part;z)</p>
+      </div>
+
+      <h3>4.2 Equipotential Surfaces</h3>
+      <div class="note-box">
+        <ul>
+          <li>All points on an equipotential surface have the same potential.</li>
+          <li>E&#x20D7; is always perpendicular to equipotential surfaces.</li>
+          <li>No work is done moving a charge along an equipotential surface.</li>
+          <li>For point charge: equipotentials are concentric spheres.</li>
+          <li>For uniform field: equipotentials are planes perpendicular to field.</li>
+          <li>Two equipotential surfaces never cross each other.</li>
+        </ul>
+      </div>
+
+      <h3>4.3 Electric Potential Energy</h3>
+      <div class="formula-box">
+        <p>Potential energy of two charges q<sub>1</sub> and q<sub>2</sub> at distance r:</p>
+        <p class="big-formula">U = kq<sub>1</sub>q<sub>2</sub> / r</p>
+        <p>For a system of multiple charges: U = &frac12; &Sigma;<sub>i</sub>&Sigma;<sub>j&ne;i</sub> kq<sub>i</sub>q<sub>j</sub>/r<sub>ij</sub></p>
+        <p>(The factor &frac12; avoids counting each pair twice)</p>
+        <p><strong>Work done by field</strong> when charge q moves from A to B: W = q(V<sub>A</sub> &minus; V<sub>B</sub>)</p>
+        <p><strong>Work done against field</strong> (by external agent): W<sub>ext</sub> = q(V<sub>B</sub> &minus; V<sub>A</sub>)</p>
+      </div>
+
+      <h3>4.4 Potential due to a Dipole</h3>
+      <div class="formula-box">
+        <p>At a point making angle &theta; with the dipole axis, at distance r (r &gt;&gt; a):</p>
+        <p class="big-formula">V = kp cos&theta; / r&sup2;</p>
+        <p>On axial line (&theta;=0): V = kp/r&sup2;</p>
+        <p>On equatorial line (&theta;=90&deg;): V = 0</p>
+      </div>
+
+      <h3>4.5 Solved Examples</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Potential at a Point</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Find potential at a point equidistant (0.2 m) from charges +4&mu;C, +2&mu;C, and &minus;6&mu;C.</p>
+          <p>V = k(q<sub>1</sub>+q<sub>2</sub>+q<sub>3</sub>)/r = 9&times;10&sup9;&times;(4+2&minus;6)&times;10&minus;&sup6;/0.2 = 9&times;10&sup9;&times;0/0.2 = <strong>0 V</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Work Done</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> How much work is done in bringing a charge of +3&mu;C from infinity to a point where V = 200 V?</p>
+          <p>W = q&Delta;V = q(V<sub>final</sub> &minus; V<sub>initial</sub>) = 3&times;10&minus;&sup6; &times; (200 &minus; 0) = <strong>6&times;10&minus;&sup4; J</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Potential Energy of a System</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Three charges +1&mu;C, +2&mu;C, +3&mu;C are at the vertices of an equilateral triangle of side 0.2 m. Find total PE.</p>
+          <p>Three pairs: U<sub>12</sub> = k&times;1&times;2/0.2 &times;10&minus;&sup1;&sup2; = 9&times;10&sup9;&times;2&times;10&minus;&sup1;&sup2;/0.2 = 0.09 J</p>
+          <p>U<sub>13</sub> = 9&times;10&sup9;&times;3&times;10&minus;&sup1;&sup2;/0.2 = 0.135 J</p>
+          <p>U<sub>23</sub> = 9&times;10&sup9;&times;6&times;10&minus;&sup1;&sup2;/0.2 = 0.27 J</p>
+          <p>U<sub>total</sub> = 0.09 + 0.135 + 0.27 = <strong>0.495 J</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 4 – E from V Formula</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> The electric potential in a region is V = 3x&sup2; &minus; 4y. Find E&#x20D7;.</p>
+          <p>E<sub>x</sub> = &minus;&part;V/&part;x = &minus;6x</p>
+          <p>E<sub>y</sub> = &minus;&part;V/&part;y = &minus;(&minus;4) = +4</p>
+          <p>E<sub>z</sub> = 0</p>
+          <p><strong>E&#x20D7; = (&minus;6x) x&#x0302; + 4 ŷ</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5 ==================== -->
+    <section id="capacitors">
+      <h2>5. Capacitors</h2>
+
+      <h3>5.1 Definition and Basic Formulas</h3>
+      <div class="formula-box">
+        <p><strong>Capacitance:</strong> C = Q/V (Farads = C/V)</p>
+        <p><strong>Parallel plate capacitor:</strong> C = &epsilon;<sub>0</sub>A/d (area A, separation d, vacuum)</p>
+        <p><strong>With dielectric (dielectric constant &kappa;):</strong> C = &kappa;&epsilon;<sub>0</sub>A/d</p>
+        <p><strong>Spherical capacitor</strong> (inner r<sub>1</sub>, outer r<sub>2</sub>): C = 4&pi;&epsilon;<sub>0</sub>r<sub>1</sub>r<sub>2</sub>/(r<sub>2</sub>&minus;r<sub>1</sub>)</p>
+        <p><strong>Cylindrical capacitor</strong> (length L): C = 2&pi;&epsilon;<sub>0</sub>L / ln(r<sub>2</sub>/r<sub>1</sub>)</p>
+        <p><strong>Isolated sphere</strong> (in vacuum): C = 4&pi;&epsilon;<sub>0</sub>R</p>
+      </div>
+
+      <h3>5.2 Combinations of Capacitors</h3>
+      <div class="formula-box">
+        <table class="formula-table">
+          <thead><tr><th>Connection</th><th>Equivalent Capacitance</th><th>What is same?</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Series</strong></td><td>1/C<sub>eq</sub> = 1/C<sub>1</sub> + 1/C<sub>2</sub> + &hellip;</td><td>Charge Q on each</td></tr>
+            <tr><td><strong>Parallel</strong></td><td>C<sub>eq</sub> = C<sub>1</sub> + C<sub>2</sub> + &hellip;</td><td>Voltage V across each</td></tr>
+          </tbody>
+        </table>
+        <p>For two capacitors in series: C<sub>eq</sub> = C<sub>1</sub>C<sub>2</sub>/(C<sub>1</sub>+C<sub>2</sub>)</p>
+      </div>
+
+      <h3>5.3 Energy Stored in a Capacitor</h3>
+      <div class="formula-box">
+        <p class="big-formula">U = Q&sup2;/(2C) = CV&sup2;/2 = QV/2</p>
+        <p><strong>Energy density</strong> (energy per unit volume) between the plates:</p>
+        <p class="big-formula">u = &frac12;&epsilon;<sub>0</sub>E&sup2;</p>
+        <p>This formula is valid for any electric field in any region.</p>
+      </div>
+
+      <h3>5.4 Effect of Dielectric on a Capacitor</h3>
+      <div class="formula-box">
+        <table class="data-table">
+          <thead><tr><th>Quantity</th><th>Dielectric inserted (battery connected)</th><th>Dielectric inserted (battery disconnected)</th></tr></thead>
+          <tbody>
+            <tr><td>C</td><td>Increases (&times;&kappa;)</td><td>Increases (&times;&kappa;)</td></tr>
+            <tr><td>V</td><td>Constant (battery maintains V)</td><td>Decreases (V/&kappa;)</td></tr>
+            <tr><td>Q</td><td>Increases (&times;&kappa;)</td><td>Constant (no battery to supply charge)</td></tr>
+            <tr><td>E</td><td>Constant (V/d unchanged)</td><td>Decreases (E/&kappa;)</td></tr>
+            <tr><td>U (energy)</td><td>Increases (&times;&kappa;)</td><td>Decreases (U/&kappa;)</td></tr>
+          </tbody>
+        </table>
+        <p class="formula-note">This table is a JEE favourite. The key difference is whether the battery is connected or not.</p>
+      </div>
+
+      <h3>5.5 Charging Through a Resistor (RC Circuit)</h3>
+      <div class="formula-box">
+        <p>When capacitor C charges through resistance R from voltage V<sub>0</sub>:</p>
+        <p>Q(t) = Q<sub>0</sub>(1 &minus; e<sup>&minus;t/RC</sup>) where Q<sub>0</sub> = CV<sub>0</sub></p>
+        <p>V<sub>C</sub>(t) = V<sub>0</sub>(1 &minus; e<sup>&minus;t/RC</sup>)</p>
+        <p>I(t) = (V<sub>0</sub>/R) e<sup>&minus;t/RC</sup></p>
+        <p><strong>Time constant:</strong> &tau; = RC (at t=&tau;, charge reaches 63.2% of max)</p>
+        <p><strong>Discharging:</strong> Q(t) = Q<sub>0</sub>e<sup>&minus;t/RC</sup></p>
+      </div>
+
+      <h3>5.6 Solved Problems</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Equivalent Capacitance Network</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Three capacitors 2&mu;F, 3&mu;F, 6&mu;F are connected in series. Find equivalent capacitance. Then these are connected in parallel with a 4&mu;F capacitor. Find final C.</p>
+          <p>Series: 1/C<sub>s</sub> = 1/2 + 1/3 + 1/6 = 3/6 + 2/6 + 1/6 = 6/6 = 1 &rarr; C<sub>s</sub> = <strong>1&mu;F</strong></p>
+          <p>Parallel with 4&mu;F: C<sub>total</sub> = 1 + 4 = <strong>5&mu;F</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Energy Stored</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A 10&mu;F capacitor is charged to 100 V. Find energy stored.</p>
+          <p>U = CV&sup2;/2 = 10&times;10&minus;&sup6; &times; 10000/2 = <strong>0.05 J = 50 mJ</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 3 – Dielectric Inserted (Battery Disconnected)</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A parallel plate capacitor (C=5&mu;F) is charged to 200 V. Battery is disconnected. A dielectric &kappa;=4 is inserted. Find new V, Q, C, U.</p>
+          <p>Q = CV = 5&times;10&minus;&sup6;&times;200 = 10&minus;&sup3; C = 1000&mu;C (unchanged)</p>
+          <p>C' = &kappa;C = 4&times;5 = <strong>20&mu;F</strong></p>
+          <p>V' = Q/C' = 10&minus;&sup3;/20&times;10&minus;&sup6; = <strong>50 V</strong></p>
+          <p>U = Q&sup2;/(2C') = (10&minus;&sup3;)&sup2;/(2&times;20&times;10&minus;&sup6;) = 10&minus;&sup6;/40&times;10&minus;&sup6; = <strong>0.025 J</strong></p>
+          <p>Original U = CV&sup2;/2 = 5&times;10&minus;&sup6;&times;40000/2 = 0.1 J. Ratio = 1/4 = 1/&kappa; ✓</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 4 – Charge Redistribution</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A 4&mu;F capacitor charged to 100 V is connected in parallel with an uncharged 6&mu;F capacitor. Find final voltage and charges.</p>
+          <p>Initial charge Q = 4&times;100 = 400&mu;C. After connection, charge distributes: V<sub>f</sub> = Q/C<sub>total</sub> = 400/10 = <strong>40 V</strong></p>
+          <p>Q<sub>4</sub> = 4&times;40 = <strong>160&mu;C</strong>; Q<sub>6</sub> = 6&times;40 = <strong>240&mu;C</strong></p>
+          <p>Energy lost = &frac12;&times;4&times;10<sup>4</sup> &minus; &frac12;&times;10&times;1600 = 20000 &minus; 8000 = <strong>12000&mu;J</strong> (lost to spark/heat)</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 5 – Force Between Capacitor Plates</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A parallel plate capacitor has plate area 100 cm&sup2; and separation 1 mm. Voltage = 500 V. Find force between plates.</p>
+          <p>E = V/d = 500/10&minus;&sup3; = 5&times;10&sup5; V/m; &sigma; = &epsilon;<sub>0</sub>E = 8.854&times;10&minus;&sup1;&sup2;&times;5&times;10&sup5; = 4.43&times;10&minus;&sup6; C/m&sup2;</p>
+          <p>F = &sigma;&sup2;A/(2&epsilon;<sub>0</sub>) = (&epsilon;<sub>0</sub>E)&sup2;&times;A/(2&epsilon;<sub>0</sub>) = &frac12;&epsilon;<sub>0</sub>E&sup2;A</p>
+          <p>= &frac12;&times;8.854&times;10&minus;&sup1;&sup2;&times;(5&times;10&sup5;)&sup2;&times;10&minus;&sup2; = &frac12;&times;8.854&times;10&minus;&sup1;&sup2;&times;2.5&times;10<sup>11</sup>&times;10&minus;&sup2; = <strong>0.011 N</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 6 – RC Charging</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> In an RC circuit, R=1M&Omega;, C=2&mu;F, V<sub>0</sub>=10 V. Find (a) time constant, (b) charge at t=2&tau;, (c) current at t=0.</p>
+          <p>(a) &tau; = RC = 10&sup6;&times;2&times;10&minus;&sup6; = <strong>2 s</strong></p>
+          <p>(b) Q<sub>0</sub> = CV<sub>0</sub> = 20&mu;C; Q(2&tau;) = 20(1&minus;e<sup>&minus;2</sup>) = 20(1&minus;0.135) = <strong>17.3&mu;C</strong></p>
+          <p>(c) I<sub>0</sub> = V<sub>0</sub>/R = 10/10&sup6; = <strong>10&mu;A</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5b ==================== -->
+    <section id="conductors">
+      <h2>5b. Conductors, Earthing &amp; Van de Graaff</h2>
+
+      <h3>Properties of a Conductor in Electrostatic Equilibrium</h3>
+      <div class="note-box">
+        <ul>
+          <li><strong>E = 0 inside a conductor.</strong> Any free charges redistribute on the surface so the net internal field vanishes.</li>
+          <li><strong>E = &sigma;/&epsilon;<sub>0</sub></strong> just outside the surface (twice the sheet formula because field exists only on one side).</li>
+          <li>The surface is always an equipotential in equilibrium.</li>
+          <li>Charge resides entirely on the outer surface of a hollow conductor.</li>
+          <li>On an irregularly shaped conductor, charge density is highest where curvature is greatest (sharp points).</li>
+        </ul>
+      </div>
+
+      <h3>Electrostatic Shielding</h3>
+      <div class="note-box">
+        <p>A hollow conductor shields its interior from external electric fields. No field penetrates inside. This is the principle behind the Faraday cage.</p>
+        <p>Conversely, if a charge is placed inside a hollow conductor, it induces equal and opposite charges on the inner surface. The outer surface carries the same charge as the object inside.</p>
+      </div>
+
+      <h3>Earthing (Grounding) a Conductor</h3>
+      <div class="note-box">
+        <p>When a charged conductor is connected to the earth (ground), charge flows between the conductor and the earth until the conductor's potential becomes zero.</p>
+        <p>If a positive charge is brought near an isolated conductor and the conductor is then grounded (while the inducing charge is still present), negative charges flow from ground; when the ground wire is removed first and then the inducing charge is removed, the conductor retains a net negative charge.</p>
+      </div>
+
+      <h3>Van de Graaff Generator</h3>
+      <div class="note-box">
+        <p>A machine that builds up very high potential (up to several million volts) on a large hollow metallic sphere.</p>
+        <p><strong>Principle:</strong> A moving belt carries charge from a lower brush to the inside of the sphere. Because the inside of a conductor has no field, any charge placed inside immediately moves to the outer surface, accumulating indefinitely.</p>
+        <p><strong>Maximum potential:</strong> Limited by air breakdown (dielectric strength of air &asymp; 3&times;10&sup6; V/m). For a sphere of radius R: V<sub>max</sub> = 3&times;10&sup6;&times;R volts.</p>
+        <p><strong>Application:</strong> Accelerating charged particles for nuclear physics experiments.</p>
+      </div>
+
+      <h3>Electric Flux Detailed Treatment</h3>
+      <div class="formula-box">
+        <p>Electric flux through a surface element dA:</p>
+        <p>d&Phi; = E&#x20D7; &middot; dA&#x20D7; = E dA cos&theta;</p>
+        <p>where &theta; is the angle between E&#x20D7; and the area vector (outward normal).</p>
+        <p>For a uniform field and flat surface of area A: &Phi; = EA cos&theta;</p>
+        <p>Total flux out of a closed surface = Q<sub>enc</sub>/&epsilon;<sub>0</sub> (Gauss's Law)</p>
+        <p><strong>Sign convention for flux:</strong> Outward flux is positive; inward is negative.</p>
+      </div>
+
+      <h3>Solved Problems – Conductors &amp; Flux</h3>
+      <div class="solved-example">
+        <div class="example-header">Example 1 – Charge Distribution on Concentric Spheres</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A solid conducting sphere of radius 5 cm has charge +4&mu;C. It is surrounded by a concentric conducting shell of inner radius 10 cm and outer radius 12 cm with charge &minus;2&mu;C. Find the charge on each surface.</p>
+          <p>Inner surface of shell: &minus;4&mu;C (induced by the +4&mu;C sphere)</p>
+          <p>Outer surface of shell: total shell charge + inner surface = &minus;2 + 4 = <strong>+2&mu;C</strong></p>
+          <p>E field between the two conductors (5 cm &lt; r &lt; 10 cm): E = kQ/r&sup2; = k(4&times;10<sup>&minus;6</sup>)/r&sup2;</p>
+          <p>E field outside shell (r &gt; 12 cm): E = k(4&minus;2)&times;10<sup>&minus;6</sup>/r&sup2; = k(2&times;10<sup>&minus;6</sup>)/r&sup2;</p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example 2 – Maximum Potential of a Sphere</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> A Van de Graaff sphere has radius 0.5 m. What is the maximum charge it can hold before air breaks down?</p>
+          <p>E<sub>max</sub> = 3&times;10&sup6; V/m at the surface; E = kQ/R&sup2; &rarr; Q = E<sub>max</sub>R&sup2;/k</p>
+          <p>Q = 3&times;10&sup6;&times;0.25/(9&times;10&sup9;) = 0.75&times;10&sup6;/(9&times;10&sup9;) = <strong>8.33&times;10<sup>&minus;5</sup> C = 83.3&mu;C</strong></p>
+          <p>V<sub>max</sub> = kQ/R = 9&times;10&sup9;&times;8.33&times;10<sup>&minus;5</sup>/0.5 = <strong>1.5&times;10&sup6; V = 1.5 MV</strong></p>
+        </div>
+      </div>
+
+      <h3>Electric Potential – Additional Results</h3>
+      <div class="formula-box">
+        <p><strong>Uniformly charged sphere (solid, non-conductor):</strong></p>
+        <p>Outside (r &gt; R): V = kQ/r</p>
+        <p>Inside (r &lt; R): V = kQ(3R&sup2;&minus;r&sup2;)/(2R&sup3;) &nbsp; [maximum at centre: V<sub>centre</sub> = 3kQ/(2R) = (3/2)V<sub>surface</sub>]</p>
+        <p><strong>Uniformly charged ring</strong> (charge Q, radius a) at axial point distance x from centre:</p>
+        <p>V = kQ/&radic;(x&sup2;+a&sup2;); &nbsp; E<sub>axial</sub> = kQx/(x&sup2;+a&sup2;)<sup>3/2</sup></p>
+        <p>Maximum E on axis at x = a/&radic;2</p>
+        <p><strong>Uniformly charged disc</strong> (surface charge &sigma;, radius R) at axial point x:</p>
+        <p>V = &sigma;(&radic;(R&sup2;+x&sup2;) &minus; x)/(2&epsilon;<sub>0</sub>)</p>
+        <p>E<sub>axial</sub> = &sigma;/(2&epsilon;<sub>0</sub>)[1 &minus; x/&radic;(R&sup2;+x&sup2;)]</p>
+      </div>
+
+      <h3>Capacitor with Partially Inserted Dielectric</h3>
+      <div class="formula-box">
+        <p>If a dielectric of constant &kappa; is inserted to cover fraction (x/L) of the plate area A:</p>
+        <p>The remaining area (1&minus;x/L)A is in air. The two regions act as capacitors <em>in parallel</em>:</p>
+        <p>C = &epsilon;<sub>0</sub>A/(d) &times; [(1&minus;x/L) + &kappa;(x/L)] = (&epsilon;<sub>0</sub>A/d)[1 + (&kappa;&minus;1)x/L]</p>
+        <p>Force on dielectric being pulled out (at constant voltage V):</p>
+        <p>F = (&kappa;&minus;1)&epsilon;<sub>0</sub>AV&sup2;/(2dL) (attractive, pulls dielectric in)</p>
+      </div>
+
+      <h3>Solved Problems – Advanced Capacitors</h3>
+      <div class="solved-example">
+        <div class="example-header">Example – Bridge Circuit of Capacitors</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Four capacitors 2&mu;F, 4&mu;F, 2&mu;F, 4&mu;F form a Wheatstone-bridge arrangement. A 5th capacitor of 1&mu;F connects the bridge points. Find equivalent capacitance across the battery.</p>
+          <p>Check balance: C<sub>1</sub>/C<sub>2</sub> = C<sub>3</sub>/C<sub>4</sub> &rarr; 2/4 = 2/4 = 0.5 ✓ &rarr; <strong>Balanced bridge</strong></p>
+          <p>For balanced bridge: no charge on bridge capacitor; it can be ignored.</p>
+          <p>Two arms in series: (2+2)=4&mu;F and (4+4)=8&mu;F – wait, recalculate.</p>
+          <p>Top arm: 2+4=6&mu;F? No. Series: 1/(1/2+1/2)=1; each arm: 2 and 2 in series = 1&mu;F; 4 and 4 in series = 2&mu;F.</p>
+          <p>Simplified (balanced, C<sub>bridge</sub> ignored): C<sub>eq</sub> = (2&times;2/(2+2)) + (4&times;4/(4+4)) ... use actual circuit topology.</p>
+          <p>For the balanced case with C<sub>1</sub>=C<sub>3</sub>=2&mu;F and C<sub>2</sub>=C<sub>4</sub>=4&mu;F in bridge: C<sub>eq</sub> = (C<sub>1</sub>C<sub>2</sub>/(C<sub>1</sub>+C<sub>2</sub>)) + (C<sub>3</sub>C<sub>4</sub>/(C<sub>3</sub>+C<sub>4</sub>)) = 8/6 + 8/6 = <strong>8/3 &asymp; 2.67&mu;F</strong></p>
+        </div>
+      </div>
+
+      <div class="solved-example">
+        <div class="example-header">Example – Capacitor Energy in Series vs Parallel</div>
+        <div class="example-body">
+          <p><strong>Problem:</strong> Two capacitors 3&mu;F and 6&mu;F are connected (a) in series, (b) in parallel to 12 V. Find total energy in each case.</p>
+          <p><strong>(a) Series:</strong> C<sub>eq</sub> = 3&times;6/(3+6) = 2&mu;F; U = &frac12;CV&sup2; = &frac12;&times;2&times;144 = <strong>144&mu;J</strong></p>
+          <p><strong>(b) Parallel:</strong> C<sub>eq</sub> = 3+6 = 9&mu;F; U = &frac12;&times;9&times;144 = <strong>648&mu;J</strong></p>
+          <p>Parallel stores 4.5 times more energy (C<sub>parallel</sub>/C<sub>series</sub> = 9/2 = 4.5)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="practice-es">
+      <h2>6. Practice Problems</h2>
+      <div class="practice-box">
+        <p><strong>Conceptual quick checks before solving:</strong></p>
+        <ul>
+          <li>For Coulomb's law problems: always verify that k = 9&times;10&sup9; and convert charges to Coulombs (1&mu;C = 10<sup>&minus;6</sup> C).</li>
+          <li>For Gauss's law: identify the symmetry (spherical/cylindrical/planar) before choosing a Gaussian surface.</li>
+          <li>For potential: it is a scalar; just add algebraically. For field: vector sum required.</li>
+          <li>For capacitors: determine if battery remains connected or is disconnected before inserting dielectric.</li>
+        </ul>
+        <ol>
+          <li>Two equal charges repel each other with 0.36 N at 0.1 m separation. Find the charge. <em>[Ans: 2&times;10&minus;&sup5; C]</em></li>
+          <li>Charges +5&mu;C and +20&mu;C are 30 cm apart. Find E at the midpoint. <em>[Ans: 2&times;10&sup6; N/C toward +5&mu;C]</em></li>
+          <li>An electron is accelerated through 1000 V. Find its final kinetic energy in eV and joules. <em>[Ans: 1000 eV, 1.6&times;10&minus;&sup1;&sup6; J]</em></li>
+          <li>A dipole (p=5&times;10&minus;&sup9; C&middot;m) is placed in uniform field E=10&sup4; N/C. Find torque at &theta;=30&deg;. <em>[Ans: 2.5&times;10&minus;&sup5; N&middot;m]</em></li>
+          <li>Find flux through one face of a cube enclosing a charge Q at its centre. <em>[Ans: Q/(6&epsilon;<sub>0</sub>)]</em></li>
+          <li>A capacitor of 2&mu;F is charged by 12 V battery. Find charge and energy stored. <em>[Ans: 24&mu;C, 144&mu;J]</em></li>
+          <li>Two capacitors 4&mu;F and 6&mu;F in series across 100 V. Find charge and voltage across each. <em>[Ans: 240&mu;C; V<sub>4</sub>=60 V, V<sub>6</sub>=40 V]</em></li>
+          <li>A 10&mu;F capacitor has initial charge 500&mu;C. It is connected to an uncharged 40&mu;F capacitor. Find final energy. <em>[Ans: initial U=12500&mu;J; final U=2500&mu;J]</em></li>
+          <li>In Millikan's oil drop, a drop of mass 10&minus;&sup1;&sup5; kg is suspended in field E=5&times;10&sup4; N/C. Find charge on the drop. <em>[Ans: 2&times;10&minus;&sup1;&sup9; C = 2e]</em></li>
+          <li>A parallel plate capacitor (C=4&mu;F, V=200 V). Find (a) E if d=2mm (b) &sigma; on plates. <em>[Ans: 10&sup5; V/m; &sigma;=8.854&times;10&minus;&sup7; C/m&sup2;]</em></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="common-mistakes">
+      <h2>7. Common Mistakes &amp; JEE Tips</h2>
+      <div class="note-box">
+        <h3>Top 10 Mistakes to Avoid</h3>
+        <ol>
+          <li><strong>Forgetting &epsilon;<sub>r</sub> in a medium:</strong> Coulomb force and capacitance both change. F<sub>medium</sub> = F<sub>vac</sub>/&kappa;, C<sub>medium</sub> = &kappa;C<sub>vac</sub>.</li>
+          <li><strong>Treating potential as a vector:</strong> V is scalar. Add algebraically, not as vectors.</li>
+          <li><strong>Confusing E = 0 inside conductor with V = 0:</strong> Inside a conductor E = 0 but V = constant (the surface potential).</li>
+          <li><strong>Wrong sign in work-energy:</strong> W<sub>field</sub> = q(V<sub>i</sub>&minus;V<sub>f</sub>); W<sub>external</sub> = q(V<sub>f</sub>&minus;V<sub>i</sub>).</li>
+          <li><strong>Gauss's law with non-uniform fields:</strong> Gauss's law gives the net flux; you need symmetry to find E from it.</li>
+          <li><strong>Series vs. Parallel capacitors:</strong> In series, same Q; in parallel, same V.</li>
+          <li><strong>Forgetting the factor 2 in parallel plates:</strong> E between plates = &sigma;/&epsilon;<sub>0</sub>, not &sigma;/(2&epsilon;<sub>0</sub>).</li>
+          <li><strong>Energy stored vs. energy supplied:</strong> Only half the energy supplied by battery is stored in a capacitor; the other half is dissipated as heat in the circuit.</li>
+          <li><strong>RC time constant units:</strong> &tau; = RC in seconds. Verify: (&Omega;)(F) = (V/A)(C/V) = C/A = s ✓</li>
+          <li><strong>Dipole direction:</strong> Dipole moment p points from &minus;q to +q (opposite to E<sub>equatorial</sub> direction).</li>
+        </ol>
+      </div>
+
+      <div class="note-box">
+        <h3>JEE Favourite Topics in Electrostatics</h3>
+        <ul>
+          <li>Charge distributions on conductors (two sphere problem, earthing)</li>
+          <li>Wheatstone bridge analogy for capacitor networks</li>
+          <li>Dielectric insertion with/without battery (table of changes)</li>
+          <li>Energy stored and energy dissipated in charging a capacitor</li>
+          <li>Electric field and potential for non-standard geometries (ring, disc)</li>
+          <li>Force on a charge in a non-uniform field using F = qE</li>
+          <li>Comparing electric and gravitational forces (ratio &asymp; 10<sup>39</sup> for electron-proton)</li>
+        </ul>
+      </div>
+
+      <div class="formula-box">
+        <h3>Quick Dimensional Analysis</h3>
+        <table class="data-table">
+          <thead><tr><th>Quantity</th><th>SI Unit</th><th>Dimensions</th></tr></thead>
+          <tbody>
+            <tr><td>Electric charge Q</td><td>Coulomb (C)</td><td>[A T]</td></tr>
+            <tr><td>Electric field E</td><td>N/C or V/m</td><td>[M L T<sup>&minus;3</sup> A<sup>&minus;1</sup>]</td></tr>
+            <tr><td>Electric potential V</td><td>Volt (V = J/C)</td><td>[M L&sup2; T<sup>&minus;3</sup> A<sup>&minus;1</sup>]</td></tr>
+            <tr><td>Capacitance C</td><td>Farad (F = C/V)</td><td>[M<sup>&minus;1</sup> L<sup>&minus;2</sup> T<sup>4</sup> A&sup2;]</td></tr>
+            <tr><td>Permittivity &epsilon;<sub>0</sub></td><td>C&sup2;/(N&middot;m&sup2;)</td><td>[M<sup>&minus;1</sup> L<sup>&minus;3</sup> T<sup>4</sup> A&sup2;]</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="summary-box">
+      <h2>Key Formulas Quick Reference</h2>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <h4>Coulomb &amp; Field</h4>
+          <p>F = kq<sub>1</sub>q<sub>2</sub>/r&sup2;</p>
+          <p>E = kQ/r&sup2;</p>
+          <p>p = q&times;2a (dipole)</p>
+        </div>
+        <div class="formula-card">
+          <h4>Gauss's Law</h4>
+          <p>&Phi; = Q/&epsilon;<sub>0</sub></p>
+          <p>E(sphere) = kQ/r&sup2;</p>
+          <p>E(plane) = &sigma;/(2&epsilon;<sub>0</sub>)</p>
+        </div>
+        <div class="formula-card">
+          <h4>Potential</h4>
+          <p>V = kQ/r</p>
+          <p>U = kq<sub>1</sub>q<sub>2</sub>/r</p>
+          <p>E = &minus;dV/dr</p>
+        </div>
+        <div class="formula-card">
+          <h4>Capacitors</h4>
+          <p>C = &epsilon;<sub>0</sub>A/d</p>
+          <p>U = CV&sup2;/2</p>
+          <p>&tau; = RC</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

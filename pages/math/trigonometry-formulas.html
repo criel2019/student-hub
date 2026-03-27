@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trigonometry Formulas – All Identities, Values, Equations | Class 11 12 JEE | StudyHub</title>
+  <meta name="description" content="Complete trigonometry formulas for Class 11, 12 and JEE. All trig identities, values table, compound angles, multiple angles, product formulas with examples and proofs." />
+  <meta name="keywords" content="trigonometry formulas, trig identities, compound angles, multiple angles, JEE trigonometry, class 11 12 trig, inverse trigonometry, sine rule, cosine rule" />
+  <link rel="canonical" href="https://studyhub.example.com/pages/math/trigonometry-formulas.html" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .page-hero{background:linear-gradient(135deg,#1e3a5f 0%,#2a5298 100%);color:#fff;padding:60px 24px 40px;text-align:center}
+    .page-hero h1{font-size:2.2rem;margin-bottom:12px;line-height:1.3}
+    .page-hero p{font-size:1.05rem;opacity:.88;max-width:720px;margin:0 auto}
+    .content-wrap{max-width:900px;margin:0 auto;padding:40px 20px 80px}
+    .toc{background:#eaf0fb;border:1px solid #c3d0e8;border-radius:10px;padding:22px 28px;margin-bottom:40px}
+    .toc h2{font-size:1.1rem;color:#1e3a5f;margin-bottom:12px}
+    .toc ol{margin-left:20px;line-height:2}
+    .toc a{color:#2a5298;text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .section{margin-bottom:56px}
+    .section h2{font-size:1.6rem;color:#1e3a5f;border-bottom:3px solid #2a5298;padding-bottom:8px;margin-bottom:24px}
+    .section h3{font-size:1.2rem;color:#2a5298;margin:28px 0 12px}
+    .section h4{font-size:1.05rem;color:#1a1a2e;margin:20px 0 8px}
+    .formula-table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:.93rem}
+    .formula-table th{background:#1e3a5f;color:#fff;padding:10px 14px;text-align:center}
+    .formula-table td{padding:9px 14px;border-bottom:1px solid #dce1ec;text-align:center;vertical-align:middle}
+    .formula-table tr:nth-child(even) td{background:#f4f6f9}
+    .formula-table .left{text-align:left}
+    .formula-cell{font-family:'Courier New',monospace;font-size:.91rem;font-weight:600;color:#1e3a5f}
+    .example-box{background:#fff;border-left:4px solid #2a5298;border-radius:0 8px 8px 0;padding:18px 22px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+    .example-box .label{font-size:.78rem;font-weight:700;text-transform:uppercase;color:#2a5298;letter-spacing:.08em;margin-bottom:6px}
+    .example-box .problem{font-weight:600;color:#1a1a2e;margin-bottom:10px;font-size:1.02rem}
+    .example-box .solution{color:#333;line-height:1.8}
+    .example-box .solution .step{display:block;margin:4px 0;padding-left:12px}
+    .highlight{background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:12px 16px;margin:14px 0;font-size:.95rem}
+    .proof-box{background:#f8f0ff;border:1px solid #8e44ad;border-radius:8px;padding:16px 20px;margin:14px 0}
+    .proof-box strong{color:#8e44ad}
+    .practice-box{background:#f0f8f0;border:1px solid #27ae60;border-radius:8px;padding:18px 22px;margin:20px 0}
+    .practice-box h4{color:#1e8449;margin-bottom:12px}
+    .practice-box ol{margin-left:20px;line-height:2.1}
+    .practice-box .answers{margin-top:12px;font-size:.88rem;color:#555;border-top:1px solid #c3e6cb;padding-top:10px}
+    .rule-box{background:#fef9e7;border:1px solid #f39c12;border-radius:8px;padding:16px 20px;margin:16px 0}
+    .math{font-family:'Courier New',monospace;font-size:.97rem;background:#f0f0f0;padding:1px 5px;border-radius:3px}
+    .big-formula{display:block;text-align:center;font-family:'Courier New',monospace;font-size:1.05rem;background:#1e3a5f;color:#fff;padding:14px 20px;border-radius:8px;margin:16px 0;letter-spacing:.03em}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+    @media(max-width:600px){.two-col{grid-template-columns:1fr}}
+    .formula-card{background:#eaf0fb;border:1px solid #c3d0e8;border-radius:8px;padding:12px 16px;font-family:'Courier New',monospace;font-size:.9rem;color:#1e3a5f}
+    .astc-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;max-width:320px;margin:16px auto;text-align:center}
+    .astc-cell{padding:18px 10px;border-radius:8px;font-weight:700;font-size:1.1rem}
+    .astc-q1{background:#d4edda;color:#1e8449}
+    .astc-q2{background:#d1ecf1;color:#0c5460}
+    .astc-q3{background:#fff3cd;color:#856404}
+    .astc-q4{background:#f8d7da;color:#721c24}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">📚 StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>Trigonometry Formulas</h1>
+  <p>Every trigonometric identity, formula, and value you need for Class 11, Class 12, and JEE — with proofs, derivations, triangle formulas, inverse trig, and 10 fully solved problems.</p>
+</div>
+
+<div class="content-wrap">
+
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#ratios">Trigonometric Ratios &amp; Definitions</a></li>
+      <li><a href="#values">Standard Values Table (Complete)</a></li>
+      <li><a href="#astc">ASTC Rule &amp; Signs in Quadrants</a></li>
+      <li><a href="#pythagorean">Pythagorean Identities (with proofs)</a></li>
+      <li><a href="#compound">Compound Angle Formulas</a></li>
+      <li><a href="#multiple">Multiple &amp; Half-Angle Formulas</a></li>
+      <li><a href="#product-sum">Product-to-Sum &amp; Sum-to-Product</a></li>
+      <li><a href="#t-formula">t-Formulas (Weierstrass)</a></li>
+      <li><a href="#inverse">Inverse Trigonometry</a></li>
+      <li><a href="#triangle">Triangle Formulas (Sine Rule, Cosine Rule, Area)</a></li>
+      <li><a href="#solved">10 Solved JEE Problems</a></li>
+      <li><a href="#practice">30 Practice Problems</a></li>
+    </ol>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="ratios">
+    <h2>1. Trigonometric Ratios &amp; Definitions</h2>
+    <p>For a right-angled triangle with angle θ at vertex A (opposite side = a, adjacent side = b, hypotenuse = c):</p>
+    <div class="two-col">
+      <div class="formula-card">sin θ = opposite / hypotenuse = a/c</div>
+      <div class="formula-card">cos θ = adjacent / hypotenuse = b/c</div>
+      <div class="formula-card">tan θ = opposite / adjacent = a/b = sin θ / cos θ</div>
+      <div class="formula-card">cot θ = adjacent / opposite = b/a = cos θ / sin θ</div>
+      <div class="formula-card">sec θ = hypotenuse / adjacent = c/b = 1 / cos θ</div>
+      <div class="formula-card">csc θ = hypotenuse / opposite = c/a = 1 / sin θ</div>
+    </div>
+    <p><strong>Unit Circle Definition:</strong> For any angle θ, place a point P at (cos θ, sin θ) on the unit circle (radius 1). This extends trig ratios beyond 0° to 90° to all real angles.</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="values">
+    <h2>2. Standard Values Table</h2>
+    <p>Memorise the values from 0° to 360°. Pattern for sin: √0/2, √1/2, √2/2, √3/2, √4/2 for 0°, 30°, 45°, 60°, 90°. cos is sin reversed.</p>
+
+    <table class="formula-table">
+      <thead>
+        <tr>
+          <th>Angle</th><th>0°</th><th>30°</th><th>45°</th><th>60°</th><th>90°</th><th>120°</th><th>135°</th><th>150°</th><th>180°</th>
+        </tr>
+        <tr>
+          <th>Radians</th><th>0</th><th>π/6</th><th>π/4</th><th>π/3</th><th>π/2</th><th>2π/3</th><th>3π/4</th><th>5π/6</th><th>π</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>sin</strong></td><td>0</td><td>1/2</td><td>1/√2</td><td>√3/2</td><td>1</td><td>√3/2</td><td>1/√2</td><td>1/2</td><td>0</td></tr>
+        <tr><td><strong>cos</strong></td><td>1</td><td>√3/2</td><td>1/√2</td><td>1/2</td><td>0</td><td>−1/2</td><td>−1/√2</td><td>−√3/2</td><td>−1</td></tr>
+        <tr><td><strong>tan</strong></td><td>0</td><td>1/√3</td><td>1</td><td>√3</td><td>∞</td><td>−√3</td><td>−1</td><td>−1/√3</td><td>0</td></tr>
+        <tr><td><strong>cot</strong></td><td>∞</td><td>√3</td><td>1</td><td>1/√3</td><td>0</td><td>−1/√3</td><td>−1</td><td>−√3</td><td>∞</td></tr>
+        <tr><td><strong>sec</strong></td><td>1</td><td>2/√3</td><td>√2</td><td>2</td><td>∞</td><td>−2</td><td>−√2</td><td>−2/√3</td><td>−1</td></tr>
+        <tr><td><strong>csc</strong></td><td>∞</td><td>2</td><td>√2</td><td>2/√3</td><td>1</td><td>2/√3</td><td>√2</td><td>2</td><td>∞</td></tr>
+      </tbody>
+    </table>
+
+    <table class="formula-table">
+      <thead>
+        <tr>
+          <th>Angle</th><th>210°</th><th>225°</th><th>240°</th><th>270°</th><th>300°</th><th>315°</th><th>330°</th><th>360°</th>
+        </tr>
+        <tr>
+          <th>Radians</th><th>7π/6</th><th>5π/4</th><th>4π/3</th><th>3π/2</th><th>5π/3</th><th>7π/4</th><th>11π/6</th><th>2π</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>sin</strong></td><td>−1/2</td><td>−1/√2</td><td>−√3/2</td><td>−1</td><td>−√3/2</td><td>−1/√2</td><td>−1/2</td><td>0</td></tr>
+        <tr><td><strong>cos</strong></td><td>−√3/2</td><td>−1/√2</td><td>−1/2</td><td>0</td><td>1/2</td><td>1/√2</td><td>√3/2</td><td>1</td></tr>
+        <tr><td><strong>tan</strong></td><td>1/√3</td><td>1</td><td>√3</td><td>∞</td><td>−√3</td><td>−1</td><td>−1/√3</td><td>0</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="astc">
+    <h2>3. ASTC Rule — Signs in Four Quadrants</h2>
+    <p><strong>"All Students Take Calculus"</strong> — this mnemonic tells you which trig functions are positive in each quadrant.</p>
+
+    <div class="astc-grid">
+      <div class="astc-cell astc-q2">Q2 (90°–180°)<br>S only<br>(sin &gt; 0)</div>
+      <div class="astc-cell astc-q1">Q1 (0°–90°)<br>A — All<br>(all &gt; 0)</div>
+      <div class="astc-cell astc-q3">Q3 (180°–270°)<br>T only<br>(tan &gt; 0)</div>
+      <div class="astc-cell astc-q4">Q4 (270°–360°)<br>C only<br>(cos &gt; 0)</div>
+    </div>
+
+    <h3>Reduction Formulas (Moving Between Quadrants)</h3>
+    <table class="formula-table">
+      <thead><tr><th>Expression</th><th>= (sign depends on quadrant)</th></tr></thead>
+      <tbody>
+        <tr><td>sin(180°−θ)</td><td class="formula-cell">sin θ</td></tr>
+        <tr><td>cos(180°−θ)</td><td class="formula-cell">−cos θ</td></tr>
+        <tr><td>sin(180°+θ)</td><td class="formula-cell">−sin θ</td></tr>
+        <tr><td>cos(180°+θ)</td><td class="formula-cell">−cos θ</td></tr>
+        <tr><td>sin(360°−θ) = sin(−θ)</td><td class="formula-cell">−sin θ</td></tr>
+        <tr><td>cos(360°−θ) = cos(−θ)</td><td class="formula-cell">cos θ</td></tr>
+        <tr><td>sin(90°−θ)</td><td class="formula-cell">cos θ &nbsp; (co-function)</td></tr>
+        <tr><td>cos(90°−θ)</td><td class="formula-cell">sin θ &nbsp; (co-function)</td></tr>
+        <tr><td>tan(90°−θ)</td><td class="formula-cell">cot θ</td></tr>
+        <tr><td>sin(90°+θ)</td><td class="formula-cell">cos θ</td></tr>
+        <tr><td>cos(90°+θ)</td><td class="formula-cell">−sin θ</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight"><strong>Rule:</strong> When you add/subtract 90° (or π/2), the function changes (sin↔cos, tan↔cot, sec↔csc). When you add/subtract 180° (π), the function stays the same. The sign depends on the quadrant.</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="pythagorean">
+    <h2>4. Pythagorean Identities</h2>
+
+    <div class="proof-box">
+      <strong>Proof of sin²θ + cos²θ = 1:</strong><br>
+      By Pythagoras: opposite² + adjacent² = hypotenuse² → a² + b² = c²<br>
+      Divide both sides by c²: (a/c)² + (b/c)² = 1 → sin²θ + cos²θ = 1 ✓
+    </div>
+
+    <h3>The Three Pythagorean Identities</h3>
+    <div class="two-col">
+      <div class="formula-card">Identity 1:<br>sin²θ + cos²θ = 1<br>⟹ sin²θ = 1 − cos²θ<br>⟹ cos²θ = 1 − sin²θ</div>
+      <div class="formula-card">Identity 2 (÷ cos²θ):<br>tan²θ + 1 = sec²θ<br>⟹ sec²θ − tan²θ = 1<br>⟹ (sec θ−tan θ)(sec θ+tan θ) = 1</div>
+    </div>
+    <div class="formula-card" style="margin:8px 0">Identity 3 (÷ sin²θ): &nbsp; 1 + cot²θ = csc²θ &nbsp;⟹ csc²θ − cot²θ = 1 &nbsp;⟹ (csc θ−cot θ)(csc θ+cot θ) = 1</div>
+
+    <div class="highlight">
+      <strong>JEE tip:</strong> The factored forms (sec θ − tan θ)(sec θ + tan θ) = 1 and (csc θ − cot θ)(csc θ + cot θ) = 1 are used frequently to simplify rationalization problems.
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="compound">
+    <h2>5. Compound Angle Formulas</h2>
+
+    <h3>Sine and Cosine of Sum/Difference</h3>
+    <div class="two-col">
+      <div class="formula-card">sin(A+B) = sinA cosB + cosA sinB</div>
+      <div class="formula-card">sin(A−B) = sinA cosB − cosA sinB</div>
+      <div class="formula-card">cos(A+B) = cosA cosB − sinA sinB</div>
+      <div class="formula-card">cos(A−B) = cosA cosB + sinA sinB</div>
+    </div>
+
+    <div class="proof-box">
+      <strong>Derivation of cos(A−B):</strong> Using unit circle geometry, place two unit vectors at angles A and B from the positive x-axis. The distance between their tips squared equals (cosA−cosB)²+(sinA−sinB)² by distance formula. By the law of cosines, this also equals 2−2cos(A−B). Equating: cos(A−B) = cosA cosB + sinA sinB ✓<br>
+      All other compound formulas follow from this one.
+    </div>
+
+    <h3>Tangent of Sum/Difference</h3>
+    <div class="two-col">
+      <div class="formula-card">tan(A+B) = (tanA + tanB) / (1 − tanA tanB)</div>
+      <div class="formula-card">tan(A−B) = (tanA − tanB) / (1 + tanA tanB)</div>
+      <div class="formula-card">cot(A+B) = (cotA cotB − 1) / (cotB + cotA)</div>
+      <div class="formula-card">cot(A−B) = (cotA cotB + 1) / (cotB − cotA)</div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example — Compound Angles</div>
+      <div class="problem">Prove that tan 75° = 2 + √3</div>
+      <div class="solution">
+        <span class="step">tan 75° = tan(45° + 30°) = (tan 45° + tan 30°)/(1 − tan 45° · tan 30°)</span>
+        <span class="step">= (1 + 1/√3)/(1 − 1/√3) = (√3+1)/(√3−1)</span>
+        <span class="step">Rationalise: × (√3+1)/(√3+1) = (√3+1)²/(3−1) = (3+2√3+1)/2 = (4+2√3)/2 = 2+√3 ✓</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example — sin 105°</div>
+      <div class="problem">Find the exact value of sin 105°.</div>
+      <div class="solution">
+        <span class="step">sin 105° = sin(60° + 45°) = sin60 cos45 + cos60 sin45</span>
+        <span class="step">= (√3/2)(1/√2) + (1/2)(1/√2) = (√3 + 1)/(2√2) = (√6+√2)/4</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="multiple">
+    <h2>6. Multiple Angle &amp; Half-Angle Formulas</h2>
+
+    <h3>Double Angle Formulas (2A)</h3>
+    <table class="formula-table">
+      <thead><tr><th>Function</th><th>Formula 1</th><th>Formula 2</th><th>Formula 3</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>sin 2A</strong></td>
+          <td class="formula-cell">2 sinA cosA</td>
+          <td class="formula-cell">2 tanA / (1+tan²A)</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>cos 2A</strong></td>
+          <td class="formula-cell">cos²A − sin²A</td>
+          <td class="formula-cell">2cos²A − 1</td>
+          <td class="formula-cell">1 − 2sin²A = (1−tan²A)/(1+tan²A)</td>
+        </tr>
+        <tr>
+          <td><strong>tan 2A</strong></td>
+          <td class="formula-cell">2 tanA / (1−tan²A)</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      <strong>Derived from cos 2A:</strong><br>
+      cos 2A = 1 − 2sin²A &nbsp;⟹&nbsp; sin²A = (1 − cos 2A)/2 &nbsp; (useful in integration!)<br>
+      cos 2A = 2cos²A − 1 &nbsp;⟹&nbsp; cos²A = (1 + cos 2A)/2
+    </div>
+
+    <h3>Triple Angle Formulas (3A)</h3>
+    <div class="two-col">
+      <div class="formula-card">sin 3A = 3 sinA − 4 sin³A</div>
+      <div class="formula-card">cos 3A = 4 cos³A − 3 cosA</div>
+      <div class="formula-card">tan 3A = (3tanA − tan³A) / (1 − 3tan²A)</div>
+      <div class="formula-card">sin³A = (3 sinA − sin 3A)/4<br>cos³A = (3 cosA + cos 3A)/4</div>
+    </div>
+
+    <h3>Half-Angle Formulas</h3>
+    <table class="formula-table">
+      <thead><tr><th>Formula</th><th>Expression</th></tr></thead>
+      <tbody>
+        <tr><td><strong>sin(A/2)</strong></td><td class="formula-cell">±√((1 − cosA)/2)</td></tr>
+        <tr><td><strong>cos(A/2)</strong></td><td class="formula-cell">±√((1 + cosA)/2)</td></tr>
+        <tr><td><strong>tan(A/2)</strong></td><td class="formula-cell">±√((1−cosA)/(1+cosA)) = sinA/(1+cosA) = (1−cosA)/sinA</td></tr>
+      </tbody>
+    </table>
+    <p>The ± sign is determined by the quadrant in which A/2 falls.</p>
+
+    <div class="example-box">
+      <div class="label">Example — Triple Angle</div>
+      <div class="problem">If sin θ = 1/2, find sin 3θ.</div>
+      <div class="solution">
+        <span class="step">sin 3θ = 3 sinθ − 4 sin³θ = 3(1/2) − 4(1/8) = 3/2 − 1/2 = 1</span>
+        <span class="step">Check: sin θ = 1/2 → θ = 30°, so 3θ = 90°, sin 90° = 1 ✓</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="product-sum">
+    <h2>7. Product-to-Sum &amp; Sum-to-Product Formulas</h2>
+
+    <h3>Product-to-Sum</h3>
+    <table class="formula-table">
+      <thead><tr><th>#</th><th>Product Form</th><th>Sum Form</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td class="formula-cell">2 sinA cosB</td><td class="formula-cell">sin(A+B) + sin(A−B)</td></tr>
+        <tr><td>2</td><td class="formula-cell">2 cosA sinB</td><td class="formula-cell">sin(A+B) − sin(A−B)</td></tr>
+        <tr><td>3</td><td class="formula-cell">2 cosA cosB</td><td class="formula-cell">cos(A−B) + cos(A+B)</td></tr>
+        <tr><td>4</td><td class="formula-cell">2 sinA sinB</td><td class="formula-cell">cos(A−B) − cos(A+B)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Sum-to-Product (let C = A+B, D = A−B → A = (C+D)/2, B = (C−D)/2)</h3>
+    <table class="formula-table">
+      <thead><tr><th>#</th><th>Sum Form</th><th>Product Form</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td class="formula-cell">sinC + sinD</td><td class="formula-cell">2 sin((C+D)/2) cos((C−D)/2)</td></tr>
+        <tr><td>2</td><td class="formula-cell">sinC − sinD</td><td class="formula-cell">2 cos((C+D)/2) sin((C−D)/2)</td></tr>
+        <tr><td>3</td><td class="formula-cell">cosC + cosD</td><td class="formula-cell">2 cos((C+D)/2) cos((C−D)/2)</td></tr>
+        <tr><td>4</td><td class="formula-cell">cosC − cosD</td><td class="formula-cell">−2 sin((C+D)/2) sin((C−D)/2)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <div class="label">Example — Sum to Product</div>
+      <div class="problem">Prove: (sin 3θ + sin θ)/(cos 3θ + cos θ) = tan 2θ</div>
+      <div class="solution">
+        <span class="step">Numerator: sin 3θ + sin θ = 2 sin(2θ) cos(θ) &nbsp; [C=3θ, D=θ]</span>
+        <span class="step">Denominator: cos 3θ + cos θ = 2 cos(2θ) cos(θ)</span>
+        <span class="step">Ratio = [2 sin 2θ cos θ] / [2 cos 2θ cos θ] = sin 2θ / cos 2θ = tan 2θ ✓</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="t-formula">
+    <h2>8. t-Formulas (Weierstrass Substitution)</h2>
+
+    <p>Let <strong>t = tan(A/2)</strong>. Then:</p>
+    <div class="two-col">
+      <div class="formula-card">sin A = 2t / (1+t²)</div>
+      <div class="formula-card">cos A = (1−t²) / (1+t²)</div>
+      <div class="formula-card">tan A = 2t / (1−t²)</div>
+      <div class="formula-card">1 − cos A = 2sin²(A/2) = 2t²/(1+t²)</div>
+    </div>
+
+    <div class="proof-box">
+      <strong>Derivation:</strong> sin A = 2 sin(A/2) cos(A/2). Divide top and bottom by cos²(A/2): sin A = 2tan(A/2) / (1+tan²(A/2)) = 2t/(1+t²) ✓. Similarly cos A = (cos²(A/2)−sin²(A/2))/cos²(A/2)+sin²(A/2)) = (1−tan²(A/2))/(1+tan²(A/2)) = (1−t²)/(1+t²) ✓
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example — t-formula in equation</div>
+      <div class="problem">Solve: 2 sin x − cos x = 1 using t-formula.</div>
+      <div class="solution">
+        <span class="step">Let t = tan(x/2). Then sin x = 2t/(1+t²), cos x = (1−t²)/(1+t²)</span>
+        <span class="step">2·[2t/(1+t²)] − (1−t²)/(1+t²) = 1</span>
+        <span class="step">Multiply through by (1+t²): 4t − (1−t²) = 1+t²</span>
+        <span class="step">4t − 1 + t² = 1 + t² → 4t = 2 → t = 1/2</span>
+        <span class="step">tan(x/2) = 1/2 → x = 2 tan⁻¹(1/2) + 2nπ</span>
+        <span class="step"><strong>Note:</strong> Also check t → ∞ case (x = π) separately, which gives 2(0)−(−1) = 1 ✓, so x = π + 2nπ is also a solution.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="inverse">
+    <h2>9. Inverse Trigonometry</h2>
+
+    <h3>Domain &amp; Range Table</h3>
+    <table class="formula-table">
+      <thead><tr><th>Function</th><th>Domain</th><th>Range (Principal Value Branch)</th></tr></thead>
+      <tbody>
+        <tr><td class="formula-cell">sin⁻¹ x</td><td>[−1, 1]</td><td>[−π/2, π/2]</td></tr>
+        <tr><td class="formula-cell">cos⁻¹ x</td><td>[−1, 1]</td><td>[0, π]</td></tr>
+        <tr><td class="formula-cell">tan⁻¹ x</td><td>(−∞, ∞)</td><td>(−π/2, π/2)</td></tr>
+        <tr><td class="formula-cell">cot⁻¹ x</td><td>(−∞, ∞)</td><td>(0, π)</td></tr>
+        <tr><td class="formula-cell">sec⁻¹ x</td><td>(−∞,−1]∪[1,∞)</td><td>[0,π] − {π/2}</td></tr>
+        <tr><td class="formula-cell">csc⁻¹ x</td><td>(−∞,−1]∪[1,∞)</td><td>[−π/2,π/2] − {0}</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Essential Properties</h3>
+    <div class="two-col">
+      <div class="formula-card">sin⁻¹(−x) = −sin⁻¹ x<br>(sin⁻¹ is odd)</div>
+      <div class="formula-card">cos⁻¹(−x) = π − cos⁻¹ x</div>
+      <div class="formula-card">tan⁻¹(−x) = −tan⁻¹ x<br>(tan⁻¹ is odd)</div>
+      <div class="formula-card">sin⁻¹ x + cos⁻¹ x = π/2</div>
+      <div class="formula-card">tan⁻¹ x + cot⁻¹ x = π/2</div>
+      <div class="formula-card">sec⁻¹ x + csc⁻¹ x = π/2</div>
+    </div>
+
+    <h3>Addition Formulas for Inverse Trig</h3>
+    <table class="formula-table">
+      <thead><tr><th>Formula</th><th>Condition</th></tr></thead>
+      <tbody>
+        <tr><td class="formula-cell left">tan⁻¹ x + tan⁻¹ y = tan⁻¹((x+y)/(1−xy))</td><td>if xy &lt; 1</td></tr>
+        <tr><td class="formula-cell left">tan⁻¹ x + tan⁻¹ y = π + tan⁻¹((x+y)/(1−xy))</td><td>if xy &gt; 1, x &gt; 0, y &gt; 0</td></tr>
+        <tr><td class="formula-cell left">tan⁻¹ x − tan⁻¹ y = tan⁻¹((x−y)/(1+xy))</td><td>if xy &gt; −1</td></tr>
+        <tr><td class="formula-cell left">sin⁻¹ x + sin⁻¹ y = sin⁻¹(x√(1−y²) + y√(1−x²))</td><td>if x²+y² ≤ 1</td></tr>
+        <tr><td class="formula-cell left">cos⁻¹ x + cos⁻¹ y = cos⁻¹(xy − √(1−x²)√(1−y²))</td><td>x,y ≥ 0</td></tr>
+        <tr><td class="formula-cell left">2 tan⁻¹ x = sin⁻¹(2x/(1+x²)) = cos⁻¹((1−x²)/(1+x²))</td><td>|x| ≤ 1 for sin⁻¹ form</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="triangle">
+    <h2>10. Triangle Formulas</h2>
+    <p>For a triangle ABC with sides a (opposite A), b (opposite B), c (opposite C):</p>
+
+    <h3>Sine Rule</h3>
+    <span class="big-formula">a/sin A = b/sin B = c/sin C = 2R</span>
+    <p>where R is the circumradius (radius of circumscribed circle).</p>
+
+    <h3>Cosine Rule</h3>
+    <div class="two-col">
+      <div class="formula-card">a² = b² + c² − 2bc cosA</div>
+      <div class="formula-card">b² = a² + c² − 2ac cosB</div>
+      <div class="formula-card">c² = a² + b² − 2ab cosC</div>
+      <div class="formula-card">cosA = (b²+c²−a²)/(2bc)</div>
+    </div>
+
+    <h3>Projection Formulas</h3>
+    <div class="two-col">
+      <div class="formula-card">a = b cosC + c cosB</div>
+      <div class="formula-card">b = a cosC + c cosA</div>
+    </div>
+
+    <h3>Area of Triangle</h3>
+    <div class="two-col">
+      <div class="formula-card">Δ = (1/2) ab sinC = (1/2) bc sinA = (1/2) ac sinB</div>
+      <div class="formula-card">Δ = √[s(s−a)(s−b)(s−c)] &nbsp; [Heron's formula]<br>where s = (a+b+c)/2</div>
+    </div>
+
+    <h3>Circumradius (R) and Inradius (r)</h3>
+    <table class="formula-table">
+      <thead><tr><th>Quantity</th><th>Formula</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Circumradius R</strong></td><td class="formula-cell">R = a/(2 sinA) = abc/(4Δ)</td></tr>
+        <tr><td><strong>Inradius r</strong></td><td class="formula-cell">r = Δ/s = (s−a)tan(A/2) = 4R sinA/2 sinB/2 sinC/2</td></tr>
+        <tr><td><strong>tan(A/2)</strong></td><td class="formula-cell">tan(A/2) = r/(s−a)</td></tr>
+        <tr><td><strong>tan(B/2)</strong></td><td class="formula-cell">tan(B/2) = r/(s−b)</td></tr>
+        <tr><td><strong>tan(C/2)</strong></td><td class="formula-cell">tan(C/2) = r/(s−c)</td></tr>
+        <tr><td><strong>Napier's analogy</strong></td><td class="formula-cell">tan((A−B)/2) = (a−b)/(a+b) · cot(C/2)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <div class="label">Example — Triangle Calculation</div>
+      <div class="problem">In triangle ABC, a = 7, b = 8, c = 9. Find cos A and the area.</div>
+      <div class="solution">
+        <span class="step">cosA = (b²+c²−a²)/(2bc) = (64+81−49)/(2·8·9) = 96/144 = 2/3</span>
+        <span class="step">sinA = √(1 − 4/9) = √(5/9) = √5/3</span>
+        <span class="step">Area = (1/2) bc sinA = (1/2)(8)(9)(√5/3) = 36√5/3 = 12√5 sq. units</span>
+        <span class="step">Using Heron's: s = (7+8+9)/2 = 12; Δ = √(12·5·4·3) = √720 = 12√5 ✓</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="solved">
+    <h2>11. 10 Solved JEE-Level Problems</h2>
+
+    <div class="example-box">
+      <div class="label">Problem 1</div>
+      <div class="problem">Prove: sin 20° · sin 40° · sin 80° = √3/8</div>
+      <div class="solution">
+        <span class="step">Use: sin θ · sin(60°−θ) · sin(60°+θ) = (1/4) sin 3θ</span>
+        <span class="step">Here θ = 20°: sin 20° · sin 40° · sin 80° = (1/4) sin 60° = (1/4)(√3/2) = √3/8 ✓</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Problem 2</div>
+      <div class="problem">If tan α + tan β = a, cot α + cot β = b, find tan(α + β).</div>
+      <div class="solution">
+        <span class="step">cot α + cot β = b → (1/tan α) + (1/tan β) = b → (tan α + tan β)/(tan α tan β) = b</span>
+        <span class="step">a / (tan α tan β) = b → tan α tan β = a/b</span>
+        <span class="step">tan(α+β) = (tan α + tan β)/(1 − tan α tan β) = a/(1 − a/b) = ab/(b−a)</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Problem 3</div>
+      <div class="problem">Find the value of cos² 48° − sin² 12°.</div>
+      <div class="solution">
+        <span class="step">Use: cos²A − sin²B = cos(A+B) cos(A−B)</span>
+        <span class="step">= cos(60°) cos(36°) = (1/2) cos 36°</span>
+        <span class="step">cos 36° = (1+√5)/4 &nbsp;(golden ratio connection)</span>
+        <span class="step">Answer = (1+√5)/8</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Problem 4</div>
+      <div class="problem">If sin(A+B) = 1 and cos(A−B) = √3/2, find A and B (0 &lt; A,B &lt; π/2).</div>
+      <div class="solution">
+        <span class="step">sin(A+B) = 1 → A+B = 90° ...(i)</span>
+        <span class="step">cos(A−B) = √3/2 → A−B = 30° ...(ii)</span>
+        <span class="step">Adding: 2A = 120° → A = 60°; then B = 30°</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Problem 5</div>
+      <div class="problem">Evaluate: tan⁻¹(1/2) + tan⁻¹(1/5) + tan⁻¹(1/8)</div>
+      <div class="solution">
+        <span class="step">First: tan⁻¹(1/2) + tan⁻¹(1/5) = tan⁻¹((1/2+1/5)/(1−1/10)) = tan⁻¹((7/10)/(9/10)) = tan⁻¹(7/9)</span>
+        <span class="step">Now: tan⁻¹(7/9) + tan⁻¹(1/8) = tan⁻¹((7/9+1/8)/(1−7/72))</span>
+        <span class="step">= tan⁻¹((56+9)/(72)/(1−7/72)) = tan⁻¹((65/72)/(65/72)) = tan⁻¹(1) = π/4</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Problem 6</div>
+      <div class="problem">If A + B + C = π, prove: sin 2A + sin 2B + sin 2C = 4 sinA sinB sinC.</div>
+      <div class="solution">
+        <span class="step">LHS = sin 2A + sin 2B + sin 2C</span>
+        <span class="step">= 2 sin(A+B) cos(A−B) + sin 2C &nbsp;[sum-to-product on first two]</span>
+        <span class="step">Since A+B+C = π, A+B = π−C, so sin(A+B) = sinC</span>
+        <span class="step">= 2 sinC cos(A−B) + 2 sinC cosC &nbsp;[sin 2C = 2 sinC cosC]</span>
+        <span class="step">= 2 sinC [cos(A−B) + cosC]</span>
+        <span class="step">cosC = cos(π−A−B) = −cos(A+B)</span>
+        <span class="step">= 2 sinC [cos(A−B) − cos(A+B)] = 2 sinC · 2 sinA sinB</span>
+        <span class="step">= 4 sinA sinB sinC ✓</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Problem 7</div>
+      <div class="problem">Solve: cos 2θ + cos θ = 0 for θ ∈ [0°, 360°]</div>
+      <div class="solution">
+        <span class="step">cos 2θ + cos θ = 0 → (2cos²θ − 1) + cos θ = 0</span>
+        <span class="step">2cos²θ + cosθ − 1 = 0 → (2cosθ − 1)(cosθ + 1) = 0</span>
+        <span class="step">cosθ = 1/2 → θ = 60° or 300°</span>
+        <span class="step">cosθ = −1 → θ = 180°</span>
+        <span class="step"><strong>Solutions: θ = 60°, 180°, 300°</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Problem 8</div>
+      <div class="problem">If tan θ = 3/4 and π &lt; θ &lt; 3π/2, find sin θ, cos θ.</div>
+      <div class="solution">
+        <span class="step">θ is in Q3 (π to 3π/2), so sinθ &lt; 0 and cosθ &lt; 0.</span>
+        <span class="step">tan θ = 3/4 (positive in Q3 ✓). From a 3-4-5 triangle: opp=3, adj=4, hyp=5.</span>
+        <span class="step">sinθ = −3/5, cosθ = −4/5 (both negative in Q3)</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Problem 9</div>
+      <div class="problem">In a triangle, show that: (a−b)² cos²(C/2) + (a+b)² sin²(C/2) = c²</div>
+      <div class="solution">
+        <span class="step">LHS = (a−b)² cos²(C/2) + (a+b)² sin²(C/2)</span>
+        <span class="step">= (a²−2ab+b²)cos²(C/2) + (a²+2ab+b²)sin²(C/2)</span>
+        <span class="step">= (a²+b²)(cos²(C/2)+sin²(C/2)) + 2ab(sin²(C/2)−cos²(C/2))</span>
+        <span class="step">= (a²+b²) − 2ab cosC = c² &nbsp; [by cosine rule] ✓</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Problem 10</div>
+      <div class="problem">Find all solutions of: sin x + sin 2x + sin 3x = 0</div>
+      <div class="solution">
+        <span class="step">(sin x + sin 3x) + sin 2x = 0</span>
+        <span class="step">2 sin 2x cos x + sin 2x = 0 &nbsp; [sum-to-product: sin x+sin 3x = 2sin 2x cos x]</span>
+        <span class="step">sin 2x (2 cos x + 1) = 0</span>
+        <span class="step">Case 1: sin 2x = 0 → 2x = nπ → x = nπ/2</span>
+        <span class="step">Case 2: cos x = −1/2 → x = 2π/3 + 2nπ or x = 4π/3 + 2nπ = ±2π/3 + 2nπ</span>
+        <span class="step"><strong>General solution: x = nπ/2 or x = 2nπ ± 2π/3, n ∈ ℤ</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="practice">
+    <h2>12. Practice Problems (30 Questions)</h2>
+    <div class="practice-box">
+      <h4>Identities &amp; Values</h4>
+      <ol>
+        <li>Prove: (1 + tan²θ)/(1 + cot²θ) = tan²θ</li>
+        <li>Find: sin 15°, cos 15° (exact values)</li>
+        <li>Simplify: (sin θ + cos θ)² + (sin θ − cos θ)²</li>
+        <li>Prove: sec⁴θ − sec²θ = tan⁴θ + tan²θ</li>
+        <li>Find the exact value of sin 18°.</li>
+        <li>If sin θ + cos θ = √2 cos θ, find cot θ.</li>
+        <li>Prove: tan A − tan B = sin(A−B)/(cos A cos B)</li>
+        <li>Evaluate: cos 36° − cos 72°</li>
+        <li>If A+B = 45°, prove: (1+tanA)(1+tanB) = 2</li>
+        <li>Find sin 75° + cos 75°</li>
+      </ol>
+      <h4 style="margin-top:16px">Multiple &amp; Compound Angles</h4>
+      <ol start="11">
+        <li>If cos θ = −4/5 and θ is in Q3, find sin 2θ and cos 2θ.</li>
+        <li>Prove: tan 3A − tan 2A − tan A = tan 3A tan 2A tan A</li>
+        <li>Find the value of sin 10° sin 50° sin 70°.</li>
+        <li>Prove: cos A cos 2A cos 4A = sin 8A/(8 sin A)</li>
+        <li>If 2 cos θ = x + 1/x, find 2 cos 2θ in terms of x.</li>
+      </ol>
+      <h4 style="margin-top:16px">Inverse Trig</h4>
+      <ol start="16">
+        <li>Evaluate: sin⁻¹(1/√2) + cos⁻¹(1/2)</li>
+        <li>Solve: 2 tan⁻¹(cos x) = tan⁻¹(2 csc x)</li>
+        <li>Prove: tan⁻¹(1/3) + tan⁻¹(1/7) = π/4</li>
+        <li>Find: cos⁻¹(cos 7π/6)</li>
+        <li>Simplify: sin(tan⁻¹ x)</li>
+      </ol>
+      <h4 style="margin-top:16px">Triangle Problems</h4>
+      <ol start="21">
+        <li>In △ABC, a=5, b=6, c=7. Find the area and circumradius R.</li>
+        <li>If the angles of a triangle are in AP with the smallest angle = 40°, find all angles.</li>
+        <li>Prove: a(b cosC − c cosB) = b² − c²</li>
+        <li>In △ABC, if cos A/2 = √(bc/(b+c)), prove b+c = 2a... [and solve]</li>
+        <li>Find inradius r if a=5, b=12, c=13 (right triangle).</li>
+      </ol>
+      <h4 style="margin-top:16px">Equations</h4>
+      <ol start="26">
+        <li>Solve: 2 cos² θ − 3 cos θ + 1 = 0 for θ ∈ [0, 2π]</li>
+        <li>Solve: tan θ + cot θ = 2 for θ ∈ [0, 2π]</li>
+        <li>Find general solution of: sin 5θ = cos 2θ</li>
+        <li>Solve: 3 tan² θ − 2√3 tan θ − 1 = 0</li>
+        <li>If sin θ − √3 cos θ = 1, find general solution.</li>
+      </ol>
+      <div class="answers"><strong>Selected Answers:</strong> (2) sin15°=(√6−√2)/4, cos15°=(√6+√2)/4 &nbsp; (3) 2 &nbsp; (5) sin18°=(√5−1)/4 &nbsp; (8) 1/2 &nbsp; (10) √6/2 &nbsp; (11) sin2θ=24/25, cos2θ=7/25 &nbsp; (13) 1/8 &nbsp; (16) 3π/4 &nbsp; (19) 5π/6 &nbsp; (20) x/√(1+x²) &nbsp; (21) A=6√6, R=35/(4·6√6/35)... &nbsp; (25) r=2 &nbsp; (26) θ=π/3, π/2, 5π/3, 3π/2 no—θ=π/3, 5π/3</div>
+    </div>
+  </div>
+
+</div>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

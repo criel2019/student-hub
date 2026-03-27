@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quadratic Equations – Formulas, Methods, Roots, Graphs | Class 10 11 JEE | StudyHub</title>
+  <meta name="description" content="Complete guide to quadratic equations. Quadratic formula, factoring method, completing the square, nature of roots, Vieta's formulas, graphing parabolas. With 15 solved examples." />
+  <meta name="keywords" content="quadratic equations, quadratic formula, discriminant, Vieta formulas, nature of roots, completing the square, JEE quadratic, class 10 11 quadratic equations" />
+  <link rel="canonical" href="https://studyhub.example.com/pages/math/quadratic-equations.html" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .page-hero{background:linear-gradient(135deg,#1e3a5f 0%,#2a5298 100%);color:#fff;padding:60px 24px 40px;text-align:center}
+    .page-hero h1{font-size:2.2rem;margin-bottom:12px;line-height:1.3}
+    .page-hero p{font-size:1.05rem;opacity:.88;max-width:720px;margin:0 auto}
+    .content-wrap{max-width:900px;margin:0 auto;padding:40px 20px 80px}
+    .toc{background:#eaf0fb;border:1px solid #c3d0e8;border-radius:10px;padding:22px 28px;margin-bottom:40px}
+    .toc h2{font-size:1.1rem;color:#1e3a5f;margin-bottom:12px}
+    .toc ol{margin-left:20px;line-height:2}
+    .toc a{color:#2a5298;text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .section{margin-bottom:56px}
+    .section h2{font-size:1.6rem;color:#1e3a5f;border-bottom:3px solid #2a5298;padding-bottom:8px;margin-bottom:24px}
+    .section h3{font-size:1.2rem;color:#2a5298;margin:28px 0 12px}
+    .section h4{font-size:1.05rem;color:#1a1a2e;margin:20px 0 8px}
+    .formula-table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:.93rem}
+    .formula-table th{background:#1e3a5f;color:#fff;padding:10px 14px;text-align:left}
+    .formula-table td{padding:9px 14px;border-bottom:1px solid #dce1ec;vertical-align:top}
+    .formula-table tr:nth-child(even) td{background:#f4f6f9}
+    .formula-cell{font-family:'Courier New',monospace;font-size:.91rem;font-weight:600;color:#1e3a5f}
+    .example-box{background:#fff;border-left:4px solid #2a5298;border-radius:0 8px 8px 0;padding:18px 22px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+    .example-box .label{font-size:.78rem;font-weight:700;text-transform:uppercase;color:#2a5298;letter-spacing:.08em;margin-bottom:6px}
+    .example-box .problem{font-weight:600;color:#1a1a2e;margin-bottom:10px;font-size:1.02rem}
+    .example-box .solution{color:#333;line-height:1.8}
+    .example-box .solution .step{display:block;margin:4px 0;padding-left:12px}
+    .highlight{background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:12px 16px;margin:14px 0;font-size:.95rem}
+    .warning-box{background:#fdecea;border:1px solid #e74c3c;border-radius:8px;padding:16px 20px;margin:16px 0}
+    .warning-box strong{color:#c0392b}
+    .practice-box{background:#f0f8f0;border:1px solid #27ae60;border-radius:8px;padding:18px 22px;margin:20px 0}
+    .practice-box h4{color:#1e8449;margin-bottom:12px}
+    .practice-box ol{margin-left:20px;line-height:2.1}
+    .practice-box .answers{margin-top:12px;font-size:.88rem;color:#555;border-top:1px solid #c3e6cb;padding-top:10px}
+    .rule-box{background:#fef9e7;border:1px solid #f39c12;border-radius:8px;padding:16px 20px;margin:16px 0}
+    .math{font-family:'Courier New',monospace;font-size:.97rem;background:#f0f0f0;padding:1px 5px;border-radius:3px}
+    .big-formula{display:block;text-align:center;font-family:'Courier New',monospace;font-size:1.15rem;background:#1e3a5f;color:#fff;padding:16px 20px;border-radius:8px;margin:16px 0;letter-spacing:.04em}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+    @media(max-width:600px){.two-col{grid-template-columns:1fr}}
+    .formula-card{background:#eaf0fb;border:1px solid #c3d0e8;border-radius:8px;padding:12px 16px;font-family:'Courier New',monospace;font-size:.9rem;color:#1e3a5f}
+    .discriminant-card{border-radius:10px;padding:18px 22px;margin:10px 0;font-size:.95rem}
+    .disc-pos{background:#d4edda;border:1px solid #27ae60}
+    .disc-zero{background:#fff3cd;border:1px solid #f39c12}
+    .disc-neg{background:#f8d7da;border:1px solid #e74c3c}
+    .method-badge{display:inline-block;background:#2a5298;color:#fff;font-size:.75rem;padding:3px 10px;border-radius:20px;margin-bottom:8px;font-weight:600}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">📚 StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>Quadratic Equations</h1>
+  <p>Complete guide for Class 10, 11 and JEE — four solution methods, discriminant, Vieta's formulas, nature of roots, graph analysis, and 15 fully solved examples with 20 practice problems.</p>
+</div>
+
+<div class="content-wrap">
+
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#standard-form">Standard Form &amp; Terminology</a></li>
+      <li><a href="#factoring">Method 1 — Factoring</a></li>
+      <li><a href="#completing">Method 2 — Completing the Square</a></li>
+      <li><a href="#formula">Method 3 — Quadratic Formula</a></li>
+      <li><a href="#graphical">Method 4 — Graphical Method</a></li>
+      <li><a href="#discriminant">Discriminant &amp; Nature of Roots</a></li>
+      <li><a href="#vieta">Vieta's Formulas</a></li>
+      <li><a href="#derived-expressions">Derived Expressions from Roots</a></li>
+      <li><a href="#sign-analysis">Sign of Roots Analysis</a></li>
+      <li><a href="#maxmin">Maximum and Minimum Values</a></li>
+      <li><a href="#special">Special Cases</a></li>
+      <li><a href="#common-errors">Common Errors &amp; JEE Traps</a></li>
+      <li><a href="#jee-solved">10 Solved JEE Problems</a></li>
+      <li><a href="#practice">20 Practice Problems</a></li>
+    </ol>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="standard-form">
+    <h2>1. Standard Form &amp; Terminology</h2>
+
+    <span class="big-formula">ax² + bx + c = 0 &nbsp;&nbsp; (a ≠ 0)</span>
+
+    <table class="formula-table">
+      <thead><tr><th>Term</th><th>Meaning</th><th>Example: 2x² − 5x + 3 = 0</th></tr></thead>
+      <tbody>
+        <tr><td><strong>a</strong></td><td>Leading coefficient (coefficient of x²)</td><td>a = 2</td></tr>
+        <tr><td><strong>b</strong></td><td>Middle coefficient (coefficient of x)</td><td>b = −5</td></tr>
+        <tr><td><strong>c</strong></td><td>Constant term</td><td>c = 3</td></tr>
+        <tr><td><strong>Roots / Zeros</strong></td><td>Values of x that satisfy the equation; denoted α, β</td><td>α = 3/2, β = 1</td></tr>
+        <tr><td><strong>Discriminant D</strong></td><td>b² − 4ac; determines nature of roots</td><td>D = 25 − 24 = 1 &gt; 0</td></tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      <strong>Why a ≠ 0 is required:</strong> If a = 0, the equation becomes bx + c = 0, which is a linear equation (at most 1 root, not 2). The term "quadratic" comes from the Latin "quadratus" (square).
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="factoring">
+    <h2>2. Method 1 — Factoring</h2>
+    <p>Express ax² + bx + c as a product of two linear factors (x − α)(x − β) = 0. Works best when roots are rational.</p>
+
+    <div class="rule-box">
+      <strong>Key Step:</strong> Find two numbers p and q such that p + q = b and p · q = ac. Then split the middle term and factor by grouping.
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 1 — Simple Monic</div>
+      <div class="problem">Solve: x² − 5x + 6 = 0</div>
+      <div class="solution">
+        <span class="step">Find p, q: p + q = −5, p · q = 6 → p = −2, q = −3</span>
+        <span class="step">x² − 2x − 3x + 6 = 0 → x(x−2) − 3(x−2) = 0</span>
+        <span class="step">(x − 2)(x − 3) = 0</span>
+        <span class="step"><strong>Answer: x = 2 or x = 3</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Non-monic</div>
+      <div class="problem">Solve: 6x² + 11x − 10 = 0</div>
+      <div class="solution">
+        <span class="step">a=6, b=11, c=−10. Need p+q=11, p·q=6·(−10)=−60</span>
+        <span class="step">p=15, q=−4 &nbsp; (15+(−4)=11 ✓, 15·(−4)=−60 ✓)</span>
+        <span class="step">6x² + 15x − 4x − 10 = 0 → 3x(2x+5) − 2(2x+5) = 0</span>
+        <span class="step">(3x − 2)(2x + 5) = 0</span>
+        <span class="step"><strong>Answer: x = 2/3 or x = −5/2</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3 — Difference of Squares</div>
+      <div class="problem">Solve: 4x² − 25 = 0</div>
+      <div class="solution">
+        <span class="step">(2x)² − 5² = 0 → (2x − 5)(2x + 5) = 0</span>
+        <span class="step"><strong>Answer: x = 5/2 or x = −5/2</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 4 — Perfect Square</div>
+      <div class="problem">Solve: 9x² − 12x + 4 = 0</div>
+      <div class="solution">
+        <span class="step">(3x)² − 2(3x)(2) + 2² = (3x − 2)² = 0</span>
+        <span class="step"><strong>Answer: x = 2/3 (double root / equal roots)</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 5 — Substitution then factoring</div>
+      <div class="problem">Solve: x⁴ − 13x² + 36 = 0</div>
+      <div class="solution">
+        <span class="step">Let y = x²: y² − 13y + 36 = 0</span>
+        <span class="step">(y − 4)(y − 9) = 0 → y = 4 or y = 9</span>
+        <span class="step">x² = 4 → x = ±2; x² = 9 → x = ±3</span>
+        <span class="step"><strong>Answer: x ∈ {−3, −2, 2, 3}</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="completing">
+    <h2>3. Method 2 — Completing the Square</h2>
+
+    <div class="rule-box">
+      <strong>The Technique:</strong> Write ax² + bx + c as a[(x + b/2a)² − (b/2a)² + c/a]. This isolates the squared term, making the equation solvable by taking square roots.
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 1 — Standard</div>
+      <div class="problem">Solve: x² + 6x + 5 = 0 by completing the square</div>
+      <div class="solution">
+        <span class="step">x² + 6x = −5</span>
+        <span class="step">Add (6/2)² = 9 to both sides: x² + 6x + 9 = 4</span>
+        <span class="step">(x + 3)² = 4</span>
+        <span class="step">x + 3 = ±2</span>
+        <span class="step"><strong>Answer: x = −1 or x = −5</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Coefficient of x² ≠ 1</div>
+      <div class="problem">Solve: 2x² − 8x + 3 = 0</div>
+      <div class="solution">
+        <span class="step"><strong>Step 1:</strong> Divide by 2: x² − 4x + 3/2 = 0</span>
+        <span class="step"><strong>Step 2:</strong> x² − 4x = −3/2</span>
+        <span class="step"><strong>Step 3:</strong> Add (4/2)² = 4: x² − 4x + 4 = −3/2 + 4 = 5/2</span>
+        <span class="step"><strong>Step 4:</strong> (x − 2)² = 5/2</span>
+        <span class="step"><strong>Step 5:</strong> x − 2 = ±√(5/2) = ±√10/2</span>
+        <span class="step"><strong>Answer: x = 2 ± √10/2 = (4 ± √10)/2</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3 — No real roots</div>
+      <div class="problem">Solve: x² + 2x + 5 = 0</div>
+      <div class="solution">
+        <span class="step">x² + 2x = −5 → x² + 2x + 1 = −4 → (x+1)² = −4</span>
+        <span class="step">No real solution (square is non-negative, −4 is negative)</span>
+        <span class="step">Complex solution: x + 1 = ±2i → <strong>x = −1 ± 2i</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 4 — Irrational coefficients</div>
+      <div class="problem">Solve: x² − 2√2 x + 1 = 0</div>
+      <div class="solution">
+        <span class="step">x² − 2√2 x = −1</span>
+        <span class="step">Add (√2)² = 2: (x − √2)² = 1</span>
+        <span class="step">x − √2 = ±1 → <strong>x = √2 + 1 or x = √2 − 1</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 5 — Derive the Quadratic Formula</div>
+      <div class="problem">Solve ax² + bx + c = 0 by completing the square.</div>
+      <div class="solution">
+        <span class="step">Divide by a: x² + (b/a)x + c/a = 0</span>
+        <span class="step">x² + (b/a)x = −c/a</span>
+        <span class="step">Add b²/(4a²): x² + (b/a)x + b²/(4a²) = b²/(4a²) − c/a</span>
+        <span class="step">(x + b/(2a))² = (b² − 4ac)/(4a²)</span>
+        <span class="step">x + b/(2a) = ±√(b² − 4ac)/(2a)</span>
+        <span class="step"><strong>x = (−b ± √(b² − 4ac)) / (2a)</strong> ← This IS the quadratic formula!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="formula">
+    <h2>4. Method 3 — Quadratic Formula</h2>
+
+    <span class="big-formula">x = (−b ± √(b² − 4ac)) / (2a)</span>
+
+    <p>This formula works for ALL quadratic equations. When in doubt, use it.</p>
+
+    <div class="example-box">
+      <div class="label">Example 1</div>
+      <div class="problem">Solve: 3x² + 7x − 6 = 0</div>
+      <div class="solution">
+        <span class="step">a=3, b=7, c=−6. D = 49 − 4(3)(−6) = 49 + 72 = 121</span>
+        <span class="step">x = (−7 ± √121)/(6) = (−7 ± 11)/6</span>
+        <span class="step">x = (−7+11)/6 = 4/6 = 2/3 &nbsp; or &nbsp; x = (−7−11)/6 = −18/6 = −3</span>
+        <span class="step"><strong>Answer: x = 2/3 or x = −3</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Equal roots</div>
+      <div class="problem">Solve: x² − 6x + 9 = 0</div>
+      <div class="solution">
+        <span class="step">D = 36 − 36 = 0</span>
+        <span class="step">x = (6 ± 0)/2 = 3</span>
+        <span class="step"><strong>Answer: x = 3 (repeated root)</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3 — Complex roots</div>
+      <div class="problem">Solve: x² − 4x + 13 = 0</div>
+      <div class="solution">
+        <span class="step">D = 16 − 52 = −36</span>
+        <span class="step">x = (4 ± √(−36))/2 = (4 ± 6i)/2</span>
+        <span class="step"><strong>Answer: x = 2 + 3i or x = 2 − 3i</strong> (complex conjugate pair)</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 4 — Surd roots</div>
+      <div class="problem">Solve: x² − 4x + 1 = 0</div>
+      <div class="solution">
+        <span class="step">D = 16 − 4 = 12</span>
+        <span class="step">x = (4 ± √12)/2 = (4 ± 2√3)/2 = 2 ± √3</span>
+        <span class="step"><strong>Answer: x = 2 + √3 or x = 2 − √3</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 5 — Word problem</div>
+      <div class="problem">A ball is thrown upward with initial velocity 20 m/s from height 5 m. When does it hit the ground? (h = 5 + 20t − 5t²)</div>
+      <div class="solution">
+        <span class="step">Set h = 0: 5 + 20t − 5t² = 0 → 5t² − 20t − 5 = 0 → t² − 4t − 1 = 0</span>
+        <span class="step">t = (4 ± √(16+4))/2 = (4 ± √20)/2 = 2 ± √5</span>
+        <span class="step">t = 2 + √5 ≈ 4.24 s &nbsp; (negative root rejected)</span>
+        <span class="step"><strong>Answer: The ball hits the ground at t = 2 + √5 ≈ 4.24 seconds.</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="graphical">
+    <h2>5. Method 4 — Graphical Method</h2>
+    <p>The graph of y = ax² + bx + c is a <strong>parabola</strong>. The roots of ax² + bx + c = 0 are the x-intercepts (where the parabola crosses the x-axis).</p>
+    <ul style="line-height:2;margin-left:20px">
+      <li>If a &gt; 0: parabola opens <strong>upward</strong> (cup shape, U)</li>
+      <li>If a &lt; 0: parabola opens <strong>downward</strong> (cap shape, ∩)</li>
+      <li><strong>Vertex:</strong> at x = −b/(2a), y = (4ac − b²)/(4a)</li>
+      <li><strong>Axis of symmetry:</strong> x = −b/(2a)</li>
+      <li>Two x-intercepts → D &gt; 0 (two distinct real roots)</li>
+      <li>One x-intercept (tangent) → D = 0 (equal roots)</li>
+      <li>No x-intercept → D &lt; 0 (complex roots)</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="discriminant">
+    <h2>6. Discriminant D = b² − 4ac</h2>
+
+    <div class="discriminant-card disc-pos">
+      <strong>D &gt; 0 → Two distinct real roots</strong><br>
+      x₁ = (−b + √D)/(2a) &nbsp; and &nbsp; x₂ = (−b − √D)/(2a)<br>
+      If D is a perfect square: roots are rational. Otherwise: irrational (surd) roots.<br>
+      <em>Example:</em> x² − 5x + 6 = 0, D = 1 &gt; 0 (perfect square) → x = 2, 3 (rational)
+    </div>
+
+    <div class="discriminant-card disc-zero">
+      <strong>D = 0 → Two equal (repeated) real roots</strong><br>
+      x = −b/(2a) &nbsp; (both roots are the same)<br>
+      The parabola is tangent to the x-axis at the vertex.<br>
+      <em>Example:</em> x² − 4x + 4 = 0, D = 0 → x = 2, 2
+    </div>
+
+    <div class="discriminant-card disc-neg">
+      <strong>D &lt; 0 → Two complex conjugate roots</strong><br>
+      x = (−b ± i√|D|)/(2a) &nbsp; where i = √(−1)<br>
+      The parabola does not intersect the x-axis.<br>
+      <em>Example:</em> x² + x + 1 = 0, D = 1−4 = −3 → x = (−1 ± i√3)/2
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="vieta">
+    <h2>7. Vieta's Formulas</h2>
+    <p>If α and β are roots of ax² + bx + c = 0, then:</p>
+
+    <span class="big-formula">α + β = −b/a &nbsp;&nbsp;&nbsp; αβ = c/a</span>
+
+    <div class="highlight">
+      <strong>Proof:</strong> If α, β are roots, then ax² + bx + c = a(x − α)(x − β) = a[x² − (α+β)x + αβ]. Comparing with ax² + bx + c: coefficient of x gives −a(α+β) = b → α+β = −b/a; constant term gives a·αβ = c → αβ = c/a. ✓
+    </div>
+
+    <h3>Forming an Equation from Given Roots</h3>
+    <span class="big-formula">x² − (α+β)x + αβ = 0 &nbsp;&nbsp; or &nbsp;&nbsp; x² − (sum)x + (product) = 0</span>
+
+    <div class="example-box">
+      <div class="label">Example — Form equation</div>
+      <div class="problem">Form a quadratic with roots 3 + √2 and 3 − √2.</div>
+      <div class="solution">
+        <span class="step">Sum = (3+√2) + (3−√2) = 6</span>
+        <span class="step">Product = (3+√2)(3−√2) = 9 − 2 = 7</span>
+        <span class="step"><strong>Equation: x² − 6x + 7 = 0</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="derived-expressions">
+    <h2>8. Derived Expressions from Roots (α, β)</h2>
+    <p>Given α+β = S and αβ = P (from Vieta's), all symmetric expressions can be found without finding the roots individually.</p>
+
+    <table class="formula-table">
+      <thead><tr><th>Expression</th><th>Identity Used</th><th>Result in terms of S, P</th></tr></thead>
+      <tbody>
+        <tr><td class="formula-cell">α² + β²</td><td>(α+β)² − 2αβ</td><td class="formula-cell">S² − 2P</td></tr>
+        <tr><td class="formula-cell">α² − β²</td><td>(α+β)(α−β)</td><td class="formula-cell">S · √(S²−4P)</td></tr>
+        <tr><td class="formula-cell">α³ + β³</td><td>(α+β)³ − 3αβ(α+β)</td><td class="formula-cell">S³ − 3PS</td></tr>
+        <tr><td class="formula-cell">α³ − β³</td><td>(α−β)(α²+αβ+β²)</td><td class="formula-cell">(√(S²−4P))(S²−P)</td></tr>
+        <tr><td class="formula-cell">α⁴ + β⁴</td><td>(α²+β²)² − 2(αβ)²</td><td class="formula-cell">(S²−2P)² − 2P²</td></tr>
+        <tr><td class="formula-cell">1/α + 1/β</td><td>(α+β)/(αβ)</td><td class="formula-cell">S/P</td></tr>
+        <tr><td class="formula-cell">α/β + β/α</td><td>(α²+β²)/(αβ)</td><td class="formula-cell">(S²−2P)/P</td></tr>
+        <tr><td class="formula-cell">1/α² + 1/β²</td><td>(α²+β²)/(αβ)²</td><td class="formula-cell">(S²−2P)/P²</td></tr>
+        <tr><td class="formula-cell">(α − β)²</td><td>(α+β)² − 4αβ</td><td class="formula-cell">S² − 4P = D/a²</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <div class="label">Example — Derived quantities</div>
+      <div class="problem">For 2x² − 5x + 3 = 0, find α² + β², α³ + β³, 1/α + 1/β.</div>
+      <div class="solution">
+        <span class="step">α + β = 5/2 = S; αβ = 3/2 = P</span>
+        <span class="step">α² + β² = S² − 2P = 25/4 − 3 = 13/4</span>
+        <span class="step">α³ + β³ = S³ − 3PS = 125/8 − 3(3/2)(5/2) = 125/8 − 45/4 = 125/8 − 90/8 = 35/8</span>
+        <span class="step">1/α + 1/β = S/P = (5/2)/(3/2) = 5/3</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="sign-analysis">
+    <h2>9. Sign of Roots Analysis</h2>
+
+    <table class="formula-table">
+      <thead><tr><th>Condition</th><th>α + β = −b/a</th><th>αβ = c/a</th><th>Discriminant D</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Both roots positive</strong></td><td>S &gt; 0 (i.e., −b/a &gt; 0)</td><td>P &gt; 0 (i.e., c/a &gt; 0)</td><td>D ≥ 0</td></tr>
+        <tr><td><strong>Both roots negative</strong></td><td>S &lt; 0</td><td>P &gt; 0</td><td>D ≥ 0</td></tr>
+        <tr><td><strong>Roots have opposite signs</strong></td><td>Any sign</td><td>P &lt; 0 (c/a &lt; 0)</td><td>D &gt; 0 (guaranteed)</td></tr>
+        <tr><td><strong>One root is zero</strong></td><td>S = other root</td><td>P = 0 (c = 0)</td><td>D = b² ≥ 0</td></tr>
+        <tr><td><strong>Both roots are zero</strong></td><td>S = 0</td><td>P = 0</td><td>D = 0</td></tr>
+        <tr><td><strong>Roots equal &amp; opposite</strong></td><td>S = 0 (b = 0)</td><td>P &lt; 0</td><td>D = −4ac &gt; 0</td></tr>
+        <tr><td><strong>Roots reciprocals of each other (αβ=1)</strong></td><td>—</td><td>P = 1 (a = c)</td><td>D ≥ 0</td></tr>
+        <tr><td><strong>One root is negative of the reciprocal of other</strong></td><td>—</td><td>P = −1 (a = −c)</td><td>D ≥ 0</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <div class="label">Example — Condition for both roots greater than 2</div>
+      <div class="problem">Find the range of k such that both roots of x² − (k+2)x + k² − 1 = 0 are greater than 2.</div>
+      <div class="solution">
+        <span class="step">Conditions needed: (1) D ≥ 0, (2) f(2) &gt; 0, (3) vertex x-coordinate &gt; 2</span>
+        <span class="step">(1) D = (k+2)² − 4(k²−1) ≥ 0 → k²+4k+4−4k²+4 ≥ 0 → −3k²+4k+8 ≥ 0 → 3k²−4k−8 ≤ 0</span>
+        <span class="step">(3k+4)(k−2) ≤ 0 → −4/3 ≤ k ≤ 2</span>
+        <span class="step">(2) f(2) = 4 − 2(k+2) + k²−1 = k²−2k−1 &gt; 0 → k &lt; 1−√2 or k &gt; 1+√2</span>
+        <span class="step">(3) Vertex at x = (k+2)/2 &gt; 2 → k &gt; 2</span>
+        <span class="step">Intersection of all three: k &gt; 2 AND −4/3 ≤ k ≤ 2 → <strong>No solution (empty set)</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="maxmin">
+    <h2>10. Maximum and Minimum Values</h2>
+
+    <p>For f(x) = ax² + bx + c:</p>
+    <table class="formula-table">
+      <thead><tr><th>a &gt; 0 (opens up)</th><th>a &lt; 0 (opens down)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Minimum at x = −b/(2a)<br>Min value = (4ac − b²)/(4a) = c − b²/(4a)</td>
+          <td>Maximum at x = −b/(2a)<br>Max value = (4ac − b²)/(4a)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Vertex Form</h3>
+    <span class="big-formula">f(x) = a(x − h)² + k &nbsp;&nbsp; where h = −b/(2a), k = (4ac−b²)/(4a)</span>
+
+    <div class="example-box">
+      <div class="label">Example — Maximum/Minimum</div>
+      <div class="problem">Find the minimum value of f(x) = 2x² − 8x + 11.</div>
+      <div class="solution">
+        <span class="step">a = 2 &gt; 0, so minimum exists.</span>
+        <span class="step">x = −b/(2a) = 8/4 = 2</span>
+        <span class="step">Min value = f(2) = 2(4) − 8(2) + 11 = 8 − 16 + 11 = 3</span>
+        <span class="step">Vertex form: 2(x − 2)² + 3</span>
+        <span class="step"><strong>Minimum value = 3, achieved at x = 2.</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="special">
+    <h2>11. Special Cases</h2>
+
+    <table class="formula-table">
+      <thead><tr><th>Condition</th><th>Implication</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>c = 0</td><td>One root is zero; other root = −b/a</td><td>3x² − 6x = 0 → x = 0, 2</td></tr>
+        <tr><td>b = 0</td><td>Roots are equal &amp; opposite (±√(−c/a))</td><td>x² − 4 = 0 → x = ±2</td></tr>
+        <tr><td>a = c</td><td>Roots are reciprocals of each other (α·β = 1)</td><td>3x²−5x+3=0: αβ=1</td></tr>
+        <tr><td>a + b + c = 0</td><td>x = 1 is always a root; other root = c/a</td><td>2x²−3x+1=0: x=1, x=1/2</td></tr>
+        <tr><td>a − b + c = 0</td><td>x = −1 is always a root; other root = −c/a</td><td>3x²+2x−1=0: x=−1, x=1/3</td></tr>
+        <tr><td>D = 0</td><td>Equal roots; parabola tangent to x-axis</td><td>x²−2x+1=0: x=1,1</td></tr>
+        <tr><td>a, b, c in AP (b = (a+c)/2)</td><td>Sum of roots = −b/a; special structure</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      <strong>Shortcut — Check x=1:</strong> If a+b+c = 0, x=1 is a root. Check before using the formula!<br>
+      <strong>Shortcut — Check x=−1:</strong> If a−b+c = 0, x=−1 is a root.
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="common-errors">
+    <h2>12. Common Errors &amp; JEE Traps</h2>
+
+    <div class="warning-box">
+      <strong>Error 1 — Forgetting to check D for "equal roots" condition:</strong><br>
+      For a quadratic to have equal roots, D = 0 (b² = 4ac). Many students confuse "equal roots" with "roots equal to zero".
+    </div>
+    <div class="warning-box">
+      <strong>Error 2 — Division by zero in Vieta's:</strong><br>
+      Vieta's formulas require a ≠ 0. Always verify the equation is truly quadratic before applying them.
+    </div>
+    <div class="warning-box">
+      <strong>Error 3 — Wrong sign in sum of roots:</strong><br>
+      For x² + bx + c = 0: α + β = −b, NOT b. The negative sign is often missed.
+    </div>
+    <div class="warning-box">
+      <strong>Error 4 — Extraneous roots from squaring:</strong><br>
+      When solving equations involving √(quadratic), squaring can introduce extraneous roots. Always verify in the original equation.
+    </div>
+    <div class="warning-box">
+      <strong>Error 5 — Assuming roots are always rational:</strong><br>
+      When D is not a perfect square, roots are irrational. Don't force rational approximations in exact-answer problems.
+    </div>
+    <div class="warning-box">
+      <strong>JEE Trap — Condition for common roots:</strong><br>
+      If a₁x²+b₁x+c₁ = 0 and a₂x²+b₂x+c₂ = 0 have a common root α, then:<br>
+      (a₁c₂ − a₂c₁)² = (b₁c₂ − b₂c₁)(a₁b₂ − a₂b₁) — this condition is frequently tested.
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="jee-solved">
+    <h2>13. 10 Solved JEE-Level Problems</h2>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 1</div>
+      <div class="problem">If one root of x² − px + q = 0 is twice the other, find the relationship between p and q.</div>
+      <div class="solution">
+        <span class="step">Let roots be α and 2α. Sum: α + 2α = p → 3α = p → α = p/3</span>
+        <span class="step">Product: α · 2α = q → 2α² = q → 2(p/3)² = q → 2p²/9 = q</span>
+        <span class="step"><strong>Relationship: 2p² = 9q</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 2</div>
+      <div class="problem">Find all values of k for which x² − kx + k + 3 = 0 has real roots with one root greater than 3 and other less than 1.</div>
+      <div class="solution">
+        <span class="step">Let f(x) = x² − kx + k + 3. Parabola opens up (a=1&gt;0).</span>
+        <span class="step">For one root &gt; 3, other &lt; 1: we need f(1) &lt; 0 AND f(3) &lt; 0.</span>
+        <span class="step">f(1) = 1 − k + k + 3 = 4 &gt; 0. This is always positive!</span>
+        <span class="step">So f(1) &lt; 0 has no solution. The condition cannot be satisfied.</span>
+        <span class="step"><strong>Answer: No such k exists.</strong> (We need f(1) and f(3) to have the same sign since both 1 and 3 are on the same "outside" region.)</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 3</div>
+      <div class="problem">If α, β are roots of x² − 2x + 3 = 0, form the equation with roots α + 2, β + 2.</div>
+      <div class="solution">
+        <span class="step">α + β = 2, αβ = 3.</span>
+        <span class="step">New sum = (α+2) + (β+2) = α + β + 4 = 6</span>
+        <span class="step">New product = (α+2)(β+2) = αβ + 2(α+β) + 4 = 3 + 4 + 4 = 11</span>
+        <span class="step"><strong>New equation: x² − 6x + 11 = 0</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 4</div>
+      <div class="problem">Find the range of values of a for which f(x) = x² − ax + 1 − 2a² &gt; 0 for all real x.</div>
+      <div class="solution">
+        <span class="step">For f(x) &gt; 0 for all x, need a &gt; 0 (already, since coefficient of x² is 1) AND D &lt; 0.</span>
+        <span class="step">D = a² − 4(1−2a²) = a² − 4 + 8a² = 9a² − 4 &lt; 0</span>
+        <span class="step">9a² &lt; 4 → a² &lt; 4/9 → |a| &lt; 2/3 → −2/3 &lt; a &lt; 2/3</span>
+        <span class="step"><strong>Answer: a ∈ (−2/3, 2/3)</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 5</div>
+      <div class="problem">Let α, β be roots of x² − x − 1 = 0. Find αⁿ + βⁿ.</div>
+      <div class="solution">
+        <span class="step">α + β = 1, αβ = −1. Note: α² = α + 1 and β² = β + 1 (from equation).</span>
+        <span class="step">Let Sₙ = αⁿ + βⁿ. Then Sₙ = (α+β)Sₙ₋₁ − αβ·Sₙ₋₂ = Sₙ₋₁ + Sₙ₋₂</span>
+        <span class="step">S₀ = 2, S₁ = 1. This is the <strong>Lucas sequence</strong>: 2, 1, 3, 4, 7, 11, ...</span>
+        <span class="step">The recurrence Sₙ = Sₙ₋₁ + Sₙ₋₂ is the Fibonacci-type relation.</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 6</div>
+      <div class="problem">If p and q are roots of x² + px + q = 0, find p and q.</div>
+      <div class="solution">
+        <span class="step">By Vieta's: p + q = −p and pq = q.</span>
+        <span class="step">From pq = q: q(p−1) = 0 → q = 0 or p = 1.</span>
+        <span class="step">Case 1: q = 0. Then p + 0 = −p → 2p = 0 → p = 0. Equation: x² = 0. Roots 0, 0 — but then the roots are 0 and 0, not p=0 and q=0... consistent!</span>
+        <span class="step">Case 2: p = 1. Then 1 + q = −1 → q = −2. Check: pq = (1)(−2) = −2 = q ✓. Equation: x²+x−2=0, roots 1, −2 ✓</span>
+        <span class="step"><strong>Answer: (p, q) = (0, 0) or (p, q) = (1, −2)</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 7</div>
+      <div class="problem">Find k if the equation (k−2)x² + 8x + k+4 = 0 has real and equal roots.</div>
+      <div class="solution">
+        <span class="step">For equal roots: D = 0 → 64 − 4(k−2)(k+4) = 0</span>
+        <span class="step">64 = 4(k−2)(k+4) = 4(k²+2k−8)</span>
+        <span class="step">16 = k² + 2k − 8 → k² + 2k − 24 = 0 → (k+6)(k−4) = 0</span>
+        <span class="step">k = −6 or k = 4. But if k = 2, not quadratic — check: k=−6 ✓, k=4 ✓.</span>
+        <span class="step"><strong>Answer: k = −6 or k = 4</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 8</div>
+      <div class="problem">For what value of m does mx² + (m+1)x + 2 = 0 have equal roots?</div>
+      <div class="solution">
+        <span class="step">D = (m+1)² − 8m = 0 → m² + 2m + 1 − 8m = 0 → m² − 6m + 1 = 0</span>
+        <span class="step">m = (6 ± √32)/2 = 3 ± 2√2</span>
+        <span class="step"><strong>Answer: m = 3 + 2√2 or m = 3 − 2√2</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 9</div>
+      <div class="problem">If ax² + bx + c = 0 and bx² + cx + a = 0 have a common root, prove a³ + b³ + c³ = 3abc.</div>
+      <div class="solution">
+        <span class="step">Let α be the common root. Then: aα² + bα + c = 0 ...(i) and bα² + cα + a = 0 ...(ii)</span>
+        <span class="step">(i)×b − (ii)×a: b²α + bc − acα − a² = 0 → α(b²−ac) = a²−bc → α = (a²−bc)/(b²−ac) ...(iii)</span>
+        <span class="step">(i)×c − (ii)×b: acα² + bcα + c² − b²α² − bcα − ab = 0 → α²(ac−b²) = ab−c²</span>
+        <span class="step">→ α² = (ab−c²)/(ac−b²) ...(iv)</span>
+        <span class="step">From (iii) and (iv): α² = α² → [(a²−bc)/(b²−ac)]² = (ab−c²)/(ac−b²)</span>
+        <span class="step">After simplification (cross multiply and expand): a³+b³+c³−3abc = 0 ✓</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 10</div>
+      <div class="problem">Find the quadratic equation whose roots are the squares of the roots of x² + x − 2 = 0.</div>
+      <div class="solution">
+        <span class="step">Roots of original: α, β where α+β = −1, αβ = −2</span>
+        <span class="step">New roots: α², β². New sum = α²+β² = (α+β)²−2αβ = 1+4 = 5</span>
+        <span class="step">New product = (αβ)² = (−2)² = 4</span>
+        <span class="step"><strong>New equation: x² − 5x + 4 = 0</strong></span>
+        <span class="step">Check: roots are 1 and 4 = (−1)² and (−2)² ✓ (original roots: 1 and −2) ✓</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="practice">
+    <h2>14. Practice Problems (20 Questions)</h2>
+    <div class="practice-box">
+      <h4>Solve the following quadratic equations:</h4>
+      <ol>
+        <li>x² − 7x + 12 = 0</li>
+        <li>2x² + 7x + 3 = 0</li>
+        <li>x² + 3x − 10 = 0</li>
+        <li>3x² − 5x − 2 = 0</li>
+        <li>x² − 5x + 3 = 0 (surd roots)</li>
+        <li>x² + x + 1 = 0 (complex roots)</li>
+        <li>4x² − 12x + 9 = 0 (repeated root)</li>
+        <li>x⁴ − 5x² + 4 = 0 (bi-quadratic)</li>
+      </ol>
+      <h4 style="margin-top:12px">Vieta's and Derived Expressions:</h4>
+      <ol start="9">
+        <li>If α, β are roots of 3x²−5x+2=0, find (a) α²+β² (b) 1/α+1/β (c) α/β + β/α</li>
+        <li>Form a quadratic whose roots are three times the roots of x²−4x+3=0.</li>
+        <li>If α, β are roots of x²−5x+7=0, find α³+β³.</li>
+        <li>For what value of k do the equations x²−3x+k=0 and x²+kx−9=0 have a common root?</li>
+      </ol>
+      <h4 style="margin-top:12px">Nature of Roots &amp; Inequalities:</h4>
+      <ol start="13">
+        <li>Find k for which x²+kx+4=0 has: (a) two real roots (b) equal roots (c) no real roots.</li>
+        <li>Prove that x²−2x+3 is always positive.</li>
+        <li>Find the range of k if x²−(k+2)x+2k+1 = 0 has both roots positive.</li>
+        <li>If the roots of 2x²−6x+7=0 are α, β, find the equation with roots 1/(α+1) and 1/(β+1).</li>
+      </ol>
+      <h4 style="margin-top:12px">Maximum/Minimum &amp; Applications:</h4>
+      <ol start="17">
+        <li>Find the minimum value of x²−6x+11 and the value of x at which it occurs.</li>
+        <li>Find the maximum of −2x²+8x−5.</li>
+        <li>A rectangular plot has perimeter 80 m. If area = 400 m², find its dimensions.</li>
+        <li>The product of two consecutive integers is 156. Find them.</li>
+      </ol>
+      <div class="answers">
+        <strong>Answers:</strong> (1) x=3,4 &nbsp; (2) x=−1/2,−3 &nbsp; (3) x=2,−5 &nbsp; (4) x=2,−1/3 &nbsp; (5) x=(5±√13)/2 &nbsp; (6) x=(−1±i√3)/2 &nbsp; (7) x=3/2 &nbsp; (8) x=±1,±2 &nbsp;
+        (9a) 13/9 &nbsp;(9b) 5/2 &nbsp;(9c) 13/6 &nbsp; (10) x²−12x+27=0 &nbsp; (11) 20 &nbsp; (12) k=1 or k=−9/2 &nbsp;
+        (13a) k≤−4 or k≥4 &nbsp;(13b) k=±4 &nbsp;(13c) −4&lt;k&lt;4 &nbsp;
+        (15) k≥3 &nbsp; (17) min=2 at x=3 &nbsp; (18) max=3 at x=2 &nbsp; (19) 20m×20m &nbsp; (20) 12 and 13
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

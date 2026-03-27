@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SQL Tutorial – Complete Beginner to Advanced Guide with Examples | StudyHub</title>
+  <meta name="description" content="Learn SQL from scratch. CREATE, INSERT, SELECT, WHERE, JOIN, GROUP BY, subqueries, indexes – complete SQL tutorial with 40+ examples for database courses, GATE and interviews." />
+  <meta name="keywords" content="SQL tutorial beginners, SQL queries examples, SQL joins tutorial, SQL GROUP BY, SQL subqueries, GATE SQL, SQL interview questions, MySQL PostgreSQL" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .sql-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+    .sql-hero h1 { font-size: 2.1rem; margin-bottom: 12px; }
+    .sql-hero p { font-size: 1.05rem; max-width: 720px; margin: 0 auto 20px; opacity: 0.9; }
+    .hero-badges span {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 4px 14px; border-radius: 20px;
+      font-size: 0.82rem; margin: 4px;
+    }
+    .content-wrapper { max-width: 980px; margin: 0 auto; padding: 0 20px 60px; }
+    .toc-box {
+      background: #f0f4ff; border: 1px solid #a5b4fc;
+      border-radius: 10px; padding: 22px 26px; margin: 36px 0;
+    }
+    .toc-box h2 { font-size: 1.1rem; margin: 0 0 12px; color: #3730a3; }
+    .toc-box ol { margin: 0; padding-left: 20px; }
+    .toc-box li { margin: 6px 0; }
+    .toc-box a { color: #3730a3; text-decoration: none; }
+    .toc-box a:hover { text-decoration: underline; }
+    .section { margin-top: 52px; }
+    .section h2 {
+      font-size: 1.65rem; color: #0f172a;
+      border-left: 5px solid #4f46e5;
+      padding-left: 14px; margin-bottom: 18px;
+    }
+    .section h3 { font-size: 1.2rem; color: #1e293b; margin: 28px 0 10px; }
+    .section h4 { font-size: 1rem; color: #64748b; margin: 20px 0 8px; font-weight: 600; }
+    .section p { line-height: 1.75; color: #334155; margin: 10px 0; }
+    pre {
+      background: #1e1e2e; color: #cdd6f4;
+      border-radius: 8px; padding: 20px 22px;
+      overflow-x: auto; font-size: 0.87rem;
+      line-height: 1.65; margin: 12px 0 20px;
+      border: 1px solid #313244;
+    }
+    pre code { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; }
+    .code-label {
+      display: inline-block; background: #4f46e5; color: #fff;
+      font-size: 0.7rem; font-weight: 700; padding: 2px 10px;
+      border-radius: 4px 4px 0 0; margin-bottom: -4px;
+      position: relative; z-index: 1; letter-spacing: 0.05em;
+    }
+    .info-box {
+      background: #eef2ff; border-left: 4px solid #4f46e5;
+      border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0;
+    }
+    .info-box strong { color: #3730a3; }
+    .tip-box {
+      background: #f0fdf4; border-left: 4px solid #22c55e;
+      border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0;
+    }
+    .tip-box strong { color: #166534; }
+    .warn-box {
+      background: #fefce8; border-left: 4px solid #ca8a04;
+      border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0;
+    }
+    .warn-box strong { color: #92400e; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+    th { background: #4f46e5; color: #fff; padding: 10px 14px; text-align: left; }
+    td { padding: 9px 14px; border-bottom: 1px solid #e2e8f0; }
+    tr:nth-child(even) td { background: #f8fafc; }
+    tr:hover td { background: #eef2ff; }
+    .interview-card {
+      background: #fff; border: 1px solid #e2e8f0;
+      border-radius: 10px; padding: 18px 22px; margin: 14px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .interview-card h4 { margin: 0 0 8px; color: #0f172a; }
+    .interview-card .difficulty {
+      display: inline-block; font-size: 0.75rem; font-weight: 700;
+      padding: 2px 8px; border-radius: 4px; margin-bottom: 8px;
+    }
+    .diff-easy   { background: #d1fae5; color: #065f46; }
+    .diff-medium { background: #fef9c3; color: #92400e; }
+    .diff-hard   { background: #fee2e2; color: #991b1b; }
+    .answer-toggle {
+      background: #4f46e5; color: #fff; border: none;
+      border-radius: 6px; padding: 6px 14px; cursor: pointer;
+      font-size: 0.82rem; margin-top: 8px;
+    }
+    .answer-toggle:hover { background: #3730a3; }
+    .answer-content { display: none; margin-top: 12px; }
+    .answer-content.show { display: block; }
+    .breadcrumb { font-size: 0.85rem; color: #94a3b8; margin: 20px 0 0; }
+    .breadcrumb a { color: #4f46e5; text-decoration: none; }
+    .sql-type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 18px 0; }
+    .sql-type-card {
+      background: #fff; border: 1px solid #e2e8f0;
+      border-radius: 8px; padding: 14px 16px;
+      border-top: 3px solid #4f46e5;
+    }
+    .sql-type-card h4 { margin: 0 0 8px; color: #1e293b; font-size: 0.95rem; }
+    .sql-type-card ul { padding-left: 16px; margin: 0; }
+    .sql-type-card li { font-size: 0.85rem; color: #64748b; margin: 3px 0; }
+    .join-visual {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px; margin: 20px 0;
+    }
+    .join-card {
+      background: #fff; border: 1px solid #e2e8f0;
+      border-radius: 8px; padding: 14px 16px; text-align: center;
+    }
+    .join-card .join-icon { font-size: 2rem; margin-bottom: 8px; }
+    .join-card h4 { margin: 0 0 6px; color: #1e293b; font-size: 0.95rem; }
+    .join-card p { font-size: 0.82rem; color: #64748b; margin: 0; }
+    .checklist { padding-left: 0; list-style: none; }
+    .checklist li { padding: 5px 0 5px 26px; position: relative; color: #334155; font-size: 0.92rem; }
+    .checklist li::before { content: "✓"; position: absolute; left: 4px; color: #4f46e5; font-weight: 700; }
+    footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 28px 20px; font-size: 0.87rem; margin-top: 60px; }
+    footer a { color: #a5b4fc; text-decoration: none; }
+    .schema-box {
+      background: #1e1e2e; color: #94a3b8; border-radius: 8px;
+      padding: 16px 20px; font-family: monospace; font-size: 0.85rem;
+      border: 1px solid #313244; margin: 14px 0;
+    }
+    .schema-box .table-name { color: #89b4fa; font-weight: bold; }
+    .schema-box .pk { color: #a6e3a1; }
+    .schema-box .fk { color: #f38ba8; }
+    .schema-box .col { color: #cdd6f4; }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">📚 StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="sql-hero">
+  <h1>SQL Tutorial – Beginner to Advanced</h1>
+  <p>Complete guide with 40+ examples: CREATE, INSERT, SELECT, WHERE, JOINs, GROUP BY, Subqueries, Window Functions, CTEs, and Indexes — for database courses, GATE, and interviews.</p>
+  <div class="hero-badges">
+    <span>40+ SQL Examples</span>
+    <span>9 Chapters</span>
+    <span>All JOIN Types</span>
+    <span>Window Functions</span>
+    <span>15 Interview Q&amp;A</span>
+    <span>GATE Checklist</span>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="breadcrumb">
+    <a href="../../index.html">Home</a> &rsaquo; <a href="../programming.html">Programming</a> &rsaquo; SQL Tutorial
+  </div>
+
+  <div class="toc-box">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#ch1">Introduction to SQL and RDBMS Concepts</a></li>
+      <li><a href="#ch2">Creating and Managing Tables (DDL)</a></li>
+      <li><a href="#ch3">Inserting, Updating, and Deleting Data (DML)</a></li>
+      <li><a href="#ch4">SELECT Queries — WHERE, ORDER BY, LIMIT</a></li>
+      <li><a href="#ch5">Aggregate Functions and GROUP BY / HAVING</a></li>
+      <li><a href="#ch6">JOINs — INNER, LEFT, RIGHT, FULL, SELF, CROSS</a></li>
+      <li><a href="#ch7">Subqueries and Correlated Queries</a></li>
+      <li><a href="#ch8">Advanced SQL — Window Functions, CTEs, CASE</a></li>
+      <li><a href="#ch9">Indexes, EXPLAIN, and Query Performance</a></li>
+      <li><a href="#nosql">SQL vs NoSQL</a></li>
+      <li><a href="#interviews">15 Interview Questions with SQL Solutions</a></li>
+      <li><a href="#gate">GATE SQL Topics Checklist</a></li>
+    </ol>
+  </div>
+
+  <!-- Chapter 1 -->
+  <div class="section" id="ch1">
+    <h2>Chapter 1: Introduction to SQL</h2>
+
+    <p><strong>SQL (Structured Query Language)</strong> is the standard language for interacting with relational databases. It was developed at IBM in the 1970s and is now the most widely used database language in the world.</p>
+
+    <h3>Core RDBMS Concepts</h3>
+    <table>
+      <tr><th>Term</th><th>Meaning</th><th>Example</th></tr>
+      <tr><td>Table (Relation)</td><td>A collection of related data in rows and columns</td><td>students, courses, orders</td></tr>
+      <tr><td>Row (Tuple / Record)</td><td>A single data entry in a table</td><td>One student's information</td></tr>
+      <tr><td>Column (Attribute / Field)</td><td>A specific piece of data for each row</td><td>name, age, gpa</td></tr>
+      <tr><td>Primary Key (PK)</td><td>Uniquely identifies each row; NOT NULL, UNIQUE</td><td>student_id, order_id</td></tr>
+      <tr><td>Foreign Key (FK)</td><td>References a PK in another table; enforces referential integrity</td><td>enrollments.student_id → students.student_id</td></tr>
+      <tr><td>Index</td><td>Data structure that speeds up queries on a column</td><td>Index on email for fast lookup</td></tr>
+      <tr><td>Schema</td><td>The structure/blueprint of a database (tables, relationships)</td><td>university_db schema</td></tr>
+      <tr><td>Normalization</td><td>Organizing data to reduce redundancy</td><td>1NF, 2NF, 3NF, BCNF</td></tr>
+      <tr><td>Transaction</td><td>A unit of work; all-or-nothing (ACID)</td><td>Transfer money: debit + credit</td></tr>
+    </table>
+
+    <h3>SQL Command Categories</h3>
+    <div class="sql-type-grid">
+      <div class="sql-type-card">
+        <h4>DDL — Data Definition Language</h4>
+        <ul>
+          <li>CREATE TABLE / DATABASE</li>
+          <li>ALTER TABLE</li>
+          <li>DROP TABLE</li>
+          <li>TRUNCATE</li>
+          <li>RENAME</li>
+        </ul>
+      </div>
+      <div class="sql-type-card">
+        <h4>DML — Data Manipulation Language</h4>
+        <ul>
+          <li>INSERT INTO</li>
+          <li>UPDATE ... SET</li>
+          <li>DELETE FROM</li>
+          <li>SELECT (also DQL)</li>
+        </ul>
+      </div>
+      <div class="sql-type-card">
+        <h4>DCL — Data Control Language</h4>
+        <ul>
+          <li>GRANT privileges</li>
+          <li>REVOKE privileges</li>
+        </ul>
+      </div>
+      <div class="sql-type-card">
+        <h4>TCL — Transaction Control</h4>
+        <ul>
+          <li>COMMIT</li>
+          <li>ROLLBACK</li>
+          <li>SAVEPOINT</li>
+          <li>BEGIN TRANSACTION</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Popular RDBMS Systems</h3>
+    <table>
+      <tr><th>RDBMS</th><th>Used For</th><th>Notable Features</th><th>License</th></tr>
+      <tr><td>MySQL</td><td>Web apps (LAMP stack), e-commerce</td><td>Fast, widely supported, triggers</td><td>Open source (GPL)</td></tr>
+      <tr><td>PostgreSQL</td><td>Enterprise, GIS, JSON workloads</td><td>ACID, advanced types, extensions</td><td>Open source</td></tr>
+      <tr><td>SQLite</td><td>Mobile apps, embedded, testing</td><td>Serverless, single file, zero config</td><td>Public domain</td></tr>
+      <tr><td>MS SQL Server</td><td>Microsoft ecosystem, .NET apps</td><td>T-SQL extensions, SSRS, SSAS</td><td>Commercial</td></tr>
+      <tr><td>Oracle</td><td>Large enterprise, banking</td><td>PL/SQL, RAC, partitioning</td><td>Commercial</td></tr>
+      <tr><td>MariaDB</td><td>MySQL drop-in replacement</td><td>Faster in some workloads, forks MySQL</td><td>Open source</td></tr>
+    </table>
+
+    <h3>Our Practice Schema</h3>
+    <p>Throughout this tutorial, we'll use a university database with these three tables:</p>
+    <div class="schema-box">
+      <span class="table-name">students</span>(<span class="pk">student_id</span>, first_name, last_name, email, age, gpa, enrollment_date, <span class="col">department</span>)<br>
+      <span class="table-name">courses</span>(<span class="pk">course_id</span>, course_name, credits, department, instructor)<br>
+      <span class="table-name">enrollments</span>(<span class="pk">enrollment_id</span>, <span class="fk">student_id</span>, <span class="fk">course_id</span>, grade, semester)
+    </div>
+  </div>
+
+  <!-- Chapter 2 -->
+  <div class="section" id="ch2">
+    <h2>Chapter 2: Creating and Managing Tables (DDL)</h2>
+
+    <div class="code-label">SQL – CREATE TABLE with All Constraint Types</div>
+    <pre><code>-- CREATE TABLE: define structure and constraints
+CREATE TABLE students (
+    student_id      INT PRIMARY KEY AUTO_INCREMENT,
+    first_name      VARCHAR(50)  NOT NULL,
+    last_name       VARCHAR(50)  NOT NULL,
+    email           VARCHAR(100) UNIQUE NOT NULL,
+    age             INT          CHECK (age >= 16 AND age <= 60),
+    gpa             DECIMAL(3,2) DEFAULT 0.00,
+    enrollment_date DATE         DEFAULT (CURRENT_DATE),
+    department      VARCHAR(50),
+    phone           VARCHAR(15)  NULL
+);
+
+-- courses table
+CREATE TABLE courses (
+    course_id   INT PRIMARY KEY AUTO_INCREMENT,
+    course_name VARCHAR(100) NOT NULL,
+    credits     INT          NOT NULL CHECK (credits BETWEEN 1 AND 6),
+    department  VARCHAR(50),
+    instructor  VARCHAR(100),
+    max_seats   INT DEFAULT 60
+);
+
+-- enrollments table with FOREIGN KEY constraints
+CREATE TABLE enrollments (
+    enrollment_id INT PRIMARY KEY AUTO_INCREMENT,
+    student_id    INT NOT NULL,
+    course_id     INT NOT NULL,
+    grade         VARCHAR(2)  DEFAULT NULL,
+    semester      VARCHAR(20) NOT NULL,
+    enrolled_at   TIMESTAMP   DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (student_id) REFERENCES students(student_id)
+        ON DELETE CASCADE     -- delete enrollment if student deleted
+        ON UPDATE CASCADE,    -- update if student_id changes
+    FOREIGN KEY (course_id)  REFERENCES courses(course_id)
+        ON DELETE RESTRICT,   -- prevent deleting a course with enrollments
+    UNIQUE (student_id, course_id, semester)  -- composite unique
+);
+
+-- CREATE TABLE LIKE — copy structure without data
+CREATE TABLE students_backup LIKE students;
+
+-- CREATE TABLE AS SELECT — copy structure AND data
+CREATE TABLE cs_students AS
+    SELECT * FROM students WHERE department = 'Computer Science';</code></pre>
+
+    <div class="code-label">SQL – ALTER TABLE</div>
+    <pre><code>-- Add a new column
+ALTER TABLE students ADD COLUMN address VARCHAR(200);
+ALTER TABLE students ADD COLUMN birth_year INT AFTER age;
+
+-- Modify column type/constraints
+ALTER TABLE students MODIFY COLUMN gpa DECIMAL(4,2);          -- MySQL
+ALTER TABLE students ALTER COLUMN gpa TYPE DECIMAL(4,2);      -- PostgreSQL
+
+-- Rename a column (MySQL 8.0+)
+ALTER TABLE students RENAME COLUMN phone TO mobile;
+
+-- Drop a column
+ALTER TABLE students DROP COLUMN address;
+
+-- Add a constraint after table creation
+ALTER TABLE students ADD CONSTRAINT chk_gpa CHECK (gpa >= 0 AND gpa <= 10);
+ALTER TABLE students ADD CONSTRAINT uq_email UNIQUE (email);
+
+-- Drop a constraint
+ALTER TABLE students DROP INDEX uq_email;     -- MySQL
+ALTER TABLE students DROP CONSTRAINT uq_email; -- PostgreSQL, MS SQL
+
+-- Rename the entire table
+RENAME TABLE students TO university_students;  -- MySQL
+ALTER TABLE students RENAME TO university_students;  -- PostgreSQL</code></pre>
+
+    <div class="code-label">SQL – DROP and TRUNCATE</div>
+    <pre><code>-- DROP TABLE: remove table and all its data permanently
+DROP TABLE IF EXISTS students_backup;
+DROP TABLE IF EXISTS temp_results;
+
+-- TRUNCATE: delete all rows but keep the table structure
+-- Faster than DELETE, resets AUTO_INCREMENT
+TRUNCATE TABLE students_backup;
+
+-- DROP DATABASE (careful!)
+DROP DATABASE IF EXISTS test_db;
+
+-- VIEW: virtual table based on a query
+CREATE VIEW cs_student_view AS
+    SELECT student_id, first_name, last_name, gpa
+    FROM students
+    WHERE department = 'Computer Science';
+
+-- Query a view just like a table
+SELECT * FROM cs_student_view WHERE gpa > 8.0;
+
+-- Drop a view
+DROP VIEW IF EXISTS cs_student_view;</code></pre>
+  </div>
+
+  <!-- Chapter 3 -->
+  <div class="section" id="ch3">
+    <h2>Chapter 3: Inserting, Updating, and Deleting Data (DML)</h2>
+
+    <div class="code-label">SQL – INSERT</div>
+    <pre><code>-- Insert a single row (all columns)
+INSERT INTO students VALUES (
+    NULL, 'Rahul', 'Sharma', 'rahul@example.com', 20, 8.5, '2023-07-01', 'Computer Science', NULL
+);
+
+-- Insert with specified columns (recommended — order-independent)
+INSERT INTO students (first_name, last_name, email, age, gpa, department)
+VALUES ('Priya', 'Patel', 'priya@example.com', 21, 9.2, 'Electronics');
+
+-- Insert multiple rows in one statement (more efficient)
+INSERT INTO students (first_name, last_name, email, age, gpa, department) VALUES
+    ('Amit',   'Kumar',  'amit@example.com',   19, 7.8, 'Mechanical'),
+    ('Sunita', 'Singh',  'sunita@example.com',  22, 8.9, 'Computer Science'),
+    ('Wei',    'Zhang',  'wei@example.com',     20, 9.5, 'Mathematics'),
+    ('Aisha',  'Khan',   'aisha@example.com',   20, 9.1, 'Computer Science'),
+    ('Carlos', 'Rivera', 'carlos@example.com',  23, 8.3, 'Electronics');
+
+-- INSERT ... SELECT: copy data from another table
+INSERT INTO cs_students (first_name, last_name, email, gpa)
+    SELECT first_name, last_name, email, gpa
+    FROM students
+    WHERE department = 'Computer Science';
+
+-- REPLACE INTO: delete existing row and insert (MySQL-specific)
+-- Useful when you want upsert behavior
+REPLACE INTO students (student_id, first_name, last_name, email, age, gpa, department)
+VALUES (1, 'Rahul', 'Sharma', 'rahul.sharma@example.com', 21, 8.7, 'Computer Science');
+
+-- INSERT ... ON DUPLICATE KEY UPDATE (MySQL upsert)
+INSERT INTO students (student_id, email, gpa)
+VALUES (1, 'new_email@example.com', 9.0)
+ON DUPLICATE KEY UPDATE
+    email = VALUES(email),
+    gpa   = VALUES(gpa);</code></pre>
+
+    <div class="code-label">SQL – UPDATE</div>
+    <pre><code>-- Update a single column for one row
+UPDATE students SET gpa = 9.0 WHERE student_id = 1;
+
+-- Update multiple columns
+UPDATE students
+SET gpa = 8.8, department = 'Computer Science'
+WHERE first_name = 'Amit' AND last_name = 'Kumar';
+
+-- Update using arithmetic (give everyone in CS a 0.1 GPA boost)
+UPDATE students
+SET gpa = ROUND(gpa + 0.1, 2)
+WHERE department = 'Computer Science' AND gpa < 9.9;
+
+-- Update with a subquery
+UPDATE students
+SET gpa = (SELECT AVG(gpa) FROM students WHERE department = 'Computer Science')
+WHERE student_id = 100;  -- set one student's GPA to dept average
+
+-- Update with CASE (conditional update)
+UPDATE students
+SET department = CASE
+    WHEN department = 'CS' THEN 'Computer Science'
+    WHEN department = 'ECE' THEN 'Electronics'
+    WHEN department = 'ME'  THEN 'Mechanical'
+    ELSE department
+END
+WHERE department IN ('CS', 'ECE', 'ME');</code></pre>
+
+    <div class="code-label">SQL – DELETE and TRUNCATE</div>
+    <pre><code">-- Delete a specific row
+DELETE FROM students WHERE student_id = 5;
+
+-- Delete with condition
+DELETE FROM students WHERE gpa < 5.0 AND enrollment_date < '2020-01-01';
+
+-- Delete using subquery (delete students not enrolled in any course)
+DELETE FROM students
+WHERE student_id NOT IN (
+    SELECT DISTINCT student_id FROM enrollments
+);
+
+-- Safe delete: check count before deleting
+SELECT COUNT(*) FROM students WHERE age > 60;  -- verify first
+DELETE FROM students WHERE age > 60;
+
+-- TRUNCATE vs DELETE difference:
+-- DELETE: row-by-row, triggers fire, can be rolled back, keeps AUTO_INCREMENT
+-- TRUNCATE: faster, no triggers, cannot be rolled back in MySQL, resets AUTO_INCREMENT
+
+TRUNCATE TABLE students;      -- faster, resets auto_increment
+DELETE FROM students;         -- slower, keeps auto_increment value</code></pre>
+
+    <div class="warn-box">
+      <strong>Warning:</strong> Always run a SELECT with the same WHERE clause before UPDATE or DELETE to verify which rows will be affected. A missing WHERE clause in DELETE or UPDATE affects ALL rows.
+    </div>
+  </div>
+
+  <!-- Chapter 4 -->
+  <div class="section" id="ch4">
+    <h2>Chapter 4: SELECT Queries</h2>
+
+    <div class="code-label">SQL – Basic SELECT, WHERE, ORDER BY, LIMIT</div>
+    <pre><code">-- Retrieve all columns and rows
+SELECT * FROM students;
+
+-- Retrieve specific columns
+SELECT first_name, last_name, gpa FROM students;
+
+-- Column aliases
+SELECT
+    CONCAT(first_name, ' ', last_name) AS full_name,
+    gpa AS grade_point,
+    department AS dept
+FROM students;
+
+-- DISTINCT: remove duplicate values
+SELECT DISTINCT department FROM students;
+SELECT COUNT(DISTINCT department) AS num_depts FROM students;
+
+-- ── WHERE clause conditions ──────────────────────────────────────────
+
+-- Comparison operators
+SELECT * FROM students WHERE gpa > 9.0;
+SELECT * FROM students WHERE age <= 20;
+SELECT * FROM students WHERE department = 'Computer Science';
+
+-- Logical operators (AND, OR, NOT)
+SELECT * FROM students
+WHERE department = 'Computer Science' AND age < 21;
+
+SELECT * FROM students
+WHERE department = 'Computer Science' OR department = 'Electronics';
+
+SELECT * FROM students
+WHERE NOT (department = 'Mechanical');
+
+-- BETWEEN (inclusive on both ends)
+SELECT * FROM students WHERE gpa BETWEEN 8.0 AND 9.0;
+SELECT * FROM students WHERE enrollment_date BETWEEN '2022-01-01' AND '2023-12-31';
+
+-- IN and NOT IN
+SELECT * FROM students
+WHERE department IN ('Computer Science', 'Electronics', 'Mathematics');
+
+SELECT * FROM students
+WHERE student_id NOT IN (SELECT student_id FROM enrollments);
+
+-- LIKE: pattern matching
+-- % = any number of characters, _ = exactly one character
+SELECT * FROM students WHERE first_name LIKE 'R%';        -- starts with R
+SELECT * FROM students WHERE first_name LIKE '%a';        -- ends with a
+SELECT * FROM students WHERE first_name LIKE '%ra%';      -- contains 'ra'
+SELECT * FROM students WHERE first_name LIKE '_r%';       -- 2nd char is 'r'
+SELECT * FROM students WHERE email LIKE '%@gmail.com';    -- gmail users
+
+-- IS NULL and IS NOT NULL
+SELECT * FROM students WHERE department IS NULL;
+SELECT * FROM students WHERE department IS NOT NULL;
+SELECT * FROM students WHERE phone IS NULL AND gpa > 8.0;
+
+-- ORDER BY
+SELECT * FROM students ORDER BY gpa DESC;               -- highest GPA first
+SELECT * FROM students ORDER BY department ASC, gpa DESC;  -- multi-column sort
+SELECT * FROM students ORDER BY LENGTH(last_name), last_name;  -- by length
+
+-- LIMIT and OFFSET (pagination)
+SELECT * FROM students ORDER BY gpa DESC LIMIT 5;            -- top 5
+SELECT * FROM students ORDER BY gpa DESC LIMIT 5 OFFSET 5;  -- rows 6-10
+SELECT * FROM students ORDER BY gpa DESC LIMIT 5, 5;        -- MySQL shorthand: LIMIT offset, count
+
+-- RAND() — random sample
+SELECT * FROM students ORDER BY RAND() LIMIT 3;   -- 3 random students</code></pre>
+
+    <h3>SQL Execution Order</h3>
+    <div class="info-box">
+      <strong>SQL clauses execute in this order:</strong><br>
+      <code>FROM</code> &rarr; <code>JOIN</code> &rarr; <code>WHERE</code> &rarr; <code>GROUP BY</code> &rarr; <code>HAVING</code> &rarr; <code>SELECT</code> &rarr; <code>DISTINCT</code> &rarr; <code>ORDER BY</code> &rarr; <code>LIMIT</code><br><br>
+      This is why you cannot use a column alias defined in SELECT inside a WHERE clause — WHERE executes before SELECT.
+    </div>
+
+    <div class="code-label">SQL – String, Date, and Math Functions</div>
+    <pre><code">-- String functions
+SELECT UPPER(first_name), LOWER(last_name) FROM students;
+SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM students;
+SELECT LENGTH(email) AS email_length FROM students;
+SELECT SUBSTRING(email, 1, 5) AS email_prefix FROM students;  -- first 5 chars
+SELECT TRIM('  hello  ');        -- 'hello'
+SELECT REPLACE(email, '@', ' at ') FROM students;
+
+-- Date functions
+SELECT CURDATE(), CURTIME(), NOW();   -- current date, time, datetime
+SELECT YEAR(enrollment_date) AS year FROM students;
+SELECT DATEDIFF(CURDATE(), enrollment_date) AS days_enrolled FROM students;
+SELECT DATE_FORMAT(enrollment_date, '%d %M %Y') AS formatted FROM students;
+SELECT DATE_ADD(enrollment_date, INTERVAL 1 YEAR) AS one_year_later FROM students;
+
+-- Math functions
+SELECT ABS(-15.7);          -- 15.7
+SELECT CEIL(4.3);           -- 5
+SELECT FLOOR(4.9);          -- 4
+SELECT ROUND(9.567, 2);     -- 9.57
+SELECT POWER(2, 10);        -- 1024
+SELECT SQRT(144);           -- 12
+SELECT MOD(17, 5);          -- 2 (remainder)
+
+-- Conditional: COALESCE (return first non-NULL)
+SELECT COALESCE(phone, 'No phone') AS contact FROM students;
+-- NULLIF(a, b): returns NULL if a = b, else returns a
+SELECT NULLIF(department, 'Unknown') FROM students;</code></pre>
+  </div>
+
+  <!-- Chapter 5 -->
+  <div class="section" id="ch5">
+    <h2>Chapter 5: Aggregate Functions and GROUP BY / HAVING</h2>
+
+    <div class="code-label">SQL – Aggregate Functions</div>
+    <pre><code">-- COUNT: count rows
+SELECT COUNT(*)           AS total_rows     FROM students;  -- all rows
+SELECT COUNT(phone)       AS has_phone      FROM students;  -- non-NULL only
+SELECT COUNT(DISTINCT department) AS dept_count FROM students;
+
+-- SUM, AVG, MIN, MAX
+SELECT
+    SUM(gpa)        AS sum_gpa,
+    AVG(gpa)        AS avg_gpa,
+    MIN(gpa)        AS min_gpa,
+    MAX(gpa)        AS max_gpa,
+    ROUND(AVG(gpa), 2) AS rounded_avg
+FROM students;
+
+-- Aggregate on filtered rows
+SELECT AVG(gpa) AS avg_cs_gpa
+FROM students
+WHERE department = 'Computer Science';
+
+-- GROUP_CONCAT: aggregate strings (MySQL)
+SELECT department, GROUP_CONCAT(first_name ORDER BY first_name SEPARATOR ', ') AS names
+FROM students
+GROUP BY department;</code></pre>
+
+    <div class="code-label">SQL – GROUP BY and HAVING</div>
+    <pre><code">-- Basic GROUP BY: one row per group
+SELECT
+    department,
+    COUNT(*)          AS student_count,
+    ROUND(AVG(gpa),2) AS avg_gpa,
+    MAX(gpa)          AS top_gpa,
+    MIN(gpa)          AS bottom_gpa
+FROM students
+GROUP BY department
+ORDER BY avg_gpa DESC;
+
+-- GROUP BY multiple columns
+SELECT department, YEAR(enrollment_date) AS year, COUNT(*) AS count
+FROM students
+GROUP BY department, YEAR(enrollment_date)
+ORDER BY department, year;
+
+-- HAVING: filter AFTER grouping (like WHERE but for groups)
+SELECT department, COUNT(*) AS count, ROUND(AVG(gpa), 2) AS avg
+FROM students
+GROUP BY department
+HAVING COUNT(*) >= 3 AND AVG(gpa) > 8.0;
+
+-- WHERE vs HAVING
+-- WHERE filters individual rows BEFORE grouping
+-- HAVING filters groups AFTER grouping
+
+-- Combining WHERE + GROUP BY + HAVING + ORDER BY
+SELECT
+    department,
+    COUNT(*)            AS enrolled_count,
+    ROUND(AVG(gpa), 2)  AS avg_gpa
+FROM students
+WHERE enrollment_date >= '2022-01-01'    -- filter rows first
+GROUP BY department
+HAVING COUNT(*) > 2                      -- filter groups
+ORDER BY avg_gpa DESC                    -- sort result
+LIMIT 5;                                 -- take top 5
+
+-- ROLLUP: add subtotals and grand total
+SELECT department, YEAR(enrollment_date) AS year, COUNT(*) AS count
+FROM students
+GROUP BY department, YEAR(enrollment_date) WITH ROLLUP;</code></pre>
+  </div>
+
+  <!-- Chapter 6 -->
+  <div class="section" id="ch6">
+    <h2>Chapter 6: JOINs — Complete Guide</h2>
+
+    <div class="join-visual">
+      <div class="join-card">
+        <div class="join-icon">&#9899;</div>
+        <h4>INNER JOIN</h4>
+        <p>Only rows that match in BOTH tables</p>
+      </div>
+      <div class="join-card">
+        <div class="join-icon">&#9900;</div>
+        <h4>LEFT JOIN</h4>
+        <p>All rows from LEFT + matching from right (NULL if no match)</p>
+      </div>
+      <div class="join-card">
+        <div class="join-icon">&#9901;</div>
+        <h4>RIGHT JOIN</h4>
+        <p>All rows from RIGHT + matching from left (NULL if no match)</p>
+      </div>
+      <div class="join-card">
+        <div class="join-icon">&#9902;</div>
+        <h4>FULL OUTER</h4>
+        <p>All rows from BOTH tables (NULL where no match)</p>
+      </div>
+      <div class="join-card">
+        <div class="join-icon">&#10227;</div>
+        <h4>SELF JOIN</h4>
+        <p>Table joined with itself using aliases</p>
+      </div>
+      <div class="join-card">
+        <div class="join-icon">&#10799;</div>
+        <h4>CROSS JOIN</h4>
+        <p>Cartesian product: every row with every other row</p>
+      </div>
+    </div>
+
+    <div class="code-label">SQL – INNER JOIN</div>
+    <pre><code>-- INNER JOIN: only students who are enrolled in at least one course
+SELECT
+    s.first_name,
+    s.last_name,
+    c.course_name,
+    e.grade,
+    e.semester
+FROM students s
+INNER JOIN enrollments e ON s.student_id = e.student_id
+INNER JOIN courses c     ON e.course_id  = c.course_id
+ORDER BY s.last_name, c.course_name;
+
+-- JOIN with USING shorthand (when column names are identical)
+SELECT s.first_name, c.course_name
+FROM students s
+JOIN enrollments e USING (student_id)
+JOIN courses c     USING (course_id);
+
+-- Filtering in JOINs
+SELECT s.first_name, c.course_name, e.grade
+FROM students s
+JOIN enrollments e ON s.student_id = e.student_id
+JOIN courses c     ON e.course_id  = c.course_id
+WHERE s.department = 'Computer Science'
+  AND c.credits >= 3
+  AND e.grade IN ('A', 'A+', 'O');
+
+-- Aggregate over join
+SELECT
+    s.department,
+    COUNT(DISTINCT s.student_id) AS enrolled_students,
+    COUNT(e.enrollment_id)       AS total_enrollments,
+    ROUND(AVG(c.credits), 1)     AS avg_credits_per_enroll
+FROM students s
+JOIN enrollments e ON s.student_id = e.student_id
+JOIN courses c     ON e.course_id  = c.course_id
+GROUP BY s.department
+ORDER BY total_enrollments DESC;</code></pre>
+
+    <div class="code-label">SQL – LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN</div>
+    <pre><code>-- LEFT JOIN: show ALL students, even if not enrolled in any course
+SELECT
+    s.first_name,
+    s.last_name,
+    COUNT(e.enrollment_id) AS courses_enrolled
+FROM students s
+LEFT JOIN enrollments e ON s.student_id = e.student_id
+GROUP BY s.student_id, s.first_name, s.last_name
+ORDER BY courses_enrolled DESC;
+
+-- Find students NOT enrolled in any course
+SELECT s.first_name, s.last_name
+FROM students s
+LEFT JOIN enrollments e ON s.student_id = e.student_id
+WHERE e.student_id IS NULL;   -- NULL means no match in right table
+
+-- RIGHT JOIN: all courses, including those with no students
+SELECT
+    c.course_name,
+    COUNT(e.student_id) AS enrolled_count
+FROM students s
+RIGHT JOIN enrollments e ON s.student_id = e.student_id
+RIGHT JOIN courses c     ON e.course_id  = c.course_id
+GROUP BY c.course_id, c.course_name;
+
+-- FULL OUTER JOIN (PostgreSQL / MS SQL)
+SELECT s.first_name, c.course_name
+FROM students s
+FULL OUTER JOIN enrollments e ON s.student_id = e.student_id
+FULL OUTER JOIN courses c     ON e.course_id  = c.course_id;
+
+-- MySQL: simulate FULL OUTER JOIN using UNION
+SELECT s.first_name, c.course_name
+FROM students s
+LEFT JOIN enrollments e ON s.student_id = e.student_id
+LEFT JOIN courses c     ON e.course_id  = c.course_id
+UNION
+SELECT s.first_name, c.course_name
+FROM students s
+RIGHT JOIN enrollments e ON s.student_id = e.student_id
+RIGHT JOIN courses c     ON e.course_id  = c.course_id;</code></pre>
+
+    <div class="code-label">SQL – SELF JOIN and CROSS JOIN</div>
+    <pre><code">-- SELF JOIN: find pairs of students in the same department
+SELECT
+    a.first_name AS student1,
+    b.first_name AS student2,
+    a.department
+FROM students a
+INNER JOIN students b
+    ON a.department = b.department
+    AND a.student_id < b.student_id   -- avoid (A,B) and (B,A) duplicates
+ORDER BY a.department, a.first_name;
+
+-- SELF JOIN: find students with GPA higher than their department average
+SELECT
+    s1.first_name,
+    s1.department,
+    s1.gpa,
+    ROUND(s2_avg.dept_avg, 2) AS dept_avg
+FROM students s1
+JOIN (
+    SELECT department, AVG(gpa) AS dept_avg
+    FROM students
+    GROUP BY department
+) AS s2_avg ON s1.department = s2_avg.department
+WHERE s1.gpa > s2_avg.dept_avg
+ORDER BY s1.department, s1.gpa DESC;
+
+-- CROSS JOIN: generate all (student, course) combinations for timetabling
+SELECT s.first_name, c.course_name
+FROM students s
+CROSS JOIN courses c
+WHERE s.department = c.department
+ORDER BY s.first_name, c.course_name;
+-- Warning: produces m × n rows — use carefully!</code></pre>
+  </div>
+
+  <!-- Chapter 7 -->
+  <div class="section" id="ch7">
+    <h2>Chapter 7: Subqueries and Correlated Queries</h2>
+
+    <div class="code-label">SQL – Subqueries in WHERE, SELECT, FROM</div>
+    <pre><code">-- Subquery in WHERE: students with above-average GPA
+SELECT first_name, gpa
+FROM students
+WHERE gpa > (SELECT AVG(gpa) FROM students);
+
+-- Subquery with IN: students enrolled in 4-credit courses
+SELECT first_name FROM students
+WHERE student_id IN (
+    SELECT student_id FROM enrollments
+    WHERE course_id IN (
+        SELECT course_id FROM courses WHERE credits = 4
+    )
+);
+
+-- Subquery with NOT IN: students not enrolled in any course
+SELECT first_name, last_name FROM students
+WHERE student_id NOT IN (
+    SELECT DISTINCT student_id FROM enrollments
+);
+
+-- Subquery in SELECT (scalar subquery — must return exactly one row/column)
+SELECT
+    first_name,
+    gpa,
+    (SELECT AVG(gpa) FROM students) AS overall_avg,
+    gpa - (SELECT AVG(gpa) FROM students) AS diff_from_avg
+FROM students;
+
+-- Subquery in FROM (derived table / inline view)
+SELECT dept_stats.department, dept_stats.avg_gpa, dept_stats.count
+FROM (
+    SELECT
+        department,
+        ROUND(AVG(gpa), 2) AS avg_gpa,
+        COUNT(*)           AS count
+    FROM students
+    GROUP BY department
+) AS dept_stats
+WHERE dept_stats.count >= 3
+ORDER BY dept_stats.avg_gpa DESC;</code></pre>
+
+    <div class="code-label">SQL – Correlated Subquery and EXISTS</div>
+    <pre><code">-- Correlated subquery: references outer query (runs once per outer row)
+-- Find the top student in each department
+SELECT s.first_name, s.department, s.gpa
+FROM students s
+WHERE s.gpa = (
+    SELECT MAX(gpa)
+    FROM students s2
+    WHERE s2.department = s.department  -- correlates with outer query
+);
+
+-- EXISTS: often faster than IN for large datasets
+-- Students who are enrolled in at least one course
+SELECT s.first_name, s.last_name
+FROM students s
+WHERE EXISTS (
+    SELECT 1
+    FROM enrollments e
+    WHERE e.student_id = s.student_id
+);
+
+-- NOT EXISTS: students who have NOT submitted grades
+SELECT c.course_name
+FROM courses c
+WHERE NOT EXISTS (
+    SELECT 1 FROM enrollments e
+    WHERE e.course_id = c.course_id AND e.grade IS NOT NULL
+);
+
+-- ANY / ALL operators
+-- Students whose GPA is higher than ANY CS student
+SELECT first_name, gpa FROM students
+WHERE gpa > ANY (
+    SELECT gpa FROM students WHERE department = 'Computer Science'
+);
+
+-- Students whose GPA is higher than ALL ME students
+SELECT first_name, gpa FROM students
+WHERE gpa > ALL (
+    SELECT gpa FROM students WHERE department = 'Mechanical'
+);</code></pre>
+  </div>
+
+  <!-- Chapter 8 -->
+  <div class="section" id="ch8">
+    <h2>Chapter 8: Advanced SQL</h2>
+
+    <h3>Window Functions</h3>
+    <div class="info-box">
+      <strong>Window functions</strong> perform calculations across a set of rows related to the current row — without collapsing them into groups like GROUP BY. They use the <code>OVER()</code> clause.
+    </div>
+
+    <div class="code-label">SQL – Window Functions: RANK, ROW_NUMBER, LAG, LEAD, Running Total</div>
+    <pre><code">-- RANK vs DENSE_RANK vs ROW_NUMBER
+SELECT
+    first_name,
+    department,
+    gpa,
+    RANK()        OVER (ORDER BY gpa DESC) AS overall_rank,
+    DENSE_RANK()  OVER (ORDER BY gpa DESC) AS dense_rank,
+    ROW_NUMBER()  OVER (ORDER BY gpa DESC) AS row_num
+FROM students;
+-- RANK:       gaps after ties (1,1,3,4)
+-- DENSE_RANK: no gaps       (1,1,2,3)
+-- ROW_NUMBER: always unique (1,2,3,4)
+
+-- PARTITION BY: rank within each department
+SELECT
+    first_name,
+    department,
+    gpa,
+    RANK() OVER (PARTITION BY department ORDER BY gpa DESC) AS dept_rank
+FROM students;
+
+-- LAG and LEAD: access adjacent rows
+SELECT
+    first_name,
+    department,
+    gpa,
+    LAG(gpa, 1)  OVER (PARTITION BY department ORDER BY gpa DESC) AS prev_gpa,
+    LEAD(gpa, 1) OVER (PARTITION BY department ORDER BY gpa DESC) AS next_gpa,
+    gpa - LAG(gpa, 1) OVER (PARTITION BY department ORDER BY gpa DESC) AS gpa_diff
+FROM students;
+
+-- Running total and moving average
+SELECT
+    student_id,
+    first_name,
+    gpa,
+    SUM(gpa)  OVER (ORDER BY student_id ROWS UNBOUNDED PRECEDING) AS running_sum,
+    AVG(gpa)  OVER (ORDER BY student_id ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS moving_avg_3
+FROM students;
+
+-- NTILE: divide into quartiles
+SELECT
+    first_name,
+    gpa,
+    NTILE(4) OVER (ORDER BY gpa DESC) AS quartile
+FROM students;
+-- 1 = top 25%, 4 = bottom 25%
+
+-- FIRST_VALUE and LAST_VALUE
+SELECT
+    first_name,
+    department,
+    gpa,
+    FIRST_VALUE(first_name) OVER (PARTITION BY department ORDER BY gpa DESC) AS top_student,
+    MAX(gpa)                OVER (PARTITION BY department) AS dept_max_gpa
+FROM students;</code></pre>
+
+    <h3>Common Table Expressions (CTEs)</h3>
+    <div class="code-label">SQL – CTEs and Recursive CTEs</div>
+    <pre><code">-- Basic CTE (WITH clause)
+WITH dept_stats AS (
+    SELECT
+        department,
+        COUNT(*)            AS student_count,
+        ROUND(AVG(gpa), 2)  AS avg_gpa
+    FROM students
+    GROUP BY department
+)
+SELECT *
+FROM dept_stats
+WHERE avg_gpa > 8.0
+ORDER BY avg_gpa DESC;
+
+-- Multiple CTEs chained together
+WITH
+dept_averages AS (
+    SELECT department, AVG(gpa) AS avg_gpa
+    FROM students
+    GROUP BY department
+),
+above_avg_students AS (
+    SELECT s.student_id, s.first_name, s.department, s.gpa, da.avg_gpa
+    FROM students s
+    JOIN dept_averages da ON s.department = da.department
+    WHERE s.gpa > da.avg_gpa
+)
+SELECT
+    a.first_name,
+    a.department,
+    ROUND(a.gpa, 2) AS gpa,
+    ROUND(a.avg_gpa, 2) AS dept_avg
+FROM above_avg_students a
+ORDER BY a.department, a.gpa DESC;
+
+-- Recursive CTE: generate a sequence of numbers 1-10
+WITH RECURSIVE numbers AS (
+    SELECT 1 AS n          -- anchor member
+    UNION ALL
+    SELECT n + 1           -- recursive member
+    FROM numbers
+    WHERE n < 10
+)
+SELECT * FROM numbers;
+
+-- Recursive CTE: organizational hierarchy
+WITH RECURSIVE org_chart AS (
+    -- anchor: top-level employees (no manager)
+    SELECT employee_id, name, manager_id, 1 AS level
+    FROM employees
+    WHERE manager_id IS NULL
+    UNION ALL
+    -- recursive: employees reporting to someone
+    SELECT e.employee_id, e.name, e.manager_id, oc.level + 1
+    FROM employees e
+    JOIN org_chart oc ON e.manager_id = oc.employee_id
+)
+SELECT REPEAT('  ', level-1) || name AS hierarchy, level
+FROM org_chart
+ORDER BY level, name;</code></pre>
+
+    <h3>CASE Expressions</h3>
+    <div class="code-label">SQL – CASE Expression</div>
+    <pre><code">-- Searched CASE (most common)
+SELECT
+    first_name,
+    gpa,
+    CASE
+        WHEN gpa >= 9.5 THEN 'Distinction'
+        WHEN gpa >= 9.0 THEN 'First Class'
+        WHEN gpa >= 7.5 THEN 'Second Class'
+        WHEN gpa >= 6.0 THEN 'Pass'
+        ELSE 'Fail'
+    END AS result
+FROM students;
+
+-- Simple CASE
+SELECT
+    first_name,
+    department,
+    CASE department
+        WHEN 'Computer Science' THEN 'CS'
+        WHEN 'Electronics'      THEN 'ECE'
+        WHEN 'Mechanical'       THEN 'ME'
+        ELSE 'Other'
+    END AS dept_code
+FROM students;
+
+-- CASE in aggregate (pivot-like query)
+SELECT
+    department,
+    SUM(CASE WHEN gpa >= 9.0 THEN 1 ELSE 0 END) AS distinction_count,
+    SUM(CASE WHEN gpa >= 7.5 AND gpa < 9.0 THEN 1 ELSE 0 END) AS first_class_count,
+    SUM(CASE WHEN gpa < 7.5 THEN 1 ELSE 0 END) AS others_count
+FROM students
+GROUP BY department;
+
+-- CASE in ORDER BY
+SELECT first_name, department
+FROM students
+ORDER BY
+    CASE department
+        WHEN 'Computer Science' THEN 1
+        WHEN 'Electronics'      THEN 2
+        ELSE 3
+    END,
+    first_name;</code></pre>
+  </div>
+
+  <!-- Chapter 9 -->
+  <div class="section" id="ch9">
+    <h2>Chapter 9: Indexes and Query Performance</h2>
+
+    <div class="code-label">SQL – Creating and Using Indexes</div>
+    <pre><code">-- Single column index
+CREATE INDEX idx_department ON students(department);
+CREATE INDEX idx_gpa ON students(gpa);
+
+-- Unique index (also enforces uniqueness constraint)
+CREATE UNIQUE INDEX idx_email ON students(email);
+
+-- Composite index (multiple columns — column order matters!)
+-- Most selective column first; covers queries filtering on (department) OR (department, gpa)
+CREATE INDEX idx_dept_gpa ON students(department, gpa DESC);
+
+-- Full-text index (for text search — MySQL)
+CREATE FULLTEXT INDEX idx_ft_name ON students(first_name, last_name);
+SELECT * FROM students WHERE MATCH(first_name, last_name) AGAINST ('rahul sharma' IN NATURAL LANGUAGE MODE);
+
+-- Drop an index
+DROP INDEX idx_gpa ON students;          -- MySQL
+DROP INDEX idx_gpa;                       -- PostgreSQL (use ALTER TABLE)
+
+-- Show all indexes on a table
+SHOW INDEXES FROM students;              -- MySQL
+SELECT * FROM pg_indexes WHERE tablename = 'students';  -- PostgreSQL</code></pre>
+
+    <div class="code-label">SQL – EXPLAIN to Analyze Query Plans</div>
+    <pre><code">-- EXPLAIN: shows how MySQL executes a query
+EXPLAIN SELECT * FROM students WHERE department = 'Computer Science';
+-- Look for: type (ALL = full scan, ref/range = index used), rows, Extra
+
+-- EXPLAIN ANALYZE (PostgreSQL — actually executes the query)
+EXPLAIN ANALYZE SELECT * FROM students WHERE department = 'Computer Science';
+
+-- Index is NOT used when:
+-- 1. Column is inside a function: WHERE YEAR(enrollment_date) = 2023
+--    FIX: WHERE enrollment_date BETWEEN '2023-01-01' AND '2023-12-31'
+-- 2. Using != or NOT IN (usually)
+-- 3. Leading wildcard LIKE: WHERE name LIKE '%rahul' (no index; '%rahul%' either)
+--    FIX: WHERE name LIKE 'rahul%'  (index IS used for trailing wildcard)
+-- 4. Implicit type conversion: WHERE student_id = '123' (string vs int)
+
+-- Covering index: all columns needed are IN the index
+-- Query: SELECT gpa FROM students WHERE department = 'CS'
+-- Index on (department, gpa) covers this query — no table lookup needed!
+CREATE INDEX idx_dept_covering ON students(department, gpa, first_name);</code></pre>
+
+    <h3>Performance Tips</h3>
+    <table>
+      <tr><th>Tip</th><th>Bad (Slow)</th><th>Good (Fast)</th></tr>
+      <tr><td>Avoid function on indexed column</td><td><code>WHERE YEAR(date) = 2023</code></td><td><code>WHERE date BETWEEN '2023-01-01' AND '2023-12-31'</code></td></tr>
+      <tr><td>Use specific columns</td><td><code>SELECT *</code></td><td><code>SELECT id, name, gpa</code></td></tr>
+      <tr><td>Limit without offset for pagination</td><td><code>LIMIT 10 OFFSET 1000000</code></td><td>Cursor-based: <code>WHERE id &gt; last_id LIMIT 10</code></td></tr>
+      <tr><td>EXISTS vs COUNT</td><td><code>SELECT COUNT(*) &gt; 0</code></td><td><code>SELECT EXISTS(...)</code></td></tr>
+      <tr><td>Avoid DISTINCT when not needed</td><td><code>SELECT DISTINCT * FROM ...</code></td><td>Fix the join so duplicates don't arise</td></tr>
+      <tr><td>Use JOIN instead of subquery</td><td>Correlated subquery in SELECT</td><td>JOIN with derived table</td></tr>
+    </table>
+  </div>
+
+  <!-- SQL vs NoSQL -->
+  <div class="section" id="nosql">
+    <h2>SQL vs NoSQL</h2>
+    <table>
+      <tr><th>Feature</th><th>SQL (Relational)</th><th>NoSQL</th></tr>
+      <tr><td>Data model</td><td>Tables with rows and columns</td><td>Document, key-value, graph, column-family</td></tr>
+      <tr><td>Schema</td><td>Fixed schema (schema-on-write)</td><td>Flexible / dynamic (schema-on-read)</td></tr>
+      <tr><td>ACID transactions</td><td>Full ACID support</td><td>Usually eventual consistency (BASE)</td></tr>
+      <tr><td>Scaling</td><td>Vertical (scale-up)</td><td>Horizontal (scale-out, sharding)</td></tr>
+      <tr><td>Query language</td><td>SQL (standardized)</td><td>Varies by DB (MongoDB Query Language, etc.)</td></tr>
+      <tr><td>Best for</td><td>Structured data, complex joins, reporting</td><td>Unstructured data, high write throughput, IoT</td></tr>
+      <tr><td>Examples</td><td>MySQL, PostgreSQL, Oracle, MS SQL</td><td>MongoDB, Redis, Cassandra, DynamoDB, Neo4j</td></tr>
+      <tr><td>When to use</td><td>Banking, ERP, e-commerce, analytics</td><td>Social media feeds, caching, real-time apps</td></tr>
+    </table>
+  </div>
+
+  <!-- Interview Questions -->
+  <div class="section" id="interviews">
+    <h2>15 SQL Interview Questions</h2>
+
+    <div class="interview-card">
+      <h4>1. Find the second highest GPA in the students table</h4>
+      <span class="difficulty diff-easy">Easy</span>
+      <button class="answer-toggle" onclick="toggleAnswer('sq1')">Show Answer</button>
+      <div id="sq1" class="answer-content">
+        <div class="code-label">SQL</div>
+        <pre><code>-- Method 1: LIMIT + OFFSET
+SELECT DISTINCT gpa FROM students ORDER BY gpa DESC LIMIT 1 OFFSET 1;
+
+-- Method 2: Subquery
+SELECT MAX(gpa) AS second_highest
+FROM students
+WHERE gpa < (SELECT MAX(gpa) FROM students);
+
+-- Method 3: Dense rank (handles NULLs and ties correctly)
+SELECT gpa FROM (
+    SELECT gpa, DENSE_RANK() OVER (ORDER BY gpa DESC) AS rnk
+    FROM students
+) ranked
+WHERE rnk = 2
+LIMIT 1;</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>2. Find duplicate emails in the students table</h4>
+      <span class="difficulty diff-easy">Easy</span>
+      <button class="answer-toggle" onclick="toggleAnswer('sq2')">Show Answer</button>
+      <div id="sq2" class="answer-content">
+        <div class="code-label">SQL</div>
+        <pre><code">SELECT email, COUNT(*) AS occurrences
+FROM students
+GROUP BY email
+HAVING COUNT(*) > 1
+ORDER BY occurrences DESC;</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>3. Delete duplicate rows, keeping only the one with the lowest student_id</h4>
+      <span class="difficulty diff-medium">Medium</span>
+      <button class="answer-toggle" onclick="toggleAnswer('sq3')">Show Answer</button>
+      <div id="sq3" class="answer-content">
+        <div class="code-label">SQL – MySQL</div>
+        <pre><code">DELETE FROM students
+WHERE student_id NOT IN (
+    SELECT MIN(student_id)
+    FROM students
+    GROUP BY email
+);</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>4. Get the department-wise top student (highest GPA) for each department</h4>
+      <span class="difficulty diff-medium">Medium</span>
+      <button class="answer-toggle" onclick="toggleAnswer('sq4')">Show Answer</button>
+      <div id="sq4" class="answer-content">
+        <div class="code-label">SQL – Window Function</div>
+        <pre><code">SELECT first_name, department, gpa
+FROM (
+    SELECT first_name, department, gpa,
+           RANK() OVER (PARTITION BY department ORDER BY gpa DESC) AS rnk
+    FROM students
+) ranked
+WHERE rnk = 1;</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>5. Find students who enrolled in ALL available courses</h4>
+      <span class="difficulty diff-medium">Medium</span>
+      <button class="answer-toggle" onclick="toggleAnswer('sq5')">Show Answer</button>
+      <div id="sq5" class="answer-content">
+        <div class="code-label">SQL</div>
+        <pre><code">SELECT student_id, COUNT(DISTINCT course_id) AS courses_taken
+FROM enrollments
+GROUP BY student_id
+HAVING COUNT(DISTINCT course_id) = (SELECT COUNT(*) FROM courses);</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>6. Pivot: Show count of students per department as columns</h4>
+      <span class="difficulty diff-medium">Medium</span>
+      <button class="answer-toggle" onclick="toggleAnswer('sq6')">Show Answer</button>
+      <div id="sq6" class="answer-content">
+        <div class="code-label">SQL – Conditional Aggregation</div>
+        <pre><code">SELECT
+    SUM(CASE WHEN department = 'Computer Science' THEN 1 ELSE 0 END) AS CS,
+    SUM(CASE WHEN department = 'Electronics'       THEN 1 ELSE 0 END) AS ECE,
+    SUM(CASE WHEN department = 'Mechanical'        THEN 1 ELSE 0 END) AS ME,
+    SUM(CASE WHEN department = 'Mathematics'       THEN 1 ELSE 0 END) AS Math
+FROM students;</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>7. Find the running total of enrollments per day</h4>
+      <span class="difficulty diff-medium">Medium</span>
+      <button class="answer-toggle" onclick="toggleAnswer('sq7')">Show Answer</button>
+      <div id="sq7" class="answer-content">
+        <div class="code-label">SQL – Window Function</div>
+        <pre><code">SELECT
+    DATE(enrolled_at) AS enroll_date,
+    COUNT(*) AS daily_count,
+    SUM(COUNT(*)) OVER (ORDER BY DATE(enrolled_at)) AS running_total
+FROM enrollments
+GROUP BY DATE(enrolled_at)
+ORDER BY enroll_date;</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>8. Find courses with no enrolled students</h4>
+      <span class="difficulty diff-easy">Easy</span>
+      <button class="answer-toggle" onclick="toggleAnswer('sq8')">Show Answer</button>
+      <div id="sq8" class="answer-content">
+        <div class="code-label">SQL</div>
+        <pre><code">-- Method 1: LEFT JOIN + NULL check
+SELECT c.course_name
+FROM courses c
+LEFT JOIN enrollments e ON c.course_id = e.course_id
+WHERE e.course_id IS NULL;
+
+-- Method 2: NOT IN
+SELECT course_name FROM courses
+WHERE course_id NOT IN (SELECT DISTINCT course_id FROM enrollments);
+
+-- Method 3: NOT EXISTS
+SELECT course_name FROM courses c
+WHERE NOT EXISTS (SELECT 1 FROM enrollments e WHERE e.course_id = c.course_id);</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>9. Update salary (or GPA) by rank — top 10% get +10%, bottom 10% get -5%</h4>
+      <span class="difficulty diff-hard">Hard</span>
+      <button class="answer-toggle" onclick="toggleAnswer('sq9')">Show Answer</button>
+      <div id="sq9" class="answer-content">
+        <div class="code-label">SQL</div>
+        <pre><code">WITH ranked AS (
+    SELECT student_id,
+           NTILE(10) OVER (ORDER BY gpa DESC) AS decile
+    FROM students
+)
+UPDATE students s
+JOIN ranked r ON s.student_id = r.student_id
+SET s.gpa = CASE
+    WHEN r.decile = 1  THEN LEAST(s.gpa * 1.10, 10.0)   -- top 10%
+    WHEN r.decile = 10 THEN GREATEST(s.gpa * 0.95, 0.0)  -- bottom 10%
+    ELSE s.gpa
+END;</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>10–15: More Key SQL Interview Topics</h4>
+      <span class="difficulty diff-medium">Medium–Hard</span>
+      <ul class="checklist">
+        <li>10. Employees who earn more than their manager — SELF JOIN</li>
+        <li>11. Consecutive available seat numbers (e.g., at least 2 consecutive free seats) — LAG/LEAD</li>
+        <li>12. N-th highest salary — DENSE_RANK or LIMIT OFFSET</li>
+        <li>13. Find customers who bought every product — relational division with GROUP BY + HAVING</li>
+        <li>14. Median of a column — ROW_NUMBER + COUNT or percentile functions</li>
+        <li>15. Hierarchical query (org chart, category tree) — Recursive CTE</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- GATE Checklist -->
+  <div class="section" id="gate">
+    <h2>GATE CS — SQL &amp; Database Topics Checklist</h2>
+    <ul class="checklist">
+      <li>Relational model: relations, tuples, attributes, domains</li>
+      <li>Keys: primary key, candidate key, super key, foreign key</li>
+      <li>Relational algebra: selection (σ), projection (π), join (⋈), union, set-difference, Cartesian product</li>
+      <li>Relational calculus: tuple relational calculus (TRC), domain relational calculus (DRC)</li>
+      <li>SQL: DDL, DML, DCL, TCL — syntax and semantics</li>
+      <li>Aggregate functions: COUNT, SUM, AVG, MIN, MAX with GROUP BY and HAVING</li>
+      <li>JOINs: INNER, OUTER (LEFT/RIGHT/FULL), NATURAL, SELF, CROSS</li>
+      <li>Subqueries: correlated, nested, scalar; EXISTS, IN, ANY, ALL</li>
+      <li>Normalization: 1NF, 2NF, 3NF, BCNF, 4NF — functional dependencies</li>
+      <li>Armstrong's Axioms: reflexivity, augmentation, transitivity</li>
+      <li>Lossless join decomposition and dependency preservation</li>
+      <li>Transaction management: ACID properties (Atomicity, Consistency, Isolation, Durability)</li>
+      <li>Concurrency control: serializability, conflict serializability, precedence graph</li>
+      <li>Locking protocols: 2PL (strict 2PL, rigorous 2PL), deadlock detection</li>
+      <li>Recovery: log-based recovery, UNDO/REDO, checkpoint</li>
+      <li>Indexing: B-tree, B+ tree structure and operations, hash indexing</li>
+      <li>File organization: heap, sorted, clustered, multi-level index</li>
+      <li>Query optimization: relational algebra equivalences, cost estimation</li>
+      <li>ER model: entity, attribute, relationship, cardinality, specialization/generalization</li>
+      <li>ER to Relational mapping: entities, weak entities, many-to-many, ISA</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2024 StudyHub &mdash; Free Learning Resources for Students</p>
+  <p><a href="../programming.html">Back to Programming</a> &bull; <a href="python-tutorial-beginners.html">Python Tutorial</a> &bull; <a href="data-structures-algorithms.html">DSA Tutorial</a></p>
+</footer>
+
+<script src="../../js/main.js"></script>
+<script>
+  function toggleAnswer(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('show');
+    const btn = el.previousElementSibling;
+    btn.textContent = el.classList.contains('show') ? 'Hide Answer' : 'Show Answer';
+  }
+</script>
+</body>
+</html>

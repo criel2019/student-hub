@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Probability & Statistics – All Formulas, Bayes Theorem, Distributions | JEE Class 12 | StudyHub</title>
+  <meta name="description" content="Complete probability and statistics for JEE and Class 12. Classical probability, conditional probability, Bayes theorem, Binomial distribution, Normal distribution with examples." />
+  <meta name="keywords" content="probability formulas, Bayes theorem, binomial distribution, JEE probability, class 12 statistics, conditional probability, random variable, mean median mode" />
+  <link rel="canonical" href="https://studyhub.example.com/pages/math/probability-statistics.html" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .page-hero{background:linear-gradient(135deg,#1e3a5f 0%,#2a5298 100%);color:#fff;padding:60px 24px 40px;text-align:center}
+    .page-hero h1{font-size:2.2rem;margin-bottom:12px;line-height:1.3}
+    .page-hero p{font-size:1.05rem;opacity:.88;max-width:720px;margin:0 auto}
+    .content-wrap{max-width:900px;margin:0 auto;padding:40px 20px 80px}
+    .toc{background:#eaf0fb;border:1px solid #c3d0e8;border-radius:10px;padding:22px 28px;margin-bottom:40px}
+    .toc h2{font-size:1.1rem;color:#1e3a5f;margin-bottom:12px}
+    .toc ol{margin-left:20px;line-height:2}
+    .toc a{color:#2a5298;text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .section{margin-bottom:56px}
+    .section h2{font-size:1.6rem;color:#1e3a5f;border-bottom:3px solid #2a5298;padding-bottom:8px;margin-bottom:24px}
+    .section h3{font-size:1.2rem;color:#2a5298;margin:28px 0 12px}
+    .section h4{font-size:1.05rem;color:#1a1a2e;margin:18px 0 8px}
+    .formula-table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:.92rem}
+    .formula-table th{background:#1e3a5f;color:#fff;padding:10px 14px;text-align:left}
+    .formula-table td{padding:9px 14px;border-bottom:1px solid #dce1ec;vertical-align:top}
+    .formula-table tr:nth-child(even) td{background:#f4f6f9}
+    .formula-cell{font-family:'Courier New',monospace;font-size:.9rem;font-weight:600;color:#1e3a5f}
+    .example-box{background:#fff;border-left:4px solid #2a5298;border-radius:0 8px 8px 0;padding:18px 22px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+    .example-box .label{font-size:.78rem;font-weight:700;text-transform:uppercase;color:#2a5298;letter-spacing:.08em;margin-bottom:6px}
+    .example-box .problem{font-weight:600;color:#1a1a2e;margin-bottom:10px;font-size:1.01rem}
+    .example-box .solution{color:#333;line-height:1.8}
+    .example-box .solution .step{display:block;margin:4px 0;padding-left:12px}
+    .highlight{background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:12px 16px;margin:14px 0;font-size:.95rem}
+    .practice-box{background:#f0f8f0;border:1px solid #27ae60;border-radius:8px;padding:18px 22px;margin:20px 0}
+    .practice-box h4{color:#1e8449;margin-bottom:12px}
+    .practice-box ol{margin-left:20px;line-height:2.1}
+    .practice-box .answers{margin-top:12px;font-size:.87rem;color:#555;border-top:1px solid #c3e6cb;padding-top:10px}
+    .rule-box{background:#fef9e7;border:1px solid #f39c12;border-radius:8px;padding:16px 20px;margin:16px 0}
+    .bayes-box{background:#f0e8ff;border:2px solid #8e44ad;border-radius:10px;padding:20px 24px;margin:20px 0}
+    .bayes-box h3{color:#8e44ad;margin-top:0}
+    .math{font-family:'Courier New',monospace;font-size:.97rem;background:#f0f0f0;padding:1px 5px;border-radius:3px}
+    .big-formula{display:block;text-align:center;font-family:'Courier New',monospace;font-size:1.05rem;background:#1e3a5f;color:#fff;padding:14px 20px;border-radius:8px;margin:16px 0;letter-spacing:.02em}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+    @media(max-width:600px){.two-col{grid-template-columns:1fr}}
+    .formula-card{background:#eaf0fb;border:1px solid #c3d0e8;border-radius:8px;padding:12px 16px;font-family:'Courier New',monospace;font-size:.88rem;color:#1e3a5f;line-height:1.7}
+    .dist-card{border-radius:10px;padding:16px 20px;margin:12px 0}
+    .dist-binomial{background:#e8f4fd;border:1px solid #3498db}
+    .dist-normal{background:#e8fdf4;border:1px solid #27ae60}
+    .prob-tree{background:#fafafa;border:1px solid #ccc;border-radius:8px;padding:16px 20px;margin:14px 0;font-family:'Courier New',monospace;font-size:.9rem;line-height:2}
+    .stat-formula{background:#fff8f0;border:1px solid #e67e22;border-radius:8px;padding:14px 18px;margin:10px 0}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">📚 StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>Probability &amp; Statistics</h1>
+  <p>Complete coverage for JEE Main, JEE Advanced and Class 12 — classical probability, conditional probability, Bayes' theorem (with 4 worked examples), binomial distribution, mean/median/mode, standard deviation, correlation and regression.</p>
+</div>
+
+<div class="content-wrap">
+
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#basic">Basic Probability</a></li>
+      <li><a href="#conditional">Conditional Probability &amp; Multiplication Theorem</a></li>
+      <li><a href="#bayes">Bayes' Theorem — Derivation &amp; 4 Examples</a></li>
+      <li><a href="#random-variables">Random Variables, PDF, CDF, E(X), Var(X)</a></li>
+      <li><a href="#binomial">Binomial Distribution</a></li>
+      <li><a href="#mean-median-mode">Mean, Median &amp; Mode</a></li>
+      <li><a href="#std-dev">Standard Deviation &amp; Variance</a></li>
+      <li><a href="#correlation">Correlation &amp; Regression</a></li>
+      <li><a href="#jee-solved">10 Solved JEE Problems</a></li>
+      <li><a href="#practice">20 Practice Problems</a></li>
+    </ol>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="basic">
+    <h2>1. Basic Probability</h2>
+
+    <h3>Definitions</h3>
+    <table class="formula-table">
+      <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Sample Space S</strong></td><td>Set of all possible outcomes of an experiment</td></tr>
+        <tr><td><strong>Event E</strong></td><td>A subset of S</td></tr>
+        <tr><td><strong>n(S)</strong></td><td>Total number of outcomes (equally likely)</td></tr>
+        <tr><td><strong>n(E)</strong></td><td>Number of favourable outcomes</td></tr>
+        <tr><td><strong>P(E)</strong></td><td>n(E)/n(S) — classical probability</td></tr>
+        <tr><td><strong>Mutually exclusive</strong></td><td>A ∩ B = ∅ (cannot occur simultaneously)</td></tr>
+        <tr><td><strong>Exhaustive events</strong></td><td>A₁ ∪ A₂ ∪ ··· ∪ Aₙ = S (cover all outcomes)</td></tr>
+        <tr><td><strong>Independent events</strong></td><td>Occurrence of A does not affect P(B)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Core Probability Laws</h3>
+    <table class="formula-table">
+      <thead><tr><th>Law</th><th>Formula</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Range</td><td class="formula-cell">0 ≤ P(E) ≤ 1</td><td>P(∅) = 0, P(S) = 1</td></tr>
+        <tr><td>Complement</td><td class="formula-cell">P(A') = 1 − P(A)</td><td>A' is the event "A does not occur"</td></tr>
+        <tr><td>Addition (general)</td><td class="formula-cell">P(A∪B) = P(A)+P(B)−P(A∩B)</td><td>For any two events</td></tr>
+        <tr><td>Addition (mutually exclusive)</td><td class="formula-cell">P(A∪B) = P(A)+P(B)</td><td>When A∩B = ∅</td></tr>
+        <tr><td>Addition (three events)</td><td class="formula-cell">P(A∪B∪C) = P(A)+P(B)+P(C)−P(A∩B)−P(B∩C)−P(A∩C)+P(A∩B∩C)</td><td>Inclusion-exclusion</td></tr>
+        <tr><td>Odds in favour of A</td><td class="formula-cell">P(A) : P(A') = P(A) : (1−P(A))</td><td></td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <div class="label">Example 1</div>
+      <div class="problem">A card is drawn from a standard deck of 52 cards. Find P(red or face card).</div>
+      <div class="solution">
+        <span class="step">P(red) = 26/52 = 1/2; P(face) = 12/52 = 3/13; P(red AND face) = 6/52 = 3/26</span>
+        <span class="step">P(red ∪ face) = 1/2 + 3/13 − 3/26 = 13/26 + 6/26 − 3/26 = 16/26 = <strong>8/13</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2</div>
+      <div class="problem">Two dice are thrown. Find P(sum = 7) and P(at least one 6).</div>
+      <div class="solution">
+        <span class="step">n(S) = 36. Sum = 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) → 6 outcomes. P = 6/36 = <strong>1/6</strong></span>
+        <span class="step">P(at least one 6) = 1 − P(no 6) = 1 − (5/6)² = 1 − 25/36 = <strong>11/36</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3</div>
+      <div class="problem">In a class, P(pass maths) = 2/3, P(pass physics) = 3/4, P(fail both) = 1/12. Find P(pass at least one).</div>
+      <div class="solution">
+        <span class="step">P(fail both) = 1 − P(at least one) → P(at least one) = 1 − 1/12 = <strong>11/12</strong></span>
+        <span class="step">Check: P(M∪P) = 2/3 + 3/4 − P(M∩P) = 11/12 → P(M∩P) = 8/12+9/12−11/12 = 6/12 = 1/2</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 4</div>
+      <div class="problem">A bag has 3 red, 4 blue balls. Two balls are drawn without replacement. Find P(both red).</div>
+      <div class="solution">
+        <span class="step">P(first red) = 3/7. Given first is red, P(second red) = 2/6 = 1/3.</span>
+        <span class="step">P(both red) = (3/7)(1/3) = <strong>1/7</strong></span>
+        <span class="step">Using combinations: C(3,2)/C(7,2) = 3/21 = 1/7 ✓</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 5</div>
+      <div class="problem">P(A) = 0.3, P(B) = 0.4, P(A∩B) = 0.12. Are A and B independent?</div>
+      <div class="solution">
+        <span class="step">For independence: P(A∩B) should equal P(A)·P(B) = 0.3 × 0.4 = 0.12</span>
+        <span class="step">P(A∩B) = 0.12 = 0.12 ✓. <strong>Yes, A and B are independent.</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="conditional">
+    <h2>2. Conditional Probability &amp; Multiplication Theorem</h2>
+
+    <span class="big-formula">P(A|B) = P(A∩B) / P(B), &nbsp;&nbsp; P(B) ≠ 0</span>
+
+    <p>Read as "probability of A given B has already occurred." The sample space reduces to B.</p>
+
+    <h3>Multiplication Theorem</h3>
+    <div class="two-col">
+      <div class="formula-card">P(A∩B) = P(B) · P(A|B)<br>= P(A) · P(B|A)</div>
+      <div class="formula-card">Independent events:<br>P(A∩B) = P(A) · P(B)<br>⟹ P(A|B) = P(A)</div>
+    </div>
+
+    <h3>Multiplication for 3 events</h3>
+    <span class="big-formula">P(A∩B∩C) = P(A)·P(B|A)·P(C|A∩B)</span>
+
+    <div class="example-box">
+      <div class="label">Example 1</div>
+      <div class="problem">A bag has 5 white and 3 black balls. Two balls drawn without replacement. P(2nd white | 1st white)?</div>
+      <div class="solution">
+        <span class="step">P(2nd white | 1st white) = P(both white)/P(1st white)</span>
+        <span class="step">= [C(5,2)/C(8,2)] / [5/8] = [10/28] / [5/8] = (10/28)·(8/5) = 80/140 = <strong>4/7</strong></span>
+        <span class="step">Direct: After removing 1 white, bag has 4 white, 3 black → P = 4/7 ✓</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2</div>
+      <div class="problem">P(A) = 0.5, P(B|A) = 0.4, P(B|A') = 0.2. Find P(B).</div>
+      <div class="solution">
+        <span class="step">P(B) = P(A)·P(B|A) + P(A')·P(B|A') &nbsp; [Total Probability]</span>
+        <span class="step">= 0.5 × 0.4 + 0.5 × 0.2 = 0.2 + 0.1 = <strong>0.3</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3</div>
+      <div class="problem">Find P(A∩B∩C) if P(A)=1/2, P(B|A)=1/3, P(C|A∩B)=1/4.</div>
+      <div class="solution">
+        <span class="step">P(A∩B∩C) = P(A)·P(B|A)·P(C|A∩B) = (1/2)(1/3)(1/4) = <strong>1/24</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 4 — Independent events</div>
+      <div class="problem">A hits target with P=2/5, B with P=3/4. Both fire independently. P(target is hit)?</div>
+      <div class="solution">
+        <span class="step">P(target hit) = 1 − P(both miss) = 1 − P(A misses)·P(B misses)</span>
+        <span class="step">= 1 − (3/5)(1/4) = 1 − 3/20 = <strong>17/20</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 5 — Law of Total Probability</div>
+      <div class="problem">Three machines M₁, M₂, M₃ produce 30%, 45%, 25% of a factory's output. Their defect rates are 2%, 3%, 2% respectively. A random item is picked; find P(defective).</div>
+      <div class="solution">
+        <span class="step">P(D) = P(M₁)P(D|M₁) + P(M₂)P(D|M₂) + P(M₃)P(D|M₃)</span>
+        <span class="step">= 0.30×0.02 + 0.45×0.03 + 0.25×0.02</span>
+        <span class="step">= 0.006 + 0.0135 + 0.005 = <strong>0.0245</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="bayes">
+    <h2>3. Bayes' Theorem</h2>
+
+    <div class="bayes-box">
+      <h3>Statement &amp; Derivation</h3>
+      <p>Let A₁, A₂, ..., Aₙ be mutually exclusive and exhaustive events (partition of S), and let B be any event with P(B) &gt; 0. Then:</p>
+      <span class="big-formula" style="font-size:.95rem">P(Aᵢ|B) = P(Aᵢ) · P(B|Aᵢ) / [P(A₁)P(B|A₁) + P(A₂)P(B|A₂) + ··· + Pₙ)P(B|Aₙ)]</span>
+      <p style="margin-top:10px"><strong>Derivation:</strong></p>
+      <p>Numerator: P(Aᵢ ∩ B) = P(Aᵢ)·P(B|Aᵢ) [by multiplication theorem]<br>
+      Denominator: P(B) = Σ P(Aⱼ)·P(B|Aⱼ) [Law of Total Probability]<br>
+      Therefore: P(Aᵢ|B) = P(Aᵢ∩B)/P(B) = P(Aᵢ)P(B|Aᵢ) / Σ P(Aⱼ)P(B|Aⱼ) ✓</p>
+      <p><strong>Prior probability:</strong> P(Aᵢ) — what we knew before observing B<br>
+      <strong>Posterior probability:</strong> P(Aᵢ|B) — updated belief after observing B</p>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 1 — Classic Bag Problem</div>
+      <div class="problem">Bag I has 3 red, 4 blue balls. Bag II has 5 red, 3 blue. A bag is chosen at random and one ball drawn. It is red. Find the probability it came from Bag I.</div>
+      <div class="solution">
+        <span class="step"><strong>Define events:</strong> A₁ = Bag I chosen, A₂ = Bag II chosen, B = red ball drawn</span>
+        <span class="step">P(A₁) = P(A₂) = 1/2</span>
+        <span class="step">P(B|A₁) = 3/7 &nbsp;&nbsp; P(B|A₂) = 5/8</span>
+        <span class="step"><strong>P(B) = P(A₁)P(B|A₁) + P(A₂)P(B|A₂)</strong></span>
+        <span class="step">= (1/2)(3/7) + (1/2)(5/8) = 3/14 + 5/16 = 24/112 + 35/112 = 59/112</span>
+        <span class="step"><strong>Bayes:</strong> P(A₁|B) = P(A₁)P(B|A₁) / P(B) = (1/2·3/7) / (59/112)</span>
+        <span class="step">= (3/14) × (112/59) = (3 × 8)/59 = <strong>24/59</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Medical Testing (Sensitivity &amp; Specificity)</div>
+      <div class="problem">A disease affects 1% of the population. A test has 95% sensitivity (true positive rate) and 90% specificity (true negative rate). If a person tests positive, what is P(has disease)?</div>
+      <div class="solution">
+        <span class="step"><strong>Events:</strong> D = has disease, T = tests positive</span>
+        <span class="step">P(D) = 0.01, P(D') = 0.99</span>
+        <span class="step">P(T|D) = 0.95 (sensitivity), P(T|D') = 1 − 0.90 = 0.10 (false positive rate)</span>
+        <span class="step"><strong>P(T) = P(D)P(T|D) + P(D')P(T|D')</strong></span>
+        <span class="step">= 0.01 × 0.95 + 0.99 × 0.10 = 0.0095 + 0.099 = 0.1085</span>
+        <span class="step"><strong>P(D|T) = P(D)P(T|D) / P(T) = 0.0095 / 0.1085 ≈ 0.0876 ≈ 8.76%</strong></span>
+        <span class="step"><strong>Insight:</strong> Even with a positive test, there's only ~8.76% chance of having the disease due to low prevalence (base rate fallacy). This is why doctors re-test before diagnosing.</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3 — Factory Defect Problem</div>
+      <div class="problem">Three factories A, B, C produce 50%, 30%, 20% of a product. Defect rates: 1%, 2%, 3%. A defective item is found. Find P(it came from factory C).</div>
+      <div class="solution">
+        <span class="step">P(A)=0.5, P(B)=0.3, P(C)=0.2</span>
+        <span class="step">P(D|A)=0.01, P(D|B)=0.02, P(D|C)=0.03</span>
+        <span class="step">P(D) = 0.5×0.01 + 0.3×0.02 + 0.2×0.03 = 0.005+0.006+0.006 = 0.017</span>
+        <span class="step">P(C|D) = P(C)P(D|C)/P(D) = (0.2×0.03)/0.017 = 0.006/0.017 ≈ <strong>0.353 (35.3%)</strong></span>
+        <span class="step">Similarly: P(A|D) = 0.005/0.017 ≈ 29.4%; P(B|D) = 0.006/0.017 ≈ 35.3%</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 4 — JEE Level</div>
+      <div class="problem">A letter is known to have come from TATANAGAR or CALCUTTA. On the postal stamp, only two consecutive letters "TA" are visible. Find the probability it came from TATANAGAR.</div>
+      <div class="solution">
+        <span class="step">Event A₁ = from TATANAGAR, A₂ = from CALCUTTA; each equally likely: P(A₁)=P(A₂)=1/2</span>
+        <span class="step">B = "TA" visible on stamp</span>
+        <span class="step">In TATANAGAR (9 letters), consecutive pairs: TA-AT-TA-AN-NA-AG-GA-AR = 8 pairs. "TA" appears at positions 1-2 and 3-4 → 2 times. P(B|A₁) = 2/8 = 1/4</span>
+        <span class="step">In CALCUTTA (8 letters), pairs: CA-AL-LC-CU-UT-TT-TA = 7 pairs. "TA" appears once. P(B|A₂) = 1/7</span>
+        <span class="step">P(B) = (1/2)(1/4) + (1/2)(1/7) = 1/8 + 1/14 = 7/56 + 4/56 = 11/56</span>
+        <span class="step">P(A₁|B) = (1/2 × 1/4)/(11/56) = (1/8)/(11/56) = (1/8)(56/11) = 7/11 ≈ <strong>7/11</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="random-variables">
+    <h2>4. Random Variables, E(X) and Var(X)</h2>
+
+    <h3>Types of Random Variables</h3>
+    <div class="two-col">
+      <div class="formula-card"><strong>Discrete:</strong> Countable outcomes (e.g., number of heads in 5 coin flips). Has a Probability Mass Function (PMF): P(X=x).</div>
+      <div class="formula-card"><strong>Continuous:</strong> Uncountably infinite outcomes (e.g., height, temperature). Has a Probability Density Function (PDF): f(x) where P(a≤X≤b) = ∫ₐᵇ f(x)dx.</div>
+    </div>
+
+    <h3>Expected Value (Mean)</h3>
+    <table class="formula-table">
+      <thead><tr><th>Variable Type</th><th>Formula</th></tr></thead>
+      <tbody>
+        <tr><td>Discrete E(X)</td><td class="formula-cell">E(X) = Σ xᵢ · P(X=xᵢ) = Σ xᵢ pᵢ</td></tr>
+        <tr><td>Continuous E(X)</td><td class="formula-cell">E(X) = ∫₋∞^∞ x·f(x) dx</td></tr>
+        <tr><td>E(aX+b)</td><td class="formula-cell">= aE(X) + b &nbsp; (linearity)</td></tr>
+        <tr><td>E(X²)</td><td class="formula-cell">= Σ xᵢ² · pᵢ</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Variance &amp; Standard Deviation</h3>
+    <span class="big-formula">Var(X) = E(X²) − [E(X)]² = E[(X−μ)²]</span>
+    <div class="two-col">
+      <div class="formula-card">σ = √Var(X) &nbsp; (Standard Deviation)<br>Var(aX+b) = a²·Var(X)</div>
+      <div class="formula-card">Var(X+Y) = Var(X)+Var(Y) if X,Y independent</div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example — Discrete Random Variable</div>
+      <div class="problem">X has PMF: P(X=0)=0.1, P(X=1)=0.3, P(X=2)=0.4, P(X=3)=0.2. Find E(X), E(X²), Var(X).</div>
+      <div class="solution">
+        <span class="step">E(X) = 0(0.1)+1(0.3)+2(0.4)+3(0.2) = 0+0.3+0.8+0.6 = <strong>1.7</strong></span>
+        <span class="step">E(X²) = 0²(0.1)+1²(0.3)+2²(0.4)+3²(0.2) = 0+0.3+1.6+1.8 = 3.7</span>
+        <span class="step">Var(X) = E(X²)−[E(X)]² = 3.7−(1.7)² = 3.7−2.89 = <strong>0.81</strong></span>
+        <span class="step">σ = √0.81 = 0.9</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="binomial">
+    <h2>5. Binomial Distribution</h2>
+
+    <div class="dist-card dist-binomial">
+      <h3 style="color:#2980b9;margin-top:0">When to Use Binomial Distribution?</h3>
+      <ul style="margin-left:20px;line-height:2">
+        <li>Fixed number of trials: n</li>
+        <li>Each trial has exactly two outcomes: success (p) or failure (q = 1−p)</li>
+        <li>Trials are independent</li>
+        <li>p is constant across trials</li>
+      </ul>
+    </div>
+
+    <span class="big-formula">P(X=r) = ⁿCᵣ · pʳ · qⁿ⁻ʳ, &nbsp;&nbsp; r = 0, 1, 2, ..., n &nbsp;&nbsp; (q = 1−p)</span>
+
+    <table class="formula-table">
+      <thead><tr><th>Measure</th><th>Formula</th></tr></thead>
+      <tbody>
+        <tr><td>Mean</td><td class="formula-cell">μ = E(X) = np</td></tr>
+        <tr><td>Variance</td><td class="formula-cell">Var(X) = npq = np(1−p)</td></tr>
+        <tr><td>Standard Deviation</td><td class="formula-cell">σ = √(npq)</td></tr>
+        <tr><td>Mode</td><td class="formula-cell">If (n+1)p is integer: two modes; otherwise ⌊(n+1)p⌋</td></tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      <strong>Important:</strong> Mean &gt; Variance always in binomial (since q &lt; 1). Mean = np, Variance = npq. The ratio Var/Mean = q = 1−p &lt; 1.
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 1</div>
+      <div class="problem">A fair coin is tossed 8 times. Find P(exactly 3 heads) and P(at least 6 heads).</div>
+      <div class="solution">
+        <span class="step">n=8, p=1/2, q=1/2. P(X=r) = C(8,r)·(1/2)⁸</span>
+        <span class="step">P(X=3) = C(8,3)·(1/2)⁸ = 56/256 = <strong>7/32</strong></span>
+        <span class="step">P(X≥6) = P(6)+P(7)+P(8) = [C(8,6)+C(8,7)+C(8,8)]/256 = (28+8+1)/256 = 37/256</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2</div>
+      <div class="problem">A biased coin has P(heads) = 0.6. It is tossed 10 times. Find mean, variance, and P(exactly 4 heads).</div>
+      <div class="solution">
+        <span class="step">n=10, p=0.6, q=0.4</span>
+        <span class="step">Mean = np = 10 × 0.6 = <strong>6</strong></span>
+        <span class="step">Variance = npq = 10 × 0.6 × 0.4 = <strong>2.4</strong>; SD = √2.4 ≈ 1.55</span>
+        <span class="step">P(X=4) = C(10,4)·(0.6)⁴·(0.4)⁶ = 210·0.1296·0.004096 ≈ 210·0.000531 ≈ <strong>0.1115</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3</div>
+      <div class="problem">If the mean of a binomial distribution is 4 and variance is 3, find n and p.</div>
+      <div class="solution">
+        <span class="step">np = 4 ...(i); npq = 3 ...(ii)</span>
+        <span class="step">Divide: q = 3/4 → p = 1/4</span>
+        <span class="step">From (i): n·(1/4) = 4 → <strong>n = 16</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 4</div>
+      <div class="problem">In a multiple choice test with 5 options each, a student guesses all 10 questions. Find the probability of getting more than 2 correct.</div>
+      <div class="solution">
+        <span class="step">p = 1/5, q = 4/5, n = 10</span>
+        <span class="step">P(X&gt;2) = 1 − P(X≤2) = 1 − [P(0)+P(1)+P(2)]</span>
+        <span class="step">P(0) = (4/5)¹⁰ = 4¹⁰/5¹⁰ = 1048576/9765625 ≈ 0.1074</span>
+        <span class="step">P(1) = 10·(1/5)·(4/5)⁹ ≈ 10·0.2·0.1342 ≈ 0.2684</span>
+        <span class="step">P(2) = 45·(1/5)²·(4/5)⁸ ≈ 45·0.04·0.1678 ≈ 0.3020</span>
+        <span class="step">P(X&gt;2) = 1 − 0.1074 − 0.2684 − 0.3020 ≈ <strong>0.3222 ≈ 32.2%</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 5</div>
+      <div class="problem">X ~ B(n, 1/3). If P(X=1) = P(X=2), find n.</div>
+      <div class="solution">
+        <span class="step">C(n,1)(1/3)¹(2/3)ⁿ⁻¹ = C(n,2)(1/3)²(2/3)ⁿ⁻²</span>
+        <span class="step">n·(1/3)·(2/3)ⁿ⁻¹ = [n(n−1)/2]·(1/9)·(2/3)ⁿ⁻²</span>
+        <span class="step">Divide: n·(1/3)·(2/3) = [n(n−1)/2]·(1/9)</span>
+        <span class="step">2n/9 = n(n−1)/18 → 4 = n−1 → <strong>n = 5</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="mean-median-mode">
+    <h2>6. Mean, Median &amp; Mode</h2>
+
+    <h3>Ungrouped Data</h3>
+    <table class="formula-table">
+      <thead><tr><th>Measure</th><th>Formula</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Arithmetic Mean</strong></td><td class="formula-cell">x̄ = (Σxᵢ)/n = (x₁+x₂+...+xₙ)/n</td></tr>
+        <tr><td><strong>Median</strong></td><td>Sort data. If n is odd: middle value. If n is even: average of two middle values.</td></tr>
+        <tr><td><strong>Mode</strong></td><td>Value that appears most frequently</td></tr>
+        <tr><td><strong>Geometric Mean</strong></td><td class="formula-cell">GM = (x₁·x₂···xₙ)^(1/n)</td></tr>
+        <tr><td><strong>Harmonic Mean</strong></td><td class="formula-cell">HM = n / (Σ 1/xᵢ)</td></tr>
+        <tr><td><strong>Relationship</strong></td><td class="formula-cell">AM ≥ GM ≥ HM (for positive values)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Grouped Data Formulas</h3>
+
+    <div class="stat-formula">
+      <strong>Mean (Direct method):</strong> x̄ = Σ(fᵢxᵢ) / Σfᵢ &nbsp; where fᵢ = frequency, xᵢ = class midpoint
+    </div>
+
+    <div class="stat-formula">
+      <strong>Mean (Assumed Mean / Shortcut method):</strong> x̄ = A + Σ(fᵢdᵢ) / Σfᵢ &nbsp; where A = assumed mean, dᵢ = xᵢ − A
+    </div>
+
+    <div class="stat-formula">
+      <strong>Mean (Step Deviation method):</strong> x̄ = A + h · Σ(fᵢuᵢ) / Σfᵢ &nbsp; where uᵢ = (xᵢ−A)/h, h = class width
+    </div>
+
+    <div class="stat-formula">
+      <strong>Median for grouped data (interpolation formula):</strong><br>
+      M = L + [(n/2 − cf) / f] × h<br>
+      where L = lower boundary of median class, n = Σfᵢ, cf = cumulative frequency before median class, f = frequency of median class, h = class width
+    </div>
+
+    <div class="stat-formula">
+      <strong>Mode for grouped data:</strong><br>
+      Mo = L + [(f₁−f₀) / (2f₁−f₀−f₂)] × h<br>
+      where L = lower boundary of modal class, f₁ = highest frequency, f₀ = frequency of class preceding modal class, f₂ = frequency of class succeeding modal class, h = class width
+    </div>
+
+    <div class="highlight">
+      <strong>Empirical Relationship (approximate, for moderately skewed data):</strong><br>
+      Mode ≈ 3·Median − 2·Mean<br>
+      Mean − Mode ≈ 3(Mean − Median)
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example — Grouped Mean using Step Deviation</div>
+      <div class="problem">Find mean of: 0–10 (f=5), 10–20 (f=10), 20–30 (f=25), 30–40 (f=30), 40–50 (f=20), 50–60 (f=10).</div>
+      <div class="solution">
+        <span class="step">Midpoints: 5, 15, 25, 35, 45, 55. Take A = 35, h = 10.</span>
+        <span class="step">uᵢ = (xᵢ−35)/10: −3, −2, −1, 0, 1, 2</span>
+        <span class="step">fᵢuᵢ: 5(−3)+10(−2)+25(−1)+30(0)+20(1)+10(2) = −15−20−25+0+20+20 = −20</span>
+        <span class="step">Σfᵢ = 100. Mean = 35 + 10·(−20)/100 = 35 − 2 = <strong>33</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="std-dev">
+    <h2>7. Standard Deviation &amp; Variance</h2>
+
+    <table class="formula-table">
+      <thead><tr><th>Method</th><th>Variance Formula</th></tr></thead>
+      <tbody>
+        <tr><td>Direct</td><td class="formula-cell">σ² = Σ(xᵢ−x̄)²/n &nbsp; (ungrouped)</td></tr>
+        <tr><td>Shortcut</td><td class="formula-cell">σ² = Σxᵢ²/n − (x̄)²</td></tr>
+        <tr><td>Grouped (direct)</td><td class="formula-cell">σ² = Σfᵢ(xᵢ−x̄)² / Σfᵢ</td></tr>
+        <tr><td>Grouped (step deviation)</td><td class="formula-cell">σ² = h² [Σfᵢuᵢ²/Σfᵢ − (Σfᵢuᵢ/Σfᵢ)²]</td></tr>
+        <tr><td>Sample variance</td><td class="formula-cell">s² = Σ(xᵢ−x̄)²/(n−1) &nbsp; (unbiased)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Combined Mean &amp; Standard Deviation</h3>
+    <div class="two-col">
+      <div class="formula-card">
+        Combined mean of two groups (n₁, x̄₁) and (n₂, x̄₂):<br>
+        x̄₁₂ = (n₁x̄₁ + n₂x̄₂) / (n₁+n₂)
+      </div>
+      <div class="formula-card">
+        Combined variance:<br>
+        σ² = [n₁(σ₁²+d₁²) + n₂(σ₂²+d₂²)] / (n₁+n₂)<br>
+        where d₁ = x̄₁−x̄₁₂, d₂ = x̄₂−x̄₁₂
+      </div>
+    </div>
+
+    <h3>Coefficient of Variation (CV)</h3>
+    <span class="big-formula">CV = (σ/x̄) × 100%</span>
+    <p>CV compares relative variability. A distribution with smaller CV is more consistent/uniform.</p>
+
+    <div class="example-box">
+      <div class="label">Example — Which batsman is more consistent?</div>
+      <div class="problem">Batsman A: mean = 50, SD = 10. Batsman B: mean = 40, SD = 6. Who is more consistent?</div>
+      <div class="solution">
+        <span class="step">CV(A) = (10/50)×100 = 20%</span>
+        <span class="step">CV(B) = (6/40)×100 = 15%</span>
+        <span class="step">CV(B) &lt; CV(A) → <strong>Batsman B is more consistent</strong> (less relative variation).</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="correlation">
+    <h2>8. Correlation &amp; Regression</h2>
+
+    <h3>Karl Pearson's Correlation Coefficient</h3>
+    <span class="big-formula">r = Σ(xᵢ−x̄)(yᵢ−ȳ) / [√Σ(xᵢ−x̄)² · √Σ(yᵢ−ȳ)²] = Σdₓdᵧ / √(Σdₓ² · Σdᵧ²)</span>
+    <p>Where dₓ = xᵢ−x̄, dᵧ = yᵢ−ȳ. Range: −1 ≤ r ≤ 1.</p>
+    <ul style="margin-left:20px;line-height:2">
+      <li>r = +1: perfect positive linear correlation</li>
+      <li>r = −1: perfect negative linear correlation</li>
+      <li>r = 0: no linear correlation (could still be non-linear)</li>
+      <li>|r| &gt; 0.7: strong correlation; 0.3–0.7: moderate; &lt;0.3: weak</li>
+    </ul>
+
+    <h3>Spearman's Rank Correlation</h3>
+    <span class="big-formula">rₛ = 1 − 6Σd²ᵢ / [n(n²−1)]</span>
+    <p>where dᵢ = difference between ranks of i-th pair. Used for ordinal data or non-normal distributions.</p>
+
+    <h3>Lines of Regression</h3>
+    <div class="two-col">
+      <div class="formula-card">
+        <strong>y on x (predict y from x):</strong><br>
+        y − ȳ = bᵧₓ(x − x̄)<br>
+        bᵧₓ = r · σᵧ/σₓ = Σ(xᵢ−x̄)(yᵢ−ȳ)/Σ(xᵢ−x̄)²
+      </div>
+      <div class="formula-card">
+        <strong>x on y (predict x from y):</strong><br>
+        x − x̄ = bₓᵧ(y − ȳ)<br>
+        bₓᵧ = r · σₓ/σᵧ
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>Key properties:</strong><br>
+      • bᵧₓ · bₓᵧ = r² &nbsp; (product of regression coefficients)<br>
+      • Both lines pass through (x̄, ȳ)<br>
+      • r = ±√(bᵧₓ · bₓᵧ); sign same as regression coefficients<br>
+      • If r=0: lines are perpendicular; if r=±1: both lines coincide
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example — Regression Lines</div>
+      <div class="problem">Given: x̄=6, ȳ=8, bᵧₓ=1.2, bₓᵧ=0.6. Find r and the two regression equations.</div>
+      <div class="solution">
+        <span class="step">r² = bᵧₓ × bₓᵧ = 1.2 × 0.6 = 0.72 → r = √0.72 ≈ 0.849 (positive, since both b&gt;0)</span>
+        <span class="step">y on x: y − 8 = 1.2(x − 6) → y = 1.2x − 7.2 + 8 → <strong>y = 1.2x + 0.8</strong></span>
+        <span class="step">x on y: x − 6 = 0.6(y − 8) → x = 0.6y − 4.8 + 6 → <strong>x = 0.6y + 1.2</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="jee-solved">
+    <h2>9. 10 Solved JEE Problems</h2>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 1</div>
+      <div class="problem">A die is thrown. Event A = {1,2,3}, B = {2,3,4}. Find P(A|B) and P(B|A).</div>
+      <div class="solution">
+        <span class="step">P(A∩B) = P({2,3}) = 2/6 = 1/3; P(A) = 3/6 = 1/2; P(B) = 3/6 = 1/2</span>
+        <span class="step">P(A|B) = P(A∩B)/P(B) = (1/3)/(1/2) = 2/3</span>
+        <span class="step">P(B|A) = P(A∩B)/P(A) = (1/3)/(1/2) = 2/3</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 2</div>
+      <div class="problem">In a group of 400 people, 160 are smokers-non-drinkers, 100 are non-smokers-drinkers, and 240 are smokers. A person is chosen at random. Find P(drinker).</div>
+      <div class="solution">
+        <span class="step">Smokers = 240. Of these, 240−160 = 80 are smoker+drinker.</span>
+        <span class="step">Non-smoker drinkers = 100. Total drinkers = 80+100 = 180.</span>
+        <span class="step">P(drinker) = 180/400 = <strong>9/20</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 3</div>
+      <div class="problem">Two cards are drawn from a pack of 52 without replacement. Find P(both aces).</div>
+      <div class="solution">
+        <span class="step">P = C(4,2)/C(52,2) = 6/1326 = <strong>1/221</strong></span>
+        <span class="step">Or: P = (4/52)(3/51) = 12/2652 = 1/221 ✓</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 4</div>
+      <div class="problem">X ~ B(n, p). If E(X) = 6 and E(X²) = 38, find n and p.</div>
+      <div class="solution">
+        <span class="step">E(X) = np = 6 ...(i); E(X²) = Var(X) + [E(X)]² = npq + 36 = 38 → npq = 2</span>
+        <span class="step">From (i) and npq=2: q = 2/6 = 1/3 → p = 2/3</span>
+        <span class="step">n × 2/3 = 6 → <strong>n = 9</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 5</div>
+      <div class="problem">An unbiased die is thrown. Let X = number shown. Find E(X) and Var(X).</div>
+      <div class="solution">
+        <span class="step">E(X) = (1+2+3+4+5+6)/6 = 21/6 = 7/2 = 3.5</span>
+        <span class="step">E(X²) = (1+4+9+16+25+36)/6 = 91/6</span>
+        <span class="step">Var(X) = 91/6 − (7/2)² = 91/6 − 49/4 = 182/12 − 147/12 = 35/12 ≈ 2.917</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 6</div>
+      <div class="problem">A bag contains 4 red and 6 black balls. One ball is drawn, its colour noted and put back. Find P(after 3 draws: 2 red, 1 black).</div>
+      <div class="solution">
+        <span class="step">With replacement → independent trials. p(red)=4/10=2/5, p(black)=3/5</span>
+        <span class="step">X ~ B(3, 2/5). P(X=2) = C(3,2)(2/5)²(3/5) = 3·(4/25)·(3/5) = 36/125</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 7</div>
+      <div class="problem">The probability that a bomb hits a target is 1/5. If 5 bombs are fired, find P(exactly 2 hit and target is destroyed by at least 2 hits).</div>
+      <div class="solution">
+        <span class="step">P(exactly 2 hits) = C(5,2)(1/5)²(4/5)³ = 10·(1/25)·(64/125) = 640/3125 = <strong>128/625</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 8</div>
+      <div class="problem">If P(A) = 0.4, P(B) = 0.7, P(A∩B) = 0.3, find P(neither A nor B) and P(exactly one of A, B).</div>
+      <div class="solution">
+        <span class="step">P(A∪B) = 0.4+0.7−0.3 = 0.8</span>
+        <span class="step">P(neither) = 1−P(A∪B) = 1−0.8 = <strong>0.2</strong></span>
+        <span class="step">P(exactly one) = P(A∪B)−P(A∩B) = 0.8−0.3 = <strong>0.5</strong></span>
+        <span class="step">Or: P(A only) + P(B only) = (0.4−0.3)+(0.7−0.3) = 0.1+0.4 = 0.5 ✓</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 9</div>
+      <div class="problem">The mean and SD of 20 observations are 10 and 2. Later it is found that observation 12 was misread as 8. Find the corrected mean and SD.</div>
+      <div class="solution">
+        <span class="step">Wrong sum = 20×10 = 200. Corrected sum = 200−8+12 = 204. Corrected mean = 204/20 = <strong>10.2</strong></span>
+        <span class="step">Wrong Σx² = n(σ²+x̄²) = 20(4+100) = 2080. Corrected Σx² = 2080−64+144 = 2160</span>
+        <span class="step">Corrected σ² = 2160/20 − (10.2)² = 108 − 104.04 = 3.96; σ = √3.96 ≈ <strong>1.99</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 10</div>
+      <div class="problem">Two integers are chosen from 1 to 10 (inclusive) without replacement. Find P(both odd) and P(one odd, one even).</div>
+      <div class="solution">
+        <span class="step">5 odd (1,3,5,7,9), 5 even (2,4,6,8,10). Total ways = C(10,2) = 45.</span>
+        <span class="step">P(both odd) = C(5,2)/45 = 10/45 = <strong>2/9</strong></span>
+        <span class="step">P(one odd, one even) = C(5,1)·C(5,1)/45 = 25/45 = <strong>5/9</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="practice">
+    <h2>10. Practice Problems (20 Questions)</h2>
+    <div class="practice-box">
+      <h4>Basic &amp; Conditional Probability</h4>
+      <ol>
+        <li>Three coins are tossed. Find P(exactly 2 heads) and P(at least 1 tail).</li>
+        <li>From a group of 4 men and 6 women, 3 are selected randomly. Find P(all women) and P(1 man, 2 women).</li>
+        <li>P(A) = 1/3, P(B) = 1/4, P(A∩B) = 1/6. Find P(A∪B), P(A'∩B'), P(A|B).</li>
+        <li>Events A and B are such that P(A) = 0.4, P(B) = 0.5, P(A∪B) = 0.7. Are A and B independent?</li>
+        <li>A box has 5 defective and 15 good items. Two are picked. Find P(both defective) and P(first defective, second good).</li>
+      </ol>
+      <h4 style="margin-top:12px">Bayes' Theorem</h4>
+      <ol start="6">
+        <li>Urn A has 2 white 3 black; Urn B has 3 white 2 black. Urns are equally likely chosen. A white ball is drawn. Find P(from Urn B).</li>
+        <li>In a certain city, 40% own a car and 30% own a bike. 10% own both. A person is a car owner. Find P(also owns bike).</li>
+        <li>A test for a disease is 99% accurate (P(positive | disease) = 0.99, P(negative | no disease) = 0.99). If prevalence = 0.1%, find P(disease | positive test).</li>
+        <li>Two factories A and B produce 60% and 40% of bulbs. Defect rate: A=2%, B=1%. A bulb is defective. P(from A)?</li>
+      </ol>
+      <h4 style="margin-top:12px">Binomial Distribution</h4>
+      <ol start="10">
+        <li>In 6 throws of a fair die, find P(getting 5 exactly twice).</li>
+        <li>X ~ B(10, 1/4). Find P(X≥1) and E(X), Var(X).</li>
+        <li>If X ~ B(n, 1/2) and P(X=3) = P(X=5), find n.</li>
+        <li>Mean = 4, Variance = 3 for a binomial distribution. Find P(X=0).</li>
+      </ol>
+      <h4 style="margin-top:12px">Statistics</h4>
+      <ol start="14">
+        <li>Find mean and SD of: 2, 4, 6, 8, 10.</li>
+        <li>For data: 15, 18, 20, 22, 25, 30, find mean, median, mode.</li>
+        <li>Find the coefficient of variation if mean = 25 and variance = 25.</li>
+        <li>25 students have mean score 80. Another 35 students have mean 70. Find combined mean.</li>
+        <li>The regression line of y on x is 3y = 4x + 5. Find x when y = 6.</li>
+        <li>If bᵧₓ = 0.8 and bₓᵧ = 0.5, find r and check if valid.</li>
+        <li>10 items have mean 6 and variance 9. 5 more items all equal to 6 are added. Find new mean and variance.</li>
+      </ol>
+      <div class="answers">
+        <strong>Answers:</strong> (1) 3/8; 7/8 &nbsp; (2) C(6,3)/C(10,3)=20/120=1/6; 3·C(6,2)/120=45/120=3/8 &nbsp; (3) P(A∪B)=5/12; P(A'∩B')=7/12; P(A|B)=2/3 &nbsp; (4) P(A∩B)=0.2; P(A)P(B)=0.2 → Yes, independent &nbsp; (5) 1/19; 5/19 &nbsp; (6) 3/5 &nbsp; (7) 1/4 &nbsp; (8) ≈9.02% &nbsp; (9) 12/17≈0.706 &nbsp; (10) C(6,2)(5/6)⁴(1/6)²=15·625/1296·1/36≈0.2009 &nbsp; (11) 1−(3/4)¹⁰≈0.944; E=2.5; Var=1.875 &nbsp; (12) n=8 &nbsp; (13) P(X=0)=(3/4)¹²=(3/4)¹² since n·(1/4)=4→n=16 → (3/4)¹⁶ &nbsp; (14) mean=6, SD=√8=2√2 &nbsp; (16) CV=20% &nbsp; (17) (25·80+35·70)/60=74.17 &nbsp; (18) x=13/4 &nbsp; (19) r=√0.4≈0.632 ✓ (r²=bᵧₓ·bₓᵧ=0.4&lt;1) &nbsp; (20) mean=6; variance=9·10/15+0=6
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

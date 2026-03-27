@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Tutorial for Beginners – Complete Step-by-Step Guide with Examples | StudyHub</title>
+  <meta name="description" content="Learn Python from scratch. Variables, data types, loops, functions, lists, dictionaries, OOP – complete beginner tutorial with 50+ code examples and practice exercises." />
+  <meta name="keywords" content="python tutorial for beginners, learn python step by step, python examples, python programming basics, python for students" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .chapter-hero {
+      background: linear-gradient(135deg, #3776ab 0%, #ffd43b 100%);
+      color: #fff;
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+    .chapter-hero h1 { font-size: 2.2rem; margin-bottom: 12px; text-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+    .chapter-hero p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 20px; opacity: 0.95; }
+    .hero-badges span {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.5);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 4px;
+    }
+    .content-wrapper { max-width: 960px; margin: 0 auto; padding: 0 20px 60px; }
+    .toc-box {
+      background: #f0f7ff;
+      border: 1px solid #b3d4f5;
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin: 36px 0;
+    }
+    .toc-box h2 { font-size: 1.15rem; margin: 0 0 14px; color: #1a5a96; }
+    .toc-box ol { margin: 0; padding-left: 20px; }
+    .toc-box li { margin: 6px 0; }
+    .toc-box a { color: #1a5a96; text-decoration: none; }
+    .toc-box a:hover { text-decoration: underline; }
+    .chapter-section { margin-top: 52px; }
+    .chapter-section h2 {
+      font-size: 1.7rem;
+      color: #1a1a2e;
+      border-left: 5px solid #3776ab;
+      padding-left: 14px;
+      margin-bottom: 18px;
+    }
+    .chapter-section h3 {
+      font-size: 1.2rem;
+      color: #2c3e50;
+      margin: 28px 0 10px;
+    }
+    .chapter-section h4 {
+      font-size: 1rem;
+      color: #555;
+      margin: 20px 0 8px;
+      font-weight: 600;
+    }
+    .chapter-section p { line-height: 1.75; color: #333; margin: 10px 0; }
+    pre {
+      background: #1e1e2e;
+      color: #cdd6f4;
+      border-radius: 8px;
+      padding: 20px 22px;
+      overflow-x: auto;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      margin: 14px 0 20px;
+      border: 1px solid #313244;
+    }
+    pre code { font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace; }
+    .code-label {
+      display: inline-block;
+      background: #3776ab;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 4px 4px 0 0;
+      margin-bottom: -4px;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 0.04em;
+    }
+    .info-box {
+      background: #e8f4fd;
+      border-left: 4px solid #3776ab;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 18px 0;
+    }
+    .info-box strong { color: #1a5a96; }
+    .tip-box {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 18px 0;
+    }
+    .tip-box strong { color: #166534; }
+    .warn-box {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 18px 0;
+    }
+    .warn-box strong { color: #92400e; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 0.92rem;
+    }
+    th {
+      background: #3776ab;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    td { padding: 9px 14px; border-bottom: 1px solid #e5e7eb; }
+    tr:nth-child(even) td { background: #f9fafb; }
+    tr:hover td { background: #eef5ff; }
+    .exercise-box {
+      background: #faf5ff;
+      border: 1px solid #d8b4fe;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .exercise-box h4 { color: #7c3aed; margin-top: 0; }
+    .exercise-list { padding-left: 20px; }
+    .exercise-list li { margin: 8px 0; color: #333; line-height: 1.6; }
+    .project-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 16px 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .project-card h4 { margin-top: 0; color: #1a5a96; }
+    .answer-toggle {
+      background: #3776ab;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 7px 16px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      margin-top: 10px;
+    }
+    .answer-toggle:hover { background: #2c5f8a; }
+    .answer-content { display: none; margin-top: 14px; }
+    .answer-content.show { display: block; }
+    .breadcrumb { font-size: 0.85rem; color: #888; margin: 20px 0 0; }
+    .breadcrumb a { color: #3776ab; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .lang-compare-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin: 18px 0;
+    }
+    .lang-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px 18px;
+      background: #fff;
+    }
+    .lang-card h4 { margin-top: 0; color: #1a1a2e; }
+    .lang-card ul { padding-left: 18px; margin: 8px 0 0; }
+    .lang-card li { font-size: 0.9rem; color: #555; margin: 4px 0; }
+    .chapter-nav {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 30px 0 10px;
+    }
+    .chapter-nav a {
+      background: #3776ab;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+    .chapter-nav a:hover { background: #2c5f8a; }
+    footer {
+      background: #1e1e2e;
+      color: #aaa;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.88rem;
+      margin-top: 60px;
+    }
+    footer a { color: #7eb3e8; text-decoration: none; }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">📚 StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="chapter-hero">
+  <h1>Python Tutorial for Beginners</h1>
+  <p>Complete Step-by-Step Guide with 50+ Code Examples — Variables, Loops, Functions, OOP, File Handling and More</p>
+  <div class="hero-badges">
+    <span>50+ Examples</span>
+    <span>10 Chapters</span>
+    <span>3 Practice Projects</span>
+    <span>20 Exercises</span>
+    <span>Beginner Friendly</span>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="breadcrumb">
+    <a href="../../index.html">Home</a> &rsaquo; <a href="../programming.html">Programming</a> &rsaquo; Python Tutorial for Beginners
+  </div>
+
+  <div class="toc-box">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#ch1">Getting Started with Python</a></li>
+      <li><a href="#ch2">Variables and Data Types</a></li>
+      <li><a href="#ch3">String Operations</a></li>
+      <li><a href="#ch4">Operators</a></li>
+      <li><a href="#ch5">Control Flow</a></li>
+      <li><a href="#ch6">Functions</a></li>
+      <li><a href="#ch7">Lists</a></li>
+      <li><a href="#ch8">Dictionaries and Sets</a></li>
+      <li><a href="#ch9">Object-Oriented Programming</a></li>
+      <li><a href="#ch10">File Handling &amp; Exception Handling</a></li>
+      <li><a href="#projects">Practice Projects</a></li>
+      <li><a href="#exercises">Practice Exercises (20)</a></li>
+    </ol>
+  </div>
+
+  <!-- Chapter 1 -->
+  <div class="chapter-section" id="ch1">
+    <h2>Chapter 1: Getting Started with Python</h2>
+
+    <h3>Why Learn Python?</h3>
+    <p>Python is consistently ranked as the world's most popular programming language. Its clean, readable syntax makes it ideal for beginners, while its powerful libraries make it indispensable for professionals. Here are the key domains where Python is used:</p>
+
+    <table>
+      <tr><th>Domain</th><th>What Python Does</th><th>Key Libraries</th></tr>
+      <tr><td>Data Science / Analytics</td><td>Manipulate and analyze large datasets</td><td>Pandas, NumPy</td></tr>
+      <tr><td>Machine Learning / AI</td><td>Build predictive models, neural networks</td><td>TensorFlow, PyTorch, scikit-learn</td></tr>
+      <tr><td>Web Development</td><td>Build backend servers and REST APIs</td><td>Django, Flask, FastAPI</td></tr>
+      <tr><td>Automation / Scripting</td><td>Automate repetitive tasks, web scraping</td><td>Selenium, BeautifulSoup</td></tr>
+      <tr><td>Scientific Computing</td><td>Simulations, mathematical computation</td><td>SciPy, SymPy</td></tr>
+      <tr><td>DevOps / Cloud</td><td>Infrastructure automation, CLI tools</td><td>boto3, Fabric</td></tr>
+    </table>
+
+    <h3>Python vs Other Languages</h3>
+    <div class="lang-compare-grid">
+      <div class="lang-card">
+        <h4>Python</h4>
+        <ul>
+          <li>No semicolons, braces</li>
+          <li>Interpreted, dynamic typing</li>
+          <li>Vast ecosystem (PyPI)</li>
+          <li>Slower than compiled languages</li>
+          <li>Best for: AI, data, scripting</li>
+        </ul>
+      </div>
+      <div class="lang-card">
+        <h4>Java</h4>
+        <ul>
+          <li>Verbose, strongly typed</li>
+          <li>JVM-based, portable</li>
+          <li>Used in enterprise apps</li>
+          <li>Faster than Python at runtime</li>
+          <li>Best for: Android, enterprise</li>
+        </ul>
+      </div>
+      <div class="lang-card">
+        <h4>C++</h4>
+        <ul>
+          <li>Manual memory management</li>
+          <li>Compiled, very fast</li>
+          <li>Steep learning curve</li>
+          <li>Competitive programming</li>
+          <li>Best for: systems, games</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Installing Python and Running Your First Program</h3>
+    <p>Download Python from <strong>python.org</strong>. On installation, check "Add Python to PATH". Verify with <code>python --version</code> in your terminal.</p>
+
+    <div class="tip-box">
+      <strong>Tip:</strong> Use VS Code with the Python extension, or try PyCharm Community Edition for a full IDE experience. For quick experiments, use the online REPL at <strong>replit.com</strong> or <strong>python.org/shell</strong>.
+    </div>
+
+    <h3>Your First Python Program</h3>
+    <div class="code-label">Python</div>
+    <pre><code># This is a comment — Python ignores this line
+
+# Print output to the screen
+print("Hello, World!")
+print("Welcome to Python!")
+
+# You can print multiple values
+name = "Python"
+version = 3.12
+print("Language:", name, "| Version:", version)
+
+# print() options
+print("A", "B", "C", sep="-")      # A-B-C
+print("No newline", end=" ")
+print("on same line")              # No newline on same line</code></pre>
+
+    <h3>Comments in Python</h3>
+    <div class="code-label">Python</div>
+    <pre><code># Single-line comment — everything after # is ignored
+
+x = 10  # inline comment
+
+'''
+This is a multi-line comment (actually a string literal).
+Python does not have a dedicated block comment syntax.
+You can use triple quotes for long explanations.
+'''
+
+"""
+Double-quoted triple strings also work as multi-line comments.
+Commonly used as docstrings (documentation strings) for functions and classes.
+"""
+
+def greet(name):
+    """Return a greeting message for the given name."""
+    return f"Hello, {name}!"</code></pre>
+  </div>
+
+  <!-- Chapter 2 -->
+  <div class="chapter-section" id="ch2">
+    <h2>Chapter 2: Variables and Data Types</h2>
+
+    <p>In Python, you do not need to declare a variable's type — Python infers it automatically. This is called <strong>dynamic typing</strong>.</p>
+
+    <div class="code-label">Python – Integer, Float, String, Boolean, None</div>
+    <pre><code># --- Integers ---
+age = 25
+year = 2024
+negative = -10
+big_number = 1_000_000   # underscores improve readability
+
+print(age, year, negative, big_number)  # 25 2024 -10 1000000
+
+# --- Floats ---
+gpa = 9.5
+pi = 3.14159
+temperature = -2.5
+scientific = 1.5e3       # 1500.0 (scientific notation)
+
+print(gpa, pi, scientific)  # 9.5 3.14159 1500.0
+
+# --- Strings ---
+name = "Rahul"
+city = 'Mumbai'
+multiline = """This is a
+multi-line string that spans
+several lines"""
+
+print(name, city)
+print(multiline)
+
+# --- Boolean ---
+is_student = True
+has_job = False
+is_valid = 5 > 3        # True (result of comparison)
+print(is_student, has_job, is_valid)
+
+# --- NoneType (absence of a value) ---
+result = None
+print(result)           # None
+print(result is None)   # True</code></pre>
+
+    <h3>Checking and Converting Types</h3>
+    <div class="code-label">Python – type() and Type Conversion</div>
+    <pre><code># Type checking
+age = 25
+name = "Priya"
+gpa = 9.5
+flag = True
+
+print(type(age))    # &lt;class 'int'&gt;
+print(type(name))   # &lt;class 'str'&gt;
+print(type(gpa))    # &lt;class 'float'&gt;
+print(type(flag))   # &lt;class 'bool'&gt;
+
+# isinstance() — preferred for type checking in code
+print(isinstance(age, int))        # True
+print(isinstance(name, (str, int))) # True (any match)
+
+# --- Type Conversion (Casting) ---
+num_str = "123"
+num_int = int(num_str)      # "123" -> 123
+num_float = float("3.14")   # "3.14" -> 3.14
+num_str2 = str(456)         # 456 -> "456"
+num_bool = bool(0)          # 0 -> False (any nonzero is True)
+num_bool2 = bool("hello")   # non-empty string -> True
+
+print(num_int, type(num_int))       # 123 &lt;class 'int'&gt;
+print(num_float, type(num_float))   # 3.14 &lt;class 'float'&gt;
+print(num_str2, type(num_str2))     # 456 &lt;class 'str'&gt;
+print(num_bool, num_bool2)          # False True
+
+# Falsy values in Python:
+# False, 0, 0.0, "", [], {}, (), set(), None
+# Everything else is truthy</code></pre>
+
+    <h3>Multiple Assignment</h3>
+    <div class="code-label">Python – Multiple Assignment</div>
+    <pre><code># Assign multiple variables at once
+x, y, z = 1, 2, 3
+print(x, y, z)  # 1 2 3
+
+# Assign same value to multiple variables
+a = b = c = 0
+print(a, b, c)  # 0 0 0
+
+# Swap values (no temp variable needed!)
+x, y = 10, 20
+x, y = y, x
+print(x, y)  # 20 10
+
+# Unpack from a list
+first, second, *rest = [1, 2, 3, 4, 5]
+print(first, second, rest)  # 1 2 [3, 4, 5]</code></pre>
+  </div>
+
+  <!-- Chapter 3 -->
+  <div class="chapter-section" id="ch3">
+    <h2>Chapter 3: String Operations</h2>
+
+    <p>Strings in Python are immutable sequences of characters. Python provides a rich set of built-in string methods.</p>
+
+    <h3>Indexing and Slicing</h3>
+    <div class="code-label">Python – String Slicing</div>
+    <pre><code>text = "Hello, World!"
+
+# Length
+print(len(text))          # 13
+
+# Indexing (0-based, negative from end)
+print(text[0])            # H
+print(text[7])            # W
+print(text[-1])           # ! (last character)
+print(text[-6])           # W
+
+# Slicing [start:stop:step]  (stop is exclusive)
+print(text[7:12])         # World
+print(text[:5])           # Hello
+print(text[7:])           # World!
+print(text[::2])          # Hlo,Wrd  (every 2nd char)
+print(text[::-1])         # !dlroW ,olleH  (reversed)</code></pre>
+
+    <h3>String Methods</h3>
+    <div class="code-label">Python – Common String Methods</div>
+    <pre><code>text = "  Hello, World!  "
+
+# Case methods
+print(text.upper())           # "  HELLO, WORLD!  "
+print(text.lower())           # "  hello, world!  "
+print(text.title())           # "  Hello, World!  "
+print(text.swapcase())        # "  hELLO, wORLD!  "
+
+# Whitespace methods
+print(text.strip())           # "Hello, World!"  (both ends)
+print(text.lstrip())          # "Hello, World!  " (left only)
+print(text.rstrip())          # "  Hello, World!" (right only)
+
+# Search and replace
+clean = text.strip()
+print(clean.replace("World", "Python"))  # "Hello, Python!"
+print(clean.find("World"))    # 7 (index of first occurrence, -1 if not found)
+print(clean.index("World"))   # 7 (raises ValueError if not found)
+print(clean.count("l"))       # 3
+
+# Split and join
+sentence = "Python is easy to learn"
+words = sentence.split(" ")   # ['Python', 'is', 'easy', 'to', 'learn']
+print(words)
+print(",".join(words))        # Python,is,easy,to,learn
+print(" | ".join(["a","b","c"]))  # a | b | c
+
+# Check methods (return True/False)
+print(clean.startswith("Hello"))  # True
+print(clean.endswith("!"))        # True
+print("12345".isdigit())          # True
+print("hello".isalpha())          # True
+print("hello123".isalnum())       # True
+print("   ".isspace())            # True
+
+# Padding and alignment
+print("hi".center(10))            # "    hi    "
+print("hi".ljust(10, "-"))        # "hi--------"
+print("hi".rjust(10, "0"))        # "00000000hi"
+print("007".zfill(5))             # "00007"</code></pre>
+
+    <h3>String Formatting (3 Methods)</h3>
+    <div class="code-label">Python – String Formatting</div>
+    <pre><code>name = "Priya"
+score = 95.5678
+rank = 1
+
+# Method 1: f-strings (Python 3.6+) — RECOMMENDED
+print(f"Student: {name}, Score: {score:.2f}%, Rank: {rank}")
+# Student: Priya, Score: 95.57%, Rank: 1
+
+# f-string expressions
+print(f"Next year score: {score + 1.5:.1f}")
+print(f"Name in upper: {name.upper()}")
+print(f"{'centered':^20}")   # "      centered      "
+print(f"{rank:03d}")          # 001 (zero-padded int)
+print(f"{score:10.2f}")       # right-aligned float in 10-char field
+
+# Method 2: .format()
+print("Student: {}, Score: {:.2f}%".format(name, score))
+print("Student: {n}, Score: {s:.2f}%".format(n=name, s=score))
+print("{0} and {1} and {0}".format("cat", "dog"))  # positional
+
+# Method 3: %-formatting (older style, still seen in legacy code)
+print("Student: %s, Score: %.2f%%" % (name, score))
+print("Rank: %03d" % rank)  # 001
+
+# Multi-line string
+poem = """
+Roses are red,
+Violets are blue,
+Python is great,
+And so are you!
+"""
+print(poem)</code></pre>
+
+    <div class="tip-box">
+      <strong>Best Practice:</strong> Always use f-strings for new Python code. They are the most readable and fastest of the three formatting methods.
+    </div>
+  </div>
+
+  <!-- Chapter 4 -->
+  <div class="chapter-section" id="ch4">
+    <h2>Chapter 4: Operators</h2>
+
+    <div class="code-label">Python – All Operator Types</div>
+    <pre><code># --- Arithmetic Operators ---
+print(10 + 3)    # 13   (addition)
+print(10 - 3)    # 7    (subtraction)
+print(10 * 3)    # 30   (multiplication)
+print(10 / 3)    # 3.3333... (true division, always float)
+print(10 // 3)   # 3    (floor/integer division)
+print(10 % 3)    # 1    (modulo — remainder)
+print(10 ** 3)   # 1000 (exponentiation)
+print(-10 // 3)  # -4   (floor rounds toward -infinity!)
+
+# --- Comparison Operators (return bool) ---
+print(5 > 3)     # True
+print(5 < 3)     # False
+print(5 >= 5)    # True
+print(5 <= 4)    # False
+print(5 == 5)    # True   (equality — NOT assignment)
+print(5 != 3)    # True   (not equal)
+
+# --- Logical Operators ---
+print(True and False)   # False
+print(True or False)    # True
+print(not True)         # False
+print(5 > 3 and 2 < 4)  # True
+print(5 > 3 or 2 > 4)   # True
+print(not (5 > 3))      # False
+
+# Short-circuit evaluation
+x = None
+y = x or "default"   # y = "default"  (x is falsy)
+z = x and "value"    # z = None       (x is falsy, skip right side)
+
+# --- Assignment Operators ---
+x = 10
+x += 5    # x = x + 5  ->  15
+x -= 3    # x = x - 3  ->  12
+x *= 2    # x = x * 2  ->  24
+x /= 4    # x = x / 4  ->  6.0
+x //= 2   # x = x // 2 ->  3.0
+x **= 3   # x = x ** 3 ->  27.0
+x %= 5    # x = x % 5  ->  2.0
+
+# --- Bitwise Operators ---
+a, b = 12, 10         # 1100, 1010 in binary
+print(a & b)          # 8  (AND:  1000)
+print(a | b)          # 14 (OR:   1110)
+print(a ^ b)          # 6  (XOR:  0110)
+print(~a)             # -13 (NOT: flip bits + 2's complement)
+print(a << 1)         # 24 (left shift:  11000)
+print(a >> 1)         # 6  (right shift: 0110)
+
+# --- Identity and Membership Operators ---
+lst = [1, 2, 3]
+print(lst is lst)       # True  (same object in memory)
+print(lst is not None)  # True
+print(2 in lst)         # True  (membership test)
+print(5 not in lst)     # True</code></pre>
+
+    <h3>Operator Precedence (High to Low)</h3>
+    <table>
+      <tr><th>Precedence</th><th>Operators</th><th>Description</th></tr>
+      <tr><td>1 (highest)</td><td><code>()</code></td><td>Parentheses</td></tr>
+      <tr><td>2</td><td><code>**</code></td><td>Exponentiation</td></tr>
+      <tr><td>3</td><td><code>+x, -x, ~x</code></td><td>Unary operators</td></tr>
+      <tr><td>4</td><td><code>*, /, //, %</code></td><td>Multiplication, division</td></tr>
+      <tr><td>5</td><td><code>+, -</code></td><td>Addition, subtraction</td></tr>
+      <tr><td>6</td><td><code>&lt;&lt;, &gt;&gt;</code></td><td>Bitwise shifts</td></tr>
+      <tr><td>7</td><td><code>&amp;</code></td><td>Bitwise AND</td></tr>
+      <tr><td>8</td><td><code>^</code></td><td>Bitwise XOR</td></tr>
+      <tr><td>9</td><td><code>|</code></td><td>Bitwise OR</td></tr>
+      <tr><td>10</td><td><code>==, !=, &lt;, &gt;, &lt;=, &gt;=, is, in</code></td><td>Comparison</td></tr>
+      <tr><td>11</td><td><code>not</code></td><td>Logical NOT</td></tr>
+      <tr><td>12</td><td><code>and</code></td><td>Logical AND</td></tr>
+      <tr><td>13 (lowest)</td><td><code>or</code></td><td>Logical OR</td></tr>
+    </table>
+  </div>
+
+  <!-- Chapter 5 -->
+  <div class="chapter-section" id="ch5">
+    <h2>Chapter 5: Control Flow</h2>
+
+    <h3>if / elif / else</h3>
+    <div class="code-label">Python – Conditional Statements</div>
+    <pre><code>marks = 78
+
+if marks >= 90:
+    grade = "A+"
+elif marks >= 80:
+    grade = "A"
+elif marks >= 70:
+    grade = "B"
+elif marks >= 60:
+    grade = "C"
+else:
+    grade = "F"
+
+print(f"Grade: {grade}")   # Grade: B
+
+# Ternary / conditional expression (one-line if-else)
+status = "Pass" if marks >= 40 else "Fail"
+print(status)  # Pass
+
+# Nested if
+age = 20
+has_id = True
+if age >= 18:
+    if has_id:
+        print("Entry allowed")
+    else:
+        print("ID required")
+else:
+    print("Too young")
+
+# Multiple conditions in one line
+x = 15
+if 10 < x < 20:      # chained comparison (Pythonic!)
+    print("x is between 10 and 20")</code></pre>
+
+    <h3>for Loop</h3>
+    <div class="code-label">Python – for Loop Patterns</div>
+    <pre><code># Loop over a range
+for i in range(1, 6):
+    print(i, end=" ")   # 1 2 3 4 5
+print()
+
+# range(start, stop, step)
+for i in range(0, 20, 5):
+    print(i, end=" ")   # 0 5 10 15
+print()
+
+# Loop with enumerate — get index and value
+fruits = ["apple", "banana", "cherry", "date"]
+for index, fruit in enumerate(fruits, start=1):
+    print(f"{index}. {fruit}")
+# 1. apple
+# 2. banana
+# 3. cherry
+# 4. date
+
+# Loop over a string
+for ch in "Python":
+    print(ch, end="-")  # P-y-t-h-o-n-
+print()
+
+# Loop over a dictionary
+student = {"name": "Aisha", "age": 20, "gpa": 9.1}
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+# break — exit the loop early
+for i in range(10):
+    if i == 5:
+        break
+    print(i, end=" ")   # 0 1 2 3 4
+print()
+
+# continue — skip current iteration
+for i in range(10):
+    if i % 2 == 0:
+        continue        # skip even numbers
+    print(i, end=" ")   # 1 3 5 7 9
+print()
+
+# for-else (else runs if loop completed without break)
+for i in range(5):
+    if i == 10:         # never true
+        break
+else:
+    print("Loop completed normally")  # this prints</code></pre>
+
+    <h3>while Loop</h3>
+    <div class="code-label">Python – while Loop</div>
+    <pre><code># Basic while loop
+count = 0
+while count < 5:
+    print(f"Count: {count}")
+    count += 1
+
+# do-while equivalent (Python has no do-while)
+while True:
+    user_input = "yes"  # simulate user input
+    if user_input.lower() != "yes":
+        break
+    print("You said yes!")
+    break  # exit for demonstration
+
+# Nested loops — multiplication table
+print("\nMultiplication Table (1-5):")
+for i in range(1, 6):
+    for j in range(1, 6):
+        print(f"{i*j:3}", end="")
+    print()   # newline after each row
+
+# pass statement (placeholder — does nothing)
+for i in range(5):
+    if i == 3:
+        pass   # TODO: handle this case later
+    else:
+        print(i, end=" ")  # 0 1 2 4</code></pre>
+  </div>
+
+  <!-- Chapter 6 -->
+  <div class="chapter-section" id="ch6">
+    <h2>Chapter 6: Functions</h2>
+
+    <p>Functions are reusable blocks of code. Python functions are defined with <code>def</code>. They promote DRY (Don't Repeat Yourself) programming.</p>
+
+    <div class="code-label">Python – Basic Functions</div>
+    <pre><code># Basic function with return value
+def greet(name):
+    """Greets a person by name. (docstring)"""
+    return f"Hello, {name}!"
+
+print(greet("Aisha"))   # Hello, Aisha!
+print(greet("Wei"))     # Hello, Wei!
+
+# Function with default parameter
+def introduce(name, age, city="Unknown"):
+    return f"I'm {name}, {age} years old, from {city}."
+
+print(introduce("Raj", 20, "Delhi"))
+print(introduce("Priya", 19))          # city defaults to "Unknown"
+
+# Multiple return values (actually returns a tuple)
+def min_max(lst):
+    return min(lst), max(lst)
+
+lo, hi = min_max([3, 1, 9, 2, 7])
+print(f"Min: {lo}, Max: {hi}")  # Min: 1, Max: 9</code></pre>
+
+    <div class="code-label">Python – *args and **kwargs</div>
+    <pre><code># *args — variable number of positional arguments
+def add_all(*numbers):
+    """Sum any number of arguments."""
+    total = 0
+    for n in numbers:
+        total += n
+    return total
+    # Or: return sum(numbers)
+
+print(add_all(1, 2))          # 3
+print(add_all(1, 2, 3, 4, 5)) # 15
+
+# **kwargs — variable number of keyword arguments
+def display_info(**info):
+    """Print key-value pairs."""
+    for key, value in info.items():
+        print(f"  {key}: {value}")
+
+display_info(name="Wei", age=21, major="CS")
+# name: Wei
+# age: 21
+# major: CS
+
+# Combining all argument types
+def complex_function(a, b, *args, default=100, **kwargs):
+    print(f"a={a}, b={b}")
+    print(f"args={args}")
+    print(f"default={default}")
+    print(f"kwargs={kwargs}")
+
+complex_function(1, 2, 3, 4, 5, default=200, x=10, y=20)
+# a=1, b=2
+# args=(3, 4, 5)
+# default=200
+# kwargs={'x': 10, 'y': 20}
+
+# Unpacking when calling
+nums = [1, 2, 3]
+info = {"name": "Alice", "age": 20}
+print(add_all(*nums))           # same as add_all(1, 2, 3)
+display_info(**info)            # same as display_info(name="Alice", age=20)</code></pre>
+
+    <div class="code-label">Python – Lambda, Recursive, Generator Functions</div>
+    <pre><code># Lambda — anonymous single-expression function
+square = lambda x: x ** 2
+multiply = lambda x, y: x * y
+
+print(square(5))        # 25
+print(multiply(3, 4))   # 12
+
+# Lambda with built-in higher-order functions
+numbers = [4, 2, 7, 1, 9, 3]
+print(sorted(numbers))                                  # [1,2,3,4,7,9]
+print(sorted(numbers, reverse=True))                    # [9,7,4,3,2,1]
+print(list(map(lambda x: x**2, numbers)))               # [16,4,49,1,81,9]
+print(list(filter(lambda x: x > 4, numbers)))           # [7,9]
+
+# Sort list of tuples by second element
+students = [("Alice", 85), ("Bob", 92), ("Carol", 78), ("David", 88)]
+students.sort(key=lambda s: s[1], reverse=True)
+print(students)  # [('Bob', 92), ('David', 88), ('Alice', 85), ('Carol', 78)]
+
+# --- Recursive Function ---
+def factorial(n):
+    """n! = n * (n-1) * ... * 1"""
+    if n <= 1:       # base case
+        return 1
+    return n * factorial(n - 1)   # recursive case
+
+print(factorial(0))   # 1
+print(factorial(5))   # 120
+print(factorial(10))  # 3628800
+
+# Fibonacci (recursive — not efficient but illustrative)
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+print([fibonacci(i) for i in range(10)])
+# [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+# --- Generator Function (memory-efficient iteration) ---
+def count_up(start, end):
+    """Yield numbers one at a time without storing all in memory."""
+    while start <= end:
+        yield start
+        start += 1
+
+for num in count_up(1, 5):
+    print(num, end=" ")   # 1 2 3 4 5
+print()
+
+# Generator expression (like list comprehension but lazy)
+gen = (x**2 for x in range(1, 6))  # doesn't compute yet
+print(next(gen))   # 1
+print(next(gen))   # 4
+print(list(gen))   # [9, 16, 25] (remaining)</code></pre>
+
+    <div class="code-label">Python – Scope (LEGB Rule)</div>
+    <pre><code"># LEGB: Local -> Enclosing -> Global -> Built-in
+x = "global"
+
+def outer():
+    x = "enclosing"
+
+    def inner():
+        x = "local"
+        print(x)    # local (Local scope wins)
+
+    inner()
+    print(x)        # enclosing
+
+outer()
+print(x)            # global
+
+# global keyword — modify a global variable from inside a function
+count = 0
+def increment():
+    global count
+    count += 1
+
+increment()
+increment()
+print(count)  # 2
+
+# nonlocal keyword — modify enclosing scope variable
+def make_counter():
+    count = 0
+    def counter():
+        nonlocal count
+        count += 1
+        return count
+    return counter
+
+c = make_counter()
+print(c())  # 1
+print(c())  # 2
+print(c())  # 3</code></pre>
+  </div>
+
+  <!-- Chapter 7 -->
+  <div class="chapter-section" id="ch7">
+    <h2>Chapter 7: Lists</h2>
+
+    <p>Lists are ordered, mutable, and allow duplicate elements. They are the most versatile data structure in Python.</p>
+
+    <div class="code-label">Python – Creating and Accessing Lists</div>
+    <pre><code># Creating lists
+numbers = [1, 2, 3, 4, 5]
+mixed = [1, "hello", 3.14, True, None]
+empty = []
+matrix = [[1,2,3], [4,5,6], [7,8,9]]
+
+# Accessing elements
+print(numbers[0])       # 1    (first)
+print(numbers[-1])      # 5    (last)
+print(numbers[1:4])     # [2, 3, 4]
+print(numbers[::-1])    # [5, 4, 3, 2, 1] (reversed copy)
+print(matrix[1][2])     # 6    (row 1, col 2)
+
+# Modifying a list
+lst = [10, 20, 30, 40, 50]
+lst[2] = 99             # [10, 20, 99, 40, 50]
+lst[1:3] = [200, 300]   # [10, 200, 300, 40, 50]
+lst[:2] = []            # [300, 40, 50] (delete slice)</code></pre>
+
+    <div class="code-label">Python – List Methods</div>
+    <pre><code>nums = [3, 1, 4, 1, 5, 9, 2, 6, 5]
+
+# Adding elements
+nums.append(8)             # add to end:   [3,1,4,1,5,9,2,6,5,8]
+nums.insert(0, 0)          # insert at 0:  [0,3,1,4,1,5,9,2,6,5,8]
+nums.extend([10, 11])      # add list:     [...,8,10,11]
+
+# Removing elements
+nums.remove(1)             # remove FIRST occurrence of 1
+popped = nums.pop()        # remove and return last element
+popped_at = nums.pop(0)    # remove and return element at index 0
+
+# Searching
+print(nums.index(5))       # index of first 5
+print(nums.count(5))       # how many times 5 appears
+
+# Sorting (in-place)
+nums.sort()                # ascending
+nums.sort(reverse=True)    # descending
+nums.sort(key=lambda x: -x)  # custom key
+
+# sorted() returns a NEW sorted list (original unchanged)
+original = [5, 3, 8, 1, 4]
+sorted_lst = sorted(original)        # [1,3,4,5,8]
+sorted_rev = sorted(original, reverse=True)  # [8,5,4,3,1]
+print(original)  # still [5, 3, 8, 1, 4]
+
+# Other operations
+nums.reverse()             # reverse in-place
+print(len(nums))           # length
+print(min(nums), max(nums), sum(nums))
+nums.clear()               # remove all elements
+print(nums)                # []
+
+# Copying (important!)
+a = [1, 2, 3]
+b = a            # b is same object! (not a copy)
+c = a.copy()     # shallow copy
+d = a[:]         # also shallow copy
+e = list(a)      # also shallow copy
+
+b.append(4)
+print(a)   # [1,2,3,4] — a was modified!
+print(c)   # [1,2,3]   — c is independent</code></pre>
+
+    <div class="code-label">Python – List Comprehension</div>
+    <pre><code"># Basic list comprehension
+squares = [x**2 for x in range(1, 11)]
+print(squares)  # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+# With condition (filter)
+even_squares = [x**2 for x in range(1, 11) if x % 2 == 0]
+print(even_squares)  # [4, 16, 36, 64, 100]
+
+# Nested list comprehension
+matrix = [[i*j for j in range(1, 5)] for i in range(1, 5)]
+for row in matrix:
+    print(row)
+# [1, 2, 3, 4]
+# [2, 4, 6, 8]
+# [3, 6, 9, 12]
+# [4, 8, 12, 16]
+
+# Flatten a 2D list
+flat = [x for row in matrix for x in row]
+
+# String manipulation with comprehension
+words = ["hello", "world", "python"]
+upper_words = [w.upper() for w in words]  # ['HELLO', 'WORLD', 'PYTHON']
+long_words = [w for w in words if len(w) > 4]  # ['hello', 'world', 'python']
+
+# Using zip to pair lists
+names = ["Alice", "Bob", "Carol"]
+scores = [85, 92, 78]
+paired = list(zip(names, scores))
+print(paired)   # [('Alice', 85), ('Bob', 92), ('Carol', 78)]
+
+# Unzip using zip(*...)
+names2, scores2 = zip(*paired)
+print(list(names2))   # ['Alice', 'Bob', 'Carol']
+print(list(scores2))  # [85, 92, 78]
+
+# map and filter (functional style)
+doubled = list(map(lambda x: x*2, [1,2,3,4,5]))  # [2,4,6,8,10]
+evens = list(filter(lambda x: x%2==0, range(1,11)))  # [2,4,6,8,10]
+
+# reduce (from functools)
+from functools import reduce
+product = reduce(lambda x, y: x*y, [1,2,3,4,5])  # 120</code></pre>
+  </div>
+
+  <!-- Chapter 8 -->
+  <div class="chapter-section" id="ch8">
+    <h2>Chapter 8: Dictionaries and Sets</h2>
+
+    <h3>Dictionaries</h3>
+    <div class="code-label">Python – Dictionary Operations</div>
+    <pre><code># Creating a dictionary
+student = {
+    "name": "Pooja",
+    "age": 20,
+    "gpa": 8.7,
+    "marks": {"math": 95, "science": 88, "english": 92}
+}
+
+# Accessing values
+print(student["name"])              # Pooja  (KeyError if missing)
+print(student.get("name"))         # Pooja  (None if missing)
+print(student.get("phone", "N/A")) # N/A    (custom default)
+print(student["marks"]["math"])    # 95     (nested access)
+
+# Modifying
+student["age"] = 21                # update existing
+student["city"] = "Pune"           # add new key
+del student["age"]                 # delete key
+removed = student.pop("city")      # delete and return value
+last = student.popitem()           # remove and return last (k,v) pair
+
+# Dictionary methods
+d = {"a": 1, "b": 2, "c": 3}
+print(list(d.keys()))    # ['a', 'b', 'c']
+print(list(d.values()))  # [1, 2, 3]
+print(list(d.items()))   # [('a',1), ('b',2), ('c',3)]
+
+# Iterating
+for key in d:
+    print(f"{key}: {d[key]}")
+
+for key, value in d.items():
+    print(f"{key} -> {value}")
+
+# Merging dicts (Python 3.9+)
+d1 = {"x": 1}
+d2 = {"y": 2}
+merged = d1 | d2        # {'x': 1, 'y': 2}  (new dict)
+d1 |= d2                # d1 updated in-place
+
+# Older merge:
+merged = {**d1, **d2}
+
+# Check membership
+print("a" in d)          # True  (checks keys)
+print(1 in d.values())   # True  (checks values)</code></pre>
+
+    <div class="code-label">Python – Dictionary Comprehension</div>
+    <pre><code"># Dictionary comprehension
+squares = {x: x**2 for x in range(1, 6)}
+print(squares)  # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+word_lengths = {word: len(word) for word in ["python", "java", "cpp", "ruby"]}
+print(word_lengths)  # {'python': 6, 'java': 4, 'cpp': 3, 'ruby': 4}
+
+# Invert a dict (swap keys and values)
+original = {"a": 1, "b": 2, "c": 3}
+inverted = {v: k for k, v in original.items()}
+print(inverted)  # {1: 'a', 2: 'b', 3: 'c'}
+
+# Filter a dict
+scores = {"Alice": 85, "Bob": 72, "Carol": 91, "David": 68}
+passed = {k: v for k, v in scores.items() if v >= 75}
+print(passed)  # {'Alice': 85, 'Carol': 91}
+
+# defaultdict for auto-initializing missing keys
+from collections import defaultdict
+word_count = defaultdict(int)   # default value = 0
+for word in "the quick brown fox the fox".split():
+    word_count[word] += 1
+print(dict(word_count))
+# {'the': 2, 'quick': 1, 'brown': 1, 'fox': 2}
+
+# OrderedDict (insertion order is preserved in Python 3.7+ dicts anyway)
+# Counter — count occurrences
+from collections import Counter
+c = Counter("abracadabra")
+print(c)                      # Counter({'a': 5, 'b': 2, 'r': 2, 'c': 1, 'd': 1})
+print(c.most_common(3))       # [('a', 5), ('b', 2), ('r', 2)]</code></pre>
+
+    <h3>Sets</h3>
+    <div class="code-label">Python – Set Operations</div>
+    <pre><code># Sets: unordered, no duplicates
+primes = {2, 3, 5, 7, 11, 13}
+odds = {1, 3, 5, 7, 9, 11}
+empty_set = set()    # NOT {} — that creates an empty dict!
+
+# Set operations
+print(primes | odds)   # union {1,2,3,5,7,9,11,13}
+print(primes & odds)   # intersection {3,5,7,11}
+print(primes - odds)   # difference (in primes but not odds) {2,13}
+print(odds - primes)   # difference (in odds but not primes) {1,9}
+print(primes ^ odds)   # symmetric difference {1,2,9,13}
+
+# Modifying sets
+primes.add(17)
+primes.remove(17)       # raises KeyError if not found
+primes.discard(100)     # safe remove (no error if missing)
+popped = primes.pop()   # remove and return arbitrary element
+
+# Membership test — O(1)! Faster than list
+print(7 in primes)      # True
+print(4 in primes)      # False
+
+# Subset/superset
+a = {1, 2, 3}
+b = {1, 2, 3, 4, 5}
+print(a.issubset(b))    # True   (a <= b)
+print(b.issuperset(a))  # True   (b >= a)
+print(a.isdisjoint({6, 7}))  # True (no common elements)
+
+# Remove duplicates from a list using set
+lst_with_dups = [1, 2, 2, 3, 3, 3, 4, 5, 5]
+unique = list(set(lst_with_dups))
+print(sorted(unique))   # [1, 2, 3, 4, 5]
+
+# Frozen set (immutable set, can be dict key)
+fs = frozenset([1, 2, 3])
+print(fs)</code></pre>
+  </div>
+
+  <!-- Chapter 9 -->
+  <div class="chapter-section" id="ch9">
+    <h2>Chapter 9: Object-Oriented Programming (OOP)</h2>
+
+    <p>OOP organizes code around objects that have data (attributes) and behavior (methods). Python fully supports OOP with classes, inheritance, encapsulation, and polymorphism.</p>
+
+    <div class="code-label">Python – Class and Objects</div>
+    <pre><code>class BankAccount:
+    bank_name = "StudyBank"   # class variable (shared by all instances)
+
+    def __init__(self, owner, balance=0):
+        self.owner = owner           # instance variable
+        self.__balance = balance     # private (name mangling: _BankAccount__balance)
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            print(f"Deposited Rs.{amount}. Balance: Rs.{self.__balance}")
+        else:
+            print("Invalid deposit amount")
+
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+            print(f"Withdrawn Rs.{amount}. Balance: Rs.{self.__balance}")
+        else:
+            print("Insufficient funds")
+
+    def get_balance(self):
+        return self.__balance
+
+    # Dunder (magic) methods
+    def __str__(self):
+        """Human-readable string — used by print()"""
+        return f"BankAccount({self.owner}, Rs.{self.__balance})"
+
+    def __repr__(self):
+        """Developer-friendly string — used in REPL"""
+        return f"BankAccount(owner='{self.owner}', balance={self.__balance})"
+
+    def __eq__(self, other):
+        return self.owner == other.owner and self.__balance == other.__balance
+
+    @classmethod
+    def create_zero(cls, owner):
+        """Factory method — alternative constructor."""
+        return cls(owner, 0)
+
+    @staticmethod
+    def is_valid_amount(amount):
+        """Static method — no access to self or cls."""
+        return isinstance(amount, (int, float)) and amount > 0
+
+# Using the class
+acc1 = BankAccount("Amit", 5000)
+acc2 = BankAccount.create_zero("Priya")
+print(acc1)                         # BankAccount(Amit, Rs.5000)
+acc1.deposit(2000)
+acc1.withdraw(1000)
+print(acc1.get_balance())           # 6000
+print(BankAccount.bank_name)        # StudyBank
+print(BankAccount.is_valid_amount(100))  # True</code></pre>
+
+    <div class="code-label">Python – Inheritance</div>
+    <pre><code">class SavingsAccount(BankAccount):
+    interest_rate = 0.04    # 4% per period
+
+    def __init__(self, owner, balance=0):
+        super().__init__(owner, balance)   # call parent __init__
+
+    def add_interest(self):
+        interest = self.get_balance() * self.interest_rate
+        self.deposit(interest)
+        print(f"Interest added: Rs.{interest:.2f}")
+
+    def withdraw(self, amount):
+        """Override: maintain minimum balance of Rs.1000"""
+        if self.get_balance() - amount < 1000:
+            print("Cannot withdraw: minimum balance Rs.1000 required")
+        else:
+            super().withdraw(amount)   # call parent withdraw
+
+# Multiple inheritance
+class Timestamped:
+    def __init__(self):
+        from datetime import datetime
+        self.created_at = datetime.now().strftime("%Y-%m-%d")
+
+class AuditedSavings(SavingsAccount, Timestamped):
+    def __init__(self, owner, balance=0):
+        SavingsAccount.__init__(self, owner, balance)
+        Timestamped.__init__(self)
+
+    def info(self):
+        print(f"Account: {self.owner}, Created: {self.created_at}")
+
+# Usage
+savings = SavingsAccount("Rahul", 10000)
+savings.deposit(5000)
+savings.withdraw(14500)   # Can't: would go below 1000
+savings.add_interest()
+print(savings)</code></pre>
+
+    <div class="code-label">Python – Abstract Classes and Polymorphism</div>
+    <pre><code">from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    """Abstract base class — cannot be instantiated directly."""
+
+    @abstractmethod
+    def area(self):
+        pass
+
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+    def describe(self):
+        """Concrete method available to all subclasses."""
+        return f"{self.__class__.__name__}: Area={self.area():.2f}, Perimeter={self.perimeter():.2f}"
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14159 * self.radius ** 2
+
+    def perimeter(self):
+        return 2 * 3.14159 * self.radius
+
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+
+class Triangle(Shape):
+    def __init__(self, a, b, c):
+        self.a, self.b, self.c = a, b, c
+
+    def area(self):
+        s = (self.a + self.b + self.c) / 2   # Heron's formula
+        return (s*(s-self.a)*(s-self.b)*(s-self.c)) ** 0.5
+
+    def perimeter(self):
+        return self.a + self.b + self.c
+
+# Polymorphism — same interface, different behavior
+shapes = [Circle(5), Rectangle(4, 6), Triangle(3, 4, 5)]
+for shape in shapes:
+    print(shape.describe())
+
+# Output:
+# Circle: Area=78.54, Perimeter=31.42
+# Rectangle: Area=24.00, Perimeter=20.00
+# Triangle: Area=6.00, Perimeter=12.00</code></pre>
+  </div>
+
+  <!-- Chapter 10 -->
+  <div class="chapter-section" id="ch10">
+    <h2>Chapter 10: File Handling &amp; Exception Handling</h2>
+
+    <h3>File Operations</h3>
+    <div class="code-label">Python – Reading and Writing Files</div>
+    <pre><code># --- Writing files ---
+with open("students.txt", "w") as f:
+    f.write("Name,Score\n")
+    f.write("Alice,95\n")
+    f.write("Bob,87\n")
+    f.write("Carol,92\n")
+# File is automatically closed after the with block
+
+# --- Reading files ---
+# Read entire file as string
+with open("students.txt", "r") as f:
+    content = f.read()
+    print(content)
+
+# Read line by line (memory-efficient for large files)
+with open("students.txt", "r") as f:
+    for line in f:
+        print(line.strip())
+
+# Read all lines into a list
+with open("students.txt", "r") as f:
+    lines = f.readlines()
+    print(lines[0].strip())   # Name,Score
+
+# --- Append to existing file ---
+with open("students.txt", "a") as f:
+    f.write("David,78\n")
+
+# --- File modes ---
+# "r"  - read (default), error if not found
+# "w"  - write (overwrite if exists, create if not)
+# "a"  - append (create if not exists)
+# "x"  - exclusive creation (error if exists)
+# "rb" - read binary (images, etc.)
+# "wb" - write binary
+
+# --- CSV handling ---
+import csv
+
+with open("data.csv", "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Name", "Age", "Score"])
+    writer.writerows([
+        ["Alice", 20, 95],
+        ["Bob", 21, 87],
+        ["Carol", 19, 92]
+    ])
+
+with open("data.csv", "r") as f:
+    reader = csv.DictReader(f)   # rows as dicts
+    for row in reader:
+        print(f"{row['Name']}: {row['Score']}")
+
+# --- JSON handling ---
+import json
+
+data = {"name": "Priya", "scores": [85, 90, 92], "active": True}
+
+# Write JSON
+with open("data.json", "w") as f:
+    json.dump(data, f, indent=2)
+
+# Read JSON
+with open("data.json", "r") as f:
+    loaded = json.load(f)
+print(loaded["name"])  # Priya</code></pre>
+
+    <h3>Exception Handling</h3>
+    <div class="code-label">Python – try / except / else / finally</div>
+    <pre><code">def divide(a, b):
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero!")
+        return None
+    except TypeError as e:
+        print(f"Type error: {e}")
+        return None
+    except (ValueError, OverflowError) as e:
+        print(f"Value/Overflow error: {e}")
+        return None
+    except Exception as e:
+        print(f"Unexpected error: {type(e).__name__}: {e}")
+        return None
+    else:
+        # Runs ONLY if no exception was raised
+        print(f"Division successful: {result}")
+        return result
+    finally:
+        # ALWAYS runs — good for cleanup
+        print("divide() finished")
+
+print(divide(10, 2))    # Division successful: 5.0 / divide() finished / 5.0
+print(divide(10, 0))    # Error: Cannot divide by zero! / divide() finished / None
+print(divide("x", 2))  # Type error: ... / divide() finished / None
+
+# Handling FileNotFoundError
+try:
+    with open("missing.txt") as f:
+        data = f.read()
+except FileNotFoundError:
+    print("File not found — creating it")
+    with open("missing.txt", "w") as f:
+        f.write("Created by exception handler")
+
+# Re-raising exceptions
+def process(value):
+    try:
+        return int(value)
+    except ValueError:
+        print(f"Warning: '{value}' is not a number")
+        raise   # re-raise the same exception</code></pre>
+
+    <div class="code-label">Python – Custom Exceptions</div>
+    <pre><code">class InsufficientFundsError(Exception):
+    """Raised when a withdrawal exceeds available balance."""
+    def __init__(self, amount, balance):
+        self.amount = amount
+        self.balance = balance
+        message = f"Cannot withdraw Rs.{amount}. Available: Rs.{balance}"
+        super().__init__(message)
+
+class NegativeAmountError(ValueError):
+    """Raised when a negative amount is provided."""
+    pass
+
+def withdraw(balance, amount):
+    if amount < 0:
+        raise NegativeAmountError(f"Amount cannot be negative: {amount}")
+    if amount > balance:
+        raise InsufficientFundsError(amount, balance)
+    return balance - amount
+
+# Using custom exceptions
+try:
+    new_balance = withdraw(5000, 6000)
+except InsufficientFundsError as e:
+    print(f"Error: {e}")
+    print(f"Shortfall: Rs.{e.amount - e.balance}")
+except NegativeAmountError as e:
+    print(f"Invalid input: {e}")
+
+# Context manager (with statement) custom implementation
+class Timer:
+    """Context manager that measures execution time."""
+    import time
+
+    def __enter__(self):
+        import time
+        self.start = time.time()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        import time
+        self.elapsed = time.time() - self.start
+        print(f"Time: {self.elapsed:.4f}s")
+        return False   # don't suppress exceptions
+
+with Timer():
+    total = sum(range(1_000_000))
+    print(f"Sum: {total}")</code></pre>
+  </div>
+
+  <!-- Projects -->
+  <div class="chapter-section" id="projects">
+    <h2>Practice Projects</h2>
+
+    <div class="project-card">
+      <h4>Project 1: Simple Calculator</h4>
+      <p>Build a calculator that supports +, -, *, /, ** and handles division-by-zero errors.</p>
+      <button class="answer-toggle" onclick="toggleAnswer('proj1')">Show Solution</button>
+      <div id="proj1" class="answer-content">
+        <div class="code-label">Python – Calculator</div>
+        <pre><code">def calculator():
+    print("=== Simple Calculator ===")
+    print("Operations: +  -  *  /  //  **  %")
+
+    while True:
+        try:
+            a = float(input("Enter first number (or 'q' to quit): "))
+        except ValueError:
+            print("Goodbye!")
+            break
+
+        op = input("Enter operator: ").strip()
+
+        try:
+            b = float(input("Enter second number: "))
+        except ValueError:
+            print("Invalid number")
+            continue
+
+        try:
+            if op == "+":   result = a + b
+            elif op == "-": result = a - b
+            elif op == "*": result = a * b
+            elif op == "/": result = a / b
+            elif op == "//": result = a // b
+            elif op == "**": result = a ** b
+            elif op == "%":  result = a % b
+            else:
+                print(f"Unknown operator: {op}")
+                continue
+
+            print(f"Result: {a} {op} {b} = {result}")
+
+        except ZeroDivisionError:
+            print("Error: Division by zero!")
+
+calculator()</code></pre>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h4>Project 2: Student Grade Manager</h4>
+      <p>Manage student records using lists and dictionaries. Support add, view, update, delete, and average.</p>
+      <button class="answer-toggle" onclick="toggleAnswer('proj2')">Show Solution</button>
+      <div id="proj2" class="answer-content">
+        <div class="code-label">Python – Grade Manager</div>
+        <pre><code">students = {}   # {name: {"scores": [...], "grade": "..."}}
+
+def add_student(name, scores):
+    avg = sum(scores) / len(scores)
+    if avg >= 90: grade = "A"
+    elif avg >= 80: grade = "B"
+    elif avg >= 70: grade = "C"
+    elif avg >= 60: grade = "D"
+    else: grade = "F"
+    students[name] = {"scores": scores, "average": round(avg, 2), "grade": grade}
+    print(f"Added {name}: avg={avg:.2f}, grade={grade}")
+
+def view_all():
+    if not students:
+        print("No students found.")
+        return
+    print(f"\n{'Name':<15} {'Scores':<30} {'Avg':>6} {'Grade':>6}")
+    print("-" * 60)
+    for name, data in students.items():
+        scores_str = str(data["scores"])
+        print(f"{name:<15} {scores_str:<30} {data['average']:>6} {data['grade']:>6}")
+
+def class_average():
+    if not students:
+        return 0
+    total = sum(d["average"] for d in students.values())
+    return total / len(students)
+
+# Demo
+add_student("Alice", [92, 88, 95, 90])
+add_student("Bob",   [75, 68, 82, 79])
+add_student("Carol", [55, 60, 58, 62])
+view_all()
+print(f"\nClass Average: {class_average():.2f}")</code></pre>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h4>Project 3: File-Based To-Do List</h4>
+      <p>A persistent to-do list that saves tasks to a file between sessions.</p>
+      <button class="answer-toggle" onclick="toggleAnswer('proj3')">Show Solution</button>
+      <div id="proj3" class="answer-content">
+        <div class="code-label">Python – To-Do List</div>
+        <pre><code">import json, os
+
+FILE = "todos.json"
+
+def load_todos():
+    if os.path.exists(FILE):
+        with open(FILE) as f:
+            return json.load(f)
+    return []
+
+def save_todos(todos):
+    with open(FILE, "w") as f:
+        json.dump(todos, f, indent=2)
+
+def add_task(todos, text):
+    todos.append({"id": len(todos)+1, "task": text, "done": False})
+    save_todos(todos)
+    print(f"Added: {text}")
+
+def complete_task(todos, task_id):
+    for t in todos:
+        if t["id"] == task_id:
+            t["done"] = True
+            save_todos(todos)
+            print(f"Done: {t['task']}")
+            return
+    print(f"Task {task_id} not found")
+
+def list_tasks(todos):
+    for t in todos:
+        status = "[X]" if t["done"] else "[ ]"
+        print(f"  {status} {t['id']}. {t['task']}")
+
+todos = load_todos()
+add_task(todos, "Learn Python basics")
+add_task(todos, "Complete OOP chapter")
+add_task(todos, "Build a small project")
+complete_task(todos, 1)
+list_tasks(todos)</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exercises -->
+  <div class="chapter-section" id="exercises">
+    <h2>Practice Exercises (20)</h2>
+
+    <div class="exercise-box">
+      <h4>Exercises 1–5: Basics</h4>
+      <ol class="exercise-list">
+        <li>Write a program that takes a number and prints whether it's positive, negative, or zero.</li>
+        <li>Print the multiplication table for a given number (1–10).</li>
+        <li>Find the sum of digits of a given integer (e.g., 1234 → 10).</li>
+        <li>Check if a given string is a palindrome (e.g., "racecar").</li>
+        <li>Count the number of vowels and consonants in a string.</li>
+      </ol>
+    </div>
+
+    <div class="exercise-box">
+      <h4>Exercises 6–10: Functions &amp; Lists</h4>
+      <ol start="6" class="exercise-list">
+        <li>Write a function <code>is_prime(n)</code> that returns True if n is prime.</li>
+        <li>Write a function that returns the nth Fibonacci number using memoization.</li>
+        <li>Given a list of numbers, return a new list with duplicates removed, preserving order.</li>
+        <li>Flatten a nested list: <code>[[1,2],[3,[4,5]],6]</code> → <code>[1,2,3,4,5,6]</code>.</li>
+        <li>Write a function that rotates a list left by k positions.</li>
+      </ol>
+    </div>
+
+    <div class="exercise-box">
+      <h4>Exercises 11–15: Dictionaries &amp; Strings</h4>
+      <ol start="11" class="exercise-list">
+        <li>Count word frequency in a sentence and print the top 3 most common words.</li>
+        <li>Group a list of words by their first letter using a dictionary.</li>
+        <li>Write a Caesar cipher encoder/decoder (shift each letter by n positions).</li>
+        <li>Given a list of student dicts <code>[{"name":..., "score":...}]</code>, sort by score descending.</li>
+        <li>Merge two dictionaries — for duplicate keys, sum the values.</li>
+      </ol>
+    </div>
+
+    <div class="exercise-box">
+      <h4>Exercises 16–20: OOP &amp; File Handling</h4>
+      <ol start="16" class="exercise-list">
+        <li>Create a <code>Stack</code> class with push, pop, peek, is_empty, and size.</li>
+        <li>Create a <code>Library</code> class that manages a collection of books (add, remove, search).</li>
+        <li>Write a program that reads a CSV file of students and prints those with GPA &gt; 8.0.</li>
+        <li>Implement a <code>Matrix</code> class that supports addition and multiplication of two matrices.</li>
+        <li>Write a decorator <code>@timer</code> that measures and prints execution time of any function.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Summary Table -->
+  <div class="chapter-section">
+    <h2>Quick Reference: Python Cheat Sheet</h2>
+    <table>
+      <tr><th>Topic</th><th>Key Syntax / Function</th><th>Example</th></tr>
+      <tr><td>Print</td><td><code>print()</code></td><td><code>print(f"Hi {name}")</code></td></tr>
+      <tr><td>Input</td><td><code>input()</code></td><td><code>name = input("Enter name: ")</code></td></tr>
+      <tr><td>Type check</td><td><code>type(), isinstance()</code></td><td><code>isinstance(x, int)</code></td></tr>
+      <tr><td>List</td><td><code>[], .append(), .pop()</code></td><td><code>[x**2 for x in range(5)]</code></td></tr>
+      <tr><td>Dict</td><td><code>{}, .get(), .items()</code></td><td><code>{k:v for k,v in d.items()}</code></td></tr>
+      <tr><td>Set</td><td><code>set(), |, &amp;, -</code></td><td><code>a | b, a &amp; b</code></td></tr>
+      <tr><td>Function</td><td><code>def, return, lambda</code></td><td><code>f = lambda x: x*2</code></td></tr>
+      <tr><td>Class</td><td><code>class, __init__, self</code></td><td><code>class Dog: ...</code></td></tr>
+      <tr><td>Error handling</td><td><code>try/except/finally</code></td><td><code>except ZeroDivisionError:</code></td></tr>
+      <tr><td>File I/O</td><td><code>open(), with</code></td><td><code>with open("f.txt") as f:</code></td></tr>
+      <tr><td>Comprehension</td><td><code>[expr for x in it if cond]</code></td><td><code>[x for x in lst if x&gt;0]</code></td></tr>
+      <tr><td>Import</td><td><code>import, from...import</code></td><td><code>from math import sqrt</code></td></tr>
+    </table>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2024 StudyHub &mdash; Free Learning Resources for Students</p>
+  <p><a href="../programming.html">Back to Programming</a> &bull; <a href="data-structures-algorithms.html">Next: DSA Tutorial</a> &bull; <a href="sql-tutorial.html">SQL Tutorial</a></p>
+</footer>
+
+<script src="../../js/main.js"></script>
+<script>
+  function toggleAnswer(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('show');
+    const btn = el.previousElementSibling;
+    btn.textContent = el.classList.contains('show') ? 'Hide Solution' : 'Show Solution';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integration Formulas – Complete List with Examples | JEE Class 12 | StudyHub</title>
+  <meta name="description" content="All integration formulas for JEE Main, JEE Advanced and Class 12. Standard integrals, integration by parts, substitution, partial fractions – all with solved examples." />
+  <meta name="keywords" content="integration formulas, JEE integration, class 12 integration, definite integral, integration by parts, substitution method, partial fractions, area under curve" />
+  <link rel="canonical" href="https://studyhub.example.com/pages/math/integration-formulas.html" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .page-hero{background:linear-gradient(135deg,#1e3a5f 0%,#2a5298 100%);color:#fff;padding:60px 24px 40px;text-align:center}
+    .page-hero h1{font-size:2.2rem;margin-bottom:12px;line-height:1.3}
+    .page-hero p{font-size:1.05rem;opacity:.88;max-width:720px;margin:0 auto}
+    .content-wrap{max-width:900px;margin:0 auto;padding:40px 20px 80px}
+    .toc{background:#eaf0fb;border:1px solid #c3d0e8;border-radius:10px;padding:22px 28px;margin-bottom:40px}
+    .toc h2{font-size:1.1rem;color:#1e3a5f;margin-bottom:12px}
+    .toc ol{margin-left:20px;line-height:2}
+    .toc a{color:#2a5298;text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .section{margin-bottom:56px}
+    .section h2{font-size:1.6rem;color:#1e3a5f;border-bottom:3px solid #2a5298;padding-bottom:8px;margin-bottom:24px}
+    .section h3{font-size:1.2rem;color:#2a5298;margin:28px 0 12px}
+    .section h4{font-size:1.05rem;color:#1a1a2e;margin:20px 0 8px}
+    .formula-table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:.95rem}
+    .formula-table th{background:#1e3a5f;color:#fff;padding:10px 14px;text-align:left}
+    .formula-table td{padding:10px 14px;border-bottom:1px solid #dce1ec;vertical-align:top}
+    .formula-table tr:nth-child(even) td{background:#f4f6f9}
+    .formula-table .formula-cell{font-family:'Courier New',monospace;font-size:.93rem;font-weight:600;color:#1e3a5f}
+    .example-box{background:#fff;border-left:4px solid #2a5298;border-radius:0 8px 8px 0;padding:18px 22px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+    .example-box .label{font-size:.78rem;font-weight:700;text-transform:uppercase;color:#2a5298;letter-spacing:.08em;margin-bottom:6px}
+    .example-box .problem{font-weight:600;color:#1a1a2e;margin-bottom:10px;font-size:1.02rem}
+    .example-box .solution{color:#333;line-height:1.8}
+    .example-box .solution .step{display:block;margin:4px 0;padding-left:12px}
+    .highlight{background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:12px 16px;margin:14px 0;font-size:.95rem}
+    .practice-box{background:#f0f8f0;border:1px solid #27ae60;border-radius:8px;padding:18px 22px;margin:20px 0}
+    .practice-box h4{color:#1e8449;margin-bottom:12px}
+    .practice-box ol{margin-left:20px;line-height:2.1}
+    .practice-box .answers{margin-top:12px;font-size:.88rem;color:#555;border-top:1px solid #c3e6cb;padding-top:10px}
+    .rule-box{background:#fef9e7;border:1px solid #f39c12;border-radius:8px;padding:16px 20px;margin:16px 0}
+    .rule-box strong{color:#e67e22}
+    .math{font-family:'Courier New',monospace;font-size:.97rem;background:#f0f0f0;padding:1px 5px;border-radius:3px}
+    .big-formula{display:block;text-align:center;font-family:'Courier New',monospace;font-size:1.1rem;background:#1e3a5f;color:#fff;padding:14px 20px;border-radius:8px;margin:16px 0;letter-spacing:.03em}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">📚 StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>Integration Formulas</h1>
+  <p>Complete reference for JEE Main, JEE Advanced &amp; Class 12 — Standard integrals, substitution, integration by parts, partial fractions, definite integrals, and area under curves. Every formula with worked examples.</p>
+</div>
+
+<div class="content-wrap">
+
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#standard">Standard Integral Formulas (30+ formulas)</a></li>
+      <li><a href="#substitution">Integration by Substitution</a></li>
+      <li><a href="#by-parts">Integration by Parts</a></li>
+      <li><a href="#partial-fractions">Partial Fractions</a></li>
+      <li><a href="#definite">Definite Integrals &amp; Properties</a></li>
+      <li><a href="#area">Area Under Curves</a></li>
+      <li><a href="#jee-tricks">JEE Integration Tricks</a></li>
+    </ol>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="standard">
+    <h2>1. Standard Integral Formulas</h2>
+    <p>These are the building blocks of integration. Every other technique reduces a complicated integral to one of these standard forms. Memorise all of them.</p>
+
+    <h3>1.1 Power, Exponential &amp; Logarithmic</h3>
+    <table class="formula-table">
+      <thead><tr><th>#</th><th>Integrand f(x)</th><th>Integral ∫f(x) dx</th><th>Condition / Note</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td class="formula-cell">xⁿ</td><td class="formula-cell">xⁿ⁺¹/(n+1) + C</td><td>n ≠ −1</td></tr>
+        <tr><td>2</td><td class="formula-cell">1/x (= x⁻¹)</td><td class="formula-cell">ln|x| + C</td><td>x ≠ 0; the n = −1 special case</td></tr>
+        <tr><td>3</td><td class="formula-cell">eˣ</td><td class="formula-cell">eˣ + C</td><td>Unique: integral = itself</td></tr>
+        <tr><td>4</td><td class="formula-cell">aˣ</td><td class="formula-cell">aˣ / ln a + C</td><td>a &gt; 0, a ≠ 1</td></tr>
+        <tr><td>5</td><td class="formula-cell">ln x</td><td class="formula-cell">x ln x − x + C</td><td>Use IBP: u = ln x, dv = dx</td></tr>
+        <tr><td>6</td><td class="formula-cell">1/ln x</td><td class="formula-cell">li(x) + C</td><td>Logarithmic integral, non-elementary in closed form for general use</td></tr>
+      </tbody>
+    </table>
+
+    <h3>1.2 Trigonometric Functions</h3>
+    <table class="formula-table">
+      <thead><tr><th>#</th><th>Integrand</th><th>Integral</th><th>Tip</th></tr></thead>
+      <tbody>
+        <tr><td>7</td><td class="formula-cell">sin x</td><td class="formula-cell">−cos x + C</td><td>Sign flips on integration</td></tr>
+        <tr><td>8</td><td class="formula-cell">cos x</td><td class="formula-cell">sin x + C</td><td>Sign stays on integration</td></tr>
+        <tr><td>9</td><td class="formula-cell">tan x</td><td class="formula-cell">−ln|cos x| + C = ln|sec x| + C</td><td>Both forms equivalent</td></tr>
+        <tr><td>10</td><td class="formula-cell">cot x</td><td class="formula-cell">ln|sin x| + C</td><td></td></tr>
+        <tr><td>11</td><td class="formula-cell">sec x</td><td class="formula-cell">ln|sec x + tan x| + C</td><td>Multiply by (sec x + tan x)/(sec x + tan x)</td></tr>
+        <tr><td>12</td><td class="formula-cell">csc x</td><td class="formula-cell">ln|csc x − cot x| + C</td><td></td></tr>
+        <tr><td>13</td><td class="formula-cell">sec²x</td><td class="formula-cell">tan x + C</td><td>Derivative of tan x = sec²x</td></tr>
+        <tr><td>14</td><td class="formula-cell">csc²x</td><td class="formula-cell">−cot x + C</td><td></td></tr>
+        <tr><td>15</td><td class="formula-cell">sec x · tan x</td><td class="formula-cell">sec x + C</td><td>Derivative of sec x</td></tr>
+        <tr><td>16</td><td class="formula-cell">csc x · cot x</td><td class="formula-cell">−csc x + C</td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h3>1.3 Inverse Trigonometric Forms</h3>
+    <table class="formula-table">
+      <thead><tr><th>#</th><th>Integrand</th><th>Integral</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>17</td><td class="formula-cell">1/√(1−x²)</td><td class="formula-cell">sin⁻¹ x + C</td><td>|x| &lt; 1</td></tr>
+        <tr><td>18</td><td class="formula-cell">−1/√(1−x²)</td><td class="formula-cell">cos⁻¹ x + C</td><td></td></tr>
+        <tr><td>19</td><td class="formula-cell">1/(1+x²)</td><td class="formula-cell">tan⁻¹ x + C</td><td>Always valid</td></tr>
+        <tr><td>20</td><td class="formula-cell">1/(x√(x²−1))</td><td class="formula-cell">sec⁻¹|x| + C</td><td>|x| &gt; 1</td></tr>
+      </tbody>
+    </table>
+
+    <h3>1.4 Standard Rational/Radical Forms</h3>
+    <table class="formula-table">
+      <thead><tr><th>#</th><th>Integrand</th><th>Integral</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>21</td><td class="formula-cell">1/√(x²+a²)</td><td class="formula-cell">ln|x + √(x²+a²)| + C</td><td>= sinh⁻¹(x/a) + C</td></tr>
+        <tr><td>22</td><td class="formula-cell">1/√(x²−a²)</td><td class="formula-cell">ln|x + √(x²−a²)| + C</td><td>= cosh⁻¹(x/a) + C, |x|&gt;a</td></tr>
+        <tr><td>23</td><td class="formula-cell">1/√(a²−x²)</td><td class="formula-cell">sin⁻¹(x/a) + C</td><td>|x| &lt; a</td></tr>
+        <tr><td>24</td><td class="formula-cell">√(a²−x²)</td><td class="formula-cell">(x/2)√(a²−x²) + (a²/2)sin⁻¹(x/a) + C</td><td>Important for area of circle/ellipse</td></tr>
+        <tr><td>25</td><td class="formula-cell">1/(x²−a²)</td><td class="formula-cell">(1/2a) ln|(x−a)/(x+a)| + C</td><td>x &gt; a &gt; 0</td></tr>
+        <tr><td>26</td><td class="formula-cell">1/(a²−x²)</td><td class="formula-cell">(1/2a) ln|(a+x)/(a−x)| + C</td><td>|x| &lt; a</td></tr>
+        <tr><td>27</td><td class="formula-cell">1/(x²+a²)</td><td class="formula-cell">(1/a) tan⁻¹(x/a) + C</td><td></td></tr>
+        <tr><td>28</td><td class="formula-cell">√(x²+a²)</td><td class="formula-cell">(x/2)√(x²+a²) + (a²/2)ln|x+√(x²+a²)| + C</td><td></td></tr>
+        <tr><td>29</td><td class="formula-cell">√(x²−a²)</td><td class="formula-cell">(x/2)√(x²−a²) − (a²/2)ln|x+√(x²−a²)| + C</td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h3>1.5 Special Formula (JEE Favourite)</h3>
+    <div class="highlight">
+      <strong>Formula 30 — eˣ Trick:</strong><br>
+      <span class="math">∫ eˣ [f(x) + f′(x)] dx = eˣ f(x) + C</span><br><br>
+      This is proved by differentiating the RHS: d/dx [eˣ f(x)] = eˣ f(x) + eˣ f′(x) = eˣ[f(x) + f′(x)]. ✓<br><br>
+      <strong>Example:</strong> ∫ eˣ (sin x + cos x) dx = eˣ sin x + C &nbsp;(here f(x) = sin x, f′(x) = cos x)
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="substitution">
+    <h2>2. Integration by Substitution</h2>
+    <p>When an integral contains a composite function, substitute <span class="math">u = g(x)</span> so that <span class="math">du = g′(x)dx</span>. The integral becomes one of the standard forms in terms of u.</p>
+
+    <div class="rule-box">
+      <strong>Method:</strong> If the integrand has the pattern f(g(x)) · g′(x), set u = g(x), du = g′(x)dx, then ∫f(g(x))g′(x)dx = ∫f(u)du — solve in u, then back-substitute.
+    </div>
+
+    <h3>Solved Examples</h3>
+
+    <div class="example-box">
+      <div class="label">Example 1</div>
+      <div class="problem">Find ∫ sin(3x + 2) dx</div>
+      <div class="solution">
+        <span class="step"><strong>Step 1:</strong> Let u = 3x + 2 → du/dx = 3 → dx = du/3</span>
+        <span class="step"><strong>Step 2:</strong> ∫ sin(u) · (du/3) = (1/3) ∫ sin u du</span>
+        <span class="step"><strong>Step 3:</strong> = (1/3)(−cos u) + C</span>
+        <span class="step"><strong>Step 4:</strong> Back-substitute: = −(1/3) cos(3x + 2) + C</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2</div>
+      <div class="problem">Find ∫ x / (x² + 1) dx</div>
+      <div class="solution">
+        <span class="step"><strong>Step 1:</strong> Let u = x² + 1 → du = 2x dx → x dx = du/2</span>
+        <span class="step"><strong>Step 2:</strong> ∫ (1/u) · (du/2) = (1/2) ∫ du/u</span>
+        <span class="step"><strong>Step 3:</strong> = (1/2) ln|u| + C</span>
+        <span class="step"><strong>Step 4:</strong> = (1/2) ln(x² + 1) + C &nbsp;&nbsp;[x²+1 > 0 so |x²+1| = x²+1]</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3</div>
+      <div class="problem">Find ∫ √(1 + cos 2x) dx</div>
+      <div class="solution">
+        <span class="step"><strong>Step 1:</strong> Use identity: 1 + cos 2x = 2cos²x</span>
+        <span class="step"><strong>Step 2:</strong> √(1 + cos 2x) = √(2cos²x) = √2 · |cos x|</span>
+        <span class="step"><strong>Step 3:</strong> Assuming cos x ≥ 0 (i.e., x ∈ [0, π/2]): = √2 cos x</span>
+        <span class="step"><strong>Step 4:</strong> ∫ √2 cos x dx = √2 sin x + C</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 4 — Classic</div>
+      <div class="problem">Find ∫ tan x dx</div>
+      <div class="solution">
+        <span class="step"><strong>Step 1:</strong> Write tan x = sin x / cos x</span>
+        <span class="step"><strong>Step 2:</strong> Let u = cos x → du = −sin x dx → sin x dx = −du</span>
+        <span class="step"><strong>Step 3:</strong> ∫ sin x / cos x dx = ∫ (−du)/u = −ln|u| + C</span>
+        <span class="step"><strong>Step 4:</strong> = −ln|cos x| + C = ln|sec x| + C</span>
+        <span class="step"><strong>Note:</strong> Both forms are equivalent: −ln|cos x| = ln(1/|cos x|) = ln|sec x|</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 5</div>
+      <div class="problem">Find ∫ x · e^(x²) dx</div>
+      <div class="solution">
+        <span class="step"><strong>Step 1:</strong> Let u = x² → du = 2x dx → x dx = du/2</span>
+        <span class="step"><strong>Step 2:</strong> ∫ eᵘ · (du/2) = (1/2) eᵘ + C</span>
+        <span class="step"><strong>Step 3:</strong> = (1/2) e^(x²) + C</span>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h4>Practice Problems — Substitution</h4>
+      <ol>
+        <li>∫ cos(5x − 3) dx</li>
+        <li>∫ x² / (x³ + 7) dx</li>
+        <li>∫ e^(2x) dx</li>
+        <li>∫ sin x · cos x dx &nbsp; (two methods possible!)</li>
+        <li>∫ (ln x) / x dx</li>
+      </ol>
+      <div class="answers"><strong>Answers:</strong> (1) (1/5)sin(5x−3)+C &nbsp; (2) (1/3)ln|x³+7|+C &nbsp; (3) (1/2)e^(2x)+C &nbsp; (4) (1/2)sin²x+C or −(1/2)cos²x+C &nbsp; (5) (1/2)(ln x)²+C</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="by-parts">
+    <h2>3. Integration by Parts (IBP)</h2>
+
+    <span class="big-formula">∫ u dv = uv − ∫ v du</span>
+
+    <p>Integration by parts is derived from the product rule of differentiation: d(uv)/dx = u(dv/dx) + v(du/dx). Integrating both sides gives the IBP formula.</p>
+
+    <div class="rule-box">
+      <strong>LIATE Rule</strong> — Choose u in this priority order:<br>
+      <strong>L</strong>ogarithmic &gt; <strong>I</strong>nverse Trigonometric &gt; <strong>A</strong>lgebraic (polynomials) &gt; <strong>T</strong>rigonometric &gt; <strong>E</strong>xponential<br><br>
+      The function higher on the list becomes u; the other becomes dv. This choice usually simplifies the remaining integral.
+    </div>
+
+    <h3>Solved Examples</h3>
+
+    <div class="example-box">
+      <div class="label">Example 1 — Algebraic × Exponential</div>
+      <div class="problem">Find ∫ x · eˣ dx</div>
+      <div class="solution">
+        <span class="step"><strong>Choose:</strong> u = x (Algebraic), dv = eˣ dx (Exponential)</span>
+        <span class="step"><strong>Then:</strong> du = dx, v = eˣ</span>
+        <span class="step"><strong>IBP:</strong> ∫ x eˣ dx = x · eˣ − ∫ eˣ · dx</span>
+        <span class="step">= x eˣ − eˣ + C</span>
+        <span class="step"><strong>Answer:</strong> eˣ(x − 1) + C</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Algebraic × Trigonometric</div>
+      <div class="problem">Find ∫ x · cos x dx</div>
+      <div class="solution">
+        <span class="step"><strong>Choose:</strong> u = x, dv = cos x dx</span>
+        <span class="step"><strong>Then:</strong> du = dx, v = sin x</span>
+        <span class="step"><strong>IBP:</strong> ∫ x cos x dx = x sin x − ∫ sin x dx</span>
+        <span class="step">= x sin x − (−cos x) + C</span>
+        <span class="step"><strong>Answer:</strong> x sin x + cos x + C</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3 — Degree 2 Algebraic × Exponential</div>
+      <div class="problem">Find ∫ x² · eˣ dx</div>
+      <div class="solution">
+        <span class="step"><strong>Apply IBP twice.</strong></span>
+        <span class="step"><strong>First pass:</strong> u = x², dv = eˣdx → du = 2x dx, v = eˣ</span>
+        <span class="step">∫ x² eˣ dx = x² eˣ − ∫ 2x eˣ dx = x² eˣ − 2∫ x eˣ dx</span>
+        <span class="step"><strong>Second pass</strong> (from Example 1): ∫ x eˣ dx = eˣ(x−1)</span>
+        <span class="step"><strong>Combine:</strong> x² eˣ − 2·eˣ(x−1) + C</span>
+        <span class="step">= eˣ(x² − 2x + 2) + C</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 4 — Logarithm alone</div>
+      <div class="problem">Find ∫ ln x dx</div>
+      <div class="solution">
+        <span class="step"><strong>Choose:</strong> u = ln x, dv = dx (i.e., dv = 1·dx)</span>
+        <span class="step"><strong>Then:</strong> du = (1/x)dx, v = x</span>
+        <span class="step"><strong>IBP:</strong> ∫ ln x dx = x ln x − ∫ x · (1/x) dx</span>
+        <span class="step">= x ln x − ∫ 1 dx = x ln x − x + C</span>
+        <span class="step"><strong>Answer:</strong> x(ln x − 1) + C</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 5 — Cyclical IBP (JEE Favourite!)</div>
+      <div class="problem">Find ∫ eˣ · sin x dx</div>
+      <div class="solution">
+        <span class="step"><strong>Let I = ∫ eˣ sin x dx</strong></span>
+        <span class="step"><strong>First IBP:</strong> u = sin x, dv = eˣ dx → du = cos x dx, v = eˣ</span>
+        <span class="step">I = eˣ sin x − ∫ eˣ cos x dx ... (i)</span>
+        <span class="step"><strong>Second IBP on ∫ eˣ cos x dx:</strong> u = cos x, dv = eˣ dx → du = −sin x dx, v = eˣ</span>
+        <span class="step">∫ eˣ cos x dx = eˣ cos x − ∫ eˣ(−sin x) dx = eˣ cos x + I ... (ii)</span>
+        <span class="step"><strong>Substitute (ii) into (i):</strong> I = eˣ sin x − (eˣ cos x + I)</span>
+        <span class="step">I = eˣ sin x − eˣ cos x − I</span>
+        <span class="step">2I = eˣ(sin x − cos x)</span>
+        <span class="step"><strong>Answer:</strong> I = (eˣ/2)(sin x − cos x) + C</span>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h4>Practice Problems — Integration by Parts</h4>
+      <ol>
+        <li>∫ x · sin x dx</li>
+        <li>∫ x · ln x dx</li>
+        <li>∫ x² · cos x dx</li>
+        <li>∫ tan⁻¹ x dx</li>
+        <li>∫ eˣ · cos x dx</li>
+      </ol>
+      <div class="answers"><strong>Answers:</strong> (1) −x cos x + sin x + C &nbsp; (2) (x²/2)ln x − x²/4 + C &nbsp; (3) x² sin x + 2x cos x − 2 sin x + C &nbsp; (4) x tan⁻¹ x − (1/2)ln(1+x²) + C &nbsp; (5) (eˣ/2)(sin x + cos x) + C</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="partial-fractions">
+    <h2>4. Partial Fractions</h2>
+    <p>Used when the integrand is a rational function P(x)/Q(x) where degree of P &lt; degree of Q (if not, perform polynomial long division first).</p>
+
+    <h3>Case 1 — Distinct Linear Factors</h3>
+    <p>If Q(x) = (x − a₁)(x − a₂)···(x − aₙ), then:</p>
+    <span class="big-formula">P(x)/Q(x) = A₁/(x−a₁) + A₂/(x−a₂) + ··· + Aₙ/(x−aₙ)</span>
+
+    <h3>Case 2 — Repeated Linear Factor</h3>
+    <p>For a factor (x − a)ⁿ, include all powers:</p>
+    <span class="big-formula">... = A₁/(x−a) + A₂/(x−a)² + ··· + Aₙ/(x−a)ⁿ</span>
+
+    <h3>Case 3 — Irreducible Quadratic Factor</h3>
+    <p>For a factor (x² + bx + c) that doesn't factorise over reals:</p>
+    <span class="big-formula">... = (Ax + B)/(x² + bx + c)</span>
+
+    <div class="example-box">
+      <div class="label">Example 1 — Two distinct linear factors</div>
+      <div class="problem">Find ∫ 1 / ((x+1)(x+2)) dx</div>
+      <div class="solution">
+        <span class="step"><strong>Step 1 — Decompose:</strong> 1/((x+1)(x+2)) = A/(x+1) + B/(x+2)</span>
+        <span class="step"><strong>Step 2 — Multiply both sides by (x+1)(x+2):</strong></span>
+        <span class="step">1 = A(x+2) + B(x+1)</span>
+        <span class="step"><strong>Step 3 — Find A:</strong> Set x = −1: 1 = A(1) → A = 1</span>
+        <span class="step"><strong>Find B:</strong> Set x = −2: 1 = B(−1) → B = −1</span>
+        <span class="step"><strong>Step 4 — Integrate:</strong></span>
+        <span class="step">∫ [1/(x+1) − 1/(x+2)] dx = ln|x+1| − ln|x+2| + C</span>
+        <span class="step"><strong>Answer:</strong> ln|(x+1)/(x+2)| + C</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Linear × Quadratic</div>
+      <div class="problem">Find ∫ (2x+3) / ((x−1)(x²+1)) dx</div>
+      <div class="solution">
+        <span class="step"><strong>Decompose:</strong> (2x+3)/((x−1)(x²+1)) = A/(x−1) + (Bx+C)/(x²+1)</span>
+        <span class="step"><strong>Multiply out:</strong> 2x+3 = A(x²+1) + (Bx+C)(x−1)</span>
+        <span class="step"><strong>x = 1:</strong> 5 = A(2) → A = 5/2</span>
+        <span class="step"><strong>x = 0:</strong> 3 = A − C → C = A − 3 = 5/2 − 3 = −1/2</span>
+        <span class="step"><strong>Compare x² coefficients:</strong> 0 = A + B → B = −5/2</span>
+        <span class="step"><strong>Integrate:</strong></span>
+        <span class="step">∫ (5/2)/(x−1) dx + ∫ (−5x/2 − 1/2)/(x²+1) dx</span>
+        <span class="step">= (5/2)ln|x−1| − (5/4)ln(x²+1) − (1/2)tan⁻¹x + C</span>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h4>Practice Problems — Partial Fractions</h4>
+      <ol>
+        <li>∫ 1/(x²−4) dx</li>
+        <li>∫ (x+1)/((x−1)(x−2)(x−3)) dx</li>
+        <li>∫ 1/(x(x²+4)) dx</li>
+      </ol>
+      <div class="answers"><strong>Answers:</strong> (1) (1/4)ln|(x−2)/(x+2)|+C &nbsp; (2) 0·ln|x−1| − 3ln|x−2| + 2ln|x−3|+C &nbsp;[check by Heaviside: A=0, B=−3, C=2] &nbsp; (3) (1/4)ln|x| − (1/8)ln(x²+4) − (1/4)·(1/2)tan⁻¹(x/2)+C</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="definite">
+    <h2>5. Definite Integrals &amp; Properties</h2>
+    <p>A definite integral ∫ₐᵇ f(x) dx represents the signed area between f(x) and the x-axis from x = a to x = b. Its value is independent of the dummy variable: ∫ₐᵇ f(x)dx = ∫ₐᵇ f(t)dt.</p>
+
+    <h3>7 Essential Properties</h3>
+
+    <table class="formula-table">
+      <thead><tr><th>#</th><th>Property</th><th>Formula</th></tr></thead>
+      <tbody>
+        <tr><td>P1</td><td>Limits reversal</td><td class="formula-cell">∫ₐᵇ f(x)dx = −∫ᵦᵃ f(x)dx</td></tr>
+        <tr><td>P2</td><td>Zero interval</td><td class="formula-cell">∫ₐᵃ f(x)dx = 0</td></tr>
+        <tr><td>P3</td><td>Additive interval</td><td class="formula-cell">∫ₐᵇ f = ∫ₐᶜ f + ∫ᶜᵇ f &nbsp; (any c)</td></tr>
+        <tr><td>P4</td><td>Constant multiple</td><td class="formula-cell">∫ₐᵇ k·f(x)dx = k∫ₐᵇ f(x)dx</td></tr>
+        <tr><td>P5</td><td><strong>King's Rule ★</strong></td><td class="formula-cell">∫₀ᵃ f(x)dx = ∫₀ᵃ f(a−x)dx</td></tr>
+        <tr><td>P6</td><td>Period property</td><td class="formula-cell">∫₀ⁿᵀ f(x)dx = n∫₀ᵀ f(x)dx &nbsp; (T = period)</td></tr>
+        <tr><td>P7</td><td>Even/Odd shortcut</td><td class="formula-cell">f even: ∫₋ₐᵃ f = 2∫₀ᵃ f; &nbsp; f odd: ∫₋ₐᵃ f = 0</td></tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      <strong>King's Rule (P5) — JEE's Most Used Trick:</strong><br>
+      ∫₀ᵃ f(x) dx = ∫₀ᵃ f(a−x) dx<br><br>
+      This is proved by substituting x → (a − x). The new limits stay 0 to a, and the integral value is unchanged.<br><br>
+      <strong>Extended form:</strong> ∫ₐᵇ f(x) dx = ∫ₐᵇ f(a+b−x) dx
+    </div>
+
+    <h3>Solved Examples Using Properties</h3>
+
+    <div class="example-box">
+      <div class="label">Example 1 — King's Rule</div>
+      <div class="problem">Evaluate I = ∫₀^(π/2) sin x / (sin x + cos x) dx</div>
+      <div class="solution">
+        <span class="step"><strong>Let I = ∫₀^(π/2) sin x/(sin x + cos x) dx &nbsp;...(i)</strong></span>
+        <span class="step"><strong>Apply King's Rule</strong> (a = π/2): Replace x with (π/2 − x):</span>
+        <span class="step">I = ∫₀^(π/2) sin(π/2−x) / (sin(π/2−x) + cos(π/2−x)) dx</span>
+        <span class="step">= ∫₀^(π/2) cos x / (cos x + sin x) dx &nbsp;...(ii)</span>
+        <span class="step"><strong>Add (i) and (ii):</strong></span>
+        <span class="step">2I = ∫₀^(π/2) [sin x + cos x] / (sin x + cos x) dx = ∫₀^(π/2) 1 dx = π/2</span>
+        <span class="step"><strong>Answer: I = π/4</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Odd Function</div>
+      <div class="problem">Evaluate ∫₋π^π x³ cos x dx</div>
+      <div class="solution">
+        <span class="step"><strong>Let f(x) = x³ cos x</strong></span>
+        <span class="step">f(−x) = (−x)³ cos(−x) = −x³ cos x = −f(x)</span>
+        <span class="step">∴ f(x) is an <strong>odd</strong> function.</span>
+        <span class="step">By Property P7: ∫₋π^π f(x) dx = <strong>0</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3 — Even Function</div>
+      <div class="problem">Evaluate ∫₋₂² (x⁴ + cos x) dx</div>
+      <div class="solution">
+        <span class="step">x⁴ is even (−x)⁴ = x⁴ ✓; cos(−x) = cos x ✓ → sum is even</span>
+        <span class="step">= 2 ∫₀² (x⁴ + cos x) dx = 2 [x⁵/5 + sin x]₀²</span>
+        <span class="step">= 2 [(32/5 + sin 2) − 0] = 64/5 + 2 sin 2</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 4 — King's Rule with ln</div>
+      <div class="problem">Evaluate I = ∫₀^(π/2) ln(sin x) dx</div>
+      <div class="solution">
+        <span class="step">By King's Rule: I = ∫₀^(π/2) ln(cos x) dx &nbsp;...(ii)</span>
+        <span class="step">2I = ∫₀^(π/2) [ln sin x + ln cos x] dx = ∫₀^(π/2) ln(sin x cos x) dx</span>
+        <span class="step">= ∫₀^(π/2) ln((1/2) sin 2x) dx = ∫₀^(π/2) [ln(1/2) + ln(sin 2x)] dx</span>
+        <span class="step">= −(π/2)ln 2 + ∫₀^(π/2) ln(sin 2x) dx</span>
+        <span class="step">Let 2x = t in last integral → (1/2)∫₀^π ln(sin t) dt = (1/2)·2I = I</span>
+        <span class="step">∴ 2I = −(π/2)ln 2 + I → I = −(π/2)ln 2</span>
+        <span class="step"><strong>Answer: ∫₀^(π/2) ln(sin x) dx = −(π/2) ln 2</strong> (Classic JEE result)</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 5 — Additive property</div>
+      <div class="problem">Evaluate ∫₀³ |x − 1| dx</div>
+      <div class="solution">
+        <span class="step">|x−1| = (1−x) for x ∈ [0,1] and (x−1) for x ∈ [1,3]</span>
+        <span class="step">= ∫₀¹ (1−x) dx + ∫₁³ (x−1) dx</span>
+        <span class="step">= [x − x²/2]₀¹ + [x²/2 − x]₁³</span>
+        <span class="step">= (1 − 1/2) + (9/2 − 3 − 1/2 + 1) = 1/2 + 2 = <strong>5/2</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="area">
+    <h2>6. Area Under Curves</h2>
+
+    <h3>Key Formulas</h3>
+    <table class="formula-table">
+      <thead><tr><th>Situation</th><th>Formula</th></tr></thead>
+      <tbody>
+        <tr><td>Area between curve y = f(x) and x-axis from a to b</td><td class="formula-cell">A = ∫ₐᵇ |f(x)| dx</td></tr>
+        <tr><td>Area between two curves (f above g)</td><td class="formula-cell">A = ∫ₐᵇ [f(x) − g(x)] dx</td></tr>
+        <tr><td>Area between curve x = g(y) and y-axis</td><td class="formula-cell">A = ∫_c^d |g(y)| dy</td></tr>
+        <tr><td>Area of ellipse x²/a² + y²/b² = 1</td><td class="formula-cell">A = πab</td></tr>
+        <tr><td>Area of circle x² + y² = r²</td><td class="formula-cell">A = πr²</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <div class="label">Example 1 — Area between parabola and line</div>
+      <div class="problem">Find the area bounded by y = x² and y = x.</div>
+      <div class="solution">
+        <span class="step"><strong>Step 1 — Find intersection:</strong> x² = x → x(x−1) = 0 → x = 0 or x = 1</span>
+        <span class="step"><strong>Step 2 — Which is above?</strong> At x = 1/2: y = x gives 1/2; y = x² gives 1/4. So y = x is above y = x² on [0,1].</span>
+        <span class="step"><strong>Step 3 — Integrate:</strong></span>
+        <span class="step">A = ∫₀¹ (x − x²) dx = [x²/2 − x³/3]₀¹ = 1/2 − 1/3 = <strong>1/6 sq. units</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 2 — Area of ellipse (first quadrant × 4)</div>
+      <div class="problem">Find the area enclosed by the ellipse x²/9 + y²/4 = 1.</div>
+      <div class="solution">
+        <span class="step">Here a = 3, b = 2. By the formula: A = πab = π·3·2 = <strong>6π sq. units</strong></span>
+        <span class="step"><strong>Derivation:</strong> y = (2/3)√(9−x²). Area in first quadrant:</span>
+        <span class="step">A/4 = ∫₀³ (2/3)√(9−x²) dx = (2/3)·(π·9/4) = 3π/2</span>
+        <span class="step">Total A = 4·(3π/2) = 6π ✓</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example 3 — Area with absolute value</div>
+      <div class="problem">Find the area between y = sin x and the x-axis from 0 to 2π.</div>
+      <div class="solution">
+        <span class="step">sin x ≥ 0 on [0,π] and sin x ≤ 0 on [π,2π]</span>
+        <span class="step">A = ∫₀^π sin x dx + ∫_π^(2π) |sin x| dx</span>
+        <span class="step">= [−cos x]₀^π + [cos x]_π^(2π)</span>
+        <span class="step">= (−cos π + cos 0) + (cos 2π − cos π)</span>
+        <span class="step">= (1 + 1) + (1 + 1) = <strong>4 sq. units</strong></span>
+      </div>
+    </div>
+
+    <div class="practice-box">
+      <h4>Practice Problems — Area Under Curves</h4>
+      <ol>
+        <li>Area bounded by y = x² − 4x and the x-axis (between the roots)</li>
+        <li>Area bounded by y = x³ and y = x (consider both regions)</li>
+        <li>Area between y = eˣ, x-axis, x = 0 and x = 2</li>
+        <li>Area enclosed by parabola y² = 4x and line y = 2x</li>
+        <li>Area bounded by |x| + |y| = 1 (a square rotated 45°)</li>
+      </ol>
+      <div class="answers"><strong>Answers:</strong> (1) 32/3 &nbsp; (2) 1/2 (total) &nbsp; (3) e² − 1 &nbsp; (4) 1/3 &nbsp; (5) 2</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="section" id="jee-tricks">
+    <h2>7. JEE Integration Tricks &amp; Special Techniques</h2>
+
+    <h3>7.1 Trigonometric Substitutions</h3>
+    <table class="formula-table">
+      <thead><tr><th>Expression in integrand</th><th>Substitution</th><th>Identity used</th></tr></thead>
+      <tbody>
+        <tr><td class="formula-cell">√(a²−x²)</td><td class="formula-cell">x = a sinθ</td><td>a²−a²sin²θ = a²cos²θ</td></tr>
+        <tr><td class="formula-cell">√(a²+x²)</td><td class="formula-cell">x = a tanθ</td><td>a²+a²tan²θ = a²sec²θ</td></tr>
+        <tr><td class="formula-cell">√(x²−a²)</td><td class="formula-cell">x = a secθ</td><td>a²sec²θ−a² = a²tan²θ</td></tr>
+      </tbody>
+    </table>
+
+    <h3>7.2 Weierstrass Substitution (t = tan(x/2))</h3>
+    <div class="rule-box">
+      With t = tan(x/2): &nbsp; sin x = 2t/(1+t²), &nbsp; cos x = (1−t²)/(1+t²), &nbsp; dx = 2dt/(1+t²)<br>
+      Use for integrals of form ∫ 1/(a + b sin x) dx or ∫ 1/(a + b cos x) dx
+    </div>
+
+    <div class="example-box">
+      <div class="label">Example — Weierstrass</div>
+      <div class="problem">Find ∫ 1/(1 + sin x) dx</div>
+      <div class="solution">
+        <span class="step">Let t = tan(x/2): sin x = 2t/(1+t²), dx = 2dt/(1+t²)</span>
+        <span class="step">= ∫ 1/(1 + 2t/(1+t²)) · 2dt/(1+t²)</span>
+        <span class="step">= ∫ 2dt/((1+t²) + 2t) = ∫ 2dt/(1+t)²</span>
+        <span class="step">= −2/(1+t) + C = −2/(1 + tan(x/2)) + C</span>
+      </div>
+    </div>
+
+    <h3>7.3 Adding and Subtracting in Numerator</h3>
+    <p>For integrals like ∫ (ax+b)/(px²+qx+r) dx, write the numerator as λ·(derivative of denominator) + μ, then split.</p>
+
+    <div class="example-box">
+      <div class="label">Example</div>
+      <div class="problem">Find ∫ (3x+1)/(x²+2x+5) dx</div>
+      <div class="solution">
+        <span class="step">Derivative of denominator = 2x+2</span>
+        <span class="step">Write 3x+1 = λ(2x+2) + μ → 3x+1 = 2λx + 2λ + μ</span>
+        <span class="step">Comparing: 2λ = 3 → λ = 3/2; 2λ+μ = 1 → μ = 1−3 = −2</span>
+        <span class="step">= (3/2)∫(2x+2)/(x²+2x+5)dx − 2∫1/(x²+2x+5)dx</span>
+        <span class="step">= (3/2)ln(x²+2x+5) − 2∫1/((x+1)²+4)dx</span>
+        <span class="step">= (3/2)ln(x²+2x+5) − (2/2)tan⁻¹((x+1)/2) + C</span>
+        <span class="step">= (3/2)ln(x²+2x+5) − tan⁻¹((x+1)/2) + C</span>
+      </div>
+    </div>
+
+    <h3>7.4 Five JEE-Level Problems with Complete Solutions</h3>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 1</div>
+      <div class="problem">Evaluate ∫₀^(π/2) x/(sin x + cos x) dx</div>
+      <div class="solution">
+        <span class="step">Let I = ∫₀^(π/2) x/(sin x + cos x) dx. By King's Rule replace x with π/2 − x:</span>
+        <span class="step">I = ∫₀^(π/2) (π/2−x)/(cos x + sin x) dx</span>
+        <span class="step">Adding: 2I = (π/2)∫₀^(π/2) 1/(sin x + cos x) dx</span>
+        <span class="step">sin x + cos x = √2 sin(x + π/4), so 1/(sin x+cos x) = (1/√2) · csc(x+π/4)</span>
+        <span class="step">2I = (π/2·√2) [ln|csc(x+π/4) − cot(x+π/4)|]₀^(π/2)</span>
+        <span class="step">After evaluation: I = (π/(4√2)) ln(√2 + 1)</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 2</div>
+      <div class="problem">Evaluate ∫₀¹ ln(1+x)/(1+x²) dx</div>
+      <div class="solution">
+        <span class="step">Let I(a) = ∫₀¹ ln(1+ax)/(1+x²) dx (Leibniz differentiation under integral sign)</span>
+        <span class="step">I'(a) = ∫₀¹ x/((1+ax)(1+x²)) dx</span>
+        <span class="step">Partial fractions + integration give I'(a) = π ln(1+a)/(4(1+a)) + ...</span>
+        <span class="step">At a=1: I = (π/8)ln 2 &nbsp;(classic result)</span>
+        <span class="step"><strong>Answer: I = (π ln 2)/8</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 3</div>
+      <div class="problem">∫ sec³x dx (IBP + recursion)</div>
+      <div class="solution">
+        <span class="step">Let I = ∫ sec³x dx = ∫ sec x · sec²x dx</span>
+        <span class="step">IBP: u = sec x, dv = sec²x dx → du = sec x tan x dx, v = tan x</span>
+        <span class="step">I = sec x tan x − ∫ sec x tan²x dx = sec x tan x − ∫ sec x(sec²x − 1) dx</span>
+        <span class="step">= sec x tan x − ∫ sec³x dx + ∫ sec x dx</span>
+        <span class="step">= sec x tan x − I + ln|sec x + tan x|</span>
+        <span class="step">2I = sec x tan x + ln|sec x + tan x|</span>
+        <span class="step"><strong>Answer: I = (1/2)[sec x tan x + ln|sec x + tan x|] + C</strong></span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 4</div>
+      <div class="problem">Evaluate ∫₀^∞ e^(−x²) dx (Gaussian integral — result only, standard)</div>
+      <div class="solution">
+        <span class="step">This is the famous Gaussian integral. Its value = √π / 2.</span>
+        <span class="step">Proved using double integration and polar coordinates: if I = ∫₀^∞ e^(−x²)dx, then I² = ∫∫ e^(−x²−y²)dxdy = (π/4), so I = √π/2.</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="label">JEE Problem 5</div>
+      <div class="problem">Find ∫ √(tan x) dx</div>
+      <div class="solution">
+        <span class="step">Let t = √(tan x) → t² = tan x → 2t dt = sec²x dx → dx = 2t dt/(1+t⁴)</span>
+        <span class="step">∫ t · 2t/(1+t⁴) dt = 2∫ t²/(t⁴+1) dt</span>
+        <span class="step">Divide numerator &amp; denominator by t²: 2∫ 1/(t²+1/t²) dt</span>
+        <span class="step">Write t²+1/t² = (t−1/t)²+2 or (t+1/t)²−2 and split:</span>
+        <span class="step">= ∫(1+1/t²)/((t−1/t)²+2) dt + ∫(1−1/t²)/((t+1/t)²−2) dt</span>
+        <span class="step">= (1/√2)tan⁻¹((t−1/t)/√2) + (1/(2√2))ln|(t+1/t−√2)/(t+1/t+√2)| + C</span>
+        <span class="step">Substituting t = √(tan x) back gives the final answer.</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

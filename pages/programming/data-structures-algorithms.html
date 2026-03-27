@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Structures &amp; Algorithms – Complete Tutorial with Code | LeetCode, GATE, Interviews | StudyHub</title>
+  <meta name="description" content="Complete DSA tutorial: arrays, linked lists, stacks, queues, trees, heaps, graphs, sorting, dynamic programming. Python and Java code examples for GATE, interviews and competitive programming." />
+  <meta name="keywords" content="data structures algorithms tutorial, DSA Python Java, LeetCode preparation, GATE DSA, binary tree, sorting algorithms, dynamic programming, linked list, graph traversal" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <style>
+    .dsa-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #065f46 100%);
+      color: #fff;
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+    .dsa-hero h1 { font-size: 2.1rem; margin-bottom: 12px; }
+    .dsa-hero p { font-size: 1.05rem; max-width: 720px; margin: 0 auto 20px; opacity: 0.9; }
+    .hero-badges span {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 4px 14px; border-radius: 20px;
+      font-size: 0.82rem; margin: 4px;
+    }
+    .content-wrapper { max-width: 980px; margin: 0 auto; padding: 0 20px 60px; }
+    .toc-box {
+      background: #f0fdf4; border: 1px solid #86efac;
+      border-radius: 10px; padding: 22px 26px; margin: 36px 0;
+    }
+    .toc-box h2 { font-size: 1.1rem; margin: 0 0 12px; color: #166534; }
+    .toc-box ol { margin: 0; padding-left: 20px; }
+    .toc-box li { margin: 6px 0; }
+    .toc-box a { color: #166534; text-decoration: none; }
+    .toc-box a:hover { text-decoration: underline; }
+    .section { margin-top: 52px; }
+    .section h2 {
+      font-size: 1.65rem; color: #0f172a;
+      border-left: 5px solid #059669;
+      padding-left: 14px; margin-bottom: 18px;
+    }
+    .section h3 { font-size: 1.2rem; color: #1e293b; margin: 28px 0 10px; }
+    .section h4 { font-size: 1rem; color: #64748b; margin: 20px 0 8px; font-weight: 600; }
+    .section p { line-height: 1.75; color: #334155; margin: 10px 0; }
+    pre {
+      background: #0f172a; color: #e2e8f0;
+      border-radius: 8px; padding: 20px 22px;
+      overflow-x: auto; font-size: 0.87rem;
+      line-height: 1.65; margin: 12px 0 20px;
+      border: 1px solid #1e293b;
+    }
+    pre code { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; }
+    .code-label {
+      display: inline-block; background: #059669; color: #fff;
+      font-size: 0.7rem; font-weight: 700; padding: 2px 10px;
+      border-radius: 4px 4px 0 0; margin-bottom: -4px;
+      position: relative; z-index: 1; letter-spacing: 0.05em;
+    }
+    .java-label {
+      display: inline-block; background: #dc2626; color: #fff;
+      font-size: 0.7rem; font-weight: 700; padding: 2px 10px;
+      border-radius: 4px 4px 0 0; margin-bottom: -4px;
+      position: relative; z-index: 1; letter-spacing: 0.05em;
+    }
+    .info-box {
+      background: #ecfdf5; border-left: 4px solid #059669;
+      border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0;
+    }
+    .info-box strong { color: #065f46; }
+    .tip-box {
+      background: #eff6ff; border-left: 4px solid #3b82f6;
+      border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0;
+    }
+    .tip-box strong { color: #1d4ed8; }
+    .warn-box {
+      background: #fefce8; border-left: 4px solid #ca8a04;
+      border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+    th { background: #059669; color: #fff; padding: 10px 14px; text-align: left; }
+    td { padding: 9px 14px; border-bottom: 1px solid #e2e8f0; }
+    tr:nth-child(even) td { background: #f8fafc; }
+    tr:hover td { background: #ecfdf5; }
+    .complexity-badge {
+      display: inline-block; padding: 2px 8px;
+      border-radius: 4px; font-size: 0.78rem; font-weight: 700;
+    }
+    .c-best { background: #d1fae5; color: #065f46; }
+    .c-good { background: #dbeafe; color: #1e40af; }
+    .c-ok   { background: #fef9c3; color: #854d0e; }
+    .c-bad  { background: #fee2e2; color: #991b1b; }
+    .interview-card {
+      background: #fff; border: 1px solid #e2e8f0;
+      border-radius: 10px; padding: 18px 22px; margin: 14px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .interview-card h4 { margin: 0 0 8px; color: #0f172a; font-size: 1rem; }
+    .interview-card .difficulty {
+      display: inline-block; font-size: 0.75rem; font-weight: 700;
+      padding: 2px 8px; border-radius: 4px; margin-bottom: 8px;
+    }
+    .diff-easy { background: #d1fae5; color: #065f46; }
+    .diff-medium { background: #fef9c3; color: #92400e; }
+    .diff-hard { background: #fee2e2; color: #991b1b; }
+    .answer-toggle {
+      background: #059669; color: #fff; border: none;
+      border-radius: 6px; padding: 6px 14px; cursor: pointer;
+      font-size: 0.82rem; margin-top: 8px;
+    }
+    .answer-toggle:hover { background: #047857; }
+    .answer-content { display: none; margin-top: 12px; }
+    .answer-content.show { display: block; }
+    .breadcrumb { font-size: 0.85rem; color: #94a3b8; margin: 20px 0 0; }
+    .breadcrumb a { color: #059669; text-decoration: none; }
+    footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 28px 20px; font-size: 0.87rem; margin-top: 60px; }
+    footer a { color: #6ee7b7; text-decoration: none; }
+    .platform-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0; }
+    .platform-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; }
+    .platform-card h4 { margin: 0 0 6px; color: #0f172a; font-size: 0.95rem; }
+    .platform-card p { font-size: 0.85rem; color: #64748b; margin: 0; }
+    .checklist { padding-left: 0; list-style: none; }
+    .checklist li { padding: 5px 0 5px 26px; position: relative; color: #334155; font-size: 0.92rem; }
+    .checklist li::before { content: "✓"; position: absolute; left: 4px; color: #059669; font-weight: 700; }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../../index.html" class="nav-brand">📚 StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../math.html">Mathematics</a></li>
+      <li><a href="../physics.html">Physics</a></li>
+      <li><a href="../chemistry.html">Chemistry</a></li>
+      <li><a href="../biology.html">Biology</a></li>
+      <li><a href="../english.html">English</a></li>
+      <li><a href="../programming.html">Programming</a></li>
+      <li><a href="../competitive-exams.html">Exams</a></li>
+      <li><a href="../career.html">Career</a></li>
+      <li><a href="../gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="dsa-hero">
+  <h1>Data Structures &amp; Algorithms</h1>
+  <p>Complete Tutorial with Python &amp; Java Code — Arrays, Linked Lists, Trees, Graphs, Sorting, Dynamic Programming — for GATE, LeetCode, and Interviews</p>
+  <div class="hero-badges">
+    <span>Python + Java</span>
+    <span>Big-O Analysis</span>
+    <span>GATE Prep</span>
+    <span>LeetCode Patterns</span>
+    <span>20 Interview Q&amp;A</span>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="breadcrumb">
+    <a href="../../index.html">Home</a> &rsaquo; <a href="../programming.html">Programming</a> &rsaquo; Data Structures &amp; Algorithms
+  </div>
+
+  <div class="toc-box">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#why-dsa">Why DSA Matters — Platforms and Uses</a></li>
+      <li><a href="#arrays">Arrays — Two Pointer, Sliding Window, Binary Search, Kadane's</a></li>
+      <li><a href="#linkedlist">Linked List — Operations, Reverse, Cycle Detection</a></li>
+      <li><a href="#stack-queue">Stack and Queue — Implementation and Applications</a></li>
+      <li><a href="#trees">Binary Trees and BST — Traversals, Height, Balance</a></li>
+      <li><a href="#heap">Heaps — Min/Max Heap, Priority Queue</a></li>
+      <li><a href="#graphs">Graphs — BFS, DFS, Dijkstra, Topological Sort</a></li>
+      <li><a href="#sorting">Sorting Algorithms — Comparison Table</a></li>
+      <li><a href="#dp">Dynamic Programming — Memoization, Tabulation, Classic Problems</a></li>
+      <li><a href="#interviews">20 Common Interview Questions with Solutions</a></li>
+    </ol>
+  </div>
+
+  <!-- Section: Why DSA -->
+  <div class="section" id="why-dsa">
+    <h2>Why DSA Matters</h2>
+    <p>Data Structures and Algorithms form the backbone of every software system. Whether you are preparing for a GATE exam, cracking a FAANG interview, or competing on Codeforces, strong DSA fundamentals are essential.</p>
+
+    <div class="platform-grid">
+      <div class="platform-card">
+        <h4>GATE CS</h4>
+        <p>15–20% of GATE CS syllabus directly involves DSA. Arrays, trees, graphs, and sorting are high-weightage topics.</p>
+      </div>
+      <div class="platform-card">
+        <h4>LeetCode</h4>
+        <p>The world's most popular interview prep platform. 2500+ problems categorized by topic and company. Solve Easy before Medium.</p>
+      </div>
+      <div class="platform-card">
+        <h4>Codeforces / ICPC</h4>
+        <p>Competitive programming requires fast implementation of graph algorithms, segment trees, and advanced DP.</p>
+      </div>
+      <div class="platform-card">
+        <h4>Tech Interviews</h4>
+        <p>Google, Amazon, Microsoft, Flipkart — all test DSA. Focus on time/space complexity and edge cases.</p>
+      </div>
+      <div class="platform-card">
+        <h4>HackerRank / HackerEarth</h4>
+        <p>Popular for campus placements in India. Start with arrays and strings, progress to trees and graphs.</p>
+      </div>
+      <div class="platform-card">
+        <h4>GeeksForGeeks</h4>
+        <p>Best resource for topic-wise practice. Company-wise questions help you prepare for specific employers.</p>
+      </div>
+    </div>
+
+    <h3>Big-O Notation Quick Reference</h3>
+    <table>
+      <tr><th>Notation</th><th>Name</th><th>Example</th><th>10 elements</th><th>1000 elements</th></tr>
+      <tr><td><span class="complexity-badge c-best">O(1)</span></td><td>Constant</td><td>Array access by index</td><td>1</td><td>1</td></tr>
+      <tr><td><span class="complexity-badge c-best">O(log n)</span></td><td>Logarithmic</td><td>Binary search</td><td>3</td><td>10</td></tr>
+      <tr><td><span class="complexity-badge c-good">O(n)</span></td><td>Linear</td><td>Linear search</td><td>10</td><td>1,000</td></tr>
+      <tr><td><span class="complexity-badge c-good">O(n log n)</span></td><td>Linearithmic</td><td>Merge sort</td><td>33</td><td>10,000</td></tr>
+      <tr><td><span class="complexity-badge c-ok">O(n²)</span></td><td>Quadratic</td><td>Bubble sort</td><td>100</td><td>1,000,000</td></tr>
+      <tr><td><span class="complexity-badge c-bad">O(2ⁿ)</span></td><td>Exponential</td><td>All subsets</td><td>1,024</td><td>10^301</td></tr>
+      <tr><td><span class="complexity-badge c-bad">O(n!)</span></td><td>Factorial</td><td>All permutations</td><td>3,628,800</td><td>Astronomical</td></tr>
+    </table>
+  </div>
+
+  <!-- Section: Arrays -->
+  <div class="section" id="arrays">
+    <h2>1. Arrays</h2>
+
+    <table>
+      <tr><th>Operation</th><th>Static Array</th><th>Dynamic Array (Python list)</th></tr>
+      <tr><td>Access by index</td><td><span class="complexity-badge c-best">O(1)</span></td><td><span class="complexity-badge c-best">O(1)</span></td></tr>
+      <tr><td>Search (unsorted)</td><td><span class="complexity-badge c-good">O(n)</span></td><td><span class="complexity-badge c-good">O(n)</span></td></tr>
+      <tr><td>Search (sorted, binary)</td><td><span class="complexity-badge c-best">O(log n)</span></td><td><span class="complexity-badge c-best">O(log n)</span></td></tr>
+      <tr><td>Insert at end</td><td><span class="complexity-badge c-bad">O(n) resize</span></td><td><span class="complexity-badge c-best">O(1) amortized</span></td></tr>
+      <tr><td>Insert at middle</td><td><span class="complexity-badge c-good">O(n)</span></td><td><span class="complexity-badge c-good">O(n)</span></td></tr>
+      <tr><td>Delete at end</td><td><span class="complexity-badge c-best">O(1)</span></td><td><span class="complexity-badge c-best">O(1)</span></td></tr>
+      <tr><td>Delete at middle</td><td><span class="complexity-badge c-good">O(n)</span></td><td><span class="complexity-badge c-good">O(n)</span></td></tr>
+    </table>
+
+    <h3>Two Pointer Technique</h3>
+    <div class="code-label">Python – Two Pointer: Find Pair with Target Sum</div>
+    <pre><code>def find_pair(arr, target):
+    """Find pair that sums to target in a SORTED array. O(n) time, O(1) space."""
+    left, right = 0, len(arr) - 1
+    while left < right:
+        s = arr[left] + arr[right]
+        if s == target:
+            return (arr[left], arr[right])
+        elif s < target:
+            left += 1    # need larger sum
+        else:
+            right -= 1   # need smaller sum
+    return None
+
+arr = [1, 3, 5, 7, 9, 11, 15]
+print(find_pair(arr, 16))   # (5, 11)
+print(find_pair(arr, 20))   # (9, 11)
+print(find_pair(arr, 100))  # None
+
+# Three-sum (find triplet with sum = 0)
+def three_sum(arr):
+    arr.sort()
+    result = []
+    for i in range(len(arr) - 2):
+        if i > 0 and arr[i] == arr[i-1]:
+            continue   # skip duplicates
+        left, right = i+1, len(arr)-1
+        while left < right:
+            s = arr[i] + arr[left] + arr[right]
+            if s == 0:
+                result.append([arr[i], arr[left], arr[right]])
+                while left < right and arr[left] == arr[left+1]:
+                    left += 1
+                while left < right and arr[right] == arr[right-1]:
+                    right -= 1
+                left += 1
+                right -= 1
+            elif s < 0:
+                left += 1
+            else:
+                right -= 1
+    return result
+
+print(three_sum([-1, 0, 1, 2, -1, -4]))
+# [[-1, -1, 2], [-1, 0, 1]]</code></pre>
+
+    <h3>Sliding Window</h3>
+    <div class="code-label">Python – Sliding Window: Max Sum Subarray of Size k</div>
+    <pre><code>def max_sum_subarray(arr, k):
+    """Maximum sum of any subarray of size exactly k. O(n) time."""
+    n = len(arr)
+    if n < k:
+        return -1
+    # Build the first window
+    window_sum = sum(arr[:k])
+    max_sum = window_sum
+    # Slide the window
+    for i in range(k, n):
+        window_sum += arr[i] - arr[i - k]
+        max_sum = max(max_sum, window_sum)
+    return max_sum
+
+print(max_sum_subarray([2, 3, 4, 1, 5, 8], 2))   # 13  (5+8)
+print(max_sum_subarray([2, 3, 4, 1, 5, 8], 3))   # 14  (1+5+8)
+
+# Variable-size sliding window: longest subarray with sum <= k
+def longest_subarray_sum_le_k(arr, k):
+    """O(n) time. Expand right, shrink left when sum exceeds k."""
+    left = 0
+    current_sum = 0
+    max_len = 0
+    for right in range(len(arr)):
+        current_sum += arr[right]
+        while current_sum > k and left <= right:
+            current_sum -= arr[left]
+            left += 1
+        max_len = max(max_len, right - left + 1)
+    return max_len
+
+# Longest substring without repeating characters
+def length_of_longest_substring(s):
+    """Sliding window with a set. O(n) time."""
+    char_set = set()
+    left = 0
+    max_len = 0
+    for right in range(len(s)):
+        while s[right] in char_set:
+            char_set.remove(s[left])
+            left += 1
+        char_set.add(s[right])
+        max_len = max(max_len, right - left + 1)
+    return max_len
+
+print(length_of_longest_substring("abcabcbb"))  # 3  (abc)
+print(length_of_longest_substring("pwwkew"))    # 3  (wke)</code></pre>
+
+    <h3>Binary Search</h3>
+    <div class="code-label">Python – Binary Search (Iterative and Recursive)</div>
+    <pre><code>def binary_search(arr, target):
+    """Iterative binary search. O(log n) time, O(1) space."""
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = left + (right - left) // 2   # avoids integer overflow
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1   # not found
+
+def binary_search_recursive(arr, target, left=0, right=None):
+    """Recursive version. O(log n) time, O(log n) space (call stack)."""
+    if right is None:
+        right = len(arr) - 1
+    if left > right:
+        return -1
+    mid = (left + right) // 2
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] < target:
+        return binary_search_recursive(arr, target, mid + 1, right)
+    else:
+        return binary_search_recursive(arr, target, left, mid - 1)
+
+arr = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+print(binary_search(arr, 23))   # 5
+print(binary_search(arr, 99))   # -1
+
+# Find first and last position of target
+def search_range(arr, target):
+    """Returns [first, last] index. LeetCode #34."""
+    def find_first():
+        lo, hi, res = 0, len(arr)-1, -1
+        while lo <= hi:
+            mid = (lo + hi) // 2
+            if arr[mid] == target:
+                res = mid; hi = mid - 1  # keep searching left
+            elif arr[mid] < target:
+                lo = mid + 1
+            else:
+                hi = mid - 1
+        return res
+
+    def find_last():
+        lo, hi, res = 0, len(arr)-1, -1
+        while lo <= hi:
+            mid = (lo + hi) // 2
+            if arr[mid] == target:
+                res = mid; lo = mid + 1  # keep searching right
+            elif arr[mid] < target:
+                lo = mid + 1
+            else:
+                hi = mid - 1
+        return res
+
+    return [find_first(), find_last()]
+
+print(search_range([5,7,7,8,8,10], 8))   # [3, 4]
+print(search_range([5,7,7,8,8,10], 6))   # [-1, -1]</code></pre>
+
+    <h3>Kadane's Algorithm — Maximum Subarray Sum</h3>
+    <div class="code-label">Python – Kadane's Algorithm</div>
+    <pre><code>def max_subarray_sum(arr):
+    """Kadane's Algorithm. O(n) time, O(1) space."""
+    max_sum = arr[0]
+    current_sum = arr[0]
+    start = end = temp_start = 0
+
+    for i in range(1, len(arr)):
+        if arr[i] > current_sum + arr[i]:
+            current_sum = arr[i]
+            temp_start = i
+        else:
+            current_sum += arr[i]
+
+        if current_sum > max_sum:
+            max_sum = current_sum
+            start = temp_start
+            end = i
+
+    return max_sum, arr[start:end+1]
+
+arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+result, subarray = max_subarray_sum(arr)
+print(f"Max sum: {result}, Subarray: {subarray}")
+# Max sum: 6, Subarray: [4, -1, 2, 1]
+
+# Circular subarray maximum
+def max_circular_subarray(arr):
+    """Consider both normal and circular cases."""
+    total = sum(arr)
+    # Case 1: normal max subarray
+    def kadane(a):
+        max_s = cur = a[0]
+        for x in a[1:]:
+            cur = max(x, cur + x)
+            max_s = max(max_s, cur)
+        return max_s
+    max_normal = kadane(arr)
+    # Case 2: circular = total - min subarray
+    max_circular = total - kadane([-x for x in arr])
+    return max(max_normal, max_circular) if max_circular != 0 else max_normal</code></pre>
+  </div>
+
+  <!-- Section: Linked List -->
+  <div class="section" id="linkedlist">
+    <h2>2. Linked List</h2>
+
+    <p>A linked list is a linear data structure where elements (nodes) are stored in non-contiguous memory locations, each node pointing to the next.</p>
+
+    <table>
+      <tr><th>Operation</th><th>Singly Linked List</th><th>Array</th></tr>
+      <tr><td>Access by index</td><td><span class="complexity-badge c-good">O(n)</span></td><td><span class="complexity-badge c-best">O(1)</span></td></tr>
+      <tr><td>Insert at head</td><td><span class="complexity-badge c-best">O(1)</span></td><td><span class="complexity-badge c-good">O(n)</span></td></tr>
+      <tr><td>Insert at tail (with tail pointer)</td><td><span class="complexity-badge c-best">O(1)</span></td><td><span class="complexity-badge c-best">O(1)</span></td></tr>
+      <tr><td>Delete at head</td><td><span class="complexity-badge c-best">O(1)</span></td><td><span class="complexity-badge c-good">O(n)</span></td></tr>
+      <tr><td>Search</td><td><span class="complexity-badge c-good">O(n)</span></td><td><span class="complexity-badge c-good">O(n)</span></td></tr>
+    </table>
+
+    <div class="code-label">Python – Singly Linked List — Complete Implementation</div>
+    <pre><code>class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self._size = 0
+
+    def append(self, data):
+        """Add to end. O(n)."""
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
+        self._size += 1
+
+    def prepend(self, data):
+        """Add to beginning. O(1)."""
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+        self._size += 1
+
+    def insert_after(self, prev_data, data):
+        """Insert after a specific node."""
+        current = self.head
+        while current:
+            if current.data == prev_data:
+                new_node = Node(data)
+                new_node.next = current.next
+                current.next = new_node
+                self._size += 1
+                return
+            current = current.next
+        print(f"Node {prev_data} not found")
+
+    def delete(self, data):
+        """Delete first occurrence of data. O(n)."""
+        if not self.head:
+            return
+        if self.head.data == data:
+            self.head = self.head.next
+            self._size -= 1
+            return
+        current = self.head
+        while current.next:
+            if current.next.data == data:
+                current.next = current.next.next
+                self._size -= 1
+                return
+            current = current.next
+
+    def display(self):
+        elements = []
+        current = self.head
+        while current:
+            elements.append(str(current.data))
+            current = current.next
+        print(" -> ".join(elements) + " -> None")
+
+    def reverse(self):
+        """Reverse in-place. O(n) time, O(1) space."""
+        prev = None
+        current = self.head
+        while current:
+            next_node = current.next   # save next
+            current.next = prev        # reverse link
+            prev = current             # advance prev
+            current = next_node        # advance current
+        self.head = prev
+
+    def find_middle(self):
+        """Floyd's slow-fast pointer. O(n) time, O(1) space."""
+        slow = fast = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow.data if slow else None
+
+    def has_cycle(self):
+        """Floyd's cycle detection. O(n) time, O(1) space."""
+        slow = fast = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow is fast:
+                return True
+        return False
+
+    def nth_from_end(self, n):
+        """Find nth node from end. Two-pointer technique."""
+        fast = slow = self.head
+        for _ in range(n):
+            if not fast:
+                return None   # n > list length
+            fast = fast.next
+        while fast:
+            slow = slow.next
+            fast = fast.next
+        return slow.data if slow else None
+
+    def __len__(self):
+        return self._size
+
+    def __str__(self):
+        elements = []
+        current = self.head
+        while current:
+            elements.append(str(current.data))
+            current = current.next
+        return " -> ".join(elements)
+
+# Usage demo
+ll = LinkedList()
+for val in [1, 2, 3, 4, 5, 6, 7]:
+    ll.append(val)
+ll.display()                      # 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> None
+print("Middle:", ll.find_middle())  # 4
+print("3rd from end:", ll.nth_from_end(3))  # 5
+ll.reverse()
+ll.display()                      # 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> None</code></pre>
+
+    <div class="code-label">Python – Merge Two Sorted Linked Lists</div>
+    <pre><code>def merge_sorted_lists(l1, l2):
+    """Merge two sorted linked lists. O(m+n) time."""
+    dummy = Node(0)
+    current = dummy
+    while l1 and l2:
+        if l1.data <= l2.data:
+            current.next = l1
+            l1 = l1.next
+        else:
+            current.next = l2
+            l2 = l2.next
+        current = current.next
+    current.next = l1 if l1 else l2
+    return dummy.next</code></pre>
+  </div>
+
+  <!-- Section: Stack and Queue -->
+  <div class="section" id="stack-queue">
+    <h2>3. Stack and Queue</h2>
+
+    <div class="code-label">Python – Stack Implementation with Applications</div>
+    <pre><code">class Stack:
+    def __init__(self):
+        self._items = []
+
+    def push(self, item):
+        self._items.append(item)
+
+    def pop(self):
+        if self.is_empty():
+            raise IndexError("pop from empty stack")
+        return self._items.pop()
+
+    def peek(self):
+        if self.is_empty():
+            raise IndexError("peek from empty stack")
+        return self._items[-1]
+
+    def is_empty(self): return len(self._items) == 0
+    def size(self):     return len(self._items)
+    def __str__(self):  return str(self._items)
+
+# Application 1: Balanced Parentheses
+def is_balanced(expr):
+    stack = Stack()
+    mapping = {')': '(', '}': '{', ']': '['}
+    for char in expr:
+        if char in '({[':
+            stack.push(char)
+        elif char in ')}]':
+            if stack.is_empty() or stack.peek() != mapping[char]:
+                return False
+            stack.pop()
+    return stack.is_empty()
+
+print(is_balanced("({[]})"))         # True
+print(is_balanced("({[})"))          # False
+print(is_balanced("((()))"))         # True
+print(is_balanced("([)]"))           # False
+
+# Application 2: Evaluate postfix expression
+def eval_postfix(expr):
+    stack = Stack()
+    for token in expr.split():
+        if token.lstrip('-').isdigit():
+            stack.push(float(token))
+        else:
+            b = stack.pop()
+            a = stack.pop()
+            if token == '+': stack.push(a + b)
+            elif token == '-': stack.push(a - b)
+            elif token == '*': stack.push(a * b)
+            elif token == '/': stack.push(a / b)
+    return stack.pop()
+
+print(eval_postfix("3 4 + 2 *"))   # 14.0  ((3+4)*2)
+print(eval_postfix("5 1 2 + 4 * + 3 -"))  # 14.0
+
+# Application 3: Next Greater Element
+def next_greater_element(arr):
+    """For each element, find the next greater element. O(n) using stack."""
+    n = len(arr)
+    result = [-1] * n
+    stack = []   # stores indices
+    for i in range(n):
+        while stack and arr[i] > arr[stack[-1]]:
+            idx = stack.pop()
+            result[idx] = arr[i]
+        stack.append(i)
+    return result
+
+print(next_greater_element([4, 5, 2, 10, 8]))
+# [5, 10, 10, -1, -1]</code></pre>
+
+    <div class="code-label">Python – Queue and Deque</div>
+    <pre><code">from collections import deque
+
+class Queue:
+    def __init__(self):
+        self._items = deque()
+
+    def enqueue(self, item):
+        self._items.append(item)   # O(1)
+
+    def dequeue(self):
+        if self.is_empty():
+            raise IndexError("dequeue from empty queue")
+        return self._items.popleft()   # O(1)
+
+    def front(self):
+        return self._items[0] if not self.is_empty() else None
+
+    def is_empty(self): return len(self._items) == 0
+    def size(self):     return len(self._items)
+
+# Circular Queue (Ring Buffer)
+class CircularQueue:
+    def __init__(self, capacity):
+        self.cap = capacity
+        self.queue = [None] * capacity
+        self.front = self.rear = -1
+        self.count = 0
+
+    def enqueue(self, val):
+        if self.count == self.cap:
+            raise OverflowError("Queue full")
+        if self.front == -1:
+            self.front = 0
+        self.rear = (self.rear + 1) % self.cap
+        self.queue[self.rear] = val
+        self.count += 1
+
+    def dequeue(self):
+        if self.count == 0:
+            raise IndexError("Queue empty")
+        val = self.queue[self.front]
+        if self.front == self.rear:
+            self.front = self.rear = -1
+        else:
+            self.front = (self.front + 1) % self.cap
+        self.count -= 1
+        return val
+
+# Deque (Double-Ended Queue) — supports O(1) insert/delete at both ends
+dq = deque([1, 2, 3])
+dq.appendleft(0)    # [0, 1, 2, 3]
+dq.append(4)        # [0, 1, 2, 3, 4]
+dq.popleft()        # 0
+dq.pop()            # 4
+print(dq)           # deque([1, 2, 3])
+
+# Sliding window maximum using deque — O(n)
+def sliding_window_max(arr, k):
+    dq = deque()   # stores indices, front = max for current window
+    result = []
+    for i in range(len(arr)):
+        while dq and dq[0] < i - k + 1:
+            dq.popleft()   # remove out-of-window indices
+        while dq and arr[dq[-1]] < arr[i]:
+            dq.pop()       # remove smaller elements
+        dq.append(i)
+        if i >= k - 1:
+            result.append(arr[dq[0]])
+    return result
+
+print(sliding_window_max([1,3,-1,-3,5,3,6,7], 3))
+# [3, 3, 5, 5, 6, 7]</code></pre>
+  </div>
+
+  <!-- Section: Trees -->
+  <div class="section" id="trees">
+    <h2>4. Binary Trees and BST</h2>
+
+    <div class="code-label">Python – BST: Insert, Search, All Traversals</div>
+    <pre><code">from collections import deque
+
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+    # --- Insert ---
+    def insert(self, val):
+        self.root = self._insert(self.root, val)
+
+    def _insert(self, node, val):
+        if not node:
+            return TreeNode(val)
+        if val < node.val:
+            node.left = self._insert(node.left, val)
+        elif val > node.val:
+            node.right = self._insert(node.right, val)
+        return node   # equal: no duplicates
+
+    # --- Search ---
+    def search(self, val):
+        return self._search(self.root, val)
+
+    def _search(self, node, val):
+        if not node:
+            return False
+        if val == node.val:
+            return True
+        if val < node.val:
+            return self._search(node.left, val)
+        return self._search(node.right, val)
+
+    # --- Delete ---
+    def delete(self, val):
+        self.root = self._delete(self.root, val)
+
+    def _delete(self, node, val):
+        if not node:
+            return node
+        if val < node.val:
+            node.left = self._delete(node.left, val)
+        elif val > node.val:
+            node.right = self._delete(node.right, val)
+        else:
+            # Node found — 3 cases
+            if not node.left:   return node.right
+            if not node.right:  return node.left
+            # Two children: replace with in-order successor
+            successor = node.right
+            while successor.left:
+                successor = successor.left
+            node.val = successor.val
+            node.right = self._delete(node.right, successor.val)
+        return node
+
+    # --- Traversals ---
+    def inorder(self):    # Left, Root, Right → sorted for BST
+        result = []
+        def dfs(node):
+            if node:
+                dfs(node.left)
+                result.append(node.val)
+                dfs(node.right)
+        dfs(self.root)
+        return result
+
+    def preorder(self):   # Root, Left, Right → copy/serialize tree
+        result = []
+        def dfs(node):
+            if node:
+                result.append(node.val)
+                dfs(node.left)
+                dfs(node.right)
+        dfs(self.root)
+        return result
+
+    def postorder(self):  # Left, Right, Root → delete/evaluate tree
+        result = []
+        def dfs(node):
+            if node:
+                dfs(node.left)
+                dfs(node.right)
+                result.append(node.val)
+        dfs(self.root)
+        return result
+
+    def level_order(self):   # BFS — level by level
+        if not self.root:
+            return []
+        result = []
+        queue = deque([self.root])
+        while queue:
+            level = []
+            for _ in range(len(queue)):
+                node = queue.popleft()
+                level.append(node.val)
+                if node.left:  queue.append(node.left)
+                if node.right: queue.append(node.right)
+            result.append(level)
+        return result
+
+# Tree utility functions
+def height(root):
+    if not root: return 0
+    return 1 + max(height(root.left), height(root.right))
+
+def is_balanced(root):
+    def check(node):
+        if not node: return 0
+        left = check(node.left)
+        right = check(node.right)
+        if left == -1 or right == -1 or abs(left - right) > 1:
+            return -1
+        return 1 + max(left, right)
+    return check(root) != -1
+
+def lowest_common_ancestor(root, p, q):
+    """LCA in BST. O(log n) for balanced, O(n) worst."""
+    if not root: return None
+    if p < root.val and q < root.val:
+        return lowest_common_ancestor(root.left, p, q)
+    if p > root.val and q > root.val:
+        return lowest_common_ancestor(root.right, p, q)
+    return root
+
+# Demo
+bst = BST()
+for val in [50, 30, 70, 20, 40, 60, 80]:
+    bst.insert(val)
+
+print("Inorder:", bst.inorder())        # [20, 30, 40, 50, 60, 70, 80]
+print("Level order:", bst.level_order())  # [[50], [30, 70], [20, 40, 60, 80]]
+print("Height:", height(bst.root))       # 3
+print("Balanced:", is_balanced(bst.root)) # True
+bst.delete(30)
+print("After delete 30:", bst.inorder()) # [20, 40, 50, 60, 70, 80]</code></pre>
+  </div>
+
+  <!-- Section: Heap -->
+  <div class="section" id="heap">
+    <h2>5. Heaps and Priority Queue</h2>
+
+    <p>A heap is a complete binary tree satisfying the heap property. Python's <code>heapq</code> module implements a min-heap.</p>
+
+    <div class="code-label">Python – heapq: Min-Heap, Max-Heap, K-th Largest</div>
+    <pre><code">import heapq
+
+# --- Min-Heap ---
+min_heap = []
+for val in [5, 3, 8, 1, 9, 2]:
+    heapq.heappush(min_heap, val)
+
+print(min_heap[0])           # 1 (minimum, always at root)
+print(heapq.heappop(min_heap))  # 1 (remove and return min)
+print(heapq.heappop(min_heap))  # 2
+
+# heapify: convert list to heap in O(n)
+arr = [5, 3, 8, 1, 9, 2, 6]
+heapq.heapify(arr)
+print(arr)   # heap-ordered: [1, 3, 2, 5, 9, 8, 6]
+
+# --- Max-Heap (negate values) ---
+max_heap = []
+for val in [5, 3, 8, 1, 9, 2]:
+    heapq.heappush(max_heap, -val)   # store negated
+
+max_val = -heapq.heappop(max_heap)  # negate back
+print("Max:", max_val)               # 9
+
+# --- K-th Largest Element (O(n log k)) ---
+def kth_largest(nums, k):
+    min_heap = []
+    for num in nums:
+        heapq.heappush(min_heap, num)
+        if len(min_heap) > k:
+            heapq.heappop(min_heap)   # remove smallest
+    return min_heap[0]
+
+print(kth_largest([3, 2, 1, 5, 6, 4], 2))  # 5
+
+# --- Top K Frequent Elements ---
+from collections import Counter
+def top_k_frequent(nums, k):
+    count = Counter(nums)
+    return heapq.nlargest(k, count.keys(), key=count.get)
+
+print(top_k_frequent([1,1,1,2,2,3], 2))  # [1, 2]
+
+# --- Merge K Sorted Lists using heap ---
+def merge_k_sorted(lists):
+    heap = []
+    for i, lst in enumerate(lists):
+        if lst:
+            heapq.heappush(heap, (lst[0], i, 0))
+    result = []
+    while heap:
+        val, list_idx, element_idx = heapq.heappop(heap)
+        result.append(val)
+        if element_idx + 1 < len(lists[list_idx]):
+            next_val = lists[list_idx][element_idx + 1]
+            heapq.heappush(heap, (next_val, list_idx, element_idx + 1))
+    return result
+
+print(merge_k_sorted([[1,4,7],[2,5,8],[3,6,9]]))
+# [1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
+  </div>
+
+  <!-- Section: Graphs -->
+  <div class="section" id="graphs">
+    <h2>6. Graphs — BFS, DFS, Dijkstra, Topological Sort</h2>
+
+    <div class="code-label">Python – Graph Representation and BFS/DFS</div>
+    <pre><code">from collections import defaultdict, deque
+
+class Graph:
+    def __init__(self, directed=False):
+        self.adj = defaultdict(list)
+        self.directed = directed
+
+    def add_edge(self, u, v, weight=1):
+        self.adj[u].append((v, weight))
+        if not self.directed:
+            self.adj[v].append((u, weight))
+
+    def bfs(self, start):
+        """Breadth-First Search. O(V + E)."""
+        visited = set([start])
+        queue = deque([start])
+        order = []
+        while queue:
+            node = queue.popleft()
+            order.append(node)
+            for neighbor, _ in self.adj[node]:
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    queue.append(neighbor)
+        return order
+
+    def dfs(self, start):
+        """Depth-First Search (iterative). O(V + E)."""
+        visited = set()
+        stack = [start]
+        order = []
+        while stack:
+            node = stack.pop()
+            if node not in visited:
+                visited.add(node)
+                order.append(node)
+                for neighbor, _ in self.adj[node]:
+                    if neighbor not in visited:
+                        stack.append(neighbor)
+        return order
+
+    def dfs_recursive(self, start, visited=None):
+        """DFS recursive."""
+        if visited is None:
+            visited = set()
+        visited.add(start)
+        result = [start]
+        for neighbor, _ in self.adj[start]:
+            if neighbor not in visited:
+                result.extend(self.dfs_recursive(neighbor, visited))
+        return result
+
+    def has_cycle_undirected(self):
+        """Detect cycle in undirected graph using DFS."""
+        visited = set()
+        def dfs(node, parent):
+            visited.add(node)
+            for neighbor, _ in self.adj[node]:
+                if neighbor not in visited:
+                    if dfs(neighbor, node):
+                        return True
+                elif neighbor != parent:
+                    return True   # back edge = cycle
+            return False
+        for node in self.adj:
+            if node not in visited:
+                if dfs(node, -1):
+                    return True
+        return False
+
+# Dijkstra's Shortest Path — O((V + E) log V)
+def dijkstra(graph, start):
+    import heapq
+    dist = {node: float('inf') for node in graph.adj}
+    dist[start] = 0
+    prev = {node: None for node in graph.adj}
+    heap = [(0, start)]   # (distance, node)
+
+    while heap:
+        d, u = heapq.heappop(heap)
+        if d > dist[u]:
+            continue   # outdated entry
+        for v, w in graph.adj[u]:
+            if dist[u] + w < dist[v]:
+                dist[v] = dist[u] + w
+                prev[v] = u
+                heapq.heappush(heap, (dist[v], v))
+
+    return dist, prev
+
+# Topological Sort (Kahn's algorithm — BFS-based)
+def topological_sort(graph):
+    """Only for Directed Acyclic Graphs (DAG)."""
+    in_degree = defaultdict(int)
+    for node in graph.adj:
+        for neighbor, _ in graph.adj[node]:
+            in_degree[neighbor] += 1
+
+    queue = deque([n for n in graph.adj if in_degree[n] == 0])
+    order = []
+    while queue:
+        node = queue.popleft()
+        order.append(node)
+        for neighbor, _ in graph.adj[node]:
+            in_degree[neighbor] -= 1
+            if in_degree[neighbor] == 0:
+                queue.append(neighbor)
+
+    if len(order) != len(graph.adj):
+        return []   # cycle detected
+    return order
+
+# Demo
+g = Graph(directed=True)
+for u, v in [('A','B'),('A','C'),('B','D'),('C','D'),('D','E')]:
+    g.add_edge(u, v)
+
+print("BFS from A:", g.bfs('A'))        # ['A', 'B', 'C', 'D', 'E']
+print("DFS from A:", g.dfs('A'))        # ['A', 'C', 'D', 'E', 'B']
+print("Topo sort:", topological_sort(g)) # ['A', 'B', 'C', 'D', 'E']</code></pre>
+  </div>
+
+  <!-- Section: Sorting -->
+  <div class="section" id="sorting">
+    <h2>7. Sorting Algorithms</h2>
+
+    <div class="code-label">Python – All Major Sorting Algorithms</div>
+    <pre><code">def bubble_sort(arr):
+    """O(n²) average/worst. Stable. Good for nearly-sorted data."""
+    arr = arr[:]
+    n = len(arr)
+    for i in range(n):
+        swapped = False
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swapped = True
+        if not swapped:   # already sorted
+            break
+    return arr
+
+def selection_sort(arr):
+    """O(n²) always. Unstable. Minimizes swaps."""
+    arr = arr[:]
+    n = len(arr)
+    for i in range(n):
+        min_idx = i
+        for j in range(i+1, n):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+    return arr
+
+def insertion_sort(arr):
+    """O(n²) worst, O(n) best. Stable. Best for small/nearly-sorted arrays."""
+    arr = arr[:]
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:
+            arr[j+1] = arr[j]
+            j -= 1
+        arr[j+1] = key
+    return arr
+
+def merge_sort(arr):
+    """O(n log n) always. Stable. Best for linked lists, external sort."""
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    return _merge(left, right)
+
+def _merge(left, right):
+    result = []
+    i = j = 0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i]); i += 1
+        else:
+            result.append(right[j]); j += 1
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+
+def quick_sort(arr):
+    """O(n log n) average, O(n²) worst. Unstable. Cache-friendly."""
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left   = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right  = [x for x in arr if x > pivot]
+    return quick_sort(left) + middle + quick_sort(right)
+
+def heap_sort(arr):
+    """O(n log n) always. Unstable. O(1) extra space."""
+    import heapq
+    h = arr[:]
+    heapq.heapify(h)
+    return [heapq.heappop(h) for _ in range(len(h))]
+
+def counting_sort(arr, max_val=None):
+    """O(n + k). Stable. Only for non-negative integers."""
+    if not arr: return arr
+    if max_val is None:
+        max_val = max(arr)
+    count = [0] * (max_val + 1)
+    for x in arr:
+        count[x] += 1
+    result = []
+    for val, freq in enumerate(count):
+        result.extend([val] * freq)
+    return result
+
+# Test all algorithms
+test = [64, 34, 25, 12, 22, 11, 90, 1, 55, 42]
+print("Original:   ", test)
+print("Bubble:     ", bubble_sort(test))
+print("Merge:      ", merge_sort(test))
+print("Quick:      ", quick_sort(test))
+print("Heap:       ", heap_sort(test))
+print("Counting:   ", counting_sort(test))</code></pre>
+
+    <h3>Sorting Algorithm Comparison</h3>
+    <table>
+      <tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th><th>Space</th><th>Stable</th><th>Notes</th></tr>
+      <tr><td>Bubble Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td><td>O(1)</td><td>Yes</td><td>Simple, rarely used</td></tr>
+      <tr><td>Selection Sort</td><td>O(n²)</td><td>O(n²)</td><td>O(n²)</td><td>O(1)</td><td>No</td><td>Minimizes swaps</td></tr>
+      <tr><td>Insertion Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td><td>O(1)</td><td>Yes</td><td>Best for nearly sorted</td></tr>
+      <tr><td>Merge Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n)</td><td>Yes</td><td>Best for linked lists</td></tr>
+      <tr><td>Quick Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n²)</td><td>O(log n)</td><td>No</td><td>Fastest in practice</td></tr>
+      <tr><td>Heap Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>O(1)</td><td>No</td><td>Guaranteed O(n log n)</td></tr>
+      <tr><td>Counting Sort</td><td>O(n+k)</td><td>O(n+k)</td><td>O(n+k)</td><td>O(k)</td><td>Yes</td><td>Only integers in [0,k]</td></tr>
+      <tr><td>Radix Sort</td><td>O(nk)</td><td>O(nk)</td><td>O(nk)</td><td>O(n+k)</td><td>Yes</td><td>Good for integers/strings</td></tr>
+    </table>
+  </div>
+
+  <!-- Section: Dynamic Programming -->
+  <div class="section" id="dp">
+    <h2>8. Dynamic Programming</h2>
+
+    <div class="info-box">
+      <strong>When to use DP:</strong> A problem has <em>optimal substructure</em> (optimal solution built from optimal sub-solutions) and <em>overlapping subproblems</em> (same subproblem computed many times). DP avoids recomputation via memoization (top-down) or tabulation (bottom-up).
+    </div>
+
+    <div class="code-label">Python – DP Classic Problems</div>
+    <pre><code"># ── 1. Fibonacci with Memoization (Top-Down) ──────────────────────────
+from functools import lru_cache
+
+@lru_cache(maxsize=None)
+def fib(n):
+    if n <= 1: return n
+    return fib(n-1) + fib(n-2)
+
+print([fib(i) for i in range(10)])
+# [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+# Fibonacci Tabulation (Bottom-Up) — O(n) time, O(1) space
+def fib_tab(n):
+    if n <= 1: return n
+    a, b = 0, 1
+    for _ in range(2, n+1):
+        a, b = b, a + b
+    return b
+
+# ── 2. 0/1 Knapsack Problem ───────────────────────────────────────────
+def knapsack(weights, values, capacity):
+    """Classic 0/1 knapsack. O(n*W) time and space."""
+    n = len(weights)
+    dp = [[0] * (capacity + 1) for _ in range(n + 1)]
+
+    for i in range(1, n + 1):
+        for w in range(capacity + 1):
+            dp[i][w] = dp[i-1][w]   # exclude item i
+            if weights[i-1] <= w:
+                include = dp[i-1][w - weights[i-1]] + values[i-1]
+                dp[i][w] = max(dp[i][w], include)
+
+    return dp[n][capacity]
+
+weights = [2, 3, 4, 5]
+values  = [3, 4, 5, 6]
+capacity = 5
+print("Knapsack:", knapsack(weights, values, capacity))  # 7
+
+# ── 3. Longest Common Subsequence (LCS) ──────────────────────────────
+def lcs(s1, s2):
+    """O(m*n) time and space."""
+    m, n = len(s1), len(s2)
+    dp = [[0] * (n+1) for _ in range(m+1)]
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            if s1[i-1] == s2[j-1]:
+                dp[i][j] = dp[i-1][j-1] + 1
+            else:
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+    return dp[m][n]
+
+print("LCS:", lcs("ABCBDAB", "BDCABA"))  # 4
+
+# ── 4. Longest Increasing Subsequence (LIS) ───────────────────────────
+def lis(arr):
+    """O(n²) DP solution."""
+    n = len(arr)
+    dp = [1] * n   # every element is a subsequence of length 1
+    for i in range(1, n):
+        for j in range(i):
+            if arr[j] < arr[i]:
+                dp[i] = max(dp[i], dp[j] + 1)
+    return max(dp)
+
+print("LIS:", lis([10, 9, 2, 5, 3, 7, 101, 18]))  # 4 ([2,3,7,101] or [2,5,7,101])
+
+# O(n log n) LIS using patience sorting
+import bisect
+def lis_fast(arr):
+    tails = []
+    for x in arr:
+        pos = bisect.bisect_left(tails, x)
+        if pos == len(tails):
+            tails.append(x)
+        else:
+            tails[pos] = x
+    return len(tails)
+
+# ── 5. Coin Change (minimum coins) ────────────────────────────────────
+def coin_change(coins, amount):
+    """O(amount * len(coins)). Returns -1 if impossible."""
+    dp = [float('inf')] * (amount + 1)
+    dp[0] = 0
+    for coin in coins:
+        for x in range(coin, amount + 1):
+            dp[x] = min(dp[x], dp[x - coin] + 1)
+    return dp[amount] if dp[amount] != float('inf') else -1
+
+print("Coin change:", coin_change([1, 5, 6, 9], 11))  # 2 (5+6)
+print("Coin change:", coin_change([2], 3))              # -1
+
+# Number of ways to make change
+def coin_change_ways(coins, amount):
+    dp = [0] * (amount + 1)
+    dp[0] = 1
+    for coin in coins:
+        for x in range(coin, amount + 1):
+            dp[x] += dp[x - coin]
+    return dp[amount]
+
+print("Ways:", coin_change_ways([1,2,5], 5))  # 4
+
+# ── 6. Edit Distance (Levenshtein) ────────────────────────────────────
+def edit_distance(s1, s2):
+    """Min operations (insert/delete/replace) to convert s1 to s2."""
+    m, n = len(s1), len(s2)
+    dp = [[0]*(n+1) for _ in range(m+1)]
+    for i in range(m+1): dp[i][0] = i
+    for j in range(n+1): dp[0][j] = j
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            if s1[i-1] == s2[j-1]:
+                dp[i][j] = dp[i-1][j-1]
+            else:
+                dp[i][j] = 1 + min(dp[i-1][j],    # delete
+                                   dp[i][j-1],    # insert
+                                   dp[i-1][j-1])  # replace
+    return dp[m][n]
+
+print("Edit distance:", edit_distance("kitten", "sitting"))  # 3
+
+# ── 7. Matrix Chain Multiplication ────────────────────────────────────
+def matrix_chain(dims):
+    """Minimum scalar multiplications for chain of matrices."""
+    n = len(dims) - 1
+    dp = [[0]*n for _ in range(n)]
+    for length in range(2, n+1):
+        for i in range(n - length + 1):
+            j = i + length - 1
+            dp[i][j] = float('inf')
+            for k in range(i, j):
+                cost = dp[i][k] + dp[k+1][j] + dims[i]*dims[k+1]*dims[j+1]
+                dp[i][j] = min(dp[i][j], cost)
+    return dp[0][n-1]
+
+print("Matrix chain:", matrix_chain([10, 30, 5, 60]))  # 4500</code></pre>
+  </div>
+
+  <!-- Section: Interview Questions -->
+  <div class="section" id="interviews">
+    <h2>20 Common Interview Questions</h2>
+
+    <div class="interview-card">
+      <h4>1. Two Sum</h4>
+      <span class="difficulty diff-easy">Easy</span>
+      <p>Given an array and a target, return indices of two numbers that add up to target.</p>
+      <button class="answer-toggle" onclick="toggleAnswer('iq1')">Show Solution</button>
+      <div id="iq1" class="answer-content">
+        <div class="code-label">Python – O(n) Hash Map</div>
+        <pre><code>def two_sum(nums, target):
+    seen = {}
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in seen:
+            return [seen[complement], i]
+        seen[num] = i
+    return []
+
+print(two_sum([2,7,11,15], 9))  # [0, 1]</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>2. Valid Parentheses</h4>
+      <span class="difficulty diff-easy">Easy</span>
+      <p>Given a string of brackets, determine if it is valid (every opening bracket has a matching closing bracket in order).</p>
+      <button class="answer-toggle" onclick="toggleAnswer('iq2')">Show Solution</button>
+      <div id="iq2" class="answer-content">
+        <div class="code-label">Python – Stack</div>
+        <pre><code>def is_valid(s):
+    stack = []
+    mapping = {')': '(', '}': '{', ']': '['}
+    for c in s:
+        if c in mapping:
+            top = stack.pop() if stack else '#'
+            if mapping[c] != top:
+                return False
+        else:
+            stack.append(c)
+    return not stack</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>3. Reverse a Linked List</h4>
+      <span class="difficulty diff-easy">Easy</span>
+      <p>Reverse a singly linked list iteratively and recursively.</p>
+      <button class="answer-toggle" onclick="toggleAnswer('iq3')">Show Solution</button>
+      <div id="iq3" class="answer-content">
+        <div class="code-label">Python – Iterative O(n) O(1)</div>
+        <pre><code>def reverse_list(head):
+    prev = None
+    curr = head
+    while curr:
+        next_node = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next_node
+    return prev</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>4. Maximum Depth of Binary Tree</h4>
+      <span class="difficulty diff-easy">Easy</span>
+      <p>Find the maximum depth (number of nodes along the longest path from root to leaf).</p>
+      <button class="answer-toggle" onclick="toggleAnswer('iq4')">Show Solution</button>
+      <div id="iq4" class="answer-content">
+        <div class="code-label">Python – DFS Recursion</div>
+        <pre><code>def max_depth(root):
+    if not root: return 0
+    return 1 + max(max_depth(root.left), max_depth(root.right))</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>5. Merge Two Sorted Arrays</h4>
+      <span class="difficulty diff-easy">Easy</span>
+      <p>Merge two sorted arrays into one sorted array.</p>
+      <button class="answer-toggle" onclick="toggleAnswer('iq5')">Show Solution</button>
+      <div id="iq5" class="answer-content">
+        <div class="code-label">Python – Two Pointer O(m+n)</div>
+        <pre><code">def merge_sorted(a, b):
+    result = []
+    i = j = 0
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            result.append(a[i]); i += 1
+        else:
+            result.append(b[j]); j += 1
+    result.extend(a[i:]); result.extend(b[j:])
+    return result
+
+print(merge_sorted([1,3,5], [2,4,6]))  # [1,2,3,4,5,6]</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>6. Detect Cycle in Linked List</h4>
+      <span class="difficulty diff-easy">Easy</span>
+      <p>Determine if a linked list has a cycle. Use O(1) extra space.</p>
+      <button class="answer-toggle" onclick="toggleAnswer('iq6')">Show Solution</button>
+      <div id="iq6" class="answer-content">
+        <div class="code-label">Python – Floyd's Tortoise and Hare</div>
+        <pre><code">def has_cycle(head):
+    slow = fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow is fast:
+            return True
+    return False</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>7. Binary Search in Rotated Sorted Array</h4>
+      <span class="difficulty diff-medium">Medium</span>
+      <p>Search in a sorted array that has been rotated at some pivot.</p>
+      <button class="answer-toggle" onclick="toggleAnswer('iq7')">Show Solution</button>
+      <div id="iq7" class="answer-content">
+        <div class="code-label">Python – Modified Binary Search O(log n)</div>
+        <pre><code">def search_rotated(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target: return mid
+        if arr[left] <= arr[mid]:   # left half is sorted
+            if arr[left] <= target < arr[mid]:
+                right = mid - 1
+            else:
+                left = mid + 1
+        else:                       # right half is sorted
+            if arr[mid] < target <= arr[right]:
+                left = mid + 1
+            else:
+                right = mid - 1
+    return -1
+
+print(search_rotated([4,5,6,7,0,1,2], 0))  # 4</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>8. Level Order Traversal (Return Level by Level)</h4>
+      <span class="difficulty diff-medium">Medium</span>
+      <p>Return a list of lists, each containing the values at that level of the tree.</p>
+      <button class="answer-toggle" onclick="toggleAnswer('iq8')">Show Solution</button>
+      <div id="iq8" class="answer-content">
+        <div class="code-label">Python – BFS with Queue</div>
+        <pre><code">from collections import deque
+def level_order(root):
+    if not root: return []
+    result = []
+    q = deque([root])
+    while q:
+        level = []
+        for _ in range(len(q)):
+            node = q.popleft()
+            level.append(node.val)
+            if node.left:  q.append(node.left)
+            if node.right: q.append(node.right)
+        result.append(level)
+    return result</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>9. Number of Islands</h4>
+      <span class="difficulty diff-medium">Medium</span>
+      <p>Count number of islands in a 2D grid ('1' = land, '0' = water).</p>
+      <button class="answer-toggle" onclick="toggleAnswer('iq9')">Show Solution</button>
+      <div id="iq9" class="answer-content">
+        <div class="code-label">Python – DFS Flood Fill</div>
+        <pre><code">def num_islands(grid):
+    if not grid: return 0
+    rows, cols = len(grid), len(grid[0])
+    count = 0
+    def dfs(r, c):
+        if r < 0 or r >= rows or c < 0 or c >= cols or grid[r][c] == '0':
+            return
+        grid[r][c] = '0'   # mark visited
+        for dr, dc in [(0,1),(0,-1),(1,0),(-1,0)]:
+            dfs(r+dr, c+dc)
+    for r in range(rows):
+        for c in range(cols):
+            if grid[r][c] == '1':
+                dfs(r, c)
+                count += 1
+    return count</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>10. Word Break Problem</h4>
+      <span class="difficulty diff-medium">Medium</span>
+      <p>Given a string and a dictionary, determine if the string can be segmented into dictionary words.</p>
+      <button class="answer-toggle" onclick="toggleAnswer('iq10')">Show Solution</button>
+      <div id="iq10" class="answer-content">
+        <div class="code-label">Python – DP O(n²)</div>
+        <pre><code">def word_break(s, word_dict):
+    word_set = set(word_dict)
+    n = len(s)
+    dp = [False] * (n + 1)
+    dp[0] = True   # empty string
+    for i in range(1, n+1):
+        for j in range(i):
+            if dp[j] and s[j:i] in word_set:
+                dp[i] = True
+                break
+    return dp[n]
+
+print(word_break("leetcode", ["leet","code"]))   # True
+print(word_break("applepenapple", ["apple","pen"]))  # True</code></pre>
+      </div>
+    </div>
+
+    <div class="interview-card">
+      <h4>11–20: More Interview Topics</h4>
+      <span class="difficulty diff-medium">Medium–Hard</span>
+      <p>These topics are frequently tested in FAANG and campus placements:</p>
+      <ul class="checklist">
+        <li>11. Trapping Rain Water — two pointer / monotonic stack — O(n)</li>
+        <li>12. Serialize and Deserialize Binary Tree — preorder with markers</li>
+        <li>13. Clone Graph — BFS with hash map (old node → new node)</li>
+        <li>14. Course Schedule (cycle detection in directed graph) — topological sort</li>
+        <li>15. Minimum Spanning Tree — Kruskal's (union-find) or Prim's algorithm</li>
+        <li>16. Segment Tree — range sum / range min queries in O(log n)</li>
+        <li>17. Trie (Prefix Tree) — autocomplete, spell check — insert/search O(L)</li>
+        <li>18. Longest Palindromic Substring — expand around center or Manacher's O(n)</li>
+        <li>19. Design LRU Cache — OrderedDict or doubly linked list + hash map</li>
+        <li>20. Median of Two Sorted Arrays — binary search on smaller array O(log(min(m,n)))</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- GATE DSA Topics -->
+  <div class="section">
+    <h2>GATE CS — DSA Topics Checklist</h2>
+    <ul class="checklist">
+      <li>Arrays: searching, sorting, two-pointer, prefix sums</li>
+      <li>Linked List: operations, reversal, cycle detection, merge</li>
+      <li>Stack and Queue: applications (balancing, postfix evaluation)</li>
+      <li>Binary Trees: traversals, height, diameter, LCA</li>
+      <li>Binary Search Tree: insert, delete, search, successor/predecessor</li>
+      <li>Heaps: heapify, heap sort, priority queue</li>
+      <li>Hashing: hash functions, collision resolution (chaining, open addressing)</li>
+      <li>Graphs: representation (adj matrix/list), BFS, DFS, connected components</li>
+      <li>Shortest Paths: Dijkstra, Bellman-Ford, Floyd-Warshall</li>
+      <li>Minimum Spanning Tree: Prim's, Kruskal's, union-find</li>
+      <li>Sorting: stability, comparison-based lower bound O(n log n), counting sort</li>
+      <li>Recurrences: Master theorem, divide and conquer</li>
+      <li>Dynamic Programming: memoization, tabulation, knapsack, LCS, LIS</li>
+      <li>Greedy: activity selection, Huffman coding, fractional knapsack</li>
+      <li>Amortized Analysis: dynamic array resizing, splay trees</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2024 StudyHub &mdash; Free Learning Resources for Students</p>
+  <p><a href="../programming.html">Back to Programming</a> &bull; <a href="python-tutorial-beginners.html">Python Tutorial</a> &bull; <a href="sql-tutorial.html">SQL Tutorial</a></p>
+</footer>
+
+<script src="../../js/main.js"></script>
+<script>
+  function toggleAnswer(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('show');
+    const btn = el.previousElementSibling;
+    btn.textContent = el.classList.contains('show') ? 'Hide Solution' : 'Show Solution';
+  }
+</script>
+</body>
+</html>
