@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematics Formulas & Notes | JEE Math, Gaokao Math, Class 12 | StudyHub</title>
+  <meta name="description" content="Complete mathematics formulas and notes for JEE Main, JEE Advanced, Gaokao, Class 10/12 CBSE. Algebra, Calculus, Trigonometry, Coordinate Geometry, Statistics.">
+  <meta name="keywords" content="JEE math formulas, Gaokao mathematics, class 12 math formulas, calculus formulas, trigonometry formulas, algebra, coordinate geometry, integration formulas">
+  <link rel="canonical" href="https://studyhub.github.io/student-hub/pages/math.html">
+  <meta property="og:title" content="Mathematics Formulas - JEE, Gaokao, Class 12 | StudyHub">
+  <meta property="og:description" content="Free math formulas for JEE, NEET, Gaokao and Class 12. All chapters covered.">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question","name": "What are the most important math formulas for JEE?","acceptedAnswer": {"@type": "Answer","text": "Key JEE math formulas include calculus (integration, differentiation), trigonometry identities, coordinate geometry distance/midpoint/slope formulas, and algebra (quadratic formula, AP/GP, permutations)."}},
+      {"@type": "Question","name": "How to prepare mathematics for Gaokao?","acceptedAnswer": {"@type": "Answer","text": "Focus on algebra, functions, geometry, statistics and probability. Practice past papers from 2014-2024. Master trigonometric functions and derivatives."}},
+      {"@type": "Question","name": "What is the quadratic formula?","acceptedAnswer": {"@type": "Answer","text": "The quadratic formula is x = (-b plus-or-minus sqrt(b^2-4ac)) / 2a, used to find roots of ax^2 + bx + c = 0."}},
+      {"@type": "Question","name": "What is the AM-GM inequality?","acceptedAnswer": {"@type": "Answer","text": "The AM-GM inequality states that for non-negative numbers a and b, (a+b)/2 >= sqrt(ab). Equality holds when a = b."}},
+      {"@type": "Question","name": "What is integration by parts?","acceptedAnswer": {"@type": "Answer","text": "Integration by parts states: integral u dv = uv - integral v du. Use LIATE rule to choose u: Logarithm, Inverse trig, Algebraic, Trigonometric, Exponential."}}
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #0ea5e9;
+      --accent: #f59e0b;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --code-bg: #f1f5f9;
+      --formula-bg: #eff6ff;
+      --formula-border: #bfdbfe;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .navbar { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; gap: 1rem; height: 60px; }
+    .nav-brand { font-size: 1.25rem; font-weight: 700; color: var(--primary); white-space: nowrap; }
+    .nav-menu { list-style: none; display: flex; gap: 0.25rem; flex-wrap: wrap; }
+    .nav-menu li a { padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.875rem; color: var(--text-muted); transition: all 0.2s; }
+    .nav-menu li a:hover, .nav-menu li a.active { background: var(--primary); color: white; text-decoration: none; }
+    .hamburger { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+    .hero { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0ea5e9 100%); color: white; padding: 3.5rem 1.5rem 2.5rem; }
+    .hero-inner { max-width: 900px; margin: 0 auto; }
+    .breadcrumb { font-size: 0.85rem; opacity: 0.8; margin-bottom: 1rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.8); }
+    .breadcrumb span { margin: 0 0.4rem; }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 0.75rem; }
+    .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 650px; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
+    .hero-tag { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 0.3rem 0.9rem; font-size: 0.8rem; }
+    .main-layout { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; display: grid; grid-template-columns: 260px 1fr; gap: 2rem; }
+    .toc-sidebar { position: sticky; top: 80px; max-height: calc(100vh - 100px); overflow-y: auto; }
+    .toc-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; }
+    .toc-card h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 0.1rem; }
+    .toc-list a { display: block; padding: 0.35rem 0.6rem; border-radius: 6px; font-size: 0.85rem; color: var(--text-muted); transition: all 0.2s; }
+    .toc-list a:hover { background: var(--formula-bg); color: var(--primary); text-decoration: none; }
+    .toc-list .toc-sub { padding-left: 1.2rem; font-size: 0.8rem; }
+    .content-area { min-width: 0; }
+    .section-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
+    .section-card h2 { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--formula-border); }
+    .section-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.75rem; }
+    .section-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--primary-dark); margin: 1.2rem 0 0.5rem; }
+    .formula-box { background: var(--formula-bg); border: 1px solid var(--formula-border); border-left: 4px solid var(--primary); border-radius: 8px; padding: 1rem 1.25rem; margin: 0.75rem 0; font-family: 'Courier New', monospace; font-size: 0.95rem; line-height: 1.8; }
+    .formula-box.green { background: #f0fdf4; border-color: #bbf7d0; border-left-color: var(--success); }
+    .formula-box.amber { background: #fffbeb; border-color: #fde68a; border-left-color: var(--accent); }
+    .formula-list { list-style: none; padding: 0; }
+    .formula-list li { padding: 0.4rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .formula-list li:last-child { border-bottom: none; }
+    .formula-list li .label { font-weight: 600; color: var(--primary-dark); min-width: 200px; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0; border-radius: 8px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    thead { background: var(--primary); color: white; }
+    th { padding: 0.75rem 1rem; text-align: left; font-weight: 600; white-space: nowrap; }
+    td { padding: 0.6rem 1rem; border-top: 1px solid var(--border); }
+    tr:nth-child(even) td { background: var(--bg); }
+    tr:hover td { background: var(--formula-bg); }
+    .note { background: #fffbeb; border: 1px solid #fde68a; border-left: 4px solid var(--accent); border-radius: 6px; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; }
+    .note strong { color: #92400e; }
+    .tip { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid var(--success); border-radius: 6px; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; }
+    .problem-card { border: 1px solid var(--border); border-radius: 10px; margin: 1rem 0; overflow: hidden; }
+    .problem-header { background: var(--primary); color: white; padding: 0.75rem 1.25rem; font-weight: 600; font-size: 0.95rem; }
+    .problem-body { padding: 1.25rem; }
+    .problem-body .question { font-weight: 600; margin-bottom: 0.75rem; }
+    .problem-body .solution { background: var(--code-bg); border-radius: 6px; padding: 1rem; font-family: 'Courier New', monospace; font-size: 0.88rem; white-space: pre-wrap; }
+    .problem-answer { margin-top: 0.75rem; font-weight: 700; color: var(--success); }
+    .faq-item { border: 1px solid var(--border); border-radius: 8px; margin: 0.75rem 0; overflow: hidden; }
+    .faq-q { background: var(--bg); padding: 1rem 1.25rem; font-weight: 600; }
+    .faq-a { padding: 1rem 1.25rem; border-top: 1px solid var(--border); font-size: 0.95rem; line-height: 1.7; }
+    .badge { display: inline-block; background: var(--formula-bg); border: 1px solid var(--formula-border); color: var(--primary-dark); border-radius: 4px; padding: 0.15rem 0.5rem; font-size: 0.78rem; }
+    footer { background: #1e293b; color: #94a3b8; padding: 3rem 1.5rem 2rem; margin-top: 3rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+    .footer-col h4 { color: white; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.4rem; }
+    .footer-col ul li a { color: #94a3b8; font-size: 0.875rem; }
+    .footer-col ul li a:hover { color: white; text-decoration: none; }
+    .footer-bottom { max-width: 1200px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid #334155; text-align: center; font-size: 0.85rem; }
+    @media (max-width: 900px) { .main-layout { grid-template-columns: 1fr; } .toc-sidebar { position: static; max-height: none; } }
+    @media (max-width: 600px) { .hamburger { display: block; } .nav-menu { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: white; border-bottom: 1px solid var(--border); padding: 1rem; } .nav-menu.open { display: flex; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-brand">&#128218; StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="math.html" class="active">Mathematics</a></li>
+      <li><a href="physics.html">Physics</a></li>
+      <li><a href="chemistry.html">Chemistry</a></li>
+      <li><a href="biology.html">Biology</a></li>
+      <li><a href="english.html">English</a></li>
+      <li><a href="programming.html">Programming</a></li>
+      <li><a href="competitive-exams.html">Exams</a></li>
+      <li><a href="career.html">Career</a></li>
+      <li><a href="gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>&rsaquo;</span>
+      <span>Mathematics</span>
+    </div>
+    <h1>Mathematics Formulas &amp; Notes</h1>
+    <p>Complete reference for JEE Main, JEE Advanced, Gaokao, Class 12 CBSE/ICSE &mdash; all chapters, all formulas, solved examples.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">JEE Main</span>
+      <span class="hero-tag">JEE Advanced</span>
+      <span class="hero-tag">Gaokao</span>
+      <span class="hero-tag">Class 12 CBSE</span>
+      <span class="hero-tag">ICSE</span>
+      <span class="hero-tag">BITSAT</span>
+    </div>
+  </div>
+</section>
+
+<div class="main-layout">
+  <aside class="toc-sidebar">
+    <div class="toc-card">
+      <h3>Table of Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#algebra">1. Algebra</a></li>
+        <li><a href="#algebra" class="toc-sub">1.1 Quadratic Equations</a></li>
+        <li><a href="#sequences" class="toc-sub">1.2 Sequences &amp; Series</a></li>
+        <li><a href="#binomial" class="toc-sub">1.3 Binomial Theorem</a></li>
+        <li><a href="#permcomb" class="toc-sub">1.4 Permutations &amp; Combinations</a></li>
+        <li><a href="#complex" class="toc-sub">1.5 Complex Numbers</a></li>
+        <li><a href="#inequalities" class="toc-sub">1.6 Inequalities</a></li>
+        <li><a href="#trigonometry">2. Trigonometry</a></li>
+        <li><a href="#trig-ratios" class="toc-sub">2.1 Basic Ratios &amp; Values</a></li>
+        <li><a href="#trig-identities" class="toc-sub">2.2 Identities</a></li>
+        <li><a href="#trig-triangle" class="toc-sub">2.3 Triangle Formulas</a></li>
+        <li><a href="#inverse-trig" class="toc-sub">2.4 Inverse Trigonometry</a></li>
+        <li><a href="#calculus">3. Calculus</a></li>
+        <li><a href="#limits" class="toc-sub">3.1 Limits</a></li>
+        <li><a href="#differentiation" class="toc-sub">3.2 Differentiation</a></li>
+        <li><a href="#integration" class="toc-sub">3.3 Integration</a></li>
+        <li><a href="#diffeq" class="toc-sub">3.4 Differential Equations</a></li>
+        <li><a href="#coordinate">4. Coordinate Geometry</a></li>
+        <li><a href="#3d">5. 3D Geometry &amp; Vectors</a></li>
+        <li><a href="#matrices">6. Matrices &amp; Determinants</a></li>
+        <li><a href="#stats">7. Statistics &amp; Probability</a></li>
+        <li><a href="#jee-tips">8. JEE Math Tips</a></li>
+        <li><a href="#gaokao-tips">9. Gaokao Math Tips</a></li>
+        <li><a href="#practice">10. Solved Problems</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="content-area">
+
+    <!-- SECTION 1: ALGEBRA -->
+    <section id="algebra" class="section-card">
+      <h2>1. Algebra</h2>
+
+      <h3>1.1 Quadratic Equations</h3>
+      <p>Standard form: <strong>ax&sup2; + bx + c = 0</strong> (a &ne; 0).</p>
+
+      <h4>Quadratic Formula</h4>
+      <div class="formula-box">x = (-b &plusmn; &radic;(b&sup2; - 4ac)) / 2a</div>
+
+      <h4>Discriminant D = b&sup2; - 4ac</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Discriminant</th><th>Nature of Roots</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>D &gt; 0</td><td>Two distinct real roots</td><td>x&sup2; - 5x + 6 = 0, D = 1</td></tr>
+            <tr><td>D = 0</td><td>Two equal real roots (repeated)</td><td>x&sup2; - 4x + 4 = 0, D = 0</td></tr>
+            <tr><td>D &lt; 0</td><td>Two complex conjugate roots</td><td>x&sup2; + x + 1 = 0, D = -3</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Vieta's Formulas (roots &alpha;, &beta;)</h4>
+      <ul class="formula-list">
+        <li><span class="label">Sum of roots:</span> &alpha; + &beta; = -b/a</li>
+        <li><span class="label">Product of roots:</span> &alpha;&beta; = c/a</li>
+        <li><span class="label">Sum of squares:</span> &alpha;&sup2; + &beta;&sup2; = (&alpha;+&beta;)&sup2; - 2&alpha;&beta;</li>
+        <li><span class="label">Difference squared:</span> (&alpha;-&beta;)&sup2; = (&alpha;+&beta;)&sup2; - 4&alpha;&beta;</li>
+      </ul>
+
+      <h3 id="sequences">1.2 Sequences &amp; Series</h3>
+
+      <h4>Arithmetic Progression (AP)</h4>
+      <ul class="formula-list">
+        <li><span class="label">General term a_n:</span> a + (n-1)d</li>
+        <li><span class="label">Sum of n terms S_n:</span> n/2 &times; [2a + (n-1)d] = n/2 &times; (a + l)</li>
+        <li><span class="label">Arithmetic Mean AM:</span> (a + b) / 2</li>
+        <li><span class="label">n-th term from end:</span> l - (n-1)d</li>
+      </ul>
+
+      <h4>Geometric Progression (GP)</h4>
+      <ul class="formula-list">
+        <li><span class="label">General term a_n:</span> a &times; r^(n-1)</li>
+        <li><span class="label">Sum (finite, r&ne;1):</span> S_n = a(r^n - 1) / (r - 1)</li>
+        <li><span class="label">Sum (infinite, |r|&lt;1):</span> S = a / (1 - r)</li>
+        <li><span class="label">Geometric Mean GM:</span> &radic;(ab)</li>
+      </ul>
+
+      <h4>Harmonic Progression (HP)</h4>
+      <ul class="formula-list">
+        <li><span class="label">HM of a and b:</span> 2ab / (a + b)</li>
+        <li><span class="label">Key inequality:</span> AM &ge; GM &ge; HM (for positive numbers)</li>
+      </ul>
+
+      <h4>Sum of Special Series</h4>
+      <div class="formula-box">
+        &Sigma;n = n(n+1)/2<br>
+        &Sigma;n&sup2; = n(n+1)(2n+1)/6<br>
+        &Sigma;n&sup3; = [n(n+1)/2]&sup2;
+      </div>
+
+      <h3 id="binomial">1.3 Binomial Theorem</h3>
+      <div class="formula-box">
+        (a + b)^n = &Sigma; C(n,r) &middot; a^(n-r) &middot; b^r, r from 0 to n
+      </div>
+      <ul class="formula-list">
+        <li><span class="label">General term T_(r+1):</span> C(n,r) &middot; a^(n-r) &middot; b^r</li>
+        <li><span class="label">Sum of all coefficients:</span> Set a=b=1 to get 2^n</li>
+        <li><span class="label">Sum of even-position:</span> C(n,0)+C(n,2)+... = 2^(n-1)</li>
+        <li><span class="label">Pascal's rule:</span> C(n,r-1) + C(n,r) = C(n+1,r)</li>
+      </ul>
+
+      <h4>Pascal's Triangle (rows 0 to 5)</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Row n</th><th>Binomial Coefficients</th></tr></thead>
+          <tbody>
+            <tr><td>0</td><td>1</td></tr>
+            <tr><td>1</td><td>1 &nbsp;&nbsp; 1</td></tr>
+            <tr><td>2</td><td>1 &nbsp;&nbsp; 2 &nbsp;&nbsp; 1</td></tr>
+            <tr><td>3</td><td>1 &nbsp;&nbsp; 3 &nbsp;&nbsp; 3 &nbsp;&nbsp; 1</td></tr>
+            <tr><td>4</td><td>1 &nbsp;&nbsp; 4 &nbsp;&nbsp; 6 &nbsp;&nbsp; 4 &nbsp;&nbsp; 1</td></tr>
+            <tr><td>5</td><td>1 &nbsp;&nbsp; 5 &nbsp;&nbsp; 10 &nbsp;&nbsp; 10 &nbsp;&nbsp; 5 &nbsp;&nbsp; 1</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="permcomb">1.4 Permutations &amp; Combinations</h3>
+      <ul class="formula-list">
+        <li><span class="label">Permutation nPr:</span> n! / (n-r)!</li>
+        <li><span class="label">Combination nCr:</span> n! / [r! &times; (n-r)!]</li>
+        <li><span class="label">Symmetry:</span> nCr = nC(n-r)</li>
+        <li><span class="label">Sum property:</span> nC0 + nC1 + ... + nCn = 2^n</li>
+        <li><span class="label">Circular permutation:</span> (n-1)!</li>
+        <li><span class="label">Necklace permutation:</span> (n-1)!/2</li>
+        <li><span class="label">Multinomial coefficient:</span> n! / (n1! n2! ... nk!)</li>
+      </ul>
+      <div class="note"><strong>Note:</strong> nC(r-1) + nCr = (n+1)Cr (Pascal's identity)</div>
+
+      <h3 id="complex">1.5 Complex Numbers</h3>
+      <p>A complex number z = a + bi where i = &radic;(-1), i&sup2; = -1.</p>
+      <ul class="formula-list">
+        <li><span class="label">Modulus |z|:</span> &radic;(a&sup2; + b&sup2;)</li>
+        <li><span class="label">Conjugate z&#773;:</span> a - bi</li>
+        <li><span class="label">Argument arg(z):</span> tan^(-1)(b/a)</li>
+        <li><span class="label">Polar form:</span> r(cos&theta; + i sin&theta;) = re^(i&theta;)</li>
+        <li><span class="label">Product moduli:</span> |z1&times;z2| = |z1|&times;|z2|</li>
+        <li><span class="label">Product argument:</span> arg(z1z2) = arg(z1) + arg(z2)</li>
+        <li><span class="label">z &times; z&#773;:</span> |z|&sup2; = a&sup2; + b&sup2;</li>
+      </ul>
+      <div class="formula-box green">
+        De Moivre's Theorem: (cos&theta; + i sin&theta;)^n = cos(n&theta;) + i sin(n&theta;)<br>
+        Euler's Identity: e^(i&pi;) + 1 = 0 (most beautiful equation in mathematics)<br>
+        nth roots of unity: &omega;k = e^(2&pi;ik/n), k = 0,1,...,n-1<br>
+        Sum of nth roots of unity = 0
+      </div>
+
+      <h3 id="inequalities">1.6 Inequalities</h3>
+      <ul class="formula-list">
+        <li><span class="label">AM-GM (2 vars):</span> (a+b)/2 &ge; &radic;(ab) for a,b &gt; 0; equality iff a = b</li>
+        <li><span class="label">AM-GM (n vars):</span> (a1+a2+...+an)/n &ge; (a1&times;a2&times;...&times;an)^(1/n)</li>
+        <li><span class="label">Cauchy-Schwarz:</span> (a1&sup2;+a2&sup2;)(b1&sup2;+b2&sup2;) &ge; (a1b1+a2b2)&sup2;</li>
+        <li><span class="label">Triangle inequality:</span> |a+b| &le; |a| + |b|</li>
+        <li><span class="label">Power Mean chain:</span> QM &ge; AM &ge; GM &ge; HM (all positive)</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 2: TRIGONOMETRY -->
+    <section id="trigonometry" class="section-card">
+      <h2>2. Trigonometry</h2>
+
+      <h3 id="trig-ratios">2.1 Basic Ratios &amp; Standard Values</h3>
+      <p>Definitions: sin&theta; = opposite/hypotenuse, cos&theta; = adjacent/hypotenuse, tan&theta; = sin/cos.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Angle</th><th>sin</th><th>cos</th><th>tan</th><th>csc</th><th>sec</th><th>cot</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>0&deg;</td><td>0</td><td>1</td><td>0</td><td>undef.</td><td>1</td><td>undef.</td></tr>
+            <tr><td>30&deg; (&pi;/6)</td><td>1/2</td><td>&radic;3/2</td><td>1/&radic;3</td><td>2</td><td>2/&radic;3</td><td>&radic;3</td></tr>
+            <tr><td>45&deg; (&pi;/4)</td><td>1/&radic;2</td><td>1/&radic;2</td><td>1</td><td>&radic;2</td><td>&radic;2</td><td>1</td></tr>
+            <tr><td>60&deg; (&pi;/3)</td><td>&radic;3/2</td><td>1/2</td><td>&radic;3</td><td>2/&radic;3</td><td>2</td><td>1/&radic;3</td></tr>
+            <tr><td>90&deg; (&pi;/2)</td><td>1</td><td>0</td><td>undef.</td><td>1</td><td>undef.</td><td>0</td></tr>
+            <tr><td>120&deg; (2&pi;/3)</td><td>&radic;3/2</td><td>-1/2</td><td>-&radic;3</td><td>2/&radic;3</td><td>-2</td><td>-1/&radic;3</td></tr>
+            <tr><td>150&deg; (5&pi;/6)</td><td>1/2</td><td>-&radic;3/2</td><td>-1/&radic;3</td><td>2</td><td>-2/&radic;3</td><td>-&radic;3</td></tr>
+            <tr><td>180&deg; (&pi;)</td><td>0</td><td>-1</td><td>0</td><td>undef.</td><td>-1</td><td>undef.</td></tr>
+            <tr><td>270&deg; (3&pi;/2)</td><td>-1</td><td>0</td><td>undef.</td><td>-1</td><td>undef.</td><td>0</td></tr>
+            <tr><td>360&deg; (2&pi;)</td><td>0</td><td>1</td><td>0</td><td>undef.</td><td>1</td><td>undef.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note"><strong>ASTC Rule (All Students Take Calculus):</strong> Q1: All +ve | Q2: Sin +ve | Q3: Tan +ve | Q4: Cos +ve</div>
+
+      <h3 id="trig-identities">2.2 Trigonometric Identities</h3>
+
+      <h4>Pythagorean Identities</h4>
+      <div class="formula-box">
+        sin&sup2;&theta; + cos&sup2;&theta; = 1<br>
+        1 + tan&sup2;&theta; = sec&sup2;&theta;<br>
+        1 + cot&sup2;&theta; = csc&sup2;&theta;
+      </div>
+
+      <h4>Sum &amp; Difference Formulas</h4>
+      <ul class="formula-list">
+        <li><span class="label">sin(A &plusmn; B):</span> sinA cosB &plusmn; cosA sinB</li>
+        <li><span class="label">cos(A &plusmn; B):</span> cosA cosB &mp; sinA sinB</li>
+        <li><span class="label">tan(A + B):</span> (tanA + tanB) / (1 - tanA tanB)</li>
+        <li><span class="label">tan(A - B):</span> (tanA - tanB) / (1 + tanA tanB)</li>
+      </ul>
+
+      <h4>Double Angle Formulas</h4>
+      <ul class="formula-list">
+        <li><span class="label">sin 2A:</span> 2 sinA cosA</li>
+        <li><span class="label">cos 2A (form 1):</span> cos&sup2;A - sin&sup2;A</li>
+        <li><span class="label">cos 2A (form 2):</span> 1 - 2sin&sup2;A</li>
+        <li><span class="label">cos 2A (form 3):</span> 2cos&sup2;A - 1</li>
+        <li><span class="label">tan 2A:</span> 2tanA / (1 - tan&sup2;A)</li>
+      </ul>
+
+      <h4>Half Angle Formulas</h4>
+      <ul class="formula-list">
+        <li><span class="label">sin&sup2;(A/2):</span> (1 - cosA) / 2</li>
+        <li><span class="label">cos&sup2;(A/2):</span> (1 + cosA) / 2</li>
+        <li><span class="label">tan(A/2):</span> sinA / (1 + cosA) = (1 - cosA) / sinA</li>
+      </ul>
+
+      <h4>Product-to-Sum Formulas</h4>
+      <ul class="formula-list">
+        <li><span class="label">2 sinA cosB:</span> sin(A+B) + sin(A-B)</li>
+        <li><span class="label">2 cosA cosB:</span> cos(A-B) + cos(A+B)</li>
+        <li><span class="label">2 sinA sinB:</span> cos(A-B) - cos(A+B)</li>
+      </ul>
+
+      <h4>Sum-to-Product Formulas</h4>
+      <ul class="formula-list">
+        <li><span class="label">sinC + sinD:</span> 2 sin((C+D)/2) cos((C-D)/2)</li>
+        <li><span class="label">sinC - sinD:</span> 2 cos((C+D)/2) sin((C-D)/2)</li>
+        <li><span class="label">cosC + cosD:</span> 2 cos((C+D)/2) cos((C-D)/2)</li>
+        <li><span class="label">cosC - cosD:</span> -2 sin((C+D)/2) sin((C-D)/2)</li>
+      </ul>
+
+      <h4>t-Formulas (t = tan(A/2))</h4>
+      <div class="formula-box amber">
+        sinA = 2t/(1+t&sup2;) &nbsp;&nbsp;&nbsp; cosA = (1-t&sup2;)/(1+t&sup2;) &nbsp;&nbsp;&nbsp; tanA = 2t/(1-t&sup2;)
+      </div>
+
+      <h3 id="trig-triangle">2.3 Triangle Formulas</h3>
+      <ul class="formula-list">
+        <li><span class="label">Sine Rule:</span> a/sinA = b/sinB = c/sinC = 2R</li>
+        <li><span class="label">Cosine Rule:</span> a&sup2; = b&sup2; + c&sup2; - 2bc cosA</li>
+        <li><span class="label">Area (trig):</span> &Delta; = (1/2)ab sinC</li>
+        <li><span class="label">Heron's Formula:</span> &Delta; = &radic;[s(s-a)(s-b)(s-c)], s = (a+b+c)/2</li>
+        <li><span class="label">Inradius r:</span> r = &Delta;/s</li>
+        <li><span class="label">Circumradius R:</span> R = abc / (4&Delta;)</li>
+      </ul>
+
+      <h3 id="inverse-trig">2.4 Inverse Trigonometry</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Function</th><th>Domain</th><th>Principal Range</th></tr></thead>
+          <tbody>
+            <tr><td>sin&sup2;x (written sin&#8315;&#185;x)</td><td>[-1, 1]</td><td>[-&pi;/2, &pi;/2]</td></tr>
+            <tr><td>cos&#8315;&#185;x</td><td>[-1, 1]</td><td>[0, &pi;]</td></tr>
+            <tr><td>tan&#8315;&#185;x</td><td>(-&infin;, &infin;)</td><td>(-&pi;/2, &pi;/2)</td></tr>
+            <tr><td>cot&#8315;&#185;x</td><td>(-&infin;, &infin;)</td><td>(0, &pi;)</td></tr>
+            <tr><td>sec&#8315;&#185;x</td><td>|x| &ge; 1</td><td>[0, &pi;] \ {&pi;/2}</td></tr>
+            <tr><td>csc&#8315;&#185;x</td><td>|x| &ge; 1</td><td>[-&pi;/2, &pi;/2] \ {0}</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="formula-list">
+        <li><span class="label">sin&#8315;&#185;(-x):</span> -sin&#8315;&#185;x (odd function)</li>
+        <li><span class="label">cos&#8315;&#185;(-x):</span> &pi; - cos&#8315;&#185;x</li>
+        <li><span class="label">tan&#8315;&#185;(-x):</span> -tan&#8315;&#185;x (odd function)</li>
+        <li><span class="label">sin&#8315;&#185;x + cos&#8315;&#185;x:</span> &pi;/2</li>
+        <li><span class="label">tan&#8315;&#185;x + cot&#8315;&#185;x:</span> &pi;/2</li>
+        <li><span class="label">tan&#8315;&#185;x + tan&#8315;&#185;y:</span> tan&#8315;&#185;[(x+y)/(1-xy)] when xy &lt; 1</li>
+        <li><span class="label">2 sin&#8315;&#185;x:</span> sin&#8315;&#185;(2x&radic;(1-x&sup2;))</li>
+        <li><span class="label">2 tan&#8315;&#185;x:</span> tan&#8315;&#185;(2x/(1-x&sup2;)) = sin&#8315;&#185;(2x/(1+x&sup2;))</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 3: CALCULUS -->
+    <section id="calculus" class="section-card">
+      <h2>3. Calculus</h2>
+
+      <h3 id="limits">3.1 Limits</h3>
+      <h4>Standard Limits</h4>
+      <ul class="formula-list">
+        <li><span class="label">lim(x&rarr;0) (sin x)/x:</span> 1</li>
+        <li><span class="label">lim(x&rarr;0) (tan x)/x:</span> 1</li>
+        <li><span class="label">lim(x&rarr;0) (e^x - 1)/x:</span> 1</li>
+        <li><span class="label">lim(x&rarr;0) (a^x - 1)/x:</span> ln a</li>
+        <li><span class="label">lim(x&rarr;0) (1+x)^(1/x):</span> e</li>
+        <li><span class="label">lim(x&rarr;&infin;) (1+1/x)^x:</span> e</li>
+        <li><span class="label">lim(x&rarr;0) ln(1+x)/x:</span> 1</li>
+        <li><span class="label">lim(x&rarr;a) (x^n - a^n)/(x-a):</span> na^(n-1)</li>
+      </ul>
+      <div class="formula-box amber">
+        L'H&ocirc;pital's Rule: If f(x)/g(x) &rarr; 0/0 or &infin;/&infin; as x&rarr;a,<br>
+        then lim f(x)/g(x) = lim f'(x)/g'(x) (if the latter limit exists)
+      </div>
+      <p><strong>Sandwich (Squeeze) Theorem:</strong> If f(x) &le; g(x) &le; h(x) near a, and lim f(x) = lim h(x) = L, then lim g(x) = L.</p>
+
+      <h3 id="differentiation">3.2 Differentiation</h3>
+      <h4>Basic Rules</h4>
+      <ul class="formula-list">
+        <li><span class="label">Power Rule:</span> d/dx (x^n) = n x^(n-1)</li>
+        <li><span class="label">Product Rule:</span> (uv)' = u'v + uv'</li>
+        <li><span class="label">Quotient Rule:</span> (u/v)' = (u'v - uv') / v&sup2;</li>
+        <li><span class="label">Chain Rule:</span> d/dx [f(g(x))] = f'(g(x)) &times; g'(x)</li>
+      </ul>
+
+      <h4>Standard Derivatives Table</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Function f(x)</th><th>Derivative f'(x)</th></tr></thead>
+          <tbody>
+            <tr><td>x^n</td><td>n x^(n-1)</td></tr>
+            <tr><td>e^x</td><td>e^x</td></tr>
+            <tr><td>a^x</td><td>a^x ln(a)</td></tr>
+            <tr><td>ln x</td><td>1/x (x &gt; 0)</td></tr>
+            <tr><td>log_a(x)</td><td>1/(x ln a)</td></tr>
+            <tr><td>sin x</td><td>cos x</td></tr>
+            <tr><td>cos x</td><td>-sin x</td></tr>
+            <tr><td>tan x</td><td>sec&sup2; x</td></tr>
+            <tr><td>cot x</td><td>-csc&sup2; x</td></tr>
+            <tr><td>sec x</td><td>sec x tan x</td></tr>
+            <tr><td>csc x</td><td>-csc x cot x</td></tr>
+            <tr><td>sin&#8315;&#185;x</td><td>1/&radic;(1-x&sup2;)</td></tr>
+            <tr><td>cos&#8315;&#185;x</td><td>-1/&radic;(1-x&sup2;)</td></tr>
+            <tr><td>tan&#8315;&#185;x</td><td>1/(1+x&sup2;)</td></tr>
+            <tr><td>cot&#8315;&#185;x</td><td>-1/(1+x&sup2;)</td></tr>
+            <tr><td>sec&#8315;&#185;x</td><td>1/(|x|&radic;(x&sup2;-1))</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Applications of Derivatives</h4>
+      <ul class="formula-list">
+        <li><span class="label">Tangent slope at x0:</span> m = f'(x0)</li>
+        <li><span class="label">Normal slope:</span> -1/f'(x0)</li>
+        <li><span class="label">Increasing function:</span> f'(x) &gt; 0 on interval</li>
+        <li><span class="label">Decreasing function:</span> f'(x) &lt; 0 on interval</li>
+        <li><span class="label">Critical points:</span> f'(c) = 0 or undefined</li>
+        <li><span class="label">Local max (2nd deriv):</span> f'(c) = 0 and f''(c) &lt; 0</li>
+        <li><span class="label">Local min (2nd deriv):</span> f'(c) = 0 and f''(c) &gt; 0</li>
+        <li><span class="label">Concave up:</span> f''(x) &gt; 0</li>
+        <li><span class="label">Inflection point:</span> f''(x) = 0 and sign changes</li>
+      </ul>
+
+      <h3 id="integration">3.3 Integration</h3>
+      <h4>Standard Integrals Table</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Integral</th><th>Result (+C)</th></tr></thead>
+          <tbody>
+            <tr><td>&int; x^n dx</td><td>x^(n+1)/(n+1), n &ne; -1</td></tr>
+            <tr><td>&int; 1/x dx</td><td>ln|x|</td></tr>
+            <tr><td>&int; e^x dx</td><td>e^x</td></tr>
+            <tr><td>&int; a^x dx</td><td>a^x/ln(a)</td></tr>
+            <tr><td>&int; sin x dx</td><td>-cos x</td></tr>
+            <tr><td>&int; cos x dx</td><td>sin x</td></tr>
+            <tr><td>&int; tan x dx</td><td>ln|sec x|</td></tr>
+            <tr><td>&int; cot x dx</td><td>ln|sin x|</td></tr>
+            <tr><td>&int; sec x dx</td><td>ln|sec x + tan x|</td></tr>
+            <tr><td>&int; csc x dx</td><td>ln|csc x - cot x|</td></tr>
+            <tr><td>&int; sec&sup2; x dx</td><td>tan x</td></tr>
+            <tr><td>&int; csc&sup2; x dx</td><td>-cot x</td></tr>
+            <tr><td>&int; sec x tan x dx</td><td>sec x</td></tr>
+            <tr><td>&int; csc x cot x dx</td><td>-csc x</td></tr>
+            <tr><td>&int; 1/&radic;(a&sup2;-x&sup2;) dx</td><td>sin&#8315;&#185;(x/a)</td></tr>
+            <tr><td>&int; 1/(a&sup2;+x&sup2;) dx</td><td>(1/a) tan&#8315;&#185;(x/a)</td></tr>
+            <tr><td>&int; 1/(x&sup2;-a&sup2;) dx</td><td>(1/2a) ln|(x-a)/(x+a)|</td></tr>
+            <tr><td>&int; &radic;(a&sup2;-x&sup2;) dx</td><td>(x/2)&radic;(a&sup2;-x&sup2;) + (a&sup2;/2) sin&#8315;&#185;(x/a)</td></tr>
+            <tr><td>&int; e^(ax) sin(bx) dx</td><td>e^(ax)(a sin bx - b cos bx)/(a&sup2;+b&sup2;)</td></tr>
+            <tr><td>&int; e^(ax) cos(bx) dx</td><td>e^(ax)(a cos bx + b sin bx)/(a&sup2;+b&sup2;)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Methods of Integration</h4>
+      <ul class="formula-list">
+        <li><span class="label">Substitution:</span> Let u = g(x); &int;f(g(x))g'(x)dx = &int;f(u)du</li>
+        <li><span class="label">By Parts (LIATE):</span> &int;u dv = uv - &int;v du</li>
+        <li><span class="label">LIATE order:</span> Log, Inverse trig, Algebraic, Trig, Exponential</li>
+        <li><span class="label">Partial fractions:</span> Decompose rational function before integrating</li>
+      </ul>
+
+      <h4>Definite Integral Properties</h4>
+      <ul class="formula-list">
+        <li><span class="label">Reversal:</span> &int;[a to b] f = -&int;[b to a] f</li>
+        <li><span class="label">Additive interval:</span> &int;[a to c] = &int;[a to b] + &int;[b to c]</li>
+        <li><span class="label">Even function:</span> &int;[-a to a] f = 2&int;[0 to a] f</li>
+        <li><span class="label">Odd function:</span> &int;[-a to a] f = 0</li>
+        <li><span class="label">King's property:</span> &int;[a to b] f(x)dx = &int;[a to b] f(a+b-x)dx</li>
+        <li><span class="label">Period:</span> &int;[0 to nT] f = n &int;[0 to T] f for periodic f with period T</li>
+      </ul>
+
+      <h4>Applications of Integration</h4>
+      <ul class="formula-list">
+        <li><span class="label">Area under curve:</span> A = &int;[a to b] |f(x)| dx</li>
+        <li><span class="label">Area between curves:</span> A = &int;[a to b] [f(x) - g(x)] dx</li>
+        <li><span class="label">Volume (disk method):</span> V = &pi; &int;[a to b] [f(x)]&sup2; dx</li>
+        <li><span class="label">Volume (shell method):</span> V = 2&pi; &int;[a to b] x f(x) dx</li>
+      </ul>
+
+      <h3 id="diffeq">3.4 Differential Equations</h3>
+      <ul class="formula-list">
+        <li><span class="label">Order:</span> Highest derivative present</li>
+        <li><span class="label">Degree:</span> Power of highest-order derivative (polynomial form)</li>
+        <li><span class="label">Variable separable:</span> f(y)dy = g(x)dx; integrate both sides</li>
+        <li><span class="label">Homogeneous (y=vx):</span> If dy/dx = F(y/x), substitute y = vx</li>
+        <li><span class="label">Linear 1st-order form:</span> dy/dx + P(x)y = Q(x)</li>
+        <li><span class="label">Integrating Factor IF:</span> e^(&int;P dx)</li>
+        <li><span class="label">General solution:</span> y &times; IF = &int; Q &times; IF dx + C</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 4: COORDINATE GEOMETRY -->
+    <section id="coordinate" class="section-card">
+      <h2>4. Coordinate Geometry</h2>
+
+      <h3>4.1 Straight Lines</h3>
+      <ul class="formula-list">
+        <li><span class="label">Distance formula:</span> d = &radic;[(x2-x1)&sup2; + (y2-y1)&sup2;]</li>
+        <li><span class="label">Midpoint:</span> M = ((x1+x2)/2, (y1+y2)/2)</li>
+        <li><span class="label">Section formula (m:n internal):</span> ((mx2+nx1)/(m+n), (my2+ny1)/(m+n))</li>
+        <li><span class="label">Slope:</span> m = (y2-y1)/(x2-x1) = tan &theta;</li>
+        <li><span class="label">Slope-intercept form:</span> y = mx + c</li>
+        <li><span class="label">Point-slope form:</span> y - y1 = m(x - x1)</li>
+        <li><span class="label">Two-point form:</span> (y-y1)/(y2-y1) = (x-x1)/(x2-x1)</li>
+        <li><span class="label">Intercept form:</span> x/a + y/b = 1</li>
+        <li><span class="label">Normal form:</span> x cos&alpha; + y sin&alpha; = p</li>
+        <li><span class="label">Angle between two lines:</span> tan&theta; = |m1-m2| / (1+m1 m2)</li>
+        <li><span class="label">Distance: point to line:</span> d = |ax0+by0+c| / &radic;(a&sup2;+b&sup2;)</li>
+        <li><span class="label">Parallel condition:</span> m1 = m2</li>
+        <li><span class="label">Perpendicular condition:</span> m1 &times; m2 = -1</li>
+      </ul>
+
+      <h3>4.2 Circles</h3>
+      <ul class="formula-list">
+        <li><span class="label">Standard form:</span> (x-h)&sup2; + (y-k)&sup2; = r&sup2;</li>
+        <li><span class="label">General form:</span> x&sup2;+y&sup2;+2gx+2fy+c = 0</li>
+        <li><span class="label">Center:</span> (-g, -f)</li>
+        <li><span class="label">Radius:</span> &radic;(g&sup2; + f&sup2; - c)</li>
+        <li><span class="label">Tangent at (x1,y1):</span> xx1 + yy1 + g(x+x1) + f(y+y1) + c = 0</li>
+        <li><span class="label">Tangent length from P:</span> L = &radic;(x1&sup2;+y1&sup2;+2gx1+2fy1+c)</li>
+        <li><span class="label">Power of point P:</span> L&sup2; = x1&sup2;+y1&sup2;-r&sup2; (for circle centered at origin)</li>
+      </ul>
+
+      <h3>4.3 Conic Sections</h3>
+      <h4>Parabola Standard Forms</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Equation</th><th>Opens</th><th>Focus</th><th>Directrix</th><th>Latus Rectum</th></tr></thead>
+          <tbody>
+            <tr><td>y&sup2; = 4ax</td><td>Right</td><td>(a, 0)</td><td>x = -a</td><td>4a</td></tr>
+            <tr><td>y&sup2; = -4ax</td><td>Left</td><td>(-a, 0)</td><td>x = a</td><td>4a</td></tr>
+            <tr><td>x&sup2; = 4ay</td><td>Up</td><td>(0, a)</td><td>y = -a</td><td>4a</td></tr>
+            <tr><td>x&sup2; = -4ay</td><td>Down</td><td>(0, -a)</td><td>y = a</td><td>4a</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Ellipse: x&sup2;/a&sup2; + y&sup2;/b&sup2; = 1 (a &gt; b &gt; 0)</h4>
+      <ul class="formula-list">
+        <li><span class="label">Foci:</span> (&plusmn;c, 0) where c&sup2; = a&sup2; - b&sup2;</li>
+        <li><span class="label">Eccentricity e:</span> e = c/a, 0 &lt; e &lt; 1</li>
+        <li><span class="label">Semi-latus rectum:</span> l = b&sup2;/a</li>
+        <li><span class="label">Relation:</span> b&sup2; = a&sup2;(1 - e&sup2;)</li>
+        <li><span class="label">Sum of focal radii:</span> r1 + r2 = 2a (constant)</li>
+      </ul>
+
+      <h4>Hyperbola: x&sup2;/a&sup2; - y&sup2;/b&sup2; = 1</h4>
+      <ul class="formula-list">
+        <li><span class="label">Foci:</span> (&plusmn;c, 0) where c&sup2; = a&sup2; + b&sup2;</li>
+        <li><span class="label">Eccentricity e:</span> e = c/a, e &gt; 1</li>
+        <li><span class="label">Asymptotes:</span> y = &plusmn;(b/a)x</li>
+        <li><span class="label">Relation:</span> b&sup2; = a&sup2;(e&sup2; - 1)</li>
+        <li><span class="label">Diff. of focal radii:</span> |r1 - r2| = 2a (constant)</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 5: 3D GEOMETRY & VECTORS -->
+    <section id="3d" class="section-card">
+      <h2>5. 3D Geometry &amp; Vectors</h2>
+
+      <h3>5.1 Direction Cosines &amp; Ratios</h3>
+      <ul class="formula-list">
+        <li><span class="label">DCs (l, m, n):</span> cos&alpha;, cos&beta;, cos&gamma; (angles with x, y, z axes)</li>
+        <li><span class="label">Identity:</span> l&sup2; + m&sup2; + n&sup2; = 1</li>
+        <li><span class="label">DRs (a, b, c) to DCs:</span> l = a/&radic;(a&sup2;+b&sup2;+c&sup2;), similarly m, n</li>
+        <li><span class="label">Distance (3D):</span> d = &radic;[(x2-x1)&sup2;+(y2-y1)&sup2;+(z2-z1)&sup2;]</li>
+      </ul>
+
+      <h3>5.2 Vector Operations</h3>
+      <ul class="formula-list">
+        <li><span class="label">Magnitude |a|:</span> &radic;(a1&sup2; + a2&sup2; + a3&sup2;)</li>
+        <li><span class="label">Unit vector:</span> a&#770; = a / |a|</li>
+        <li><span class="label">Dot product a&middot;b:</span> |a||b|cos&theta; = a1b1 + a2b2 + a3b3</li>
+        <li><span class="label">Cross product |a&times;b|:</span> |a||b|sin&theta; (direction: right-hand rule)</li>
+        <li><span class="label">Cross product components:</span> (a2b3-a3b2, a3b1-a1b3, a1b2-a2b1)</li>
+        <li><span class="label">Area of parallelogram:</span> |a&times;b|</li>
+        <li><span class="label">Area of triangle:</span> (1/2)|a&times;b|</li>
+        <li><span class="label">Scalar triple product [a,b,c]:</span> a&middot;(b&times;c)</li>
+        <li><span class="label">Volume of parallelepiped:</span> |[a,b,c]|</li>
+        <li><span class="label">Coplanar test:</span> [a,b,c] = 0</li>
+      </ul>
+
+      <h3>5.3 Lines &amp; Planes in 3D</h3>
+      <ul class="formula-list">
+        <li><span class="label">Line (vector form):</span> r = a + &lambda;b</li>
+        <li><span class="label">Line (symmetric):</span> (x-x1)/l = (y-y1)/m = (z-z1)/n</li>
+        <li><span class="label">Plane (vector):</span> r&middot;n = d</li>
+        <li><span class="label">Plane (Cartesian):</span> ax + by + cz = d</li>
+        <li><span class="label">Plane (intercept form):</span> x/a + y/b + z/c = 1</li>
+        <li><span class="label">Dist. point to plane:</span> |ax0+by0+cz0-d| / &radic;(a&sup2;+b&sup2;+c&sup2;)</li>
+        <li><span class="label">Angle between line &amp; plane:</span> sin&theta; = |l&middot;a+m&middot;b+n&middot;c| / (1 &times; &radic;(a&sup2;+b&sup2;+c&sup2;))</li>
+        <li><span class="label">Dist. between skew lines:</span> |(a2-a1)&middot;(d1&times;d2)| / |d1&times;d2|</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 6: MATRICES & DETERMINANTS -->
+    <section id="matrices" class="section-card">
+      <h2>6. Matrices &amp; Determinants</h2>
+
+      <h3>6.1 Types of Matrices</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Type</th><th>Definition / Property</th></tr></thead>
+          <tbody>
+            <tr><td>Row matrix</td><td>1 &times; n (single row)</td></tr>
+            <tr><td>Column matrix</td><td>m &times; 1 (single column)</td></tr>
+            <tr><td>Square matrix</td><td>m = n (equal rows and columns)</td></tr>
+            <tr><td>Diagonal matrix</td><td>Non-zero entries only on main diagonal</td></tr>
+            <tr><td>Identity matrix I</td><td>Diagonal with all 1s; AI = IA = A</td></tr>
+            <tr><td>Zero matrix O</td><td>All entries = 0</td></tr>
+            <tr><td>Symmetric matrix</td><td>A = A^T</td></tr>
+            <tr><td>Skew-symmetric</td><td>A = -A^T; diagonal entries are all zero</td></tr>
+            <tr><td>Orthogonal matrix</td><td>A A^T = I, so A^(-1) = A^T</td></tr>
+            <tr><td>Idempotent matrix</td><td>A&sup2; = A</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>6.2 Determinants</h3>
+      <div class="formula-box">
+        2&times;2: det(A) = ad - bc, for A = [[a,b],[c,d]]<br><br>
+        3&times;3 (cofactor expansion along row 1):<br>
+        det(A) = a11(a22 a33 - a23 a32) - a12(a21 a33 - a23 a31) + a13(a21 a32 - a22 a31)
+      </div>
+
+      <h4>Properties of Determinants</h4>
+      <ul class="formula-list">
+        <li><span class="label">Row/column swap:</span> det changes sign</li>
+        <li><span class="label">Multiply row by k:</span> det multiplied by k</li>
+        <li><span class="label">Two identical rows:</span> det = 0</li>
+        <li><span class="label">Row operation R_i + k R_j:</span> det unchanged</li>
+        <li><span class="label">det(AB):</span> det(A) &times; det(B)</li>
+        <li><span class="label">det(A^T):</span> det(A)</li>
+        <li><span class="label">det(kA) for n&times;n:</span> k^n det(A)</li>
+        <li><span class="label">Singular:</span> det(A) = 0 (no inverse exists)</li>
+      </ul>
+
+      <h3>6.3 Inverse &amp; Linear Systems</h3>
+      <ul class="formula-list">
+        <li><span class="label">Matrix inverse:</span> A^(-1) = adj(A) / det(A)</li>
+        <li><span class="label">Adjoint adj(A):</span> Transpose of cofactor matrix of A</li>
+        <li><span class="label">Cramer's Rule x_i:</span> det(A_i) / det(A), where A_i has b in column i</li>
+        <li><span class="label">Unique solution:</span> det(A) &ne; 0</li>
+        <li><span class="label">Infinite solutions:</span> det(A) = 0, rank(A) = rank([A|b])</li>
+        <li><span class="label">No solution:</span> rank(A) &ne; rank([A|b])</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 7: STATISTICS & PROBABILITY -->
+    <section id="stats" class="section-card">
+      <h2>7. Statistics &amp; Probability</h2>
+
+      <h3>7.1 Measures of Central Tendency</h3>
+      <ul class="formula-list">
+        <li><span class="label">Mean (ungrouped):</span> x&#772; = &Sigma;xi / n</li>
+        <li><span class="label">Weighted mean:</span> x&#772; = &Sigma;wi xi / &Sigma;wi</li>
+        <li><span class="label">Combined mean:</span> x&#772;12 = (n1 x&#772;1 + n2 x&#772;2) / (n1 + n2)</li>
+        <li><span class="label">Median (odd n):</span> Middle value of sorted data</li>
+        <li><span class="label">Median (even n):</span> Average of two middle values</li>
+        <li><span class="label">Mode:</span> Most frequently occurring value</li>
+      </ul>
+
+      <h3>7.2 Measures of Dispersion</h3>
+      <ul class="formula-list">
+        <li><span class="label">Range:</span> Maximum - Minimum</li>
+        <li><span class="label">Mean Deviation (from mean):</span> MD = &Sigma;|xi - x&#772;| / n</li>
+        <li><span class="label">Variance:</span> &sigma;&sup2; = &Sigma;(xi - x&#772;)&sup2; / n</li>
+        <li><span class="label">Variance (shortcut):</span> &sigma;&sup2; = &Sigma;xi&sup2;/n - (x&#772;)&sup2;</li>
+        <li><span class="label">Standard deviation:</span> &sigma; = &radic;(&sigma;&sup2;)</li>
+        <li><span class="label">Coeff. of variation:</span> CV = (&sigma; / x&#772;) &times; 100 %</li>
+      </ul>
+
+      <h3>7.3 Probability Theorems</h3>
+      <ul class="formula-list">
+        <li><span class="label">Classical probability:</span> P(E) = n(E) / n(S)</li>
+        <li><span class="label">Complement rule:</span> P(A') = 1 - P(A)</li>
+        <li><span class="label">Addition rule:</span> P(A&cup;B) = P(A) + P(B) - P(A&cap;B)</li>
+        <li><span class="label">Mutually exclusive:</span> P(A&cup;B) = P(A) + P(B)</li>
+        <li><span class="label">Conditional probability:</span> P(A|B) = P(A&cap;B) / P(B)</li>
+        <li><span class="label">Independent events:</span> P(A&cap;B) = P(A) &times; P(B)</li>
+        <li><span class="label">Total probability:</span> P(B) = &Sigma; P(B|Ai) P(Ai)</li>
+        <li><span class="label">Bayes' theorem:</span> P(Ai|B) = P(B|Ai)P(Ai) / &Sigma;P(B|Aj)P(Aj)</li>
+      </ul>
+
+      <h3>7.4 Probability Distributions</h3>
+      <h4>Binomial Distribution B(n, p)</h4>
+      <div class="formula-box">
+        P(X = r) = C(n,r) p^r q^(n-r), where q = 1 - p, r = 0, 1, ..., n<br>
+        Mean &mu; = np<br>
+        Variance &sigma;&sup2; = npq<br>
+        Standard deviation &sigma; = &radic;(npq)
+      </div>
+
+      <h4>Normal Distribution N(&mu;, &sigma;&sup2;)</h4>
+      <ul class="formula-list">
+        <li><span class="label">Standard normal Z:</span> Z = (X - &mu;) / &sigma;</li>
+        <li><span class="label">68-95-99.7 rule:</span> P(&mu;&plusmn;&sigma;)&approx;68%, P(&mu;&plusmn;2&sigma;)&approx;95%, P(&mu;&plusmn;3&sigma;)&approx;99.7%</li>
+        <li><span class="label">Shape:</span> Bell-shaped, symmetric around &mu;</li>
+        <li><span class="label">Mean = Median = Mode:</span> All equal &mu;</li>
+        <li><span class="label">Total area:</span> = 1</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 8: JEE TIPS -->
+    <section id="jee-tips" class="section-card">
+      <h2>8. JEE Mathematics &mdash; Important Tips</h2>
+
+      <h3>JEE Main Chapter Weightage (5-year average)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Chapter</th><th>Approx. Marks</th><th>Priority Level</th></tr></thead>
+          <tbody>
+            <tr><td>Calculus (Differentiation + Integration)</td><td>25&ndash;30</td><td><span class="badge">Must Do</span></td></tr>
+            <tr><td>Coordinate Geometry (Lines, Circles, Conics)</td><td>20&ndash;25</td><td><span class="badge">Must Do</span></td></tr>
+            <tr><td>Algebra (Quadratics, AP/GP, Complex Numbers)</td><td>15&ndash;20</td><td><span class="badge">High</span></td></tr>
+            <tr><td>Trigonometry + Inverse Trig</td><td>10&ndash;15</td><td><span class="badge">High</span></td></tr>
+            <tr><td>Probability &amp; Statistics</td><td>8&ndash;10</td><td><span class="badge">Medium</span></td></tr>
+            <tr><td>Matrices &amp; Determinants</td><td>6&ndash;8</td><td><span class="badge">Medium</span></td></tr>
+            <tr><td>3D Geometry &amp; Vectors</td><td>8&ndash;10</td><td><span class="badge">Medium</span></td></tr>
+            <tr><td>Differential Equations</td><td>4&ndash;6</td><td><span class="badge">Medium</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Common Mistakes and How to Avoid Them</h3>
+      <ul style="padding-left:1.5rem; line-height:2.2;">
+        <li>Forgetting &plusmn; when taking square roots: always write both cases</li>
+        <li>Confusing sin(A+B) with sinA + sinB: these are NOT equal</li>
+        <li>Skipping chain rule for composite functions in differentiation</li>
+        <li>Not adding constant C in indefinite integration</li>
+        <li>Forgetting to check domain/range in inverse trigonometry problems</li>
+        <li>Sign errors in determinant cofactor expansion (use checkerboard +/-/+ pattern)</li>
+        <li>Wrong limits or substitution in definite integrals</li>
+      </ul>
+
+      <h3>2-Month JEE Math Revision Strategy</h3>
+      <div class="tip"><strong>Weeks 1&ndash;3:</strong> Calculus mastery &mdash; Limits, Differentiation, Integration (standard, substitution, by parts, partial fractions). Solve 50+ questions from each. Focus on definite integral properties (King's rule, periodicity).</div>
+      <div class="tip"><strong>Weeks 4&ndash;5:</strong> Coordinate Geometry &mdash; Lines, Circles, Parabola, Ellipse, Hyperbola. Memorize all standard forms and tangent/chord equations. Do JEE previous year problems by chapter.</div>
+      <div class="tip"><strong>Weeks 6&ndash;7:</strong> Algebra (Quadratics, AP/GP/HP, Binomial, P&amp;C, Complex Numbers) + Trigonometry. Focus on identity-based proofs and inverse trig evaluation.</div>
+      <div class="tip"><strong>Week 8:</strong> Rapid revision of Matrices, Vectors/3D, Probability. Take 5 full mock tests (3 hours each) and analyze errors.</div>
+    </section>
+
+    <!-- SECTION 9: GAOKAO TIPS -->
+    <section id="gaokao-tips" class="section-card">
+      <h2>9. Gaokao Mathematics &mdash; Tips for Chinese Students</h2>
+      <p>The Chinese Gaokao math paper is worth <strong>150 marks</strong> and lasts <strong>120 minutes</strong>. It tests both analytical thinking and computation accuracy.</p>
+
+      <h3>Gaokao Math Structure</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Section</th><th>Marks</th><th>Questions</th><th>Time Guideline</th></tr></thead>
+          <tbody>
+            <tr><td>Multiple Choice</td><td>60</td><td>12 questions &times; 5 marks</td><td>~40 minutes</td></tr>
+            <tr><td>Fill-in-the-Blank</td><td>20</td><td>4 questions &times; 5 marks</td><td>~20 minutes</td></tr>
+            <tr><td>Proof/Calculation</td><td>70</td><td>6 questions</td><td>~60 minutes</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Key Topics for Gaokao Math</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Topic</th><th>Importance</th><th>Key Concepts</th></tr></thead>
+          <tbody>
+            <tr><td>Functions &amp; Derivatives</td><td>Very High</td><td>Domain, range, monotonicity, extrema, applications of derivatives</td></tr>
+            <tr><td>Sequences (AP/GP)</td><td>Very High</td><td>General terms, sums, mathematical induction</td></tr>
+            <tr><td>Analytic Geometry</td><td>High</td><td>Conic sections, tangent lines, intersection points</td></tr>
+            <tr><td>Probability &amp; Statistics</td><td>High</td><td>Classical probability, conditional, distributions, regression</td></tr>
+            <tr><td>Trigonometry</td><td>Medium-High</td><td>Identities, equations, triangle applications</td></tr>
+            <tr><td>Solid Geometry</td><td>Medium</td><td>Prisms, pyramids, spheres, surface area and volume</td></tr>
+            <tr><td>Vectors</td><td>Medium</td><td>Dot product, angle calculation, decomposition</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Gaokao Study Advice</h3>
+      <div class="tip"><strong>Past papers are essential:</strong> Solve full Gaokao papers (National Exam I, II, III and Shanghai) from 2015 to 2024. Topics repeat in predictable patterns.</div>
+      <div class="tip"><strong>Show all steps:</strong> The grading rubric awards partial marks for each correct step. Even an incorrect final answer can earn 5&ndash;10 marks if work is shown.</div>
+      <div class="note"><strong>Common pitfall:</strong> Spending too long on one question. In the proof section, if you are stuck for 5 minutes, move on and return later. Secure easy marks first.</div>
+      <div class="note"><strong>Calculation accuracy:</strong> Gaokao does not provide a calculator. Practice mental arithmetic and standard computations (e.g., sin 30&deg;, &radic;2, &radic;3 values) until automatic.</div>
+    </section>
+
+    <!-- SECTION 10: SOLVED PROBLEMS -->
+    <section id="practice" class="section-card">
+      <h2>10. Solved Practice Problems</h2>
+
+      <div class="problem-card">
+        <div class="problem-header">Problem 1 &mdash; Algebra: Quadratic Roots</div>
+        <div class="problem-body">
+          <div class="question">If &alpha; and &beta; are the roots of 2x&sup2; - 5x + 3 = 0, find &alpha;&sup2; + &beta;&sup2;.</div>
+          <div class="solution">Given: 2x² - 5x + 3 = 0  (a=2, b=-5, c=3)
+
+By Vieta's formulas:
+  α + β = -b/a = 5/2
+  αβ = c/a = 3/2
+
+Use the identity:
+  α² + β² = (α+β)² - 2αβ
+           = (5/2)² - 2 × (3/2)
+           = 25/4 - 3
+           = 25/4 - 12/4
+           = 13/4</div>
+          <div class="problem-answer">Answer: &alpha;&sup2; + &beta;&sup2; = 13/4</div>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-header">Problem 2 &mdash; Trigonometry: Identity Proof</div>
+        <div class="problem-body">
+          <div class="question">Prove that: sin(A+B) &times; sin(A-B) = sin&sup2;A - sin&sup2;B</div>
+          <div class="solution">LHS = sin(A+B) × sin(A-B)
+    = (sinA cosB + cosA sinB)(sinA cosB - cosA sinB)
+    = sin²A cos²B - cos²A sin²B
+    = sin²A(1 - sin²B) - (1 - sin²A)sin²B
+    = sin²A - sin²A sin²B - sin²B + sin²A sin²B
+    = sin²A - sin²B
+    = RHS ✓</div>
+          <div class="problem-answer">Proved: LHS = RHS</div>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-header">Problem 3 &mdash; Calculus: Product Rule Differentiation</div>
+        <div class="problem-body">
+          <div class="question">Find dy/dx if y = x&sup2; sin(3x).</div>
+          <div class="solution">Let u = x²  and  v = sin(3x)
+u' = 2x
+v' = 3cos(3x)   [chain rule: d/dx sin(3x) = cos(3x) × 3]
+
+By product rule: dy/dx = u'v + uv'
+  = (2x)(sin 3x) + (x²)(3 cos 3x)
+  = 2x sin(3x) + 3x² cos(3x)</div>
+          <div class="problem-answer">dy/dx = 2x sin(3x) + 3x&sup2; cos(3x)</div>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-header">Problem 4 &mdash; Integration: By Parts (LIATE)</div>
+        <div class="problem-body">
+          <div class="question">Evaluate &int; x e^x dx.</div>
+          <div class="solution">By LIATE rule, choose:
+  u = x  (Algebraic)    →  du = dx
+  dv = eˣ dx            →  v = eˣ
+
+Apply integration by parts: ∫u dv = uv - ∫v du
+  = x·eˣ - ∫eˣ dx
+  = xeˣ - eˣ + C
+  = eˣ(x - 1) + C</div>
+          <div class="problem-answer">&int; x e^x dx = e^x (x - 1) + C</div>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-header">Problem 5 &mdash; Coordinate Geometry: Circle Through 3 Points</div>
+        <div class="problem-body">
+          <div class="question">Find the equation of the circle passing through (1, 2), (3, 4), and (5, 2).</div>
+          <div class="solution">Let circle equation: x² + y² + 2gx + 2fy + c = 0
+
+Substituting (1,2):  1+4+2g+4f+c = 0  →  2g+4f+c = -5   ...(1)
+Substituting (3,4):  9+16+6g+8f+c = 0  →  6g+8f+c = -25  ...(2)
+Substituting (5,2):  25+4+10g+4f+c = 0 →  10g+4f+c = -29 ...(3)
+
+(2) - (1): 4g + 4f = -20  →  g + f = -5    ...(4)
+(3) - (1): 8g = -24       →  g = -3
+From (4):  f = -5 - (-3) = -2
+From (1):  c = -5 - 2(-3) - 4(-2) = -5+6+8 = 9
+
+Circle equation: x²+y²-6x-4y+9 = 0
+Center: (3, 2), Radius = √(9+4-9) = √4 = 2</div>
+          <div class="problem-answer">x&sup2; + y&sup2; - 6x - 4y + 9 = 0 &nbsp;|&nbsp; Center: (3, 2), Radius: 2</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section-card">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">What are the most important math formulas for JEE?</div>
+        <div class="faq-a">Key JEE math formulas include calculus (integration standard forms, differentiation rules, definite integral properties), trigonometry identities (sum/difference, double angle, product-to-sum), coordinate geometry (tangent to circle/ellipse, distance from point to line), and algebra (quadratic formula, Vieta's formulas, binomial theorem). Calculus and Coordinate Geometry together account for nearly 50% of marks.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How to prepare mathematics for Gaokao?</div>
+        <div class="faq-a">Focus on mastering functions and derivatives, sequences (AP/GP), analytic geometry (conics), and probability. Practice Gaokao past papers from 2015&ndash;2024 &mdash; problems follow very predictable formats. The exam rewards accuracy and complete step-by-step solutions; partial credit is given even for incorrect final answers if your working is correct.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is the quadratic formula and when should I use it?</div>
+        <div class="faq-a">The quadratic formula x = (-b &plusmn; &radic;(b&sup2;-4ac)) / 2a solves any equation ax&sup2; + bx + c = 0. Use it when: (1) the equation cannot be factored easily, or (2) you need exact values of roots. Always compute the discriminant D = b&sup2;-4ac first to determine the nature of roots before applying the formula.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is the AM-GM inequality and how is it used in JEE?</div>
+        <div class="faq-a">The AM-GM inequality states (a+b)/2 &ge; &radic;(ab) for positive a, b. It generalizes to n variables. In JEE, it is used to find minimum or maximum values of algebraic expressions without calculus. For example, to find the minimum of a + 9/a for a &gt; 0: AM-GM gives a + 9/a &ge; 2&radic;(9) = 6, with equality when a = 3.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How to remember integration by parts and the LIATE rule?</div>
+        <div class="faq-a">Integration by parts: &int;u dv = uv - &int;v du. Choose u using the LIATE priority: Logarithm &gt; Inverse trig &gt; Algebraic &gt; Trigonometric &gt; Exponential. The function that appears first in this list is chosen as u. Example: &int;x&sup2; ln x dx &mdash; ln x is Logarithm (highest priority), so u = ln x, dv = x&sup2; dx. This minimizes the complexity of &int;v du.</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>StudyHub</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="math.html">Mathematics</a></li>
+        <li><a href="physics.html">Physics</a></li>
+        <li><a href="chemistry.html">Chemistry</a></li>
+        <li><a href="biology.html">Biology</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Competitive Exams</h4>
+      <ul>
+        <li><a href="competitive-exams.html">JEE Main &amp; Advanced</a></li>
+        <li><a href="competitive-exams.html">NEET</a></li>
+        <li><a href="competitive-exams.html">Gaokao</a></li>
+        <li><a href="competitive-exams.html">BITSAT</a></li>
+        <li><a href="competitive-exams.html">KVPY</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Math Chapters</h4>
+      <ul>
+        <li><a href="#algebra">Algebra</a></li>
+        <li><a href="#trigonometry">Trigonometry</a></li>
+        <li><a href="#calculus">Calculus</a></li>
+        <li><a href="#coordinate">Coordinate Geometry</a></li>
+        <li><a href="#stats">Probability &amp; Statistics</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Other Subjects</h4>
+      <ul>
+        <li><a href="physics.html">Physics Formulas</a></li>
+        <li><a href="chemistry.html">Chemistry Notes</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="english.html">English Grammar</a></li>
+        <li><a href="gk.html">General Knowledge</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 StudyHub. Free study resources for JEE, Gaokao, NEET and Class 12 students worldwide.</p>
+    <p style="margin-top:0.5rem;font-size:0.8rem;">Mathematics formulas &bull; Physics notes &bull; Chemistry revision &bull; All in one place.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

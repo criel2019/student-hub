@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Tutorial | Python, Java, C++, Data Structures | Beginners to Advanced | StudyHub</title>
+  <meta name="description" content="Free programming tutorials for beginners. Python basics, Java programming, C++ guide, data structures and algorithms, web development basics. Perfect for JEE CS, GATE CSE preparation.">
+  <meta name="keywords" content="Python tutorial beginners, Java programming basics, C++ guide, data structures algorithms, GATE CSE preparation, competitive programming, web development basics, SQL basics, array linked list">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Programming Tutorial | Python, Java, C++, DSA | StudyHub">
+  <meta property="og:description" content="Free programming tutorials: Python, Java, C++, Data Structures, Web Development, SQL. For beginners and GATE CSE preparation.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.7; color: #222; background: #f4f6fb; margin: 0; }
+    nav { background: #1b5e20; padding: 12px 24px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+    nav a { color: #fff; text-decoration: none; font-weight: 500; font-size: 15px; }
+    nav a:hover { text-decoration: underline; }
+    nav .brand { font-size: 20px; font-weight: 700; color: #b9f6ca; margin-right: 18px; }
+    .container { max-width: 980px; margin: 0 auto; padding: 24px 16px; }
+    h1 { color: #1b5e20; font-size: 2rem; margin-bottom: 6px; }
+    h2 { color: #2e7d32; border-bottom: 2px solid #43a047; padding-bottom: 6px; margin-top: 42px; }
+    h3 { color: #388e3c; margin-top: 28px; }
+    h4 { color: #558b2f; margin-top: 20px; }
+    .toc { background: #e8f5e9; border-left: 4px solid #43a047; padding: 16px 24px; border-radius: 4px; margin: 24px 0; }
+    .toc h3 { margin-top: 0; }
+    .toc ol { margin: 0; padding-left: 20px; }
+    .toc a { color: #2e7d32; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    pre { background: #1e2329; color: #e6edf3; border-radius: 6px; padding: 18px 20px; overflow-x: auto; font-size: 14px; line-height: 1.6; margin: 14px 0; }
+    code { font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace; }
+    pre code { color: #e6edf3; }
+    .lang-label { display: inline-block; background: #43a047; color: #fff; font-size: 11px; font-weight: 700; border-radius: 4px 4px 0 0; padding: 2px 10px; margin-bottom: -4px; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+    th { background: #388e3c; color: #fff; padding: 9px 12px; text-align: left; }
+    td { padding: 8px 12px; border: 1px solid #c8e6c9; }
+    tr:nth-child(even) td { background: #f1f8e9; }
+    .tip-box { background: #e3f2fd; border-left: 4px solid #1976d2; padding: 14px 18px; border-radius: 4px; margin: 16px 0; }
+    .tip-box strong { color: #0d47a1; }
+    .note-box { background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 18px; border-radius: 4px; margin: 12px 0; }
+    .example-box { background: #f1f8e9; border-left: 4px solid #43a047; padding: 14px 18px; border-radius: 4px; margin: 12px 0; }
+    .complexity-box { background: #fce4ec; border-left: 4px solid #e91e63; padding: 14px 18px; border-radius: 4px; margin: 12px 0; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 4px; }
+    .badge { display: inline-block; border-radius: 12px; padding: 2px 10px; font-size: 12px; margin-left: 6px; vertical-align: middle; color: #fff; }
+    .badge-py { background: #3776ab; }
+    .badge-java { background: #e76f00; }
+    .badge-cpp { background: #004482; }
+    .badge-dsa { background: #7b1fa2; }
+    .badge-web { background: #e44d26; }
+    .badge-sql { background: #00758f; }
+    .badge-gate { background: #b71c1c; }
+    .section-intro { color: #555; font-size: 15px; margin-bottom: 18px; }
+    footer { background: #1b5e20; color: #c8e6c9; text-align: center; padding: 18px; margin-top: 48px; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="brand">StudyHub</span>
+  <a href="../index.html">Home</a>
+  <a href="english.html">English</a>
+  <a href="programming.html">Programming</a>
+  <a href="math.html">Mathematics</a>
+  <a href="science.html">Science</a>
+  <a href="gate.html">GATE CSE</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+  <h1>Programming Tutorials: Beginners to Advanced</h1>
+  <p class="section-intro">Complete programming tutorials covering Python, Java, C++, Data Structures &amp; Algorithms, Web Development, and SQL. Ideal for JEE CS freshers, GATE CSE aspirants, and competitive programming beginners.</p>
+
+  <div class="toc">
+    <h3>Table of Contents</h3>
+    <ol>
+      <li><a href="#python">Python Programming</a></li>
+      <li><a href="#java">Java Programming</a></li>
+      <li><a href="#cpp">C++ Programming</a></li>
+      <li><a href="#dsa">Data Structures &amp; Algorithms</a></li>
+      <li><a href="#web">Web Development Basics</a></li>
+      <li><a href="#sql">SQL Basics</a></li>
+      <li><a href="#gate">GATE CSE Important Topics</a></li>
+      <li><a href="#competitive">Competitive Programming Tips</a></li>
+      <li><a href="#interview">Interview Preparation: Top 20 DSA Questions</a></li>
+      <li><a href="#practice">Practice Problems for Each Topic</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </div>
+
+  <!-- ===== SECTION 1: PYTHON ===== -->
+  <h2 id="python">Section 1: Python Programming <span class="badge badge-py">Python</span></h2>
+  <p class="section-intro">Python is the most beginner-friendly programming language and is widely used in data science, AI/ML, web development, and automation. It is the recommended first language for most CS students.</p>
+
+  <h3>1.1 Python Basics — Variables and Data Types</h3>
+  <span class="lang-label">Python</span>
+  <pre><code># Variables and Data Types
+name = "John"        # string
+age = 20             # integer
+gpa = 9.5            # float
+is_student = True    # boolean
+scores = None        # NoneType
+
+# Input / Output
+name = input("Enter your name: ")
+print(f"Hello, {name}! Welcome to StudyHub.")
+
+# f-string formatting
+pi = 3.14159
+print(f"Pi is approximately {pi:.2f}")  # Pi is approximately 3.14
+
+# Type conversion
+num_str = "123"
+num_int = int(num_str)         # string -> int
+num_float = float(num_str)     # string -> float
+text = str(456)                # int -> string
+
+# Type checking
+print(type(name))              # &lt;class 'str'&gt;
+print(isinstance(age, int))   # True
+
+# Multiple assignment
+x, y, z = 10, 20, 30
+a = b = c = 0</code></pre>
+
+  <h3>1.2 Control Flow</h3>
+  <span class="lang-label">Python</span>
+  <pre><code># if-elif-else
+score = 85
+if score >= 90:
+    grade = "A"
+    print("Excellent!")
+elif score >= 80:
+    grade = "B"
+    print("Very Good!")
+elif score >= 70:
+    grade = "C"
+    print("Good")
+else:
+    grade = "F"
+    print("Needs improvement")
+
+# Ternary expression
+status = "Pass" if score >= 50 else "Fail"
+
+# for loop with range
+for i in range(1, 11):
+    print(i, end=" ")   # 1 2 3 4 5 6 7 8 9 10
+print()
+
+# for loop with enumerate
+fruits = ["apple", "banana", "cherry"]
+for index, fruit in enumerate(fruits):
+    print(f"{index}: {fruit}")
+
+# while loop
+count = 0
+while count < 5:
+    print(f"Count: {count}")
+    count += 1
+
+# break and continue
+for i in range(10):
+    if i == 3:
+        continue    # skip 3
+    if i == 7:
+        break       # stop at 7
+    print(i, end=" ")
+
+# Nested loops - multiplication table
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(f"{i*j:3}", end="")
+    print()</code></pre>
+
+  <h3>1.3 Functions</h3>
+  <span class="lang-label">Python</span>
+  <pre><code># Basic function with default parameter
+def greet(name, greeting="Hello"):
+    """Return a personalised greeting string."""
+    return f"{greeting}, {name}!"
+
+print(greet("Alice"))             # Hello, Alice!
+print(greet("Bob", "Hi"))         # Hi, Bob!
+
+# Lambda (anonymous function)
+square = lambda x: x ** 2
+add = lambda a, b: a + b
+print(square(5))                  # 25
+print(add(3, 4))                  # 7
+
+# *args — variable positional arguments
+def sum_all(*args):
+    return sum(args)
+print(sum_all(1, 2, 3, 4, 5))    # 15
+
+# **kwargs — variable keyword arguments
+def show_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+show_info(name="Alice", age=20, city="Delhi")
+
+# Returning multiple values
+def min_max(numbers):
+    return min(numbers), max(numbers)
+low, high = min_max([3, 1, 7, 5, 9])
+print(low, high)                  # 1 9
+
+# Recursive function
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+print(factorial(5))               # 120
+
+# Generator function
+def fibonacci(limit):
+    a, b = 0, 1
+    while a < limit:
+        yield a
+        a, b = b, a + b
+print(list(fibonacci(50)))        # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]</code></pre>
+
+  <h3>1.4 Data Structures in Python</h3>
+  <span class="lang-label">Python</span>
+  <pre><code># ---- LISTS ----
+fruits = ["apple", "banana", "cherry"]
+fruits.append("date")            # add to end
+fruits.insert(1, "avocado")      # insert at index
+fruits.remove("banana")          # remove by value
+popped = fruits.pop()            # remove and return last
+fruits.sort()                    # sort in place
+fruits.sort(reverse=True)        # sort descending
+print(len(fruits))               # length
+print(fruits[0])                 # first element
+print(fruits[-1])                # last element
+print(fruits[1:3])               # slicing
+fruit_copy = fruits[:]           # shallow copy
+
+# List comprehension
+squares = [x**2 for x in range(1, 11)]
+evens = [x for x in range(20) if x % 2 == 0]
+
+# ---- DICTIONARIES ----
+student = {"name": "Alice", "age": 20, "gpa": 9.5}
+student["grade"] = "A"           # add key
+student["age"] = 21              # update value
+del student["gpa"]               # delete key
+print(student.get("name"))       # safe access
+print(student.keys())            # all keys
+print(student.values())          # all values
+print(student.items())           # key-value pairs
+
+# Dictionary comprehension
+squares_dict = {x: x**2 for x in range(1, 6)}
+# {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+# ---- SETS ----
+unique_nums = {1, 2, 3, 4, 5}
+unique_nums.add(6)
+unique_nums.discard(1)
+a = {1, 2, 3}; b = {2, 3, 4}
+print(a | b)                     # union: {1,2,3,4}
+print(a &amp; b)                     # intersection: {2,3}
+print(a - b)                     # difference: {1}
+
+# ---- TUPLES (immutable) ----
+coordinates = (10, 20)
+point = (3.5, 7.2, 1.0)
+x, y, z = point                  # tuple unpacking
+single = (42,)                   # single-element tuple (needs comma)
+
+# ---- STACKS (using list) ----
+stack = []
+stack.append(1); stack.append(2); stack.append(3)
+top = stack.pop()                # 3 (LIFO)
+
+# ---- QUEUES (using deque) ----
+from collections import deque
+queue = deque()
+queue.append("a"); queue.append("b"); queue.append("c")
+front = queue.popleft()          # "a" (FIFO)</code></pre>
+
+  <h3>1.5 Object-Oriented Programming in Python</h3>
+  <span class="lang-label">Python</span>
+  <pre><code>class Student:
+    school = "ABC University"      # class variable (shared by all instances)
+
+    def __init__(self, name, age, gpa):
+        self.name = name           # instance variables
+        self.age = age
+        self.gpa = gpa
+
+    def introduce(self):
+        return f"I am {self.name}, age {self.age}, GPA {self.gpa}"
+
+    def is_honour_roll(self):
+        return self.gpa >= 9.0
+
+    def __str__(self):             # string representation
+        return f"Student({self.name}, {self.age})"
+
+    def __repr__(self):
+        return f"Student(name={self.name!r}, age={self.age!r})"
+
+    @classmethod
+    def from_string(cls, data_string):
+        name, age, gpa = data_string.split(",")
+        return cls(name.strip(), int(age), float(gpa))
+
+    @staticmethod
+    def passing_gpa():
+        return 5.0
+
+
+# Inheritance
+class GradStudent(Student):
+    def __init__(self, name, age, gpa, thesis_topic):
+        super().__init__(name, age, gpa)   # call parent __init__
+        self.thesis_topic = thesis_topic
+
+    def introduce(self):                   # method overriding
+        base = super().introduce()
+        return f"{base}, researching '{self.thesis_topic}'"
+
+
+# Encapsulation using properties
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance   # private attribute
+
+    @property
+    def balance(self):
+        return self.__balance
+
+    @balance.setter
+    def balance(self, amount):
+        if amount &lt; 0:
+            raise ValueError("Balance cannot be negative")
+        self.__balance = amount
+
+
+# Usage examples
+alice = Student("Alice", 20, 9.5)
+print(alice)                       # Student(Alice, 20)
+print(alice.introduce())
+print(alice.is_honour_roll())      # True
+
+grad = GradStudent("Bob", 25, 8.9, "Neural Networks")
+print(grad.introduce())
+
+account = BankAccount(1000)
+print(account.balance)             # 1000</code></pre>
+
+  <h3>1.6 File Handling</h3>
+  <span class="lang-label">Python</span>
+  <pre><code># Writing to a file
+with open("students.txt", "w", encoding="utf-8") as f:
+    f.write("Alice,20,9.5\n")
+    f.write("Bob,21,8.8\n")
+    f.writelines(["Charlie,19,9.2\n", "Diana,22,8.5\n"])
+
+# Reading entire file
+with open("students.txt", "r", encoding="utf-8") as f:
+    content = f.read()
+    print(content)
+
+# Reading line by line
+with open("students.txt", "r", encoding="utf-8") as f:
+    for line in f:
+        name, age, gpa = line.strip().split(",")
+        print(f"Name: {name}, GPA: {gpa}")
+
+# Appending to file
+with open("students.txt", "a", encoding="utf-8") as f:
+    f.write("Eve,20,9.8\n")
+
+# Working with CSV
+import csv
+with open("data.csv", "w", newline="") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(["Name", "Age", "GPA"])
+    writer.writerow(["Alice", 20, 9.5])
+
+# Working with JSON
+import json
+data = {"students": [{"name": "Alice", "gpa": 9.5}]}
+with open("data.json", "w") as f:
+    json.dump(data, f, indent=2)
+with open("data.json", "r") as f:
+    loaded = json.load(f)
+    print(loaded["students"][0]["name"])   # Alice</code></pre>
+
+  <h3>1.7 Exception Handling</h3>
+  <span class="lang-label">Python</span>
+  <pre><code># Basic try-except-else-finally
+def safe_divide(a, b):
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero!")
+        return None
+    except TypeError as e:
+        print(f"Type error: {e}")
+        return None
+    else:
+        print(f"Division successful: {result}")
+        return result
+    finally:
+        print("Division operation complete.")
+
+safe_divide(10, 2)      # success
+safe_divide(10, 0)      # ZeroDivisionError
+safe_divide("a", 2)     # TypeError
+
+# Multiple exceptions in one except
+try:
+    num = int(input("Enter a number: "))
+    print(100 / num)
+except (ValueError, ZeroDivisionError) as e:
+    print(f"Input error: {e}")
+
+# Raising custom exceptions
+class InsufficientFundsError(Exception):
+    def __init__(self, amount, balance):
+        self.amount = amount
+        self.balance = balance
+        super().__init__(f"Cannot withdraw {amount}; balance is {balance}")
+
+def withdraw(balance, amount):
+    if amount > balance:
+        raise InsufficientFundsError(amount, balance)
+    return balance - amount
+
+try:
+    new_balance = withdraw(500, 800)
+except InsufficientFundsError as e:
+    print(e)</code></pre>
+
+  <h3>1.8 Useful Python Libraries (Quick Reference)</h3>
+  <table>
+    <tr><th>Library</th><th>Purpose</th><th>Key Functions</th></tr>
+    <tr><td>NumPy</td><td>Numerical computing, arrays</td><td>np.array(), np.zeros(), np.mean(), np.dot()</td></tr>
+    <tr><td>Pandas</td><td>Data analysis, DataFrames</td><td>pd.DataFrame(), df.read_csv(), df.groupby(), df.merge()</td></tr>
+    <tr><td>Matplotlib</td><td>Data visualisation</td><td>plt.plot(), plt.bar(), plt.scatter(), plt.show()</td></tr>
+    <tr><td>Requests</td><td>HTTP requests / web scraping</td><td>requests.get(), requests.post(), r.json()</td></tr>
+    <tr><td>Flask</td><td>Lightweight web framework</td><td>@app.route(), render_template(), jsonify()</td></tr>
+    <tr><td>Django</td><td>Full-stack web framework</td><td>models.Model, views, urls, admin</td></tr>
+    <tr><td>Scikit-learn</td><td>Machine learning</td><td>fit(), predict(), train_test_split()</td></tr>
+    <tr><td>os / sys</td><td>Operating system interaction</td><td>os.path.join(), os.listdir(), sys.argv</td></tr>
+    <tr><td>re</td><td>Regular expressions</td><td>re.match(), re.search(), re.findall()</td></tr>
+    <tr><td>datetime</td><td>Date and time manipulation</td><td>datetime.now(), timedelta, strftime()</td></tr>
+  </table>
+
+  <!-- ===== SECTION 2: JAVA ===== -->
+  <h2 id="java">Section 2: Java Programming <span class="badge badge-java">Java</span></h2>
+  <p class="section-intro">Java is a strongly typed, object-oriented language widely used in enterprise applications, Android development, and competitive programming. It is the primary language for many university CS curricula in India and China.</p>
+
+  <h3>2.1 Java Basics</h3>
+  <span class="lang-label">Java</span>
+  <pre><code>// Hello World
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+
+// Variable declarations and data types
+public class DataTypes {
+    public static void main(String[] args) {
+        int age = 20;              // 32-bit integer
+        long population = 1400000000L; // 64-bit integer
+        double gpa = 9.5;          // 64-bit float
+        float temp = 36.6f;        // 32-bit float
+        char grade = 'A';          // single character
+        boolean isStudent = true;  // boolean
+        String name = "Alice";     // String object
+
+        // Arithmetic
+        int sum = 10 + 20;         // 30
+        int div = 10 / 3;          // 3 (integer division)
+        double divD = 10.0 / 3;    // 3.333...
+        int mod = 10 % 3;          // 1
+
+        // String operations
+        String full = name + " Smith";
+        System.out.println(full.length());         // 11
+        System.out.println(full.toUpperCase());    // ALICE SMITH
+        System.out.println(full.substring(0, 5));  // Alice
+        System.out.println(full.contains("Smith")); // true
+
+        // Scanner for input
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        System.out.println("You entered: " + n);
+    }
+}</code></pre>
+
+  <h3>2.2 Control Flow in Java</h3>
+  <span class="lang-label">Java</span>
+  <pre><code>// if-else
+int score = 85;
+if (score >= 90) {
+    System.out.println("A grade");
+} else if (score >= 80) {
+    System.out.println("B grade");
+} else if (score >= 70) {
+    System.out.println("C grade");
+} else {
+    System.out.println("Fail");
+}
+
+// switch-case
+String day = "Monday";
+switch (day) {
+    case "Monday":
+    case "Tuesday":
+        System.out.println("Weekday");
+        break;
+    case "Saturday":
+    case "Sunday":
+        System.out.println("Weekend");
+        break;
+    default:
+        System.out.println("Unknown day");
+}
+
+// for loop
+for (int i = 1; i <= 10; i++) {
+    System.out.print(i + " ");
+}
+
+// enhanced for loop (for-each)
+int[] numbers = {1, 2, 3, 4, 5};
+for (int num : numbers) {
+    System.out.print(num + " ");
+}
+
+// while loop
+int count = 0;
+while (count < 5) {
+    System.out.println("Count: " + count);
+    count++;
+}
+
+// do-while
+int x = 0;
+do {
+    System.out.println(x);
+    x++;
+} while (x < 3);</code></pre>
+
+  <h3>2.3 OOP in Java</h3>
+  <span class="lang-label">Java</span>
+  <pre><code>// Class with encapsulation
+public class Student {
+    private String name;     // private field
+    private int age;
+    private double gpa;
+
+    // Constructor
+    public Student(String name, int age, double gpa) {
+        this.name = name;
+        this.age = age;
+        this.gpa = gpa;
+    }
+
+    // Getters
+    public String getName() { return name; }
+    public int getAge() { return age; }
+    public double getGpa() { return gpa; }
+
+    // Setters with validation
+    public void setGpa(double gpa) {
+        if (gpa >= 0.0 && gpa <= 10.0)
+            this.gpa = gpa;
+        else
+            throw new IllegalArgumentException("GPA must be between 0 and 10");
+    }
+
+    // toString override
+    @Override
+    public String toString() {
+        return String.format("Student[%s, age=%d, gpa=%.1f]", name, age, gpa);
+    }
+
+    // equals override
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Student)) return false;
+        Student other = (Student) obj;
+        return this.name.equals(other.name) && this.age == other.age;
+    }
+}
+
+// Inheritance
+public class GradStudent extends Student {
+    private String major;
+    private String thesisTopic;
+
+    public GradStudent(String name, int age, double gpa, String major) {
+        super(name, age, gpa);   // call parent constructor
+        this.major = major;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", major=" + major;
+    }
+}
+
+// Interface
+interface Printable {
+    void print();                       // abstract method (must implement)
+    default void printTwice() {         // default method
+        print();
+        print();
+    }
+    static void info() {                // static method
+        System.out.println("Printable interface v1.0");
+    }
+}
+
+// Abstract class
+abstract class Shape {
+    String color;
+    Shape(String color) { this.color = color; }
+    abstract double area();             // must be overridden
+    void describe() {
+        System.out.println("A " + color + " shape with area: " + area());
+    }
+}
+
+class Circle extends Shape implements Printable {
+    double radius;
+    Circle(String color, double radius) {
+        super(color);
+        this.radius = radius;
+    }
+    @Override
+    public double area() { return Math.PI * radius * radius; }
+    @Override
+    public void print() {
+        System.out.println("Circle: r=" + radius + ", area=" + String.format("%.2f", area()));
+    }
+}</code></pre>
+
+  <h3>2.4 Java Collections Framework</h3>
+  <span class="lang-label">Java</span>
+  <pre><code>import java.util.*;
+import java.util.stream.*;
+
+// ArrayList — dynamic array
+List&lt;String&gt; list = new ArrayList&lt;&gt;();
+list.add("Apple"); list.add("Banana"); list.add("Cherry");
+list.add(1, "Avocado");              // insert at index 1
+list.remove("Banana");               // remove by value
+list.remove(0);                      // remove by index
+list.sort(Comparator.naturalOrder()); // sort ascending
+System.out.println(list.size());     // length
+System.out.println(list.contains("Cherry")); // true
+
+// LinkedList — doubly linked list
+List&lt;Integer&gt; linked = new LinkedList&lt;&gt;();
+((LinkedList&lt;Integer&gt;) linked).addFirst(1);
+((LinkedList&lt;Integer&gt;) linked).addLast(2);
+
+// HashMap — key-value pairs (unordered)
+Map&lt;String, Integer&gt; scores = new HashMap&lt;&gt;();
+scores.put("Alice", 95);
+scores.put("Bob", 87);
+scores.put("Charlie", 92);
+scores.put("Alice", 98);             // update existing key
+System.out.println(scores.get("Alice")); // 98
+System.out.println(scores.getOrDefault("David", 0)); // 0 (safe)
+for (Map.Entry&lt;String, Integer&gt; entry : scores.entrySet()) {
+    System.out.println(entry.getKey() + ": " + entry.getValue());
+}
+
+// TreeMap — sorted by key
+Map&lt;String, Integer&gt; sorted = new TreeMap&lt;&gt;(scores); // alphabetical order
+
+// HashSet — unique elements, unordered
+Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3, 2, 1));
+System.out.println(set); // {1, 2, 3} (duplicates removed)
+
+// Stack — LIFO
+Deque&lt;Integer&gt; stack = new ArrayDeque&lt;&gt;();
+stack.push(10); stack.push(20); stack.push(30);
+System.out.println(stack.pop());  // 30 (LIFO)
+
+// Queue — FIFO
+Queue&lt;String&gt; queue = new LinkedList&lt;&gt;();
+queue.offer("first"); queue.offer("second"); queue.offer("third");
+System.out.println(queue.poll()); // "first" (FIFO)
+
+// Priority Queue — min-heap by default
+PriorityQueue&lt;Integer&gt; minHeap = new PriorityQueue&lt;&gt;();
+minHeap.offer(5); minHeap.offer(1); minHeap.offer(3);
+System.out.println(minHeap.poll()); // 1 (smallest first)
+
+// Stream API (Java 8+)
+List&lt;Integer&gt; nums = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+List&lt;Integer&gt; evenSquares = nums.stream()
+    .filter(n -&gt; n % 2 == 0)
+    .map(n -&gt; n * n)
+    .collect(Collectors.toList());
+System.out.println(evenSquares); // [4, 16, 36, 64, 100]
+int total = nums.stream().reduce(0, Integer::sum);
+System.out.println(total); // 55</code></pre>
+
+  <h3>2.5 Exception Handling in Java</h3>
+  <span class="lang-label">Java</span>
+  <pre><code>// Basic try-catch-finally
+public class ExceptionDemo {
+    public static void main(String[] args) {
+        try {
+            int[] arr = new int[5];
+            arr[10] = 1;           // ArrayIndexOutOfBoundsException
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array error: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("General error: " + e.getMessage());
+        } finally {
+            System.out.println("This always executes.");
+        }
+
+        // Multiple exceptions — chained
+        try {
+            String s = null;
+            s.length();            // NullPointerException
+        } catch (NullPointerException e) {
+            System.out.println("Null reference: " + e.getClass().getName());
+        }
+
+        // Custom exception
+        try {
+            validateAge(-5);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    // Checked exception — must declare with throws
+    static void readFile(String path) throws java.io.IOException {
+        java.io.FileReader reader = new java.io.FileReader(path);
+        reader.close();
+    }
+
+    // Unchecked exception — no declaration needed
+    static void validateAge(int age) {
+        if (age &lt; 0 || age &gt; 150)
+            throw new IllegalArgumentException("Invalid age: " + age);
+    }
+}</code></pre>
+
+  <!-- ===== SECTION 3: C++ ===== -->
+  <h2 id="cpp">Section 3: C++ Programming <span class="badge badge-cpp">C++</span></h2>
+  <p class="section-intro">C++ is used in competitive programming, systems software, game development, and embedded systems. It is favoured in GATE CSE and ICPC competitions due to its speed and STL library.</p>
+
+  <h3>3.1 C++ Basics and STL</h3>
+  <span class="lang-label">C++</span>
+  <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+#include &lt;map&gt;
+#include &lt;set&gt;
+#include &lt;queue&gt;
+#include &lt;stack&gt;
+using namespace std;
+
+int main() {
+    // Basic I/O
+    int n;
+    cin &gt;&gt; n;
+    cout &lt;&lt; "You entered: " &lt;&lt; n &lt;&lt; endl;
+
+    // vector — dynamic array
+    vector&lt;int&gt; v = {5, 2, 8, 1, 9, 3};
+    v.push_back(7);
+    v.pop_back();
+    sort(v.begin(), v.end());              // sort ascending
+    sort(v.begin(), v.end(), greater&lt;int&gt;()); // sort descending
+    reverse(v.begin(), v.end());
+    cout &lt;&lt; v.size() &lt;&lt; endl;
+    for (int x : v) cout &lt;&lt; x &lt;&lt; " ";
+    cout &lt;&lt; endl;
+
+    // binary_search (requires sorted vector)
+    sort(v.begin(), v.end());
+    bool found = binary_search(v.begin(), v.end(), 5);
+
+    // map — ordered key-value
+    map&lt;string, int&gt; scores;
+    scores["Alice"] = 95;
+    scores["Bob"] = 87;
+    for (auto&amp; [key, val] : scores)        // C++17 structured bindings
+        cout &lt;&lt; key &lt;&lt; ": " &lt;&lt; val &lt;&lt; "\n";
+
+    // unordered_map — O(1) average lookup
+    unordered_map&lt;string, int&gt; freq;
+    string text = "hello world";
+    for (char c : text) freq[c]++;
+
+    // set — unique sorted elements
+    set&lt;int&gt; s = {3, 1, 4, 1, 5, 9, 2, 6};
+    s.insert(7);
+    s.erase(1);
+    cout &lt;&lt; *s.begin() &lt;&lt; " " &lt;&lt; *s.rbegin() &lt;&lt; endl; // min and max
+
+    // stack — LIFO
+    stack&lt;int&gt; stk;
+    stk.push(1); stk.push(2); stk.push(3);
+    cout &lt;&lt; stk.top() &lt;&lt; endl;  // 3
+    stk.pop();
+
+    // queue — FIFO
+    queue&lt;int&gt; q;
+    q.push(1); q.push(2); q.push(3);
+    cout &lt;&lt; q.front() &lt;&lt; endl;  // 1
+    q.pop();
+
+    // priority_queue — max-heap by default
+    priority_queue&lt;int&gt; maxHeap;
+    maxHeap.push(3); maxHeap.push(1); maxHeap.push(7);
+    cout &lt;&lt; maxHeap.top() &lt;&lt; endl;  // 7
+
+    // min-heap
+    priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; minHeap;
+    minHeap.push(3); minHeap.push(1); minHeap.push(7);
+    cout &lt;&lt; minHeap.top() &lt;&lt; endl;  // 1
+
+    return 0;
+}</code></pre>
+
+  <h3>3.2 Pointers and References</h3>
+  <span class="lang-label">C++</span>
+  <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void swapByPointer(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void swapByReference(int&amp; a, int&amp; b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+int main() {
+    int x = 10, y = 20;
+
+    // Pointer basics
+    int* ptr = &amp;x;
+    cout &lt;&lt; *ptr &lt;&lt; endl;   // 10 (dereference)
+    *ptr = 50;
+    cout &lt;&lt; x &lt;&lt; endl;      // 50 (modified through pointer)
+    ptr = &amp;y;               // pointer can be reassigned
+
+    // Reference basics
+    int&amp; ref = x;
+    ref = 100;
+    cout &lt;&lt; x &lt;&lt; endl;      // 100 (reference modifies original)
+
+    // Swap using pointers
+    swapByPointer(&amp;x, &amp;y);
+
+    // Swap using references
+    swapByReference(x, y);
+
+    // Dynamic memory allocation
+    int* arr = new int[5];
+    for (int i = 0; i &lt; 5; i++) arr[i] = i * i;
+    delete[] arr;           // MUST free memory
+
+    // Smart pointer (C++11) — auto memory management
+    // #include &lt;memory&gt;
+    // unique_ptr&lt;int[]&gt; smartArr = make_unique&lt;int[]&gt;(5);
+
+    return 0;
+}</code></pre>
+
+  <h3>3.3 OOP in C++</h3>
+  <span class="lang-label">C++</span>
+  <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+// Abstract base class
+class Animal {
+protected:
+    string name;
+    int age;
+public:
+    Animal(string n, int a) : name(n), age(a) {}
+    virtual void speak() = 0;           // pure virtual function
+    virtual string type() { return "Animal"; }
+    virtual ~Animal() {}                // virtual destructor
+    void info() {
+        cout &lt;&lt; type() &lt;&lt; " " &lt;&lt; name &lt;&lt; " (age " &lt;&lt; age &lt;&lt; "): ";
+        speak();
+    }
+};
+
+class Dog : public Animal {
+public:
+    Dog(string n, int a) : Animal(n, a) {}
+    void speak() override { cout &lt;&lt; "Woof!" &lt;&lt; endl; }
+    string type() override { return "Dog"; }
+};
+
+class Cat : public Animal {
+public:
+    Cat(string n, int a) : Animal(n, a) {}
+    void speak() override { cout &lt;&lt; "Meow!" &lt;&lt; endl; }
+    string type() override { return "Cat"; }
+};
+
+// Operator overloading
+class Vector2D {
+public:
+    double x, y;
+    Vector2D(double x = 0, double y = 0) : x(x), y(y) {}
+    Vector2D operator+(const Vector2D&amp; other) const {
+        return Vector2D(x + other.x, y + other.y);
+    }
+    friend ostream&amp; operator&lt;&lt;(ostream&amp; os, const Vector2D&amp; v) {
+        return os &lt;&lt; "(" &lt;&lt; v.x &lt;&lt; ", " &lt;&lt; v.y &lt;&lt; ")";
+    }
+};
+
+int main() {
+    // Polymorphism
+    Animal* animals[] = {new Dog("Rex", 3), new Cat("Whiskers", 2)};
+    for (Animal* a : animals) {
+        a-&gt;info();
+        delete a;
+    }
+
+    // Operator overloading
+    Vector2D v1(1.5, 2.5), v2(3.0, 1.0);
+    Vector2D v3 = v1 + v2;
+    cout &lt;&lt; v3 &lt;&lt; endl;     // (4.5, 3.5)
+    return 0;
+}</code></pre>
+
+  <!-- ===== SECTION 4: DSA ===== -->
+  <h2 id="dsa">Section 4: Data Structures &amp; Algorithms <span class="badge badge-dsa">DSA</span></h2>
+  <p class="section-intro">DSA is the most critical topic for coding interviews, GATE CSE, and competitive programming. Master the following concepts thoroughly.</p>
+
+  <h3>4.1 Arrays and Searching</h3>
+  <span class="lang-label">Python</span>
+  <pre><code># Linear Search — O(n) time, O(1) space
+def linear_search(arr, target):
+    for i, val in enumerate(arr):
+        if val == target:
+            return i
+    return -1
+
+# Binary Search — O(log n) time, O(1) space, REQUIRES SORTED ARRAY
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left &lt;= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] &lt; target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+# Recursive binary search
+def binary_search_recursive(arr, target, left, right):
+    if left > right:
+        return -1
+    mid = (left + right) // 2
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] &lt; target:
+        return binary_search_recursive(arr, target, mid + 1, right)
+    else:
+        return binary_search_recursive(arr, target, left, mid - 1)
+
+# Two Pointer technique
+def two_sum_sorted(arr, target):
+    """Find two numbers in sorted array that sum to target. O(n) time."""
+    left, right = 0, len(arr) - 1
+    while left &lt; right:
+        current = arr[left] + arr[right]
+        if current == target:
+            return [left, right]
+        elif current &lt; target:
+            left += 1
+        else:
+            right -= 1
+    return []
+
+arr = [1, 3, 5, 7, 9, 11]
+print(binary_search(arr, 7))           # 3
+print(two_sum_sorted(arr, 10))         # [1, 3] (indices of 3 and 7)</code></pre>
+
+  <h3>4.2 Linked Lists</h3>
+  <span class="lang-label">Python</span>
+  <pre><code>class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        """Add to end — O(n)"""
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
+
+    def prepend(self, data):
+        """Add to beginning — O(1)"""
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+
+    def delete(self, data):
+        """Delete first occurrence — O(n)"""
+        if not self.head:
+            return
+        if self.head.data == data:
+            self.head = self.head.next
+            return
+        current = self.head
+        while current.next:
+            if current.next.data == data:
+                current.next = current.next.next
+                return
+            current = current.next
+
+    def display(self):
+        elements = []
+        current = self.head
+        while current:
+            elements.append(str(current.data))
+            current = current.next
+        print(" -> ".join(elements))
+
+    def reverse(self):
+        """Reverse the linked list — O(n)"""
+        prev = None
+        current = self.head
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        self.head = prev
+
+    def find_middle(self):
+        """Floyd's slow-fast pointer — O(n)"""
+        slow = fast = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow.data if slow else None
+
+ll = LinkedList()
+for val in [1, 2, 3, 4, 5]:
+    ll.append(val)
+ll.display()                  # 1 -> 2 -> 3 -> 4 -> 5
+ll.reverse()
+ll.display()                  # 5 -> 4 -> 3 -> 2 -> 1
+print(ll.find_middle())       # 3</code></pre>
+
+  <h3>4.3 Stack and Queue</h3>
+  <span class="lang-label">Python</span>
+  <pre><code>from collections import deque
+
+# Stack — LIFO (Last In, First Out)
+class Stack:
+    def __init__(self):
+        self._data = []
+    def push(self, item): self._data.append(item)
+    def pop(self): return self._data.pop() if self._data else None
+    def peek(self): return self._data[-1] if self._data else None
+    def is_empty(self): return len(self._data) == 0
+    def __len__(self): return len(self._data)
+
+# Application: Balanced parentheses checker
+def is_balanced(s):
+    stack = Stack()
+    pairs = {')': '(', '}': '{', ']': '['}
+    for char in s:
+        if char in '({[':
+            stack.push(char)
+        elif char in ')}]':
+            if stack.is_empty() or stack.pop() != pairs[char]:
+                return False
+    return stack.is_empty()
+
+print(is_balanced("({[]})"))  # True
+print(is_balanced("({[})"))   # False
+
+# Queue — FIFO (First In, First Out)
+class Queue:
+    def __init__(self):
+        self._data = deque()
+    def enqueue(self, item): self._data.append(item)
+    def dequeue(self): return self._data.popleft() if self._data else None
+    def front(self): return self._data[0] if self._data else None
+    def is_empty(self): return len(self._data) == 0
+    def __len__(self): return len(self._data)
+
+# Application: BFS using queue
+def bfs(graph, start):
+    visited = set()
+    queue = Queue()
+    queue.enqueue(start)
+    visited.add(start)
+    order = []
+    while not queue.is_empty():
+        node = queue.dequeue()
+        order.append(node)
+        for neighbour in graph.get(node, []):
+            if neighbour not in visited:
+                visited.add(neighbour)
+                queue.enqueue(neighbour)
+    return order
+
+graph = {'A': ['B', 'C'], 'B': ['D', 'E'], 'C': ['F'], 'D': [], 'E': [], 'F': []}
+print(bfs(graph, 'A'))   # ['A', 'B', 'C', 'D', 'E', 'F']</code></pre>
+
+  <h3>4.4 Sorting Algorithms</h3>
+
+  <table>
+    <tr><th>Algorithm</th><th>Best Case</th><th>Average Case</th><th>Worst Case</th><th>Space</th><th>Stable</th><th>Notes</th></tr>
+    <tr><td>Bubble Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td><td>O(1)</td><td>Yes</td><td>Simple, rarely used in practice</td></tr>
+    <tr><td>Selection Sort</td><td>O(n²)</td><td>O(n²)</td><td>O(n²)</td><td>O(1)</td><td>No</td><td>Minimum swaps</td></tr>
+    <tr><td>Insertion Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td><td>O(1)</td><td>Yes</td><td>Best for nearly sorted data</td></tr>
+    <tr><td>Merge Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n)</td><td>Yes</td><td>Divide and conquer; stable</td></tr>
+    <tr><td>Quick Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n²)</td><td>O(log n)</td><td>No</td><td>Fastest in practice; pivot choice matters</td></tr>
+    <tr><td>Heap Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>O(1)</td><td>No</td><td>In-place; not cache-friendly</td></tr>
+    <tr><td>Counting Sort</td><td>O(n+k)</td><td>O(n+k)</td><td>O(n+k)</td><td>O(k)</td><td>Yes</td><td>Only for integers in range [0,k]</td></tr>
+    <tr><td>Radix Sort</td><td>O(nk)</td><td>O(nk)</td><td>O(nk)</td><td>O(n+k)</td><td>Yes</td><td>Non-comparative; for fixed-length integers</td></tr>
+  </table>
+
+  <span class="lang-label">Python</span>
+  <pre><code># Merge Sort — O(n log n), stable
+def merge_sort(arr):
+    if len(arr) &lt;= 1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    return merge(left, right)
+
+def merge(left, right):
+    result = []
+    i = j = 0
+    while i &lt; len(left) and j &lt; len(right):
+        if left[i] &lt;= right[j]:
+            result.append(left[i]); i += 1
+        else:
+            result.append(right[j]); j += 1
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+
+# Quick Sort — O(n log n) average
+def quick_sort(arr, low=0, high=None):
+    if high is None: high = len(arr) - 1
+    if low &lt; high:
+        pivot_idx = partition(arr, low, high)
+        quick_sort(arr, low, pivot_idx - 1)
+        quick_sort(arr, pivot_idx + 1, high)
+
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    for j in range(low, high):
+        if arr[j] &lt;= pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
+
+data = [64, 34, 25, 12, 22, 11, 90]
+print(merge_sort(data))       # [11, 12, 22, 25, 34, 64, 90]
+quick_sort(data)
+print(data)                   # [11, 12, 22, 25, 34, 64, 90]</code></pre>
+
+  <h3>4.5 Trees and Graphs</h3>
+  <span class="lang-label">Python</span>
+  <pre><code># Binary Search Tree (BST)
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left = self.right = None
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+    def insert(self, val):
+        self.root = self._insert(self.root, val)
+
+    def _insert(self, node, val):
+        if not node:
+            return TreeNode(val)
+        if val &lt; node.val:
+            node.left = self._insert(node.left, val)
+        elif val > node.val:
+            node.right = self._insert(node.right, val)
+        return node
+
+    def search(self, val):
+        return self._search(self.root, val)
+
+    def _search(self, node, val):
+        if not node or node.val == val:
+            return node
+        if val &lt; node.val:
+            return self._search(node.left, val)
+        return self._search(node.right, val)
+
+    # Inorder traversal: Left → Root → Right (gives sorted output for BST)
+    def inorder(self, node=None, first=True):
+        if first: node = self.root
+        if node:
+            self.inorder(node.left, False)
+            print(node.val, end=" ")
+            self.inorder(node.right, False)
+
+    # Preorder: Root → Left → Right
+    def preorder(self, node=None, first=True):
+        if first: node = self.root
+        if node:
+            print(node.val, end=" ")
+            self.preorder(node.left, False)
+            self.preorder(node.right, False)
+
+    # Postorder: Left → Right → Root
+    def postorder(self, node=None, first=True):
+        if first: node = self.root
+        if node:
+            self.postorder(node.left, False)
+            self.postorder(node.right, False)
+            print(node.val, end=" ")
+
+# Depth-First Search (DFS)
+def dfs(graph, start, visited=None):
+    if visited is None:
+        visited = set()
+    visited.add(start)
+    print(start, end=" ")
+    for neighbour in graph.get(start, []):
+        if neighbour not in visited:
+            dfs(graph, neighbour, visited)
+    return visited
+
+# Dijkstra's Shortest Path Algorithm
+import heapq
+
+def dijkstra(graph, source):
+    """graph: {node: [(neighbour, weight), ...]}"""
+    dist = {node: float('inf') for node in graph}
+    dist[source] = 0
+    heap = [(0, source)]  # (distance, node)
+    while heap:
+        d, u = heapq.heappop(heap)
+        if d > dist[u]:
+            continue
+        for v, w in graph.get(u, []):
+            if dist[u] + w &lt; dist[v]:
+                dist[v] = dist[u] + w
+                heapq.heappush(heap, (dist[v], v))
+    return dist
+
+weighted_graph = {
+    'A': [('B', 4), ('C', 2)],
+    'B': [('D', 3), ('C', 1)],
+    'C': [('B', 1), ('D', 5)],
+    'D': []
+}
+print(dijkstra(weighted_graph, 'A'))
+# {'A': 0, 'B': 3, 'C': 2, 'D': 6}</code></pre>
+
+  <h3>4.6 Dynamic Programming</h3>
+  <span class="lang-label">Python</span>
+  <pre><code># Fibonacci — Memoization (top-down)
+def fib_memo(n, memo={}):
+    if n in memo: return memo[n]
+    if n &lt;= 1: return n
+    memo[n] = fib_memo(n-1, memo) + fib_memo(n-2, memo)
+    return memo[n]
+
+# Fibonacci — Tabulation (bottom-up)
+def fib_tab(n):
+    if n &lt;= 1: return n
+    dp = [0] * (n + 1)
+    dp[1] = 1
+    for i in range(2, n + 1):
+        dp[i] = dp[i-1] + dp[i-2]
+    return dp[n]
+
+# 0/1 Knapsack Problem
+def knapsack(weights, values, capacity):
+    n = len(weights)
+    dp = [[0] * (capacity + 1) for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        for w in range(capacity + 1):
+            dp[i][w] = dp[i-1][w]
+            if weights[i-1] &lt;= w:
+                dp[i][w] = max(dp[i][w], values[i-1] + dp[i-1][w - weights[i-1]])
+    return dp[n][capacity]
+
+# Longest Common Subsequence (LCS)
+def lcs(s1, s2):
+    m, n = len(s1), len(s2)
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if s1[i-1] == s2[j-1]:
+                dp[i][j] = dp[i-1][j-1] + 1
+            else:
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+    return dp[m][n]
+
+# Coin Change Problem
+def coin_change(coins, amount):
+    dp = [float('inf')] * (amount + 1)
+    dp[0] = 0
+    for coin in coins:
+        for x in range(coin, amount + 1):
+            dp[x] = min(dp[x], dp[x - coin] + 1)
+    return dp[amount] if dp[amount] != float('inf') else -1
+
+print(fib_tab(10))                              # 55
+print(knapsack([2,3,4,5], [3,4,5,6], 5))       # 7
+print(lcs("ABCBDAB", "BDCAB"))                  # 4
+print(coin_change([1, 5, 10, 25], 36))          # 3</code></pre>
+
+  <!-- ===== SECTION 5: WEB DEVELOPMENT ===== -->
+  <h2 id="web">Section 5: Web Development Basics <span class="badge badge-web">Web</span></h2>
+
+  <h3>5.1 HTML — Essential Tags and Semantic HTML5</h3>
+  <span class="lang-label">HTML</span>
+  <pre><code>&lt;!-- Document structure --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- Semantic structure --&gt;
+  &lt;header&gt;
+    &lt;nav&gt;
+      &lt;a href="#"&gt;Home&lt;/a&gt; | &lt;a href="#"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;article&gt;
+        &lt;h1&gt;Main Heading&lt;/h1&gt;
+        &lt;h2&gt;Sub Heading&lt;/h2&gt;
+        &lt;p&gt;Paragraph text with &lt;strong&gt;bold&lt;/strong&gt; and &lt;em&gt;italic&lt;/em&gt;.&lt;/p&gt;
+        &lt;a href="https://example.com" target="_blank"&gt;External link&lt;/a&gt;
+        &lt;img src="image.png" alt="Description" width="300"&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Lists --&gt;
+    &lt;ul&gt;&lt;li&gt;Unordered item 1&lt;/li&gt;&lt;li&gt;Item 2&lt;/li&gt;&lt;/ul&gt;
+    &lt;ol&gt;&lt;li&gt;Ordered item 1&lt;/li&gt;&lt;li&gt;Item 2&lt;/li&gt;&lt;/ol&gt;
+
+    &lt;!-- Table --&gt;
+    &lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Score&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;td&gt;95&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Bob&lt;/td&gt;&lt;td&gt;87&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;!-- Form --&gt;
+    &lt;form action="/submit" method="POST"&gt;
+      &lt;input type="text" name="name" placeholder="Your name" required&gt;
+      &lt;input type="email" name="email" placeholder="Email"&gt;
+      &lt;select name="level"&gt;
+        &lt;option value="beginner"&gt;Beginner&lt;/option&gt;
+        &lt;option value="advanced"&gt;Advanced&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;textarea name="message" rows="4"&gt;&lt;/textarea&gt;
+      &lt;button type="submit"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/main&gt;
+
+  &lt;aside&gt;Sidebar content&lt;/aside&gt;
+  &lt;footer&gt;&amp;copy; 2026 StudyHub&lt;/footer&gt;
+
+  &lt;script src="main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <h3>5.2 CSS — Selectors, Box Model, Flexbox, Grid, Media Queries</h3>
+  <span class="lang-label">CSS</span>
+  <pre><code>/* === SELECTORS === */
+p { color: #333; }                     /* element */
+.my-class { font-size: 16px; }         /* class */
+#my-id { background: #fff; }           /* ID */
+a:hover { color: red; }                /* pseudo-class */
+p::first-line { font-weight: bold; }   /* pseudo-element */
+input[type="text"] { border: 1px solid #ccc; } /* attribute */
+
+/* === BOX MODEL === */
+.box {
+  width: 300px;
+  height: 150px;
+  padding: 16px;          /* inner spacing */
+  border: 2px solid #333;
+  margin: 20px auto;      /* outer spacing; auto = center */
+  box-sizing: border-box; /* padding and border inside width */
+}
+
+/* === FLEXBOX === */
+.flex-container {
+  display: flex;
+  flex-direction: row;      /* row | column */
+  justify-content: center;  /* main axis alignment */
+  align-items: center;      /* cross axis alignment */
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.flex-item { flex: 1; min-width: 200px; }
+
+/* === CSS GRID === */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+  grid-template-rows: auto;
+  gap: 20px;
+}
+.grid-item:first-child { grid-column: 1 / 3; } /* span 2 columns */
+
+/* === MEDIA QUERIES === */
+@media (max-width: 768px) {    /* tablet and below */
+  .grid-container { grid-template-columns: 1fr 1fr; }
+  nav { flex-direction: column; }
+}
+@media (max-width: 480px) {    /* mobile */
+  .grid-container { grid-template-columns: 1fr; }
+  h1 { font-size: 1.5rem; }
+}
+
+/* === TRANSITIONS AND ANIMATIONS === */
+.button {
+  transition: background 0.3s ease, transform 0.2s;
+}
+.button:hover {
+  background: #1a237e;
+  transform: translateY(-2px);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero { animation: fadeIn 0.6s ease-out; }</code></pre>
+
+  <h3>5.3 JavaScript Basics</h3>
+  <span class="lang-label">JavaScript</span>
+  <pre><code>// Variables
+let name = "Alice";        // block-scoped, can reassign
+const PI = 3.14159;        // block-scoped, cannot reassign
+var old = "avoid this";    // function-scoped, legacy
+
+// Data types
+typeof "hello"   // "string"
+typeof 42        // "number"
+typeof true      // "boolean"
+typeof undefined // "undefined"
+typeof null      // "object" (legacy quirk)
+typeof []        // "object"
+typeof {}        // "object"
+
+// Functions — three styles
+function greet(name) { return `Hello, ${name}!`; }
+const greetArrow = (name) =&gt; `Hello, ${name}!`;
+const greetExpr = function(name) { return `Hello, ${name}!`; };
+
+// Array methods (functional style)
+const students = [
+  { name: "Alice", score: 92 },
+  { name: "Bob",   score: 78 },
+  { name: "Carol", score: 88 }
+];
+const topStudents = students.filter(s =&gt; s.score &gt;= 85);
+const names = students.map(s =&gt; s.name);
+const total = students.reduce((sum, s) =&gt; sum + s.score, 0);
+const avg = total / students.length;
+const found = students.find(s =&gt; s.name === "Bob");
+const sorted = [...students].sort((a, b) =&gt; b.score - a.score);
+
+// Destructuring
+const { name: n, score } = students[0];   // object destructuring
+const [first, second] = names;            // array destructuring
+
+// Spread and Rest
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];             // spread
+function sumAll(...nums) {                 // rest
+  return nums.reduce((a, b) =&gt; a + b, 0);
+}
+
+// DOM Manipulation
+document.getElementById("title").textContent = "New Title";
+document.querySelector(".card").style.backgroundColor = "#e8f5e9";
+const btn = document.querySelector("#submit-btn");
+btn.addEventListener("click", function(event) {
+  event.preventDefault();
+  console.log("Button clicked!");
+});
+const newEl = document.createElement("p");
+newEl.textContent = "Dynamic paragraph";
+document.body.appendChild(newEl);
+
+// Fetch API (AJAX)
+async function getData(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Fetch error:", error.message);
+  }
+}
+
+// Promise chaining
+fetch("https://api.example.com/data")
+  .then(res =&gt; res.json())
+  .then(data =&gt; console.log(data))
+  .catch(err =&gt; console.error(err))
+  .finally(() =&gt; console.log("Done"));</code></pre>
+
+  <!-- ===== SECTION 6: SQL ===== -->
+  <h2 id="sql">Section 6: SQL Basics <span class="badge badge-sql">SQL</span></h2>
+
+  <h3>6.1 DDL and DML Commands</h3>
+  <span class="lang-label">SQL</span>
+  <pre><code>-- === DDL: Data Definition Language ===
+
+-- Create a table
+CREATE TABLE students (
+    id        INT          PRIMARY KEY AUTO_INCREMENT,
+    name      VARCHAR(100) NOT NULL,
+    age       INT          CHECK (age &gt;= 16 AND age &lt;= 100),
+    email     VARCHAR(200) UNIQUE,
+    gpa       DECIMAL(3,2) DEFAULT 0.00,
+    dept_id   INT,
+    created_at TIMESTAMP   DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (dept_id) REFERENCES departments(id)
+);
+
+-- Create index for faster lookups
+CREATE INDEX idx_name ON students(name);
+
+-- Alter table
+ALTER TABLE students ADD COLUMN phone VARCHAR(20);
+ALTER TABLE students MODIFY COLUMN name VARCHAR(150);
+ALTER TABLE students DROP COLUMN phone;
+
+-- Drop table
+DROP TABLE IF EXISTS students;
+
+-- === DML: Data Manipulation Language ===
+
+-- Insert rows
+INSERT INTO students (name, age, email, gpa, dept_id)
+VALUES ('Alice Wang', 20, 'alice@example.com', 9.5, 1);
+
+INSERT INTO students (name, age, email, gpa, dept_id) VALUES
+('Bob Sharma', 21, 'bob@example.com', 8.8, 2),
+('Carol Chen', 22, 'carol@example.com', 9.2, 1),
+('David Patel', 19, 'david@example.com', 7.9, 3);
+
+-- Update
+UPDATE students SET gpa = 9.7 WHERE name = 'Alice Wang';
+UPDATE students SET dept_id = 2 WHERE dept_id = 3 AND age &lt; 21;
+
+-- Delete
+DELETE FROM students WHERE gpa &lt; 5.0;
+DELETE FROM students WHERE name = 'David Patel';</code></pre>
+
+  <h3>6.2 SELECT Queries — Filtering, Sorting, Aggregation</h3>
+  <span class="lang-label">SQL</span>
+  <pre><code>-- Basic SELECT
+SELECT * FROM students;
+SELECT name, gpa FROM students;
+
+-- WHERE clause with conditions
+SELECT name, gpa FROM students
+WHERE gpa &gt; 9.0 AND age &lt; 22;
+
+SELECT * FROM students
+WHERE name LIKE 'A%';            -- names starting with A
+
+SELECT * FROM students
+WHERE gpa BETWEEN 8.0 AND 9.5;
+
+SELECT * FROM students
+WHERE dept_id IN (1, 2);
+
+SELECT * FROM students
+WHERE email IS NOT NULL;
+
+-- ORDER BY
+SELECT name, gpa FROM students
+ORDER BY gpa DESC, name ASC;
+
+-- LIMIT
+SELECT name, gpa FROM students
+ORDER BY gpa DESC
+LIMIT 5;
+
+-- DISTINCT
+SELECT DISTINCT dept_id FROM students;
+
+-- Aggregate functions
+SELECT
+    COUNT(*)             AS total_students,
+    AVG(gpa)             AS average_gpa,
+    MAX(gpa)             AS highest_gpa,
+    MIN(gpa)             AS lowest_gpa,
+    SUM(gpa)             AS total_gpa
+FROM students;
+
+-- GROUP BY with HAVING
+SELECT dept_id, COUNT(*) AS count, AVG(gpa) AS avg_gpa
+FROM students
+GROUP BY dept_id
+HAVING AVG(gpa) &gt; 8.5
+ORDER BY avg_gpa DESC;
+
+-- CASE expression
+SELECT name, gpa,
+    CASE
+        WHEN gpa &gt;= 9.0 THEN 'Distinction'
+        WHEN gpa &gt;= 7.5 THEN 'Merit'
+        WHEN gpa &gt;= 6.0 THEN 'Pass'
+        ELSE 'Fail'
+    END AS result
+FROM students;
+
+-- Subquery
+SELECT name, gpa FROM students
+WHERE gpa &gt; (SELECT AVG(gpa) FROM students);
+
+-- JOIN operations
+SELECT s.name, s.gpa, d.dept_name
+FROM students s
+INNER JOIN departments d ON s.dept_id = d.id;
+
+SELECT s.name, e.course_id, c.course_name
+FROM students s
+LEFT JOIN enrollments e ON s.id = e.student_id
+LEFT JOIN courses c ON e.course_id = c.id;
+
+-- Window Functions (SQL analytic functions)
+SELECT name, gpa,
+    RANK() OVER (ORDER BY gpa DESC) AS rank_num,
+    ROW_NUMBER() OVER (PARTITION BY dept_id ORDER BY gpa DESC) AS dept_rank
+FROM students;</code></pre>
+
+  <!-- ===== SECTION 7: GATE ===== -->
+  <h2 id="gate">Section 7: GATE CSE Important Topics <span class="badge badge-gate">GATE</span></h2>
+
+  <table>
+    <tr><th>Subject</th><th>Key Topics</th><th>Weightage (approx.)</th></tr>
+    <tr><td>Data Structures &amp; Algorithms</td><td>Sorting, Trees, Graphs, DP, Hashing, Heaps</td><td>10–15%</td></tr>
+    <tr><td>Programming &amp; C</td><td>Pointers, Recursion, Memory management</td><td>5–10%</td></tr>
+    <tr><td>Operating Systems</td><td>Process scheduling, Memory management, Deadlocks, File systems</td><td>10–12%</td></tr>
+    <tr><td>Computer Networks</td><td>OSI/TCP-IP layers, Routing, TCP/UDP, DNS, HTTP</td><td>10–12%</td></tr>
+    <tr><td>DBMS</td><td>SQL, Normalisation, ER diagrams, Transactions, Indexing</td><td>8–10%</td></tr>
+    <tr><td>Computer Organisation</td><td>CPU design, Pipelining, Memory hierarchy, I/O</td><td>8–10%</td></tr>
+    <tr><td>Theory of Computation</td><td>Automata, Regular expressions, CFG, Turing machines</td><td>8–10%</td></tr>
+    <tr><td>Compiler Design</td><td>Lexical analysis, Parsing, Code generation, Optimisation</td><td>5–7%</td></tr>
+    <tr><td>Discrete Mathematics</td><td>Set theory, Graph theory, Combinatorics, Logic, Probability</td><td>10–15%</td></tr>
+    <tr><td>Digital Logic</td><td>Boolean algebra, Karnaugh maps, Flip-flops, Counters</td><td>5–8%</td></tr>
+  </table>
+
+  <div class="tip-box">
+    <strong>GATE CSE Preparation Strategy:</strong>
+    <ul>
+      <li>Start with Discrete Mathematics and Programming — they are foundational for all other subjects.</li>
+      <li>Solve at least 15 years of GATE previous year questions for each subject.</li>
+      <li>Focus on understanding concepts deeply, not just memorising formulas.</li>
+      <li>Use NPTEL video lectures (free) for OS, CN, DBMS, and TOC.</li>
+      <li>Join test series at least 3 months before the exam to build speed and accuracy.</li>
+    </ul>
+  </div>
+
+  <!-- ===== SECTION 8: COMPETITIVE PROGRAMMING ===== -->
+  <h2 id="competitive">Section 8: Competitive Programming Tips</h2>
+
+  <h3>8.1 Platforms and Their Focus</h3>
+  <table>
+    <tr><th>Platform</th><th>Best For</th><th>Rating System</th><th>URL</th></tr>
+    <tr><td>Codeforces</td><td>Competitive contests, algorithmic problems</td><td>Newbie to Legendary Grandmaster</td><td>codeforces.com</td></tr>
+    <tr><td>LeetCode</td><td>Coding interview preparation</td><td>Easy/Medium/Hard</td><td>leetcode.com</td></tr>
+    <tr><td>HackerRank</td><td>Skills certification, job applications</td><td>Stars per domain</td><td>hackerrank.com</td></tr>
+    <tr><td>CodeChef</td><td>Long contests, Indian competitions</td><td>1-7 stars</td><td>codechef.com</td></tr>
+    <tr><td>AtCoder</td><td>Japanese contests, mathematical problems</td><td>Unrated to Red</td><td>atcoder.jp</td></tr>
+    <tr><td>SPOJ</td><td>Classical algorithm problems</td><td>—</td><td>spoj.com</td></tr>
+  </table>
+
+  <h3>8.2 Fast I/O Template (C++)</h3>
+  <span class="lang-label">C++</span>
+  <pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+// Fast I/O
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+
+// Type shortcuts
+#define ll long long
+#define vi vector&lt;int&gt;
+#define vll vector&lt;long long&gt;
+#define pii pair&lt;int,int&gt;
+#define pb push_back
+#define mp make_pair
+#define MOD 1000000007LL
+
+// Common macros
+#define FOR(i, a, b) for(int i = (a); i &lt; (b); i++)
+#define REP(i, n)    for(int i = 0; i &lt; (n); i++)
+#define ALL(v)       (v).begin(), (v).end()
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t;
+    cin &gt;&gt; t;
+    while (t--) {
+        int n;
+        cin &gt;&gt; n;
+        vi a(n);
+        for (int&amp; x : a) cin &gt;&gt; x;
+        sort(ALL(a));
+        cout &lt;&lt; a[0] &lt;&lt; " " &lt;&lt; a[n-1] &lt;&lt; "\n";
+    }
+    return 0;
+}</code></pre>
+
+  <h3>8.3 Common Algorithm Complexities</h3>
+  <table>
+    <tr><th>Algorithm / Operation</th><th>Time Complexity</th><th>Space</th></tr>
+    <tr><td>Array access</td><td>O(1)</td><td>—</td></tr>
+    <tr><td>Hash map get/put</td><td>O(1) average</td><td>O(n)</td></tr>
+    <tr><td>Binary search</td><td>O(log n)</td><td>O(1)</td></tr>
+    <tr><td>BST search/insert/delete</td><td>O(h) where h = height</td><td>O(n)</td></tr>
+    <tr><td>Heap insert/delete</td><td>O(log n)</td><td>O(n)</td></tr>
+    <tr><td>Sorting (comparison-based)</td><td>O(n log n)</td><td>varies</td></tr>
+    <tr><td>BFS / DFS on graph</td><td>O(V + E)</td><td>O(V)</td></tr>
+    <tr><td>Dijkstra (with binary heap)</td><td>O(E log V)</td><td>O(V)</td></tr>
+    <tr><td>Floyd-Warshall</td><td>O(V³)</td><td>O(V²)</td></tr>
+    <tr><td>Knapsack DP</td><td>O(n × W)</td><td>O(n × W)</td></tr>
+    <tr><td>LCS DP</td><td>O(m × n)</td><td>O(m × n)</td></tr>
+  </table>
+
+  <!-- ===== SECTION 9: INTERVIEW ===== -->
+  <h2 id="interview">Section 9: Interview Preparation — Top 20 DSA Interview Questions</h2>
+
+  <table>
+    <tr><th>#</th><th>Problem</th><th>Key Technique</th><th>Difficulty</th></tr>
+    <tr><td>1</td><td>Two Sum</td><td>Hash Map</td><td>Easy</td></tr>
+    <tr><td>2</td><td>Reverse a Linked List</td><td>In-place pointer reversal</td><td>Easy</td></tr>
+    <tr><td>3</td><td>Valid Parentheses</td><td>Stack</td><td>Easy</td></tr>
+    <tr><td>4</td><td>Merge Two Sorted Lists</td><td>Merge / Two Pointers</td><td>Easy</td></tr>
+    <tr><td>5</td><td>Binary Search</td><td>Binary search on sorted array</td><td>Easy</td></tr>
+    <tr><td>6</td><td>Maximum Subarray (Kadane's)</td><td>DP / Greedy</td><td>Medium</td></tr>
+    <tr><td>7</td><td>Longest Substring Without Repeating Characters</td><td>Sliding Window + Hash Set</td><td>Medium</td></tr>
+    <tr><td>8</td><td>Binary Tree Level Order Traversal</td><td>BFS with Queue</td><td>Medium</td></tr>
+    <tr><td>9</td><td>Number of Islands</td><td>DFS/BFS on 2D grid</td><td>Medium</td></tr>
+    <tr><td>10</td><td>Coin Change</td><td>Dynamic Programming</td><td>Medium</td></tr>
+    <tr><td>11</td><td>Climbing Stairs</td><td>DP / Fibonacci</td><td>Easy</td></tr>
+    <tr><td>12</td><td>Find Kth Largest in Array</td><td>Min-Heap / QuickSelect</td><td>Medium</td></tr>
+    <tr><td>13</td><td>LRU Cache</td><td>HashMap + Doubly Linked List</td><td>Medium</td></tr>
+    <tr><td>14</td><td>Detect Cycle in Linked List</td><td>Floyd's Cycle Detection</td><td>Medium</td></tr>
+    <tr><td>15</td><td>Lowest Common Ancestor of BST</td><td>Tree traversal</td><td>Medium</td></tr>
+    <tr><td>16</td><td>Word Search</td><td>DFS Backtracking</td><td>Medium</td></tr>
+    <tr><td>17</td><td>Merge Intervals</td><td>Sorting + Greedy</td><td>Medium</td></tr>
+    <tr><td>18</td><td>Longest Common Subsequence</td><td>2D DP</td><td>Medium</td></tr>
+    <tr><td>19</td><td>Course Schedule (Topological Sort)</td><td>DFS / Kahn's BFS</td><td>Medium</td></tr>
+    <tr><td>20</td><td>Trapping Rain Water</td><td>Two Pointers or Stack</td><td>Hard</td></tr>
+  </table>
+
+  <div class="tip-box">
+    <strong>Interview Tips:</strong>
+    <ul>
+      <li>Always clarify the problem before coding — ask about edge cases (empty input, negatives, overflow).</li>
+      <li>Discuss brute force first, then optimise — show your thought process out loud.</li>
+      <li>Write clean, readable code with meaningful variable names.</li>
+      <li>Test with at least 2–3 examples including edge cases.</li>
+      <li>Know the time and space complexity of your solution before the interviewer asks.</li>
+      <li>Practice on LeetCode: aim for 100+ problems before interviews.</li>
+    </ul>
+  </div>
+
+  <!-- ===== SECTION 10: PRACTICE ===== -->
+  <h2 id="practice">Section 10: Practice Problems for Each Topic</h2>
+
+  <h3>Python Practice Problems</h3>
+  <table>
+    <tr><th>#</th><th>Problem</th><th>Concepts Practiced</th></tr>
+    <tr><td>1</td><td>Print all prime numbers up to N</td><td>Loops, conditionals, Sieve of Eratosthenes</td></tr>
+    <tr><td>2</td><td>Build a simple calculator class</td><td>OOP, methods, exception handling</td></tr>
+    <tr><td>3</td><td>Count word frequency in a string</td><td>Strings, dictionaries</td></tr>
+    <tr><td>4</td><td>Flatten a nested list</td><td>Recursion, lists</td></tr>
+    <tr><td>5</td><td>Read a CSV file and compute statistics</td><td>File I/O, Pandas basics</td></tr>
+  </table>
+
+  <h3>DSA Practice Problems</h3>
+  <table>
+    <tr><th>#</th><th>Problem</th><th>Platform</th><th>Topic</th></tr>
+    <tr><td>1</td><td>Reverse an array in-place</td><td>Any</td><td>Arrays, Two Pointers</td></tr>
+    <tr><td>2</td><td>Check if a string is a palindrome</td><td>LeetCode 125</td><td>Strings, Two Pointers</td></tr>
+    <tr><td>3</td><td>Find all permutations of a string</td><td>LeetCode 46</td><td>Recursion, Backtracking</td></tr>
+    <tr><td>4</td><td>Implement a Min Stack</td><td>LeetCode 155</td><td>Stack, Design</td></tr>
+    <tr><td>5</td><td>Serialize and Deserialize Binary Tree</td><td>LeetCode 297</td><td>Trees, BFS</td></tr>
+    <tr><td>6</td><td>Find Shortest Path in Unweighted Graph</td><td>Custom</td><td>BFS, Graphs</td></tr>
+    <tr><td>7</td><td>Maximum Profit from Stock Prices</td><td>LeetCode 122</td><td>Greedy, DP</td></tr>
+    <tr><td>8</td><td>Implement Trie (Prefix Tree)</td><td>LeetCode 208</td><td>Trie, OOP</td></tr>
+  </table>
+
+  <!-- ===== SECTION 11: FAQ ===== -->
+  <h2 id="faq">Section 11: Frequently Asked Questions (FAQ)</h2>
+
+  <h3>Q1: Which programming language should I learn first — Python, Java, or C++?</h3>
+  <p>For beginners, <strong>Python</strong> is the best first language due to its simple, readable syntax. You can focus on concepts rather than syntax. Once you are comfortable with programming logic, learning Java or C++ becomes much faster. For GATE CSE or competitive programming, C++ is strongly recommended due to its speed and powerful STL.</p>
+
+  <h3>Q2: How long does it take to learn Python basics?</h3>
+  <p>With 1–2 hours of daily practice, a complete beginner can learn Python fundamentals (variables, control flow, functions, OOP) in 4–6 weeks. Data structures and file handling add another 2–3 weeks. Real proficiency comes from building projects and solving problems on LeetCode or HackerRank consistently over several months.</p>
+
+  <h3>Q3: What is the difference between a list and a tuple in Python?</h3>
+  <p>A <strong>list</strong> is mutable (can be changed after creation) and uses square brackets: <code>my_list = [1, 2, 3]</code>. A <strong>tuple</strong> is immutable (cannot be changed) and uses parentheses: <code>my_tuple = (1, 2, 3)</code>. Tuples are faster and use less memory. Use tuples for fixed collections (e.g., coordinates, RGB values) and lists for collections that need modification.</p>
+
+  <h3>Q4: What is the most important data structure to learn for interviews?</h3>
+  <p>Master these in order: (1) Arrays and Strings, (2) Hash Maps/Sets, (3) Linked Lists, (4) Stacks and Queues, (5) Binary Trees, (6) Graphs, (7) Heaps. Hash maps solve a huge number of interview problems in O(1) time. Binary trees and graphs appear frequently in medium/hard questions.</p>
+
+  <h3>Q5: What is Big O notation and why does it matter?</h3>
+  <p>Big O notation describes how an algorithm's time or space requirements grow as the input size (n) increases. Common complexities from fastest to slowest: O(1) &gt; O(log n) &gt; O(n) &gt; O(n log n) &gt; O(n²) &gt; O(2ⁿ). In coding interviews, you are always expected to state the time and space complexity of your solution. An O(n²) solution may be acceptable for n ≤ 1,000 but will time out for n = 10⁶.</p>
+
+  <h3>Q6: How do I prepare for a software engineering internship or job interview?</h3>
+  <p>Follow this roadmap: (1) Learn one language thoroughly (Python or Java or C++). (2) Study Data Structures and Algorithms — complete at least 150 LeetCode problems (50 easy, 80 medium, 20 hard). (3) Study Object-Oriented Design and System Design basics. (4) Do 2–3 personal projects to demonstrate practical skills. (5) Practise mock interviews on platforms like Pramp or Interviewing.io. (6) Apply to internships early — most major tech companies open applications 8–12 months in advance.</p>
+
+  <h3>Q7: What is the GATE exam and should I prepare for it?</h3>
+  <p>GATE (Graduate Aptitude Test in Engineering) is a highly competitive Indian national exam for admission to M.Tech/M.E. programmes at IITs, NITs, and IISc, and for PSU (Public Sector Unit) recruitment. A good GATE score (above 700 out of 1000) opens doors to premium institutions and government jobs. It is recommended for students who want to pursue research, higher education in India, or government sector careers. Preparation takes 6–12 months of dedicated study.</p>
+
+  <h3>Q8: What is the best way to learn SQL quickly?</h3>
+  <p>Learn SQL in this order: (1) Basic SELECT, WHERE, ORDER BY, LIMIT. (2) Aggregate functions (COUNT, SUM, AVG, MIN, MAX) with GROUP BY and HAVING. (3) Joins (INNER, LEFT, RIGHT, FULL OUTER). (4) Subqueries and CTEs. (5) Window functions. Practice on SQLZoo (free, browser-based) or HackerRank SQL domain. For interview preparation, solve LeetCode SQL problems — the top 50 SQL questions cover all common interview patterns.</p>
+</div>
+
+<footer>
+  &copy; 2026 StudyHub &mdash; Programming Tutorials for CS Students &mdash; <a href="../index.html" style="color:#a5d6a7;">Home</a>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

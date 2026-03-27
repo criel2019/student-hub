@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chemistry Notes &amp; Formulas | JEE Chemistry, NEET Chemistry, Class 12 | StudyHub</title>
+  <meta name="description" content="Complete chemistry notes for JEE, NEET. Organic chemistry reactions, inorganic, physical chemistry formulas, periodic table, IUPAC naming." />
+  <meta name="keywords" content="JEE chemistry, NEET chemistry, organic chemistry reactions, physical chemistry formulas, periodic table, IUPAC nomenclature, chemical bonding, electrochemistry" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Chemistry Notes &amp; Formulas | JEE, NEET, Class 12 | StudyHub" />
+  <meta property="og:description" content="Complete chemistry notes for JEE, NEET. Organic reactions, inorganic, physical chemistry formulas, periodic table, IUPAC naming." />
+  <meta property="og:type" content="article" />
+  <link rel="canonical" href="https://studyhub.example.com/pages/chemistry.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the Nernst equation used for in electrochemistry?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Nernst equation relates the cell potential to the standard cell potential under non-standard conditions: E = E° − (0.0592/n) × log Q at 25°C. It is used to calculate the EMF of a cell when concentrations are not 1 M, which is essential for JEE and NEET electrochemistry problems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between SN1 and SN2 reactions in organic chemistry?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SN1 is a two-step mechanism through a carbocation intermediate, favors tertiary substrates, and gives racemization. SN2 is a one-step concerted mechanism, favors primary/methyl substrates, and proceeds with inversion of configuration (Walden inversion). SN1 is favored in polar protic solvents; SN2 in polar aprotic solvents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you determine the hybridization of a molecule?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hybridization number = number of sigma bonds + lone pairs on the central atom. sp=2, sp²=3, sp³=4, sp³d=5, sp³d²=6. For example, H₂O has 2 bonds + 2 lone pairs = 4, so sp³. NH₃ has 3 bonds + 1 lone pair = 4, also sp³. BF₃ has 3 bonds + 0 lone pairs = 3, so sp²."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f8f9fa; color: #212529; }
+    nav { background: #1a237e; color: #fff; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    nav a { color: #fff; text-decoration: none; margin: 0 10px; font-size: 0.95rem; }
+    nav a:hover { text-decoration: underline; }
+    .nav-brand { font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; }
+    .hero { background: linear-gradient(135deg, #1a237e 0%, #283593 60%, #3949ab 100%); color: #fff; padding: 48px 24px 36px; text-align: center; }
+    .hero h1 { font-size: 2.1rem; margin: 0 0 12px; }
+    .hero p { font-size: 1.1rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+    .toc { background: #e8eaf6; border-left: 4px solid #3949ab; padding: 16px 24px; border-radius: 4px; margin-bottom: 32px; }
+    .toc h2 { margin: 0 0 10px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; color: #1a237e; }
+    .toc ol { margin: 0; padding-left: 18px; }
+    .toc li { margin: 4px 0; }
+    .toc a { color: #1a237e; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    section { margin-bottom: 48px; }
+    h2.sec-title { font-size: 1.6rem; border-bottom: 3px solid #3949ab; padding-bottom: 8px; color: #1a237e; margin-bottom: 20px; }
+    h3 { color: #283593; margin-top: 28px; font-size: 1.15rem; }
+    h4 { color: #3949ab; margin-top: 18px; }
+    .formula-box { background: #fff; border: 1px solid #c5cae9; border-radius: 6px; padding: 14px 18px; margin: 12px 0; font-family: 'Courier New', monospace; font-size: 0.97rem; line-height: 1.8; }
+    .highlight { background: #fff9c4; border-left: 4px solid #f9a825; padding: 10px 16px; border-radius: 4px; margin: 14px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.93rem; }
+    th { background: #3949ab; color: #fff; padding: 9px 12px; text-align: left; }
+    td { padding: 8px 12px; border-bottom: 1px solid #ddd; }
+    tr:nth-child(even) td { background: #f0f2ff; }
+    tr:hover td { background: #e8eaf6; }
+    .reaction-table th { background: #4a148c; }
+    .mnemonic-box { background: #e8f5e9; border-left: 4px solid #43a047; border-radius: 4px; padding: 12px 16px; margin: 10px 0; }
+    .problem-box { background: #fff; border: 1px solid #b0bec5; border-radius: 8px; padding: 18px 20px; margin: 16px 0; }
+    .problem-box .q { font-weight: 700; color: #1a237e; }
+    .problem-box .a { margin-top: 8px; color: #333; line-height: 1.7; }
+    .faq-section { background: #f3f4fd; border-radius: 8px; padding: 20px 24px; margin-top: 32px; }
+    .faq-item { margin-bottom: 20px; border-bottom: 1px solid #c5cae9; padding-bottom: 16px; }
+    .faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .faq-item h4 { color: #1a237e; margin: 0 0 8px; }
+    .faq-item p { margin: 0; color: #444; line-height: 1.6; }
+    footer { background: #1a237e; color: #c5cae9; text-align: center; padding: 28px 16px; font-size: 0.9rem; }
+    footer a { color: #90caf9; text-decoration: none; margin: 0 8px; }
+    .badge { display: inline-block; background: #3949ab; color: #fff; border-radius: 12px; padding: 2px 10px; font-size: 0.78rem; margin: 0 3px; vertical-align: middle; }
+    .badge.neet { background: #00897b; }
+    .badge.class12 { background: #6d4c41; }
+    sub, sup { font-size: 0.75em; }
+    .weight-table th { background: #00695c; }
+    .strategy-box { background: #e0f2f1; border-left: 4px solid #00897b; padding: 12px 16px; border-radius: 4px; margin: 12px 0; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">StudyHub</span>
+  <div>
+    <a href="../index.html">Home</a>
+    <a href="math.html">Math</a>
+    <a href="chemistry.html">Chemistry</a>
+    <a href="biology.html">Biology</a>
+    <a href="english.html">English</a>
+    <a href="competitive-exams.html">Competitive Exams</a>
+    <a href="gk.html">GK</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Chemistry Notes &amp; Formulas</h1>
+  <p>Complete JEE &amp; NEET Chemistry — Physical, Organic, Inorganic with all formulas, reactions, periodic table &amp; mnemonics</p>
+  <p style="margin-top:12px;">
+    <span class="badge">JEE Main</span>
+    <span class="badge">JEE Advanced</span>
+    <span class="badge neet">NEET</span>
+    <span class="badge class12">Class 12</span>
+  </p>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#physical">Physical Chemistry Formulas</a></li>
+      <li><a href="#periodic">Periodic Table &amp; Trends</a></li>
+      <li><a href="#inorganic">Inorganic Chemistry</a></li>
+      <li><a href="#organic">Organic Chemistry</a></li>
+      <li><a href="#biomolecules">Biomolecules</a></li>
+      <li><a href="#polymers">Polymers</a></li>
+      <li><a href="#jee-strategy">JEE Chemistry Strategy</a></li>
+      <li><a href="#neet-strategy">NEET Chemistry Strategy</a></li>
+      <li><a href="#mnemonics">Chemistry Mnemonics</a></li>
+      <li><a href="#practice">Practice Problems (Solved)</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </div>
+
+  <!-- ==================== SECTION 1: PHYSICAL CHEMISTRY ==================== -->
+  <section id="physical">
+    <h2 class="sec-title">1. Physical Chemistry Formulas</h2>
+
+    <h3>Atomic Structure</h3>
+    <p>Bohr's model gives the radius and energy of the n-th orbit for a hydrogen-like atom of atomic number Z:</p>
+    <div class="formula-box">
+      r&#8345; = n² × 0.529 Å / Z &nbsp;&nbsp; (orbit radius)<br>
+      E&#8345; = −13.6 × Z² / n² eV &nbsp;&nbsp; (orbit energy, negative = bound state)<br>
+      v&#8345; = 2.18 × 10⁶ × Z/n m/s &nbsp;&nbsp; (orbital velocity)<br>
+      Frequency of photon emitted: ν = (E₂ − E₁)/h &nbsp; where h = 6.626 × 10⁻³⁴ J·s
+    </div>
+
+    <h4>Quantum Numbers</h4>
+    <table>
+      <thead>
+        <tr><th>Quantum Number</th><th>Symbol</th><th>Range of Values</th><th>Physical Meaning</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Principal</td><td>n</td><td>1, 2, 3, … ∞</td><td>Shell / energy level / size</td></tr>
+        <tr><td>Azimuthal (angular momentum)</td><td>l</td><td>0 to (n−1)</td><td>Sub-shell shape: s=0, p=1, d=2, f=3</td></tr>
+        <tr><td>Magnetic</td><td>m<sub>l</sub></td><td>−l to +l (total 2l+1 values)</td><td>Orientation of orbital in space</td></tr>
+        <tr><td>Spin</td><td>m<sub>s</sub></td><td>+½ or −½</td><td>Electron spin direction (up or down)</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Electronic Configuration Rules</h4>
+    <ul>
+      <li><strong>Aufbau Principle:</strong> Fill orbitals in order of increasing energy: 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p …</li>
+      <li><strong>Hund's Rule of Maximum Multiplicity:</strong> Electrons occupy all orbitals of equal energy singly before pairing. All singly occupied orbitals have parallel spins.</li>
+      <li><strong>Pauli's Exclusion Principle:</strong> No two electrons in an atom can have identical sets of four quantum numbers. Maximum 2 electrons per orbital, with opposite spins.</li>
+    </ul>
+
+    <h4>Electromagnetic Spectrum</h4>
+    <table>
+      <thead><tr><th>Region</th><th>Wavelength Range</th><th>Frequency Range (Hz)</th></tr></thead>
+      <tbody>
+        <tr><td>Gamma rays</td><td>&lt; 0.01 nm</td><td>&gt; 3 × 10¹⁹</td></tr>
+        <tr><td>X-rays</td><td>0.01 – 10 nm</td><td>3×10¹⁷ – 3×10¹⁹</td></tr>
+        <tr><td>UV (ultraviolet)</td><td>10 – 400 nm</td><td>7.5×10¹⁴ – 3×10¹⁷</td></tr>
+        <tr><td>Visible light</td><td>400 – 700 nm</td><td>4.3×10¹⁴ – 7.5×10¹⁴</td></tr>
+        <tr><td>IR (infrared)</td><td>700 nm – 1 mm</td><td>3×10¹¹ – 4.3×10¹⁴</td></tr>
+        <tr><td>Microwave</td><td>1 mm – 1 m</td><td>3×10⁸ – 3×10¹¹</td></tr>
+        <tr><td>Radio waves</td><td>&gt; 1 m</td><td>&lt; 3×10⁸</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Chemical Bonding</h3>
+
+    <h4>VSEPR Molecular Geometries</h4>
+    <table>
+      <thead><tr><th>Molecule</th><th>Total e⁻ Pairs</th><th>Bonding Pairs</th><th>Lone Pairs</th><th>Shape</th><th>Bond Angle</th><th>Hybridization</th></tr></thead>
+      <tbody>
+        <tr><td>BeCl₂</td><td>2</td><td>2</td><td>0</td><td>Linear</td><td>180°</td><td>sp</td></tr>
+        <tr><td>BF₃</td><td>3</td><td>3</td><td>0</td><td>Trigonal planar</td><td>120°</td><td>sp²</td></tr>
+        <tr><td>CH₄</td><td>4</td><td>4</td><td>0</td><td>Tetrahedral</td><td>109.5°</td><td>sp³</td></tr>
+        <tr><td>NH₃</td><td>4</td><td>3</td><td>1</td><td>Trigonal pyramidal</td><td>107°</td><td>sp³</td></tr>
+        <tr><td>H₂O</td><td>4</td><td>2</td><td>2</td><td>V-shaped / Bent</td><td>104.5°</td><td>sp³</td></tr>
+        <tr><td>PCl₅</td><td>5</td><td>5</td><td>0</td><td>Trigonal bipyramidal</td><td>90°, 120°</td><td>sp³d</td></tr>
+        <tr><td>SF₄</td><td>5</td><td>4</td><td>1</td><td>See-saw</td><td>~102°, 173°</td><td>sp³d</td></tr>
+        <tr><td>ClF₃</td><td>5</td><td>3</td><td>2</td><td>T-shaped</td><td>~87°</td><td>sp³d</td></tr>
+        <tr><td>SF₆</td><td>6</td><td>6</td><td>0</td><td>Octahedral</td><td>90°</td><td>sp³d²</td></tr>
+        <tr><td>IF₅</td><td>6</td><td>5</td><td>1</td><td>Square pyramidal</td><td>~90°</td><td>sp³d²</td></tr>
+        <tr><td>XeF₄</td><td>6</td><td>4</td><td>2</td><td>Square planar</td><td>90°</td><td>sp³d²</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Bond Polarity &amp; Electronegativity</h4>
+    <p>Electronegativity (Pauling scale) increases across a period and decreases down a group. F has the highest electronegativity (4.0). A bond is polar if electronegativity difference &gt; 0.4; ionic character dominates when &gt; 1.7.</p>
+    <div class="formula-box">
+      Dipole moment: μ = q × d &nbsp; (unit: Debye, D; 1 D = 3.336 × 10⁻³⁰ C·m)<br>
+      Bond energy order (for carbon): C≡C &gt; C=C &gt; C−C (bond length: triple &lt; double &lt; single)
+    </div>
+
+    <h3>Thermodynamics Chemistry</h3>
+    <div class="formula-box">
+      Hess's Law: ΔH°rxn = ΣΔH°f(products) − ΣΔH°f(reactants)<br>
+      Bond enthalpy: ΔH°rxn = ΣBE(bonds broken) − ΣBE(bonds formed)<br>
+      ΔH = ΔU + Δng·RT &nbsp; (Δng = moles gaseous products − moles gaseous reactants)<br>
+      Entropy: ΔS°rxn = ΣS°(products) − ΣS°(reactants)<br>
+      Gibbs Free Energy: ΔG = ΔH − TΔS<br>
+      ΔG = ΔG° + RT·ln Q<br>
+      At equilibrium: ΔG = 0, therefore ΔG° = −RT·ln K<br>
+      ΔG° = −nFE°cell<br>
+      Spontaneous when ΔG &lt; 0
+    </div>
+
+    <table>
+      <thead><tr><th>ΔH</th><th>ΔS</th><th>ΔG = ΔH − TΔS</th><th>Spontaneity</th></tr></thead>
+      <tbody>
+        <tr><td>Negative (−)</td><td>Positive (+)</td><td>Always negative</td><td>Spontaneous at all temperatures</td></tr>
+        <tr><td>Positive (+)</td><td>Negative (−)</td><td>Always positive</td><td>Never spontaneous</td></tr>
+        <tr><td>Negative (−)</td><td>Negative (−)</td><td>Negative at low T</td><td>Spontaneous at low temperatures</td></tr>
+        <tr><td>Positive (+)</td><td>Positive (+)</td><td>Negative at high T</td><td>Spontaneous at high temperatures</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Chemical Equilibrium</h3>
+    <div class="formula-box">
+      For: aA + bB ⇌ cC + dD<br>
+      Kc = [C]ᶜ[D]ᵈ / ([A]ᵃ[B]ᵇ)<br>
+      Kp = Kc(RT)^Δn &nbsp; where Δn = (c+d) − (a+b) for gaseous species<br>
+      Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴ at 25°C<br>
+      pH = −log[H⁺] &nbsp;|&nbsp; pOH = −log[OH⁻] &nbsp;|&nbsp; pH + pOH = 14 (at 25°C)
+    </div>
+
+    <h4>pH Calculation Guide</h4>
+    <div class="formula-box">
+      Strong acid: pH = −log[acid]<br>
+      Weak acid: pH = ½(pKa − log[HA]) &nbsp; (using approximation α &lt;&lt; 1)<br>
+      Buffer (Henderson-Hasselbalch): pH = pKa + log([A⁻]/[HA])<br>
+      Buffer (base form): pOH = pKb + log([BH⁺]/[B])
+    </div>
+
+    <h4>pKa Values of Common Acids (25°C)</h4>
+    <table>
+      <thead><tr><th>Acid</th><th>pKa</th><th>Classification</th></tr></thead>
+      <tbody>
+        <tr><td>HCl</td><td>−7</td><td>Strong acid</td></tr>
+        <tr><td>H₂SO₄ (1st ionization)</td><td>−3</td><td>Strong acid</td></tr>
+        <tr><td>HNO₃</td><td>−1.4</td><td>Strong acid</td></tr>
+        <tr><td>HF</td><td>3.17</td><td>Weak acid</td></tr>
+        <tr><td>CH₃COOH (acetic acid)</td><td>4.76</td><td>Weak acid</td></tr>
+        <tr><td>H₂CO₃ (1st)</td><td>6.35</td><td>Weak acid</td></tr>
+        <tr><td>H₂S (1st)</td><td>7.00</td><td>Weak acid</td></tr>
+        <tr><td>NH₄⁺</td><td>9.25</td><td>Conjugate acid of NH₃</td></tr>
+        <tr><td>HCN</td><td>9.31</td><td>Very weak acid</td></tr>
+        <tr><td>H₂CO₃ (2nd / HCO₃⁻)</td><td>10.33</td><td>Very weak acid</td></tr>
+        <tr><td>H₂O</td><td>15.74</td><td>Extremely weak acid</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Le Chatelier's Principle — Effect of Disturbances</h4>
+    <table>
+      <thead><tr><th>Disturbance</th><th>Equilibrium Shift</th></tr></thead>
+      <tbody>
+        <tr><td>Increase concentration of reactant</td><td>Shifts towards products (→)</td></tr>
+        <tr><td>Increase concentration of product</td><td>Shifts towards reactants (←)</td></tr>
+        <tr><td>Decrease volume / increase pressure (gas rxn)</td><td>Towards side with fewer moles of gas</td></tr>
+        <tr><td>Increase temperature (endothermic rxn)</td><td>Towards products (→), K increases</td></tr>
+        <tr><td>Increase temperature (exothermic rxn)</td><td>Towards reactants (←), K decreases</td></tr>
+        <tr><td>Add a catalyst</td><td>No shift; equilibrium reached faster; K unchanged</td></tr>
+        <tr><td>Add inert gas at constant volume</td><td>No effect on equilibrium position</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Solubility Product (Ksp) &amp; Common Ion Effect</h4>
+    <div class="formula-box">
+      For MₘXₓ(s) ⇌ m·Mⁿ⁺(aq) + x·Xᵐ⁻(aq):<br>
+      Ksp = [Mⁿ⁺]ᵐ [Xᵐ⁻]ˣ<br>
+      Common ion effect: Adding an ion common to the equilibrium reduces solubility (precipitates more solid).
+    </div>
+
+    <h3>Electrochemistry</h3>
+    <div class="formula-box">
+      Faraday's 1st Law: m = Z·Q = Z·I·t &nbsp; (m = mass deposited; Z = electrochemical equivalent)<br>
+      Faraday's 2nd Law: m₁/m₂ = E₁/E₂ &nbsp; (E = equivalent weight = M/n)<br>
+      Z = M / (n × F) &nbsp;|&nbsp; F = 96500 C/mol (Faraday's constant)<br><br>
+      Cell notation: Anode (oxidation) | electrolyte || electrolyte | Cathode (reduction)<br>
+      E°cell = E°cathode − E°anode<br>
+      Nernst equation: E = E° − (0.0592/n)·log Q &nbsp; at 25°C<br>
+      ΔG° = −nF·E°cell = −RT·ln K
+    </div>
+
+    <h4>Standard Electrode Potentials (EMF Series, 25°C)</h4>
+    <table>
+      <thead><tr><th>Half-Reaction (Reduction)</th><th>E° (V)</th><th>Tendency</th></tr></thead>
+      <tbody>
+        <tr><td>Li⁺ + e⁻ → Li</td><td>−3.04</td><td>Strong reducing agent</td></tr>
+        <tr><td>K⁺ + e⁻ → K</td><td>−2.92</td><td></td></tr>
+        <tr><td>Ca²⁺ + 2e⁻ → Ca</td><td>−2.87</td><td></td></tr>
+        <tr><td>Na⁺ + e⁻ → Na</td><td>−2.71</td><td></td></tr>
+        <tr><td>Mg²⁺ + 2e⁻ → Mg</td><td>−2.37</td><td></td></tr>
+        <tr><td>Al³⁺ + 3e⁻ → Al</td><td>−1.66</td><td></td></tr>
+        <tr><td>Zn²⁺ + 2e⁻ → Zn</td><td>−0.76</td><td></td></tr>
+        <tr><td>Fe²⁺ + 2e⁻ → Fe</td><td>−0.44</td><td></td></tr>
+        <tr><td>Ni²⁺ + 2e⁻ → Ni</td><td>−0.25</td><td></td></tr>
+        <tr><td>Sn²⁺ + 2e⁻ → Sn</td><td>−0.14</td><td></td></tr>
+        <tr><td>Pb²⁺ + 2e⁻ → Pb</td><td>−0.13</td><td></td></tr>
+        <tr><td>2H⁺ + 2e⁻ → H₂</td><td>0.00</td><td>Reference electrode (SHE)</td></tr>
+        <tr><td>Cu²⁺ + 2e⁻ → Cu</td><td>+0.34</td><td></td></tr>
+        <tr><td>I₂ + 2e⁻ → 2I⁻</td><td>+0.54</td><td></td></tr>
+        <tr><td>Fe³⁺ + e⁻ → Fe²⁺</td><td>+0.77</td><td></td></tr>
+        <tr><td>Ag⁺ + e⁻ → Ag</td><td>+0.80</td><td></td></tr>
+        <tr><td>Hg²⁺ + 2e⁻ → Hg</td><td>+0.85</td><td></td></tr>
+        <tr><td>Br₂ + 2e⁻ → 2Br⁻</td><td>+1.07</td><td></td></tr>
+        <tr><td>Cl₂ + 2e⁻ → 2Cl⁻</td><td>+1.36</td><td></td></tr>
+        <tr><td>F₂ + 2e⁻ → 2F⁻</td><td>+2.87</td><td>Strong oxidizing agent</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Conductance</h4>
+    <div class="formula-box">
+      Conductance: G = 1/R &nbsp; (unit: Siemens, S = ohm⁻¹)<br>
+      Conductivity (specific): κ = G × l/A &nbsp; (unit: S·m⁻¹)<br>
+      Molar conductivity: Λm = κ × 1000 / M &nbsp; (M = molarity; unit: S·cm²·mol⁻¹)<br>
+      Kohlrausch's Law: Λ°m = Σλ°ions &nbsp; (sum of limiting molar conductivities of individual ions)
+    </div>
+
+    <h3>Chemical Kinetics</h3>
+    <div class="formula-box">
+      Rate law: Rate = −(1/a)(d[A]/dt) = k·[A]ᵐ·[B]ⁿ<br>
+      Overall order = m + n; unit of k depends on overall order.
+    </div>
+
+    <table>
+      <thead><tr><th>Order</th><th>Integrated Rate Law</th><th>Half-life t½</th><th>Unit of k</th></tr></thead>
+      <tbody>
+        <tr><td>Zero order</td><td>[A] = [A]₀ − kt</td><td>[A]₀ / 2k (depends on [A]₀)</td><td>M·s⁻¹</td></tr>
+        <tr><td>First order</td><td>ln[A] = ln[A]₀ − kt</td><td>0.693/k (independent of [A]₀)</td><td>s⁻¹</td></tr>
+        <tr><td>Second order</td><td>1/[A] = 1/[A]₀ + kt</td><td>1/(k·[A]₀) (depends on [A]₀)</td><td>M⁻¹·s⁻¹</td></tr>
+      </tbody>
+    </table>
+
+    <div class="formula-box">
+      Arrhenius equation: k = A·e^(−Ea/RT)<br>
+      Temperature dependence: ln(k₂/k₁) = (Ea/R) × (1/T₁ − 1/T₂)<br>
+      log(k₂/k₁) = (Ea/2.303R) × (T₂ − T₁)/(T₁T₂)<br>
+      A = frequency (pre-exponential) factor; Ea = activation energy (J/mol); R = 8.314 J/(mol·K)
+    </div>
+
+    <h3>Solutions &amp; Colligative Properties</h3>
+    <div class="formula-box">
+      Molarity (M) = moles of solute / liters of solution &nbsp; (temperature dependent)<br>
+      Molality (m) = moles of solute / kg of solvent &nbsp; (temperature independent)<br>
+      Mole fraction: χA = nA / (nA + nB)<br>
+      Raoult's Law (ideal solution): PA = χA × P°A
+    </div>
+
+    <table>
+      <thead><tr><th>Colligative Property</th><th>Formula</th><th>Constants</th></tr></thead>
+      <tbody>
+        <tr><td>Relative lowering of vapour pressure</td><td>(P° − P)/P° = χsolute</td><td>Independent of temperature</td></tr>
+        <tr><td>Boiling point elevation</td><td>ΔTb = Kb × m × i</td><td>Kb(water) = 0.512 °C·kg/mol</td></tr>
+        <tr><td>Freezing point depression</td><td>ΔTf = Kf × m × i</td><td>Kf(water) = 1.86 °C·kg/mol</td></tr>
+        <tr><td>Osmotic pressure</td><td>π = i·M·R·T</td><td>R = 0.0821 L·atm/(mol·K)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="formula-box">
+      van't Hoff factor: i = observed colligative property / theoretical (no dissociation)<br>
+      For electrolytes: i = 1 + α(n − 1) &nbsp; where α = degree of dissociation, n = number of ions per formula unit<br>
+      Example: NaCl fully dissociates → n=2, α=1, i=2; weak acid: i between 1 and 2
+    </div>
+
+  </section>
+
+  <!-- ==================== SECTION 2: PERIODIC TABLE ==================== -->
+  <section id="periodic">
+    <h2 class="sec-title">2. Periodic Table &amp; Trends</h2>
+
+    <h3>Periodic Table (HTML View)</h3>
+    <div style="overflow-x:auto;">
+      <table style="font-size:0.72rem;min-width:700px;table-layout:fixed;">
+        <thead><tr><th colspan="18" style="text-align:center;background:#283593;font-size:0.9rem;">Periodic Table of the Elements</th></tr></thead>
+        <tbody>
+          <tr>
+            <td style="background:#b2ebf2;font-weight:700;text-align:center;">H<br><small>1</small></td>
+            <td colspan="16" style="background:transparent;border:none;"></td>
+            <td style="background:#bbdefb;font-weight:700;text-align:center;">He<br><small>2</small></td>
+          </tr>
+          <tr>
+            <td style="background:#ffccbc;text-align:center;">Li<br><small>3</small></td>
+            <td style="background:#ffe0b2;text-align:center;">Be<br><small>4</small></td>
+            <td colspan="10" style="background:transparent;border:none;"></td>
+            <td style="background:#dcedc8;text-align:center;">B<br><small>5</small></td>
+            <td style="background:#b2ebf2;text-align:center;">C<br><small>6</small></td>
+            <td style="background:#b2ebf2;text-align:center;">N<br><small>7</small></td>
+            <td style="background:#b2ebf2;text-align:center;">O<br><small>8</small></td>
+            <td style="background:#e1bee7;text-align:center;">F<br><small>9</small></td>
+            <td style="background:#bbdefb;text-align:center;">Ne<br><small>10</small></td>
+          </tr>
+          <tr>
+            <td style="background:#ffccbc;text-align:center;">Na<br><small>11</small></td>
+            <td style="background:#ffe0b2;text-align:center;">Mg<br><small>12</small></td>
+            <td colspan="10" style="background:transparent;border:none;"></td>
+            <td style="background:#f8bbd0;text-align:center;">Al<br><small>13</small></td>
+            <td style="background:#dcedc8;text-align:center;">Si<br><small>14</small></td>
+            <td style="background:#b2ebf2;text-align:center;">P<br><small>15</small></td>
+            <td style="background:#b2ebf2;text-align:center;">S<br><small>16</small></td>
+            <td style="background:#e1bee7;text-align:center;">Cl<br><small>17</small></td>
+            <td style="background:#bbdefb;text-align:center;">Ar<br><small>18</small></td>
+          </tr>
+          <tr>
+            <td style="background:#ffccbc;text-align:center;">K<br><small>19</small></td>
+            <td style="background:#ffe0b2;text-align:center;">Ca<br><small>20</small></td>
+            <td style="background:#fff9c4;text-align:center;">Sc<br><small>21</small></td>
+            <td style="background:#fff9c4;text-align:center;">Ti<br><small>22</small></td>
+            <td style="background:#fff9c4;text-align:center;">V<br><small>23</small></td>
+            <td style="background:#fff9c4;text-align:center;">Cr<br><small>24</small></td>
+            <td style="background:#fff9c4;text-align:center;">Mn<br><small>25</small></td>
+            <td style="background:#fff9c4;text-align:center;">Fe<br><small>26</small></td>
+            <td style="background:#fff9c4;text-align:center;">Co<br><small>27</small></td>
+            <td style="background:#fff9c4;text-align:center;">Ni<br><small>28</small></td>
+            <td style="background:#fff9c4;text-align:center;">Cu<br><small>29</small></td>
+            <td style="background:#fff9c4;text-align:center;">Zn<br><small>30</small></td>
+            <td style="background:#f8bbd0;text-align:center;">Ga<br><small>31</small></td>
+            <td style="background:#dcedc8;text-align:center;">Ge<br><small>32</small></td>
+            <td style="background:#b2ebf2;text-align:center;">As<br><small>33</small></td>
+            <td style="background:#b2ebf2;text-align:center;">Se<br><small>34</small></td>
+            <td style="background:#e1bee7;text-align:center;">Br<br><small>35</small></td>
+            <td style="background:#bbdefb;text-align:center;">Kr<br><small>36</small></td>
+          </tr>
+          <tr>
+            <td style="background:#ffccbc;text-align:center;">Rb<br><small>37</small></td>
+            <td style="background:#ffe0b2;text-align:center;">Sr<br><small>38</small></td>
+            <td style="background:#fff9c4;text-align:center;">Y<br><small>39</small></td>
+            <td style="background:#fff9c4;text-align:center;">Zr<br><small>40</small></td>
+            <td style="background:#fff9c4;text-align:center;">Nb<br><small>41</small></td>
+            <td style="background:#fff9c4;text-align:center;">Mo<br><small>42</small></td>
+            <td style="background:#fff9c4;text-align:center;">Tc<br><small>43</small></td>
+            <td style="background:#fff9c4;text-align:center;">Ru<br><small>44</small></td>
+            <td style="background:#fff9c4;text-align:center;">Rh<br><small>45</small></td>
+            <td style="background:#fff9c4;text-align:center;">Pd<br><small>46</small></td>
+            <td style="background:#fff9c4;text-align:center;">Ag<br><small>47</small></td>
+            <td style="background:#fff9c4;text-align:center;">Cd<br><small>48</small></td>
+            <td style="background:#f8bbd0;text-align:center;">In<br><small>49</small></td>
+            <td style="background:#f8bbd0;text-align:center;">Sn<br><small>50</small></td>
+            <td style="background:#dcedc8;text-align:center;">Sb<br><small>51</small></td>
+            <td style="background:#dcedc8;text-align:center;">Te<br><small>52</small></td>
+            <td style="background:#e1bee7;text-align:center;">I<br><small>53</small></td>
+            <td style="background:#bbdefb;text-align:center;">Xe<br><small>54</small></td>
+          </tr>
+          <tr>
+            <td style="background:#ffccbc;text-align:center;">Cs<br><small>55</small></td>
+            <td style="background:#ffe0b2;text-align:center;">Ba<br><small>56</small></td>
+            <td style="background:#f0f4c3;text-align:center;">La*<br><small>57</small></td>
+            <td style="background:#fff9c4;text-align:center;">Hf<br><small>72</small></td>
+            <td style="background:#fff9c4;text-align:center;">Ta<br><small>73</small></td>
+            <td style="background:#fff9c4;text-align:center;">W<br><small>74</small></td>
+            <td style="background:#fff9c4;text-align:center;">Re<br><small>75</small></td>
+            <td style="background:#fff9c4;text-align:center;">Os<br><small>76</small></td>
+            <td style="background:#fff9c4;text-align:center;">Ir<br><small>77</small></td>
+            <td style="background:#fff9c4;text-align:center;">Pt<br><small>78</small></td>
+            <td style="background:#fff9c4;text-align:center;">Au<br><small>79</small></td>
+            <td style="background:#fff9c4;text-align:center;">Hg<br><small>80</small></td>
+            <td style="background:#f8bbd0;text-align:center;">Tl<br><small>81</small></td>
+            <td style="background:#f8bbd0;text-align:center;">Pb<br><small>82</small></td>
+            <td style="background:#f8bbd0;text-align:center;">Bi<br><small>83</small></td>
+            <td style="background:#dcedc8;text-align:center;">Po<br><small>84</small></td>
+            <td style="background:#e1bee7;text-align:center;">At<br><small>85</small></td>
+            <td style="background:#bbdefb;text-align:center;">Rn<br><small>86</small></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin:10px 0;display:flex;flex-wrap:wrap;gap:8px;font-size:0.8rem;">
+      <span style="background:#ffccbc;padding:3px 10px;border-radius:4px;">Alkali metals</span>
+      <span style="background:#ffe0b2;padding:3px 10px;border-radius:4px;">Alkaline earth</span>
+      <span style="background:#fff9c4;padding:3px 10px;border-radius:4px;">Transition metals</span>
+      <span style="background:#f8bbd0;padding:3px 10px;border-radius:4px;">Post-transition metals</span>
+      <span style="background:#dcedc8;padding:3px 10px;border-radius:4px;">Metalloids</span>
+      <span style="background:#b2ebf2;padding:3px 10px;border-radius:4px;">Non-metals</span>
+      <span style="background:#e1bee7;padding:3px 10px;border-radius:4px;">Halogens</span>
+      <span style="background:#bbdefb;padding:3px 10px;border-radius:4px;">Noble gases</span>
+    </div>
+
+    <h3>Periodic Trends</h3>
+    <table>
+      <thead><tr><th>Property</th><th>Across a Period (→)</th><th>Down a Group (↓)</th></tr></thead>
+      <tbody>
+        <tr><td>Atomic radius</td><td>Decreases (more protons pull electrons closer)</td><td>Increases (additional shells added)</td></tr>
+        <tr><td>Ionic radius (same charge)</td><td>Decreases with atomic number</td><td>Increases</td></tr>
+        <tr><td>First ionization energy</td><td>Increases (exceptions: Be&gt;B, N&gt;O)</td><td>Decreases</td></tr>
+        <tr><td>Second ionization energy</td><td>Generally increases</td><td>Decreases</td></tr>
+        <tr><td>Electron affinity</td><td>Increases (with some exceptions)</td><td>Decreases</td></tr>
+        <tr><td>Electronegativity</td><td>Increases (F = 4.0 maximum)</td><td>Decreases</td></tr>
+        <tr><td>Metallic character</td><td>Decreases (left = most metallic)</td><td>Increases</td></tr>
+        <tr><td>Non-metallic character</td><td>Increases</td><td>Decreases</td></tr>
+        <tr><td>Oxidizing power</td><td>Increases</td><td>Decreases</td></tr>
+        <tr><td>Reducing power</td><td>Decreases</td><td>Increases</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Element Group Summaries</h3>
+    <ul>
+      <li><strong>Alkali metals (Group 1 — Li, Na, K, Rb, Cs, Fr):</strong> Soft metals, highly reactive with water producing H₂ and MOH. +1 oxidation state only. Reactivity increases down group. Li shows anomalous properties (diagonal relationship with Mg).</li>
+      <li><strong>Alkaline earth metals (Group 2 — Be, Mg, Ca, Sr, Ba, Ra):</strong> +2 ions. Be shows diagonal relationship with Al. Ca is biologically vital (bones, teeth, nerve signals).</li>
+      <li><strong>Halogens (Group 17 — F, Cl, Br, I, At):</strong> Form −1 ions. Reactivity: F₂ &gt; Cl₂ &gt; Br₂ &gt; I₂. F can only form −1; others can have positive oxidation states in compounds with more electronegative atoms.</li>
+      <li><strong>Noble gases (Group 18 — He, Ne, Ar, Kr, Xe, Rn):</strong> Complete valence shell, very low reactivity. Xe forms stable compounds (XeF₂, XeF₄, XeO₃).</li>
+      <li><strong>Transition metals (Groups 3–12):</strong> Variable oxidation states, form colored compounds, paramagnetism, catalytic activity, ability to form complexes.</li>
+    </ul>
+  </section>
+
+  <!-- ==================== SECTION 3: INORGANIC ==================== -->
+  <section id="inorganic">
+    <h2 class="sec-title">3. Inorganic Chemistry</h2>
+
+    <h3>s-Block Elements</h3>
+    <p><strong>Group 1 anomalous behavior of Li:</strong> Small size, high charge density. Li forms Li₂O (normal oxide) unlike Na (Na₂O₂, peroxide) and K (KO₂, superoxide). Li₂CO₃ decomposes on heating; Na₂CO₃ is stable.</p>
+
+    <table>
+      <thead><tr><th>Compound</th><th>Formula</th><th>Common Name</th><th>Important Use</th></tr></thead>
+      <tbody>
+        <tr><td>Sodium hydroxide</td><td>NaOH</td><td>Caustic soda</td><td>Soap making, paper, textiles</td></tr>
+        <tr><td>Sodium carbonate decahydrate</td><td>Na₂CO₃·10H₂O</td><td>Washing soda</td><td>Water softening, glass making</td></tr>
+        <tr><td>Sodium hydrogen carbonate</td><td>NaHCO₃</td><td>Baking soda</td><td>Baking, antacids, fire extinguisher</td></tr>
+        <tr><td>Calcium oxide</td><td>CaO</td><td>Quicklime</td><td>Cement, mortar, steel making</td></tr>
+        <tr><td>Calcium hydroxide</td><td>Ca(OH)₂</td><td>Slaked lime / hydrated lime</td><td>Whitewash, water treatment</td></tr>
+        <tr><td>Calcium sulfate dihydrate</td><td>CaSO₄·2H₂O</td><td>Gypsum</td><td>Plaster of Paris precursor</td></tr>
+        <tr><td>Calcium sulfate hemihydrate</td><td>CaSO₄·½H₂O</td><td>Plaster of Paris</td><td>Casts, dental molds</td></tr>
+      </tbody>
+    </table>
+
+    <h3>p-Block Elements Overview</h3>
+    <table>
+      <thead><tr><th>Group</th><th>Elements</th><th>Common Oxidation States</th><th>Key Compounds</th></tr></thead>
+      <tbody>
+        <tr><td>13</td><td>B, Al, Ga, In, Tl</td><td>+3 (Tl also +1)</td><td>Borax (Na₂B₄O₇·10H₂O), Alum, Al₂O₃</td></tr>
+        <tr><td>14</td><td>C, Si, Ge, Sn, Pb</td><td>+4, +2 (heavier elements)</td><td>CO₂, SiO₂, CO, PbO₂, SnCl₂</td></tr>
+        <tr><td>15</td><td>N, P, As, Sb, Bi</td><td>+5, +3, −3</td><td>NH₃, HNO₃, NO₂, PCl₃, PCl₅</td></tr>
+        <tr><td>16</td><td>O, S, Se, Te, Po</td><td>+6, +4, −2</td><td>SO₂, SO₃, H₂SO₄, H₂S</td></tr>
+        <tr><td>17</td><td>F, Cl, Br, I, At</td><td>−1 (+1,+3,+5,+7 for Cl,Br,I)</td><td>HCl, HOCl, HClO₃, HClO₄</td></tr>
+        <tr><td>18</td><td>He, Ne, Ar, Kr, Xe, Rn</td><td>0 (Xe: +2, +4, +6)</td><td>XeF₂, XeF₄, XeOF₂, XeO₃</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Oxoacids — Detailed Summary</h4>
+    <table>
+      <thead><tr><th>Element</th><th>Acid Formula</th><th>Name</th><th>Proticity</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="2">Nitrogen</td><td>HNO₂</td><td>Nitrous acid</td><td>Mono-protic</td><td>Weak acid</td></tr>
+        <tr><td>HNO₃</td><td>Nitric acid</td><td>Mono-protic</td><td>Strong acid</td></tr>
+        <tr><td rowspan="3">Phosphorus</td><td>H₃PO₂</td><td>Hypophosphorous acid</td><td>Mono-protic</td><td>Only 1 P−OH group; contains 2 P−H bonds</td></tr>
+        <tr><td>H₃PO₃</td><td>Phosphorous acid</td><td>Di-protic</td><td>2 P−OH groups; 1 P−H bond (not acidic)</td></tr>
+        <tr><td>H₃PO₄</td><td>Phosphoric acid</td><td>Tri-protic</td><td>3 P−OH groups; all ionizable</td></tr>
+        <tr><td rowspan="4">Sulfur</td><td>H₂SO₃</td><td>Sulfurous acid</td><td>Di-protic</td><td>Weak dibasic acid; S(+4)</td></tr>
+        <tr><td>H₂SO₄</td><td>Sulfuric acid</td><td>Di-protic</td><td>Strong dibasic acid; S(+6)</td></tr>
+        <tr><td>H₂S₂O₇</td><td>Pyrosulfuric acid (Oleum)</td><td>Di-protic</td><td>SO₃ dissolved in H₂SO₄</td></tr>
+        <tr><td>H₂S₂O₈</td><td>Peroxodisulfuric / Marshall's acid</td><td>Di-protic</td><td>Contains −O−O− peroxo linkage</td></tr>
+        <tr><td rowspan="4">Chlorine</td><td>HOCl (HClO)</td><td>Hypochlorous acid</td><td>Mono-protic</td><td>Weakest; Cl(+1)</td></tr>
+        <tr><td>HClO₂</td><td>Chlorous acid</td><td>Mono-protic</td><td>Cl(+3)</td></tr>
+        <tr><td>HClO₃</td><td>Chloric acid</td><td>Mono-protic</td><td>Cl(+5); strong acid</td></tr>
+        <tr><td>HClO₄</td><td>Perchloric acid</td><td>Mono-protic</td><td>Strongest; Cl(+7)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>d-Block Transition Metals</h3>
+    <h4>Exceptional Electronic Configurations</h4>
+    <div class="formula-box">
+      Cr (Z=24): Expected [Ar] 3d⁴4s² → Actual [Ar] 3d⁵4s¹ (half-filled d is extra stable)<br>
+      Cu (Z=29): Expected [Ar] 3d⁹4s² → Actual [Ar] 3d¹⁰4s¹ (fully-filled d is extra stable)<br>
+      Mo (Z=42): [Kr] 4d⁵5s¹ &nbsp;|&nbsp; Pd (Z=46): [Kr] 4d¹⁰5s⁰<br>
+      Ag (Z=47): [Kr] 4d¹⁰5s¹ &nbsp;|&nbsp; Au (Z=79): [Xe] 4f¹⁴5d¹⁰6s¹
+    </div>
+
+    <h4>Variable Oxidation States of Transition Metals</h4>
+    <table>
+      <thead><tr><th>Element</th><th>Possible Oxidation States</th><th>Most Stable</th></tr></thead>
+      <tbody>
+        <tr><td>Mn (Z=25)</td><td>+2, +3, +4, +6, +7</td><td>+2 (pink Mn²⁺), +7 (MnO₄⁻ permanganate)</td></tr>
+        <tr><td>Fe (Z=26)</td><td>+2, +3</td><td>+3 (Fe³⁺) and +2 (Fe²⁺) both common</td></tr>
+        <tr><td>Co (Z=27)</td><td>+2, +3</td><td>+2 (aqueous), +3 (complexes)</td></tr>
+        <tr><td>Ni (Z=28)</td><td>+2, +3, +4</td><td>+2 (most stable)</td></tr>
+        <tr><td>Cu (Z=29)</td><td>+1, +2</td><td>+2 (Cu²⁺ blue), +1 in CuCl, Cu₂O</td></tr>
+        <tr><td>Cr (Z=24)</td><td>+2, +3, +6</td><td>+3 (most stable), +6 (oxidizing, toxic)</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Color of Transition Metal Ions in Aqueous Solution</h4>
+    <table>
+      <thead><tr><th>Ion</th><th>Color</th><th>d-electrons</th><th>Reason for color</th></tr></thead>
+      <tbody>
+        <tr><td>Sc³⁺</td><td>Colorless</td><td>d⁰</td><td>No d-d transition possible</td></tr>
+        <tr><td>Ti³⁺</td><td>Purple</td><td>d¹</td><td>d-d transition</td></tr>
+        <tr><td>V³⁺</td><td>Green</td><td>d²</td><td>d-d transition</td></tr>
+        <tr><td>Cr³⁺</td><td>Dark green</td><td>d³</td><td>d-d transition</td></tr>
+        <tr><td>Cr²⁺</td><td>Blue</td><td>d⁴</td><td>d-d transition</td></tr>
+        <tr><td>Mn²⁺</td><td>Pale pink (faint)</td><td>d⁵ (half-filled)</td><td>Spin-forbidden d-d transition</td></tr>
+        <tr><td>Fe²⁺</td><td>Pale green</td><td>d⁶</td><td>d-d transition</td></tr>
+        <tr><td>Fe³⁺</td><td>Yellow-brown</td><td>d⁵</td><td>Charge transfer</td></tr>
+        <tr><td>Co²⁺</td><td>Pink</td><td>d⁷</td><td>d-d transition</td></tr>
+        <tr><td>Ni²⁺</td><td>Green</td><td>d⁸</td><td>d-d transition</td></tr>
+        <tr><td>Cu²⁺</td><td>Blue</td><td>d⁹</td><td>d-d transition</td></tr>
+        <tr><td>Zn²⁺</td><td>Colorless</td><td>d¹⁰</td><td>No d-d transition (filled d)</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Magnetic Properties of Transition Metal Ions</h4>
+    <div class="formula-box">
+      Spin-only magnetic moment: μ = √(n(n+2)) BM &nbsp; (Bohr Magnetons)<br>
+      where n = number of unpaired electrons<br><br>
+      Examples:<br>
+      Fe³⁺ (d⁵, 5 unpaired): μ = √(5×7) = √35 ≈ 5.92 BM<br>
+      Cu²⁺ (d⁹, 1 unpaired): μ = √(1×3) = √3 ≈ 1.73 BM<br>
+      Zn²⁺ (d¹⁰, 0 unpaired): μ = 0 BM (diamagnetic)
+    </div>
+
+    <h3>Coordination Compounds</h3>
+    <p><strong>IUPAC Naming Rules:</strong> Name ligands alphabetically first (use multiplying prefixes: di, tri, tetra, penta, hexa), then metal name with oxidation state in Roman numerals. For anionic complexes, add "-ate" to the metal name.</p>
+
+    <table>
+      <thead><tr><th>Complex</th><th>IUPAC Name</th></tr></thead>
+      <tbody>
+        <tr><td>[Fe(CN)₆]⁴⁻</td><td>Hexacyanoferrate(II) ion</td></tr>
+        <tr><td>[Fe(CN)₆]³⁻</td><td>Hexacyanoferrate(III) ion</td></tr>
+        <tr><td>[Cu(NH₃)₄]²⁺</td><td>Tetraamminecopper(II) ion</td></tr>
+        <tr><td>[Co(NH₃)₆]³⁺</td><td>Hexaamminecobalt(III) ion</td></tr>
+        <tr><td>[PtCl₄]²⁻</td><td>Tetrachloroplatinate(II) ion</td></tr>
+        <tr><td>[Ni(CO)₄]</td><td>Tetracarbonylnickel(0)</td></tr>
+        <tr><td>[Co(en)₃]³⁺</td><td>Tris(ethylenediamine)cobalt(III) ion</td></tr>
+        <tr><td>K₃[Fe(C₂O₄)₃]</td><td>Potassium trioxalatoferrate(III)</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Types of Isomerism:</strong> Geometric (cis-trans), Optical (enantiomers — mirror images), Ionization isomers (e.g., [CoBr(NH₃)₅]SO₄ vs [Co(SO₄)(NH₃)₅]Br), Linkage isomers (ambidentate ligands like NO₂⁻/ONO⁻), Hydrate isomers, Coordination isomers.</p>
+  </section>
+
+  <!-- ==================== SECTION 4: ORGANIC ==================== -->
+  <section id="organic">
+    <h2 class="sec-title">4. Organic Chemistry</h2>
+
+    <h3>IUPAC Nomenclature Rules</h3>
+    <ul>
+      <li>Select the longest carbon chain containing the principal functional group as the parent chain (longest chain = highest number of carbons).</li>
+      <li><strong>Priority order for principal characteristic group (suffix):</strong> Carboxylic acid &gt; Anhydride &gt; Ester &gt; Acid halide &gt; Amide &gt; Aldehyde &gt; Ketone &gt; Alcohol &gt; Amine</li>
+      <li>Number the chain from the end nearest the principal functional group to give it the lowest locant.</li>
+      <li><strong>E/Z nomenclature:</strong> Assign CIP priorities to groups on each sp² carbon; E = higher-priority groups on opposite sides; Z = same side.</li>
+      <li><strong>R/S configuration:</strong> Assign CIP priorities (1–4). With lowest priority (4) pointing away, clockwise sequence of 1→2→3 = R; counterclockwise = S.</li>
+    </ul>
+
+    <h3>Important Named Reactions</h3>
+    <table class="reaction-table">
+      <thead><tr><th>Reaction</th><th>Reactants</th><th>Conditions</th><th>Products</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>Aldol Condensation</td><td>Two aldehydes/ketones with α-H</td><td>Dilute base (NaOH) or dilute acid</td><td>β-hydroxy carbonyl compound → α,β-unsaturated carbonyl (on heating)</td><td>Nucleophilic addition</td></tr>
+        <tr><td>Cannizzaro Reaction</td><td>Aldehyde without α-H (HCHO, PhCHO)</td><td>Conc. NaOH</td><td>Alcohol + Carboxylate salt (50:50)</td><td>Disproportionation (redox)</td></tr>
+        <tr><td>Claisen Condensation</td><td>Two esters with α-H (or ester + ketone)</td><td>Strong base (NaOEt), then acid workup</td><td>β-ketoester</td><td>Condensation</td></tr>
+        <tr><td>Diels-Alder</td><td>Conjugated diene (s-cis) + dienophile (electron poor)</td><td>Heat (no catalyst needed)</td><td>Cyclohexene derivative (6-membered ring)</td><td>[4+2] Cycloaddition, pericyclic</td></tr>
+        <tr><td>Grignard Reaction</td><td>RMgX + carbonyl (C=O, CO₂, ester, nitrile)</td><td>Dry ether (anhydrous)</td><td>Alcohol after hydrolysis (primary/secondary/tertiary depending on carbonyl)</td><td>Nucleophilic addition</td></tr>
+        <tr><td>Reformatsky Reaction</td><td>α-Bromo ester + zinc + aldehyde/ketone</td><td>Zn, dry ether, then acid hydrolysis</td><td>β-Hydroxy ester</td><td>Nucleophilic addition (organozinc)</td></tr>
+        <tr><td>Wittig Reaction</td><td>Phosphonium ylide (Ph₃P=CHR) + aldehyde/ketone</td><td>Base forms ylide</td><td>Alkene + Ph₃P=O (triphenylphosphine oxide)</td><td>Olefination</td></tr>
+        <tr><td>Ozonolysis</td><td>Alkene + O₃ then reductive (Me₂S/Zn) or oxidative (H₂O₂) workup</td><td>−78°C for ozonation</td><td>Reductive: aldehydes + ketones; Oxidative: carboxylic acids</td><td>Cleavage of C=C</td></tr>
+        <tr><td>Clemmensen Reduction</td><td>Ketone or aldehyde + Zn(Hg) amalgam + conc. HCl</td><td>Heat (acidic medium)</td><td>Alkane (C=O → CH₂)</td><td>Reduction</td></tr>
+        <tr><td>Wolff-Kishner Reduction</td><td>Ketone or aldehyde + hydrazine (H₂NNH₂) + KOH</td><td>High temperature, basic medium</td><td>Alkane (C=O → CH₂)</td><td>Reduction</td></tr>
+        <tr><td>Baeyer-Villiger Oxidation</td><td>Ketone + peroxy acid (m-CPBA or H₂O₂/CF₃COOH)</td><td>Room temperature</td><td>Ester (or lactone for cyclic ketone)</td><td>Oxidation (oxygen insertion)</td></tr>
+        <tr><td>Birch Reduction</td><td>Arene + Na or Li (metal) + liquid NH₃ + alcohol</td><td>−33°C</td><td>1,4-cyclohexadiene (unconjugated); electron-donating substituents: substituent on double bond; electron-withdrawing: substituent on single bond position</td><td>Dissolving metal reduction</td></tr>
+        <tr><td>Fischer Esterification</td><td>Carboxylic acid + alcohol</td><td>H⁺ catalyst (H₂SO₄ or HCl), heat, azeotropic removal of water</td><td>Ester + H₂O (reversible; equilibrium)</td><td>Condensation (nucleophilic acyl substitution)</td></tr>
+        <tr><td>Saponification</td><td>Ester + aqueous NaOH (or KOH)</td><td>Heat</td><td>Sodium (or potassium) carboxylate + alcohol</td><td>Irreversible base hydrolysis</td></tr>
+        <tr><td>Hell-Volhard-Zelinsky (HVZ)</td><td>Carboxylic acid + Br₂</td><td>Red phosphorus (catalyst), heat</td><td>α-Bromo carboxylic acid</td><td>Alpha-halogenation</td></tr>
+      </tbody>
+    </table>
+
+    <h3>SN1 vs SN2 Comparison</h3>
+    <table>
+      <thead><tr><th>Feature</th><th>SN1</th><th>SN2</th></tr></thead>
+      <tbody>
+        <tr><td>Mechanism steps</td><td>2-step (carbocation intermediate)</td><td>1-step (concerted, backside attack)</td></tr>
+        <tr><td>Rate equation</td><td>Rate = k[substrate] (unimolecular)</td><td>Rate = k[substrate][Nu⁻] (bimolecular)</td></tr>
+        <tr><td>Favored substrate</td><td>3° &gt; 2° &gt; 1° (carbocation stability)</td><td>Methyl &gt; 1° &gt; 2° (least steric hindrance)</td></tr>
+        <tr><td>Stereochemistry</td><td>Racemization (planar carbocation)</td><td>100% inversion (Walden inversion)</td></tr>
+        <tr><td>Carbocation intermediate</td><td>Yes (can be stabilized by resonance)</td><td>No</td></tr>
+        <tr><td>Rearrangement possible</td><td>Yes (hydride/methyl shift possible)</td><td>No</td></tr>
+        <tr><td>Best solvent</td><td>Polar protic (stabilizes ions)</td><td>Polar aprotic (nucleophile not solvated)</td></tr>
+        <tr><td>Nucleophile requirement</td><td>Weak nucleophile sufficient</td><td>Strong nucleophile required</td></tr>
+        <tr><td>Effect of increased branching</td><td>Favored (more stable carbocation)</td><td>Retarded (steric hindrance)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Aromatic Chemistry</h3>
+    <p>Benzene resonance energy ≈ 150 kJ/mol. Aromatic compounds undergo Electrophilic Aromatic Substitution (EAS) preferentially over addition.</p>
+    <table>
+      <thead><tr><th>EAS Reaction</th><th>Reagent(s)</th><th>Electrophile Generated</th><th>Product</th></tr></thead>
+      <tbody>
+        <tr><td>Halogenation</td><td>Cl₂/FeCl₃ or Br₂/FeBr₃</td><td>Cl⁺ or Br⁺ (halonium via Lewis acid)</td><td>Chlorobenzene or bromobenzene</td></tr>
+        <tr><td>Nitration</td><td>HNO₃ + conc. H₂SO₄ (mixed acid)</td><td>NO₂⁺ (nitronium ion)</td><td>Nitrobenzene</td></tr>
+        <tr><td>Sulfonation</td><td>Conc. H₂SO₄ or SO₃/H₂SO₄ (oleum)</td><td>SO₃ or HSO₃⁺</td><td>Benzenesulfonic acid (reversible at high T)</td></tr>
+        <tr><td>Friedel-Crafts Alkylation</td><td>RCl + AlCl₃</td><td>R⁺ carbocation</td><td>Alkylbenzene (polyalkylation possible)</td></tr>
+        <tr><td>Friedel-Crafts Acylation</td><td>RCOCl + AlCl₃</td><td>RCO⁺ acylium ion</td><td>Aryl ketone (no polyacylation)</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Directing Effects in EAS</h4>
+    <ul>
+      <li><strong>Ortho/Para directors (activating):</strong> −OH, −NH₂, −NHR, −NR₂, −OR, −alkyl groups — donate electron density into ring through resonance and/or induction.</li>
+      <li><strong>Ortho/Para directors (weakly deactivating):</strong> −F, −Cl, −Br, −I — halogens withdraw by induction but donate lone pairs by resonance; net o/p direction.</li>
+      <li><strong>Meta directors (deactivating):</strong> −NO₂, −CN, −CHO, −COOR, −COOH, −SO₃H, −NR₃⁺, −CF₃ — withdraw electrons by resonance; make ring electron-poor.</li>
+    </ul>
+
+    <h3>Functional Group Reactions</h3>
+    <table>
+      <thead><tr><th>Functional Group</th><th>Key Reactions &amp; Tests</th></tr></thead>
+      <tbody>
+        <tr><td>Alcohols</td><td>Oxidation: 1° → aldehyde (PCC) → carboxylic acid (KMnO₄); 2° → ketone; 3° → no oxidation. Esterification (H⁺ cat.), Dehydration (E1 at 170°C, E2 at 140°C with Al₂O₃). Lucas test: 3° reacts immediately, 2° slowly, 1° no reaction at RT.</td></tr>
+        <tr><td>Aldehydes</td><td>Tollens' test: Ag mirror (RCHO only, not ketones). Fehling's/Benedict's: brick-red Cu₂O precipitate. Nucleophilic addition: HCN, NaHSO₃, Grignard (RMgX), RNH₂ → imine/Schiff base. Iodoform test: only for CH₃CHO.</td></tr>
+        <tr><td>Ketones</td><td>No Tollens', no Fehling's. Iodoform test: methyl ketones (RCOCH₃) give CHI₃ (yellow ppt) with I₂/NaOH. Nucleophilic addition: Grignard, HCN. Reduction: NaBH₄ or LiAlH₄ → secondary alcohol.</td></tr>
+        <tr><td>Carboxylic Acids</td><td>Esterification (H⁺), reduction (LiAlH₄ → 1° alcohol), decarboxylation (−CO₂), HVZ alpha-halogenation, hell conversion to acyl halides.</td></tr>
+        <tr><td>Amines</td><td>Basicity order in gas phase: 3° &gt; 2° &gt; 1° &gt; NH₃. In water: 2° &gt; 1° &gt; 3° ≈ NH₃ (solvation effect). 1° ArNH₂ + HNO₂ (0–5°C) → ArN₂⁺ (diazonium salt). Coupling reaction with phenols/ArH (azo dye synthesis).</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Rules and Regioselectivity</h3>
+    <div class="formula-box">
+      Markovnikov's Rule: In electrophilic addition of HX to unsymmetrical alkene, H adds to C with more H's (more H-substituted), forming more stable carbocation.<br><br>
+      Anti-Markovnikov (Radical / Peroxide effect): With ROOR (peroxides), HBr adds via radical mechanism — Br adds to less substituted carbon (H to more substituted).<br><br>
+      Zaitsev's Rule (elimination): With strong, small base (NaOH/EtOH), more substituted alkene is the major product (thermodynamic control).<br><br>
+      Hofmann's Rule (elimination): With bulky base (e.g., t-BuOK), less substituted alkene is the major product (steric control).
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5: BIOMOLECULES ==================== -->
+  <section id="biomolecules">
+    <h2 class="sec-title">5. Biomolecules</h2>
+
+    <h3>Carbohydrates</h3>
+    <table>
+      <thead><tr><th>Type</th><th>Examples</th><th>Properties</th></tr></thead>
+      <tbody>
+        <tr><td>Monosaccharides (simplest)</td><td>Glucose (C₆H₁₂O₆, aldohexose), Fructose (C₆H₁₂O₆, ketohexose), Galactose, Ribose (C₅H₁₀O₅), Deoxyribose (C₅H₁₀O₄)</td><td>Cannot be hydrolyzed; reducing sugars (except fructose — it is reducing but not aldose)</td></tr>
+        <tr><td>Disaccharides</td><td>Sucrose (glucose+fructose, non-reducing), Maltose (glucose+glucose, reducing), Lactose (glucose+galactose, reducing)</td><td>Hydrolysis with water (enzyme or acid) gives 2 monosaccharides</td></tr>
+        <tr><td>Polysaccharides</td><td>Starch (amylose = linear α-1,4; amylopectin = branched α-1,6), Glycogen (highly branched, animal storage), Cellulose (β-1,4 linkage, structural)</td><td>Non-reducing; structural or storage; not sweet</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Amino Acids and Proteins</h3>
+    <ul>
+      <li><strong>Essential amino acids (9):</strong> Histidine, Isoleucine, Leucine, Lysine, Methionine, Phenylalanine, Threonine, Tryptophan, Valine (mnemonic: "His Ile Leu Lys Met Phe Thr Trp Val").</li>
+      <li><strong>Primary structure:</strong> Sequence of amino acids linked by peptide bonds (−CO−NH−). Determined by DNA sequence.</li>
+      <li><strong>Secondary structure:</strong> α-helix (right-handed, 3.6 residues/turn, H-bonds between NH and C=O four residues apart) or β-pleated sheet (H-bonds between adjacent strands). Both stabilized by H-bonds.</li>
+      <li><strong>Tertiary structure:</strong> Complete 3D shape of a polypeptide; stabilized by disulfide bridges (Cys-Cys), hydrophobic interactions, hydrogen bonds, electrostatic interactions.</li>
+      <li><strong>Quaternary structure:</strong> Two or more polypeptide chains. Example: hemoglobin (4 subunits: 2α + 2β).</li>
+    </ul>
+
+    <h3>Lipids</h3>
+    <ul>
+      <li><strong>Triglycerides:</strong> Glycerol + 3 fatty acids (ester linkages). Saturated fats (no C=C) = solid at RT; unsaturated fats (cis C=C) = liquid oils.</li>
+      <li><strong>Phospholipids:</strong> Glycerol + 2 fatty acids + phosphate group + polar head. Form lipid bilayer (cell membrane). Amphipathic.</li>
+      <li><strong>Steroids:</strong> Fused 4-ring system. Cholesterol (precursor to hormones), testosterone, estrogen, progesterone, cortisol, bile acids, vitamin D.</li>
+    </ul>
+
+    <h3>Nucleic Acids</h3>
+    <table>
+      <thead><tr><th>Feature</th><th>DNA</th><th>RNA</th></tr></thead>
+      <tbody>
+        <tr><td>Sugar component</td><td>2'-Deoxyribose (missing 2'-OH)</td><td>Ribose (has 2'-OH)</td></tr>
+        <tr><td>Nitrogenous bases</td><td>Adenine (A), Thymine (T), Guanine (G), Cytosine (C)</td><td>Adenine (A), Uracil (U), Guanine (G), Cytosine (C)</td></tr>
+        <tr><td>Strand structure</td><td>Double helix, antiparallel strands (Watson-Crick)</td><td>Single-stranded (can fold on itself)</td></tr>
+        <tr><td>Base pairing</td><td>A=T (2 hydrogen bonds), G≡C (3 hydrogen bonds)</td><td>A=U, G≡C in intramolecular structures</td></tr>
+        <tr><td>Location in cell</td><td>Nucleus (chromosomal DNA), mitochondria, chloroplasts</td><td>Nucleus, cytoplasm, ribosomes</td></tr>
+        <tr><td>Function</td><td>Genetic information storage; replication</td><td>mRNA (template for translation), tRNA (amino acid carrier), rRNA (ribosome structure)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ==================== SECTION 6: POLYMERS ==================== -->
+  <section id="polymers">
+    <h2 class="sec-title">6. Polymers</h2>
+
+    <h3>Addition (Chain Growth) Polymers</h3>
+    <table>
+      <thead><tr><th>Polymer</th><th>Abbreviation</th><th>Monomer</th><th>Properties / Uses</th></tr></thead>
+      <tbody>
+        <tr><td>Polyethylene</td><td>PE (LDPE/HDPE)</td><td>CH₂=CH₂ (ethylene)</td><td>LDPE: plastic bags, film; HDPE: pipes, containers, bottles</td></tr>
+        <tr><td>Polypropylene</td><td>PP</td><td>CH₂=CHCH₃ (propylene)</td><td>Higher melting point than PE; ropes, packaging, car parts</td></tr>
+        <tr><td>Polyvinyl chloride</td><td>PVC</td><td>CH₂=CHCl (vinyl chloride)</td><td>Rigid PVC: pipes, profiles; Flexible PVC: electrical cables, flooring</td></tr>
+        <tr><td>Polytetrafluoroethylene</td><td>PTFE (Teflon)</td><td>CF₂=CF₂ (tetrafluoroethylene)</td><td>Non-stick coating, chemical resistance, biomedical implants</td></tr>
+        <tr><td>Polystyrene</td><td>PS</td><td>CH₂=CHC₆H₅ (styrene)</td><td>Disposable cups; expanded PS (Styrofoam) for insulation and packaging</td></tr>
+        <tr><td>Polyacrylonitrile</td><td>PAN (Orlon/Acrylic)</td><td>CH₂=CHCN (acrylonitrile)</td><td>Synthetic wool, acrylic fibers for clothing</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Condensation (Step Growth) Polymers</h3>
+    <table>
+      <thead><tr><th>Polymer</th><th>Monomers</th><th>Linkage Type</th><th>Uses</th></tr></thead>
+      <tbody>
+        <tr><td>Nylon-6</td><td>Caprolactam (ε-caprolactam, ring opening)</td><td>Amide (−CO−NH−)</td><td>Ropes, fishing nets, toothbrush bristles, parachute fabric</td></tr>
+        <tr><td>Nylon-6,6</td><td>Hexamethylenediamine + Adipic acid</td><td>Amide</td><td>Nylon stockings, tires, machine parts</td></tr>
+        <tr><td>Dacron / Terylene (PET)</td><td>Ethylene glycol + Terephthalic acid</td><td>Ester (−COO−)</td><td>Polyester fabric, plastic bottles (beverage, food), films</td></tr>
+        <tr><td>Bakelite</td><td>Phenol + Formaldehyde</td><td>C−O−C ether and C−C cross-links</td><td>Thermosetting; electrical switches, handles, brake linings</td></tr>
+        <tr><td>Glyptal</td><td>Ethylene glycol + Phthalic acid</td><td>Ester</td><td>Paints, surface coatings, lacquers</td></tr>
+        <tr><td>Melamine-formaldehyde</td><td>Melamine + Formaldehyde</td><td>C−N cross-links</td><td>Unbreakable crockery, laminates (Formica)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ==================== SECTION 7: JEE STRATEGY ==================== -->
+  <section id="jee-strategy">
+    <h2 class="sec-title">7. JEE Chemistry Strategy</h2>
+
+    <div class="strategy-box">
+      JEE Chemistry is equally divided: Physical (~33%), Organic (~33%), Inorganic (~33%). Do not neglect any section. Inorganic is most memorization-heavy but high-scoring with NCERT study. Organic needs concept clarity; Physical requires formula mastery and practice.
+    </div>
+
+    <h3>Chapter Weightage for JEE Main (Approximate)</h3>
+    <table class="weight-table">
+      <thead><tr><th>Chapter</th><th>Avg. Questions</th><th>Section</th><th>Difficulty</th></tr></thead>
+      <tbody>
+        <tr><td>Coordination Compounds</td><td>2–3</td><td>Inorganic</td><td>Medium</td></tr>
+        <tr><td>d &amp; f Block Elements</td><td>1–2</td><td>Inorganic</td><td>Medium</td></tr>
+        <tr><td>p-Block Elements (Gr 15–18)</td><td>2–3</td><td>Inorganic</td><td>Medium</td></tr>
+        <tr><td>Chemical Bonding</td><td>2</td><td>Physical/Inorganic</td><td>Low-Medium</td></tr>
+        <tr><td>Electrochemistry</td><td>2–3</td><td>Physical</td><td>Medium-High</td></tr>
+        <tr><td>Chemical Kinetics</td><td>1–2</td><td>Physical</td><td>Medium</td></tr>
+        <tr><td>Thermodynamics</td><td>2</td><td>Physical</td><td>Medium</td></tr>
+        <tr><td>Solutions &amp; Colligative Properties</td><td>1–2</td><td>Physical</td><td>Low</td></tr>
+        <tr><td>Equilibrium (Chemical + Ionic)</td><td>1–2</td><td>Physical</td><td>Medium</td></tr>
+        <tr><td>Organic Chemistry (reactions + mechanisms)</td><td>4–5</td><td>Organic</td><td>Medium-High</td></tr>
+        <tr><td>Hydrocarbons, Functional Groups</td><td>2–3</td><td>Organic</td><td>Medium</td></tr>
+        <tr><td>Biomolecules &amp; Polymers</td><td>1–2</td><td>Organic</td><td>Low</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Must-Do Chapters for JEE</h3>
+    <ul>
+      <li>Chemical Bonding &amp; Molecular Structure (VSEPR, hybridization, MO theory)</li>
+      <li>Coordination Compounds (IUPAC, VBT, CFT, isomerism)</li>
+      <li>Alcohols, Phenols &amp; Ethers + Aldehydes &amp; Ketones + Carboxylic Acids</li>
+      <li>Electrochemistry (Nernst, Faraday's laws, conductance)</li>
+      <li>Chemical Kinetics (rate laws, Arrhenius, mechanisms)</li>
+      <li>p-Block elements (Groups 15, 16, 17 especially)</li>
+      <li>Thermodynamics and Thermochemistry</li>
+    </ul>
+
+    <h3>Organic Reactions to Memorize for JEE</h3>
+    <ul>
+      <li>All named reactions: Aldol, Cannizzaro, Grignard, Wittig, Diels-Alder, Reformatsky, Claisen</li>
+      <li>SN1/SN2/E1/E2 mechanisms with stereochemistry details</li>
+      <li>EAS directing effects and mechanisms for all 5 types</li>
+      <li>Reductions: Clemmensen (acidic, converts C=O→CH₂), Wolff-Kishner (basic, converts C=O→CH₂), LiAlH₄ (reduces all carbonyls, esters, amides, nitriles), NaBH₄ (mild, reduces only C=O), H₂/Pd (hydrogenation, reduces C=C and C=O)</li>
+      <li>Oxidations: KMnO₄ (acidic: cleaves C=C; basic: oxidizes to carboxylate), PCC (oxidizes 1° alcohol → aldehyde, 2° → ketone), Jones reagent (oxidizes to acid), Tollens, Fehling</li>
+    </ul>
+  </section>
+
+  <!-- ==================== SECTION 8: NEET STRATEGY ==================== -->
+  <section id="neet-strategy">
+    <h2 class="sec-title">8. NEET Chemistry Strategy</h2>
+
+    <div class="strategy-box">
+      NEET Chemistry: 45 questions (180 marks) out of 180 total marks (chemistry = 25%). Read NCERT Chemistry (Class 11 &amp; 12) line by line for inorganic. Organic reactions and functional group chemistry are high-yield. Many NEET questions are direct NCERT facts.
+    </div>
+
+    <h3>NEET Chemistry Key Chapters &amp; Weightage</h3>
+    <table class="weight-table">
+      <thead><tr><th>Chapter</th><th>Typical Questions</th><th>Priority</th><th>Advice</th></tr></thead>
+      <tbody>
+        <tr><td>Organic Chemistry Basics + Reactions (Class 11 &amp; 12)</td><td>8–10</td><td>Very High</td><td>NCERT + named reactions + mechanisms</td></tr>
+        <tr><td>s-Block &amp; p-Block Elements</td><td>4–6</td><td>Very High</td><td>Read NCERT tables and facts thoroughly</td></tr>
+        <tr><td>Chemical Bonding &amp; Molecular Structure</td><td>3–4</td><td>High</td><td>VSEPR, hybridization, molecular shapes</td></tr>
+        <tr><td>Biomolecules (Carbohydrates, Proteins, DNA)</td><td>2–3</td><td>High</td><td>Quick scoring; all facts are from NCERT</td></tr>
+        <tr><td>Coordination Compounds</td><td>2–3</td><td>High</td><td>IUPAC naming, isomerism, CFT</td></tr>
+        <tr><td>Polymers</td><td>1–2</td><td>Medium</td><td>Know names, monomers, linkages</td></tr>
+        <tr><td>Electrochemistry</td><td>2</td><td>Medium</td><td>Nernst eq., EMF, Faraday's laws</td></tr>
+        <tr><td>Chemical Equilibrium + Ionic Equilibrium</td><td>2–3</td><td>Medium</td><td>pH calculations, buffer, Ksp</td></tr>
+        <tr><td>States of Matter (Gases)</td><td>1–2</td><td>Medium</td><td>Gas laws, KMT, van der Waals</td></tr>
+        <tr><td>Thermodynamics</td><td>2</td><td>Medium</td><td>ΔG, ΔH, ΔS, Hess's law</td></tr>
+        <tr><td>Hydrogen &amp; Its Compounds</td><td>1</td><td>Low-Medium</td><td>Properties of H₂O, H₂O₂</td></tr>
+        <tr><td>Environmental Chemistry</td><td>1–2</td><td>Low</td><td>Pollutants, ozone, greenhouse gases</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ==================== SECTION 9: MNEMONICS ==================== -->
+  <section id="mnemonics">
+    <h2 class="sec-title">9. Chemistry Mnemonics</h2>
+
+    <div class="mnemonic-box">
+      <strong>LEO says GER (Oxidation/Reduction):</strong><br>
+      LEO = Loss of Electrons is Oxidation<br>
+      GER = Gain of Electrons is Reduction<br>
+      Alternative: OIL RIG (Oxidation Is Loss, Reduction Is Gain)
+    </div>
+
+    <div class="mnemonic-box">
+      <strong>Activity Series (most to least reactive metals):</strong><br>
+      "Please Stop Calling Me A Zebra, I Like Snobbish Horses, Can My Art Please Glow"<br>
+      K, Na, Ca, Mg, Al, Zn, Fe (Iron), Ni (Nickel), Sn, H (Hydrogen), Cu, Hg, Ag, Pt, Au
+    </div>
+
+    <div class="mnemonic-box">
+      <strong>Diatomic elements — BrINClHOF (pronounced "Brinklehoff"):</strong><br>
+      Br₂, I₂, N₂, Cl₂, H₂, O₂, F₂ — these 7 elements exist as diatomic molecules at room temperature.
+    </div>
+
+    <div class="mnemonic-box">
+      <strong>Strong acids (7 strong acids to memorize):</strong><br>
+      HCl, HBr, HI (hydrohalic acids), H₂SO₄ (sulfuric), HNO₃ (nitric), HClO₄ (perchloric), HClO₃ (chloric)<br>
+      Mnemonic: "Horses Briskly Ignite Sulfuric Nitric Perchloric Chloric"
+    </div>
+
+    <div class="mnemonic-box">
+      <strong>Aufbau filling order:</strong><br>
+      1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p<br>
+      Tip: Draw the (n+l) diagonal rule grid; follow diagonal arrows top-right to bottom-left.
+    </div>
+
+    <div class="mnemonic-box">
+      <strong>Hybridization shortcut:</strong><br>
+      Count sigma bonds + lone pairs on central atom:<br>
+      2 = sp (linear, 180°), 3 = sp² (trigonal planar, 120°), 4 = sp³ (tetrahedral, 109.5°)<br>
+      5 = sp³d (trigonal bipyramidal), 6 = sp³d² (octahedral)
+    </div>
+
+    <div class="mnemonic-box">
+      <strong>Colors of transition metal ions (Ti to Cu):</strong><br>
+      "Tim's Very Colorful Crystals Make Few Colorful Nice Pieces"<br>
+      Ti³⁺=Purple, V³⁺=Green, Cr³⁺=Dark green, Cr²⁺=Blue (Crystal), Mn²⁺=Pink, Fe²⁺=pale green, Co²⁺=Pink (Colorful), Ni²⁺=Green, Cu²⁺=Blue (Pieces)
+    </div>
+
+    <div class="mnemonic-box">
+      <strong>Oxoacid strength of chlorine:</strong><br>
+      Increasing acid strength: HOCl &lt; HClO₂ &lt; HClO₃ &lt; HClO₄<br>
+      More oxygen atoms = more electronegative surroundings = more polar O−H bond = stronger acid.
+    </div>
+
+    <div class="mnemonic-box">
+      <strong>Colligative properties (all depend on NUMBER of particles, not their nature):</strong><br>
+      RBOF = Relative lowering of VP, Boiling point elevation, Osmotic pressure, Freezing point depression<br>
+      All use van't Hoff factor i: i=1 (non-electrolyte), i=2 (1:1 electrolyte like NaCl), i=3 (1:2 salt like Na₂SO₄)
+    </div>
+
+    <div class="mnemonic-box">
+      <strong>EAS directing groups — Ortho/Para vs Meta:</strong><br>
+      Ortho/Para directors: Electron-donating groups (OH, NH₂, OR, alkyl, halogens)<br>
+      Meta directors: Electron-withdrawing groups (NO₂, CN, CHO, COOH, SO₃H)<br>
+      Tip: If the group next to benzene has a lone pair (donating), it goes o/p. If electron-withdrawing (withdraws via resonance), it goes meta.
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 10: PRACTICE PROBLEMS ==================== -->
+  <section id="practice">
+    <h2 class="sec-title">10. Practice Problems (Solved)</h2>
+
+    <div class="problem-box">
+      <div class="q">Q1. Calculate the pH of 0.01 M CH₃COOH solution. (Ka = 1.8 × 10⁻⁵)</div>
+      <div class="a">
+        <strong>Solution:</strong><br>
+        For weak acid: pH = ½(pKa − log[HA])<br>
+        pKa = −log(1.8 × 10⁻⁵) = 4.74<br>
+        log[HA] = log(0.01) = −2<br>
+        pH = ½(4.74 − (−2)) = ½(6.74) = <strong>3.37</strong><br>
+        <em>Verification: [H⁺] = √(Ka × C) = √(1.8×10⁻⁵ × 0.01) = √(1.8×10⁻⁷) = 4.24×10⁻⁴ M → pH = 3.37 ✓</em>
+      </div>
+    </div>
+
+    <div class="problem-box">
+      <div class="q">Q2. A Daniell cell (Zn-Cu galvanic cell) operates under standard conditions. Calculate E°cell and ΔG°.</div>
+      <div class="a">
+        <strong>Solution:</strong><br>
+        Anode (oxidation): Zn → Zn²⁺ + 2e⁻ &nbsp; E°(Zn²⁺/Zn) = −0.76 V<br>
+        Cathode (reduction): Cu²⁺ + 2e⁻ → Cu &nbsp; E°(Cu²⁺/Cu) = +0.34 V<br>
+        E°cell = E°cathode − E°anode = 0.34 − (−0.76) = <strong>+1.10 V</strong><br>
+        n = 2 electrons transferred<br>
+        ΔG° = −nFE°cell = −2 × 96500 × 1.10 = −212,300 J = <strong>−212.3 kJ/mol</strong><br>
+        Since ΔG° &lt; 0, the cell reaction is spontaneous under standard conditions. ✓
+      </div>
+    </div>
+
+    <div class="problem-box">
+      <div class="q">Q3. The half-life of a first-order reaction is 693 seconds. What percentage of the reactant remains after 2079 seconds?</div>
+      <div class="a">
+        <strong>Solution:</strong><br>
+        t½ = 693 s → k = 0.693/693 = 1.0 × 10⁻³ s⁻¹<br>
+        Number of half-lives = 2079/693 = 3 half-lives<br>
+        Fraction remaining = (½)³ = 1/8 = 0.125<br>
+        Percentage remaining = <strong>12.5%</strong>
+      </div>
+    </div>
+
+    <div class="problem-box">
+      <div class="q">Q4. What are the major and minor products when 2-butanol undergoes acid-catalyzed dehydration? Name the rule used.</div>
+      <div class="a">
+        <strong>Solution:</strong><br>
+        2-Butanol (CH₃-CHOH-CH₂-CH₃) heated with conc. H₂SO₄ at 170°C undergoes E1 elimination.<br>
+        Applying <strong>Zaitsev's Rule</strong>: the major product is the more substituted (more stable) alkene.<br>
+        Major product: <strong>but-2-ene</strong> (CH₃-CH=CH-CH₃) — disubstituted double bond<br>
+        Minor product: but-1-ene (CH₃-CH₂-CH=CH₂) — monosubstituted double bond<br>
+        But-2-ene also exists as cis (Z) and trans (E) isomers; trans predominates.
+      </div>
+    </div>
+
+    <div class="problem-box">
+      <div class="q">Q5. 4.5 g of glucose (M = 180 g/mol) is dissolved in 250 g of water. Calculate (a) molality, (b) boiling point elevation, (c) freezing point depression. (Kb = 0.512 °C·kg/mol, Kf = 1.86 °C·kg/mol)</div>
+      <div class="a">
+        <strong>Solution:</strong><br>
+        Moles of glucose = 4.5 / 180 = 0.025 mol<br>
+        (a) Molality m = 0.025 mol / 0.250 kg = <strong>0.10 mol/kg</strong><br>
+        Glucose is a non-electrolyte → i = 1<br>
+        (b) ΔTb = Kb × m × i = 0.512 × 0.10 × 1 = <strong>0.0512 °C</strong><br>
+        New boiling point = 100 + 0.0512 = 100.0512 °C<br>
+        (c) ΔTf = Kf × m × i = 1.86 × 0.10 × 1 = <strong>0.186 °C</strong><br>
+        New freezing point = 0 − 0.186 = −0.186 °C
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section id="faq">
+    <h2 class="sec-title">FAQ</h2>
+    <div class="faq-section">
+
+      <div class="faq-item">
+        <h4>What is the best way to study organic chemistry for JEE and NEET?</h4>
+        <p>Start with IUPAC naming and isomerism to build a solid foundation. Study reaction mechanisms — understand electron-pushing (arrow-pushing) for addition, substitution, and elimination reactions rather than memorizing products blindly. Create a functional group interconversion map (connecting alcohols, aldehydes, ketones, acids, esters, amines). For JEE Advanced, pay special attention to stereochemistry (R/S, E/Z, Walden inversion in SN2, racemization in SN1). Revise named reactions with mechanism weekly.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>How are elements organized in the periodic table?</h4>
+        <p>The 118 elements are arranged by increasing atomic number in 7 periods (rows) and 18 groups (columns). Elements in the same group have identical valence electron configurations and similar chemical properties. The table divides into: s-block (Groups 1–2, valence electrons in s orbitals), p-block (Groups 13–18, valence electrons in p orbitals), d-block (Groups 3–12, transition metals), and f-block (lanthanides and actinides, valence electrons in f orbitals).</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What is the Nernst equation and when is it used?</h4>
+        <p>The Nernst equation calculates cell potential under non-standard conditions: E = E° − (0.0592/n) × log Q at 25°C, where n = electrons transferred and Q = reaction quotient. Use it when concentrations differ from 1 M (or pressures from 1 atm for gases). At equilibrium Q = K and E = 0, so ΔG° = −RT ln K = −nFE°. This connects electrochemistry with thermodynamics and equilibrium.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What are the most important physical chemistry formulas for JEE and NEET?</h4>
+        <p>Critical physical chemistry formulas: Nernst equation (electrochemistry), integrated rate laws and Arrhenius equation (kinetics), Gibbs free energy ΔG = ΔH − TΔS and ΔG° = −RT ln K (thermodynamics), Henderson-Hasselbalch for buffer pH, colligative property equations (ΔTb = Kbmi, ΔTf = Kfmi, π = iMRT), van't Hoff factor i for electrolytes, and Kp = Kc(RT)^Δn for equilibrium. Learn when each formula applies and its limitations.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Which inorganic chemistry topics are most important for NEET?</h4>
+        <p>For NEET: p-block elements (especially Groups 15, 16, 17, 18) — read NCERT Chapter 7 (Class 11) and Chapters 7–8 (Class 12) thoroughly. s-block elements and their important compounds (NaOH, Na₂CO₃, CaO, Ca(OH)₂). Coordination compounds (IUPAC naming, VBT, isomerism). d-block transition metals (electronic configurations, oxidation states, colors, magnetic properties). Metallurgy principles. Environmental chemistry. Hydrogen and its compounds (H₂O₂). NEET frequently tests direct NCERT facts, tables, and reactions in these chapters.</p>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p><strong>StudyHub</strong> — Free Chemistry Notes for JEE Main, JEE Advanced, NEET &amp; Class 12</p>
+  <p style="margin:8px 0;">
+    <a href="../index.html">Home</a>
+    <a href="math.html">Math</a>
+    <a href="biology.html">Biology</a>
+    <a href="competitive-exams.html">Competitive Exams</a>
+    <a href="programming.html">Programming</a>
+    <a href="gk.html">General Knowledge</a>
+  </p>
+  <p style="margin-top:10px;font-size:0.82rem;opacity:0.7;">&copy; 2026 StudyHub. Free study resources for Indian and Chinese students preparing for JEE, NEET, UPSC, Gaokao, and university entrance exams.</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Formulas & Notes | JEE Physics, NEET Physics, Class 12 | StudyHub</title>
+  <meta name="description" content="Complete physics formulas for JEE Main, JEE Advanced, NEET. Mechanics, Thermodynamics, Electromagnetism, Optics, Modern Physics with derivations.">
+  <meta name="keywords" content="JEE physics formulas, NEET physics notes, physics class 12, mechanics formulas, electromagnetism, Ohm law, Newton laws, thermodynamics physics">
+  <link rel="canonical" href="https://studyhub.github.io/student-hub/pages/physics.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What are the most important physics chapters for JEE?","acceptedAnswer":{"@type":"Answer","text":"Most important: Mechanics (25-30%), Electrostatics and Current Electricity (20%), Modern Physics (15%), Optics (10%). Start with Kinematics, then Laws of Motion, Work-Energy, and Rotational Mechanics."}},
+      {"@type":"Question","name":"What is Newton's second law of motion?","acceptedAnswer":{"@type":"Answer","text":"Newton's second law states F = ma. The net force on an object equals the product of its mass and acceleration. Both force and acceleration are vectors pointing in the same direction."}},
+      {"@type":"Question","name":"How to remember all physics formulas for JEE?","acceptedAnswer":{"@type":"Answer","text":"Create a formula sheet organized by chapter. Understand derivations (don't just memorize). Practice numerical problems daily. Use mnemonics for constants. Revise the sheet every week."}},
+      {"@type":"Question","name":"What is the escape velocity from Earth?","acceptedAnswer":{"@type":"Answer","text":"Escape velocity from Earth is approximately 11.2 km/s. Formula: v_e = sqrt(2GM/R) = sqrt(2gR), where g = 9.8 m/s² and R = 6.4×10⁶ m."}},
+      {"@type":"Question","name":"What is the de Broglie wavelength?","acceptedAnswer":{"@type":"Answer","text":"The de Broglie wavelength is lambda = h/p = h/(mv), where h is Planck's constant (6.626×10⁻³⁴ J·s) and p is momentum. For an electron accelerated through voltage V: lambda = 1.22/sqrt(V) nm."}}
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --primary-btn: #7c3aed;
+      --primary-btn-dark: #6d28d9;
+      --secondary: #0ea5e9;
+      --accent: #f59e0b;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --formula-bg: #faf5ff;
+      --formula-border: #ddd6fe;
+      --success: #10b981;
+      --warning: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--primary-btn); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .navbar { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; gap: 1rem; height: 60px; }
+    .nav-brand { font-size: 1.25rem; font-weight: 700; color: #2563eb; white-space: nowrap; }
+    .nav-menu { list-style: none; display: flex; gap: 0.25rem; flex-wrap: wrap; }
+    .nav-menu li a { padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.875rem; color: var(--text-muted); transition: all 0.2s; }
+    .nav-menu li a:hover, .nav-menu li a.active { background: var(--primary-btn); color: white; text-decoration: none; }
+    .hamburger { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+    .hero { background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 50%, #7c3aed 100%); color: white; padding: 3.5rem 1.5rem 2.5rem; }
+    .hero-inner { max-width: 900px; margin: 0 auto; }
+    .breadcrumb { font-size: 0.85rem; opacity: 0.8; margin-bottom: 1rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.8); }
+    .breadcrumb span { margin: 0 0.4rem; }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 0.75rem; }
+    .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 650px; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
+    .hero-tag { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 0.3rem 0.9rem; font-size: 0.8rem; }
+    .main-layout { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; display: grid; grid-template-columns: 260px 1fr; gap: 2rem; }
+    .toc-sidebar { position: sticky; top: 80px; max-height: calc(100vh - 100px); overflow-y: auto; }
+    .toc-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; }
+    .toc-card h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 0.1rem; }
+    .toc-list a { display: block; padding: 0.35rem 0.6rem; border-radius: 6px; font-size: 0.85rem; color: var(--text-muted); transition: all 0.2s; }
+    .toc-list a:hover { background: var(--formula-bg); color: var(--primary-btn); text-decoration: none; }
+    .toc-list .toc-sub { padding-left: 1.2rem; font-size: 0.8rem; }
+    .content-area { min-width: 0; }
+    .section-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
+    .section-card h2 { font-size: 1.5rem; font-weight: 700; color: var(--primary-btn); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--formula-border); }
+    .section-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.5rem 0 0.75rem; }
+    .section-card h4 { font-size: 0.95rem; font-weight: 600; color: #5b21b6; margin: 1.2rem 0 0.5rem; }
+    .formula-box { background: var(--formula-bg); border: 1px solid var(--formula-border); border-left: 4px solid var(--primary-btn); border-radius: 8px; padding: 1rem 1.25rem; margin: 0.75rem 0; font-family: 'Courier New', monospace; font-size: 0.95rem; line-height: 1.8; }
+    .formula-box.green { background: #f0fdf4; border-color: #bbf7d0; border-left-color: var(--success); }
+    .formula-box.amber { background: #fffbeb; border-color: #fde68a; border-left-color: var(--accent); }
+    .formula-box.red { background: #fff1f2; border-color: #fecdd3; border-left-color: #e11d48; }
+    .formula-list { list-style: none; padding: 0; }
+    .formula-list li { padding: 0.4rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .formula-list li:last-child { border-bottom: none; }
+    .formula-list li .label { font-weight: 600; color: #5b21b6; min-width: 220px; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0; border-radius: 8px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    thead { background: var(--primary-btn); color: white; }
+    th { padding: 0.75rem 1rem; text-align: left; font-weight: 600; white-space: nowrap; }
+    td { padding: 0.6rem 1rem; border-top: 1px solid var(--border); }
+    tr:nth-child(even) td { background: var(--bg); }
+    tr:hover td { background: var(--formula-bg); }
+    .note { background: #fffbeb; border: 1px solid #fde68a; border-left: 4px solid var(--accent); border-radius: 6px; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; }
+    .note strong { color: #92400e; }
+    .tip { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid var(--success); border-radius: 6px; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; }
+    .important { background: #fff1f2; border: 1px solid #fecdd3; border-left: 4px solid #e11d48; border-radius: 6px; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; }
+    .problem-card { border: 1px solid var(--border); border-radius: 10px; margin: 1rem 0; overflow: hidden; }
+    .problem-header { background: var(--primary-btn); color: white; padding: 0.75rem 1.25rem; font-weight: 600; font-size: 0.95rem; }
+    .problem-body { padding: 1.25rem; }
+    .problem-body .question { font-weight: 600; margin-bottom: 0.75rem; }
+    .problem-body .solution { background: #f1f5f9; border-radius: 6px; padding: 1rem; font-family: 'Courier New', monospace; font-size: 0.88rem; white-space: pre-wrap; }
+    .problem-answer { margin-top: 0.75rem; font-weight: 700; color: var(--success); }
+    .faq-item { border: 1px solid var(--border); border-radius: 8px; margin: 0.75rem 0; overflow: hidden; }
+    .faq-q { background: var(--bg); padding: 1rem 1.25rem; font-weight: 600; }
+    .faq-a { padding: 1rem 1.25rem; border-top: 1px solid var(--border); font-size: 0.95rem; line-height: 1.7; }
+    .badge { display: inline-block; background: var(--formula-bg); border: 1px solid var(--formula-border); color: #5b21b6; border-radius: 4px; padding: 0.15rem 0.5rem; font-size: 0.78rem; }
+    .badge.green { background: #f0fdf4; border-color: #bbf7d0; color: #065f46; }
+    .badge.orange { background: #fff7ed; border-color: #fed7aa; color: #9a3412; }
+    footer { background: #1e293b; color: #94a3b8; padding: 3rem 1.5rem 2rem; margin-top: 3rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+    .footer-col h4 { color: white; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.4rem; }
+    .footer-col ul li a { color: #94a3b8; font-size: 0.875rem; }
+    .footer-col ul li a:hover { color: white; text-decoration: none; }
+    .footer-bottom { max-width: 1200px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid #334155; text-align: center; font-size: 0.85rem; }
+    @media (max-width: 900px) { .main-layout { grid-template-columns: 1fr; } .toc-sidebar { position: static; max-height: none; } }
+    @media (max-width: 600px) { .hamburger { display: block; } .nav-menu { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: white; border-bottom: 1px solid var(--border); padding: 1rem; } .nav-menu.open { display: flex; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-brand">&#128218; StudyHub</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="math.html">Mathematics</a></li>
+      <li><a href="physics.html" class="active">Physics</a></li>
+      <li><a href="chemistry.html">Chemistry</a></li>
+      <li><a href="biology.html">Biology</a></li>
+      <li><a href="english.html">English</a></li>
+      <li><a href="programming.html">Programming</a></li>
+      <li><a href="competitive-exams.html">Exams</a></li>
+      <li><a href="career.html">Career</a></li>
+      <li><a href="gk.html">GK</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>&rsaquo;</span>
+      <span>Physics</span>
+    </div>
+    <h1>Physics Formulas &amp; Notes</h1>
+    <p>All formulas for JEE Main, JEE Advanced, NEET, Class 12 Physics &mdash; Mechanics, Thermodynamics, Electromagnetism, Optics, Modern Physics, and more.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">JEE Main</span>
+      <span class="hero-tag">JEE Advanced</span>
+      <span class="hero-tag">NEET</span>
+      <span class="hero-tag">Class 12 CBSE</span>
+      <span class="hero-tag">ICSE</span>
+      <span class="hero-tag">BITSAT</span>
+    </div>
+  </div>
+</section>
+
+<div class="main-layout">
+  <aside class="toc-sidebar">
+    <div class="toc-card">
+      <h3>Table of Contents</h3>
+      <ul class="toc-list">
+        <li><a href="#mechanics">1. Mechanics</a></li>
+        <li><a href="#kinematics" class="toc-sub">1.1 Kinematics</a></li>
+        <li><a href="#newton" class="toc-sub">1.2 Newton's Laws &amp; Friction</a></li>
+        <li><a href="#work-energy" class="toc-sub">1.3 Work, Energy, Power</a></li>
+        <li><a href="#rotational" class="toc-sub">1.4 Rotational Mechanics</a></li>
+        <li><a href="#gravitation" class="toc-sub">1.5 Gravitation</a></li>
+        <li><a href="#properties">2. Properties of Matter</a></li>
+        <li><a href="#thermodynamics">3. Thermodynamics</a></li>
+        <li><a href="#kinetic-theory" class="toc-sub">3.1 Kinetic Theory</a></li>
+        <li><a href="#gas-laws" class="toc-sub">3.2 Gas Laws</a></li>
+        <li><a href="#thermo-processes" class="toc-sub">3.3 Thermodynamic Processes</a></li>
+        <li><a href="#heat-transfer" class="toc-sub">3.4 Heat Transfer</a></li>
+        <li><a href="#waves">4. Waves &amp; Sound</a></li>
+        <li><a href="#electrostatics">5. Electrostatics</a></li>
+        <li><a href="#current">6. Current Electricity</a></li>
+        <li><a href="#magnetism">7. Magnetism &amp; EMI</a></li>
+        <li><a href="#optics">8. Optics</a></li>
+        <li><a href="#modern">9. Modern Physics</a></li>
+        <li><a href="#constants">10. Physical Constants</a></li>
+        <li><a href="#jee-weightage">11. JEE Weightage</a></li>
+        <li><a href="#neet-tips">12. NEET Tips</a></li>
+        <li><a href="#problems">13. Solved Problems</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="content-area">
+
+    <!-- SECTION 1: MECHANICS -->
+    <section id="mechanics" class="section-card">
+      <h2>1. Mechanics</h2>
+
+      <h3 id="kinematics">1.1 Kinematics</h3>
+      <h4>Equations of Motion (uniform acceleration)</h4>
+      <div class="formula-box">
+        v = u + at<br>
+        s = ut + (1/2)at&sup2;<br>
+        v&sup2; = u&sup2; + 2as<br>
+        s_n = u + a(2n - 1)/2 &nbsp; [distance in nth second]
+      </div>
+
+      <h4>Projectile Motion</h4>
+      <ul class="formula-list">
+        <li><span class="label">Horizontal displacement:</span> x = u cos&theta; &times; t</li>
+        <li><span class="label">Vertical displacement:</span> y = u sin&theta; &times; t - (1/2)gt&sup2;</li>
+        <li><span class="label">Time of flight:</span> T = 2u sin&theta; / g</li>
+        <li><span class="label">Maximum height:</span> H = u&sup2; sin&sup2;&theta; / 2g</li>
+        <li><span class="label">Range:</span> R = u&sup2; sin 2&theta; / g</li>
+        <li><span class="label">Maximum range (at &theta;=45&deg;):</span> R_max = u&sup2; / g</li>
+        <li><span class="label">Trajectory equation:</span> y = x tan&theta; - gx&sup2; / (2u&sup2;cos&sup2;&theta;)</li>
+      </ul>
+
+      <h4>Circular Motion</h4>
+      <ul class="formula-list">
+        <li><span class="label">Angular velocity:</span> &omega; = d&theta;/dt = v/r</li>
+        <li><span class="label">Angular acceleration:</span> &alpha; = d&omega;/dt</li>
+        <li><span class="label">Relation:</span> v = r&omega;, a_tangential = r&alpha;</li>
+        <li><span class="label">Centripetal acceleration:</span> a_c = v&sup2;/r = r&omega;&sup2;</li>
+        <li><span class="label">Centripetal force:</span> F_c = mv&sup2;/r = mr&omega;&sup2;</li>
+        <li><span class="label">Time period:</span> T = 2&pi;/&omega; = 2&pi;r/v</li>
+        <li><span class="label">Frequency:</span> f = 1/T = &omega;/(2&pi;)</li>
+      </ul>
+
+      <h3 id="newton">1.2 Newton's Laws &amp; Friction</h3>
+      <ul class="formula-list">
+        <li><span class="label">First Law (Inertia):</span> A body remains at rest or in uniform motion unless acted upon by a net force</li>
+        <li><span class="label">Second Law:</span> F_net = ma (vector equation)</li>
+        <li><span class="label">Third Law:</span> F_AB = -F_BA (action-reaction, equal and opposite)</li>
+        <li><span class="label">Weight:</span> W = mg (g = 9.8 m/s&sup2; or 10 m/s&sup2; in JEE)</li>
+        <li><span class="label">Impulse:</span> J = F &times; &Delta;t = &Delta;p = m(v - u)</li>
+        <li><span class="label">Static friction:</span> f_s &le; &mu;_s N</li>
+        <li><span class="label">Kinetic friction:</span> f_k = &mu;_k N (&mu;_k &lt; &mu;_s always)</li>
+        <li><span class="label">Angle of friction:</span> tan &phi; = &mu;</li>
+        <li><span class="label">Angle of repose:</span> tan &theta; = &mu;_s</li>
+        <li><span class="label">Pseudo force (non-inertial):</span> F_pseudo = -ma_frame</li>
+      </ul>
+
+      <h3 id="work-energy">1.3 Work, Energy &amp; Power</h3>
+      <ul class="formula-list">
+        <li><span class="label">Work:</span> W = F &middot; s &middot; cos&theta; = F&#8407; &middot; s&#8407; (dot product)</li>
+        <li><span class="label">Kinetic Energy:</span> KE = (1/2)mv&sup2;</li>
+        <li><span class="label">Work-Energy Theorem:</span> W_net = &Delta;KE = KE_f - KE_i</li>
+        <li><span class="label">Gravitational PE:</span> PE = mgh</li>
+        <li><span class="label">Spring PE:</span> PE = (1/2)kx&sup2;</li>
+        <li><span class="label">Conservation of Energy:</span> KE + PE = constant (conservative forces only)</li>
+        <li><span class="label">Power:</span> P = W/t = F &middot; v &middot; cos&theta;</li>
+        <li><span class="label">Efficiency:</span> &eta; = (useful output / total input) &times; 100%</li>
+      </ul>
+
+      <h4>Collisions</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Type</th><th>Coefficient e</th><th>Momentum</th><th>Kinetic Energy</th></tr></thead>
+          <tbody>
+            <tr><td>Perfectly elastic</td><td>e = 1</td><td>Conserved</td><td>Conserved</td></tr>
+            <tr><td>Partially inelastic</td><td>0 &lt; e &lt; 1</td><td>Conserved</td><td>Not conserved (loss)</td></tr>
+            <tr><td>Perfectly inelastic</td><td>e = 0</td><td>Conserved</td><td>Maximum loss</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Coefficient of restitution: <strong>e = (v&sub2; - v&sub1;) / (u&sub1; - u&sub2;)</strong> (relative velocity of separation / approach)</p>
+
+      <h3 id="rotational">1.4 Rotational Mechanics</h3>
+      <h4>Moment of Inertia (Standard Bodies)</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Body</th><th>Axis</th><th>Moment of Inertia I</th></tr></thead>
+          <tbody>
+            <tr><td>Solid sphere</td><td>Diameter</td><td>2MR&sup2;/5</td></tr>
+            <tr><td>Hollow sphere (thin shell)</td><td>Diameter</td><td>2MR&sup2;/3</td></tr>
+            <tr><td>Solid cylinder / disc</td><td>Own axis (symmetry axis)</td><td>MR&sup2;/2</td></tr>
+            <tr><td>Hollow cylinder (thin shell)</td><td>Own axis</td><td>MR&sup2;</td></tr>
+            <tr><td>Thin rod</td><td>Perpendicular at center</td><td>ML&sup2;/12</td></tr>
+            <tr><td>Thin rod</td><td>Perpendicular at one end</td><td>ML&sup2;/3</td></tr>
+            <tr><td>Disc</td><td>Perpendicular at center</td><td>MR&sup2;/2</td></tr>
+            <tr><td>Ring</td><td>Diameter</td><td>MR&sup2;/2</td></tr>
+            <tr><td>Ring</td><td>Perpendicular at center</td><td>MR&sup2;</td></tr>
+            <tr><td>Rectangular plate (a&times;b)</td><td>Perpendicular at center</td><td>M(a&sup2;+b&sup2;)/12</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="formula-list">
+        <li><span class="label">Parallel Axis Theorem:</span> I = I_cm + Md&sup2;</li>
+        <li><span class="label">Perpendicular Axis (lamina):</span> I_z = I_x + I_y</li>
+        <li><span class="label">Torque:</span> &tau; = r &times; F = I&alpha;</li>
+        <li><span class="label">Angular momentum:</span> L = I&omega; = r &times; p</li>
+        <li><span class="label">Conservation of L:</span> If &tau;_net = 0, then L = constant</li>
+        <li><span class="label">Rotational KE:</span> KE_rot = (1/2)I&omega;&sup2;</li>
+        <li><span class="label">Rolling without slipping:</span> v = r&omega;</li>
+        <li><span class="label">Total KE (rolling):</span> KE = (1/2)mv&sup2; + (1/2)I&omega;&sup2; = (1/2)mv&sup2;(1 + I/mr&sup2;)</li>
+      </ul>
+
+      <h3 id="gravitation">1.5 Gravitation</h3>
+      <ul class="formula-list">
+        <li><span class="label">Newton's Law of Gravitation:</span> F = Gm&sub1;m&sub2;/r&sup2;</li>
+        <li><span class="label">G (gravitational constant):</span> 6.674 &times; 10&#8315;&#185;&#185; N&middot;m&sup2;/kg&sup2;</li>
+        <li><span class="label">Gravitational field g:</span> g = GM/r&sup2;</li>
+        <li><span class="label">Surface gravity (Earth):</span> g_0 = GM/R&sup2; = 9.8 m/s&sup2;</li>
+        <li><span class="label">g at height h:</span> g_h = g_0 R&sup2;/(R+h)&sup2; &approx; g_0(1 - 2h/R) for h &lt;&lt; R</li>
+        <li><span class="label">g at depth d:</span> g_d = g_0(1 - d/R)</li>
+        <li><span class="label">Gravitational PE:</span> U = -GMm/r</li>
+        <li><span class="label">Orbital velocity:</span> v_0 = &radic;(GM/r) = &radic;(gR&sup2;/r)</li>
+        <li><span class="label">Orbital velocity (surface):</span> v_0 = &radic;(gR) &approx; 7.9 km/s</li>
+        <li><span class="label">Escape velocity:</span> v_e = &radic;(2GM/R) = &radic;(2gR) &approx; 11.2 km/s</li>
+        <li><span class="label">v_e = &radic;2 &times; v_0 (surface):</span> escape = &radic;2 times orbital</li>
+      </ul>
+      <h4>Kepler's Laws</h4>
+      <ul class="formula-list">
+        <li><span class="label">First Law:</span> Planets orbit in ellipses with the Sun at one focus</li>
+        <li><span class="label">Second Law:</span> Equal areas swept in equal times (conservation of angular momentum)</li>
+        <li><span class="label">Third Law:</span> T&sup2; &prop; r&sup3; &nbsp; (T&sup2;/r&sup3; = constant for all planets around the same star)</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 2: PROPERTIES OF MATTER -->
+    <section id="properties" class="section-card">
+      <h2>2. Properties of Matter &amp; Fluid Mechanics</h2>
+
+      <h3>2.1 Elasticity</h3>
+      <ul class="formula-list">
+        <li><span class="label">Stress:</span> Force / Area (Pa = N/m&sup2;)</li>
+        <li><span class="label">Strain:</span> Change in dimension / Original dimension (dimensionless)</li>
+        <li><span class="label">Young's Modulus Y:</span> Y = (F/A) / (&Delta;L/L) = FL / (A&Delta;L)</li>
+        <li><span class="label">Bulk Modulus B:</span> B = -V &Delta;P / &Delta;V = &Delta;P / (-&Delta;V/V)</li>
+        <li><span class="label">Shear Modulus G:</span> G = (F/A) / (shear strain)</li>
+        <li><span class="label">Poisson's Ratio &nu;:</span> &nu; = -(lateral strain) / (longitudinal strain), -1 &lt; &nu; &lt; 0.5</li>
+      </ul>
+
+      <h3>2.2 Surface Tension &amp; Capillarity</h3>
+      <ul class="formula-list">
+        <li><span class="label">Surface tension T:</span> T = F/l (force per unit length)</li>
+        <li><span class="label">Excess pressure (bubble):</span> &Delta;P = 4T/r (two surfaces)</li>
+        <li><span class="label">Excess pressure (drop):</span> &Delta;P = 2T/r (one surface)</li>
+        <li><span class="label">Capillary rise:</span> h = 2T cos&theta; / (r&rho;g)</li>
+        <li><span class="label">Work done to split:</span> W = T &times; &Delta;A</li>
+      </ul>
+
+      <h3>2.3 Viscosity &amp; Fluid Flow</h3>
+      <ul class="formula-list">
+        <li><span class="label">Viscous force (Stokes):</span> F = 6&pi;&eta;rv (sphere of radius r, velocity v)</li>
+        <li><span class="label">Terminal velocity:</span> v_T = 2r&sup2;(&rho; - &sigma;)g / (9&eta;)</li>
+        <li><span class="label">Reynolds number:</span> Re = &rho;vd/&eta; (laminar &lt;1000, turbulent &gt;2000)</li>
+        <li><span class="label">Continuity equation:</span> A&sub1;v&sub1; = A&sub2;v&sub2; (incompressible flow)</li>
+        <li><span class="label">Bernoulli's equation:</span> P + (1/2)&rho;v&sup2; + &rho;gh = constant</li>
+        <li><span class="label">Torricelli's theorem:</span> v = &radic;(2gh) (speed of efflux)</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 3: THERMODYNAMICS -->
+    <section id="thermodynamics" class="section-card">
+      <h2>3. Thermodynamics</h2>
+
+      <h3 id="kinetic-theory">3.1 Kinetic Theory of Gases</h3>
+      <div class="formula-box">
+        Ideal Gas Law: PV = nRT = NkT<br>
+        R = 8.314 J/(mol&middot;K) &nbsp;&nbsp; k = 1.38 &times; 10&#8315;&#178;&#179; J/K<br>
+        N_A = 6.022 &times; 10&sup2;&#179; /mol (Avogadro's number)<br>
+        PV = nRT, where n = N/N_A
+      </div>
+      <ul class="formula-list">
+        <li><span class="label">Average KE per molecule:</span> KE = (3/2)kT</li>
+        <li><span class="label">rms speed v_rms:</span> &radic;(3RT/M) = &radic;(3kT/m)</li>
+        <li><span class="label">Average speed v_avg:</span> &radic;(8RT/&pi;M)</li>
+        <li><span class="label">Most probable speed v_mp:</span> &radic;(2RT/M)</li>
+        <li><span class="label">Speed relation:</span> v_mp &lt; v_avg &lt; v_rms</li>
+        <li><span class="label">Degrees of freedom f:</span> Monatomic = 3, Diatomic = 5, Polyatomic = 6</li>
+        <li><span class="label">Internal energy U:</span> U = (f/2)nRT</li>
+        <li><span class="label">C_V = (f/2)R:</span> Monatomic 3R/2, Diatomic 5R/2</li>
+        <li><span class="label">C_P = C_V + R:</span> From Mayer's relation</li>
+        <li><span class="label">Ratio &gamma; = C_P/C_V:</span> Monatomic 5/3, Diatomic 7/5</li>
+      </ul>
+
+      <h3 id="gas-laws">3.2 Gas Laws</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Law</th><th>Formula</th><th>Constant Variables</th></tr></thead>
+          <tbody>
+            <tr><td>Boyle's Law</td><td>PV = constant</td><td>T, n fixed</td></tr>
+            <tr><td>Charles' Law</td><td>V/T = constant</td><td>P, n fixed</td></tr>
+            <tr><td>Gay-Lussac's Law</td><td>P/T = constant</td><td>V, n fixed</td></tr>
+            <tr><td>Avogadro's Law</td><td>V &prop; n</td><td>T, P fixed</td></tr>
+            <tr><td>Combined Gas Law</td><td>PV/T = constant</td><td>n fixed</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="thermo-processes">3.3 Thermodynamic Processes</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Process</th><th>Condition</th><th>Work Done W</th><th>&Delta;U</th></tr></thead>
+          <tbody>
+            <tr><td>Isothermal</td><td>&Delta;T = 0</td><td>nRT ln(V&sub2;/V&sub1;)</td><td>0</td></tr>
+            <tr><td>Adiabatic</td><td>&Delta;Q = 0, PV&sup2; = const</td><td>(P&sub1;V&sub1; - P&sub2;V&sub2;)/(&gamma;-1)</td><td>-W</td></tr>
+            <tr><td>Isobaric</td><td>&Delta;P = 0</td><td>P&Delta;V = nR&Delta;T</td><td>nC_V &Delta;T</td></tr>
+            <tr><td>Isochoric</td><td>&Delta;V = 0</td><td>0</td><td>nC_V &Delta;T = Q</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="formula-list">
+        <li><span class="label">First Law of Thermodynamics:</span> &Delta;U = Q - W (heat absorbed minus work done BY system)</li>
+        <li><span class="label">Adiabatic relation:</span> PV&sup2; = constant, where &gamma; = C_P/C_V</li>
+        <li><span class="label">Also adiabatic:</span> TV^(&gamma;-1) = constant</li>
+        <li><span class="label">Carnot efficiency:</span> &eta; = 1 - T_L/T_H = 1 - Q_L/Q_H</li>
+        <li><span class="label">Carnot: max efficiency:</span> No real engine can exceed Carnot efficiency</li>
+        <li><span class="label">C_P - C_V = R:</span> Mayer's relation (for ideal gas)</li>
+        <li><span class="label">Entropy change:</span> &Delta;S = Q_reversible / T</li>
+      </ul>
+
+      <h3 id="heat-transfer">3.4 Thermal Expansion &amp; Heat Transfer</h3>
+      <ul class="formula-list">
+        <li><span class="label">Linear expansion:</span> &Delta;L = L&alpha;&Delta;T</li>
+        <li><span class="label">Area expansion:</span> &Delta;A = 2A&alpha;&Delta;T</li>
+        <li><span class="label">Volume expansion:</span> &Delta;V = 3V&alpha;&Delta;T = V&beta;&Delta;T (&beta; = 3&alpha;)</li>
+        <li><span class="label">Specific heat capacity:</span> Q = mc&Delta;T</li>
+        <li><span class="label">Latent heat:</span> Q = mL (phase change at constant T)</li>
+        <li><span class="label">Thermal conduction:</span> Q/t = kA(T&sub1;-T&sub2;)/d (Fourier's law)</li>
+        <li><span class="label">Stefan-Boltzmann:</span> P = &epsilon;&sigma;AT&sup4; (radiated power)</li>
+        <li><span class="label">&sigma; (Stefan's constant):</span> 5.67 &times; 10&#8315;&#8312; W/(m&sup2;&middot;K&sup4;)</li>
+        <li><span class="label">Newton's Law of Cooling:</span> dT/dt = -k(T - T&sub0;)</li>
+        <li><span class="label">Wien's Displacement Law:</span> &lambda;_max T = 2.898 &times; 10&#8315;&#179; m&middot;K</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 4: WAVES & SOUND -->
+    <section id="waves" class="section-card">
+      <h2>4. Waves &amp; Sound</h2>
+
+      <h3>4.1 Wave Basics</h3>
+      <div class="formula-box">
+        Wave equation: y = A sin(kx - &omega;t + &phi;)<br>
+        v = f&lambda; = &omega;/k<br>
+        &omega; = 2&pi;f = 2&pi;/T &nbsp;&nbsp; k = 2&pi;/&lambda;
+      </div>
+      <ul class="formula-list">
+        <li><span class="label">Speed of sound in gas:</span> v = &radic;(&gamma;P/&rho;) = &radic;(&gamma;RT/M)</li>
+        <li><span class="label">Speed of sound in solid:</span> v = &radic;(Y/&rho;) (Y = Young's modulus)</li>
+        <li><span class="label">Intensity:</span> I &prop; A&sup2;, I = P/(4&pi;r&sup2;) (point source)</li>
+        <li><span class="label">Intensity level (decibel):</span> &beta; = 10 log(I/I&sub0;), I&sub0; = 10&#8315;&#185;&#178; W/m&sup2;</li>
+      </ul>
+
+      <h3>4.2 Superposition &amp; Standing Waves</h3>
+      <ul class="formula-list">
+        <li><span class="label">Constructive interference:</span> Path diff. &Delta; = n&lambda;, n = 0,1,2,...</li>
+        <li><span class="label">Destructive interference:</span> &Delta; = (2n-1)&lambda;/2</li>
+        <li><span class="label">Beats frequency:</span> f_beat = |f&sub1; - f&sub2;|</li>
+        <li><span class="label">Vibrating string (fundamental):</span> f&sub1; = (1/2L)&radic;(T/&mu;)</li>
+        <li><span class="label">String harmonics:</span> f_n = n &times; f&sub1; = n/(2L) &times; &radic;(T/&mu;)</li>
+        <li><span class="label">Open pipe (harmonics):</span> f_n = nv/(2L), n = 1,2,3,...</li>
+        <li><span class="label">Closed pipe (harmonics):</span> f_n = (2n-1)v/(4L), n = 1,2,3,...</li>
+        <li><span class="label">Note:</span> Closed pipe has only odd harmonics</li>
+      </ul>
+
+      <h3>4.3 Doppler Effect</h3>
+      <div class="formula-box amber">
+        f' = f &times; (v &plusmn; v_observer) / (v &mp; v_source)<br>
+        Upper signs: observer moving toward source / source moving away<br>
+        Lower signs: observer moving away / source moving toward
+      </div>
+    </section>
+
+    <!-- SECTION 5: ELECTROSTATICS -->
+    <section id="electrostatics" class="section-card">
+      <h2>5. Electrostatics</h2>
+
+      <h3>5.1 Coulomb's Law &amp; Electric Field</h3>
+      <ul class="formula-list">
+        <li><span class="label">Coulomb's Law:</span> F = kq&sub1;q&sub2;/r&sup2;, k = 1/(4&pi;&epsilon;&sub0;) = 9&times;10&sup9; N&middot;m&sup2;/C&sup2;</li>
+        <li><span class="label">Permittivity of free space &epsilon;&sub0;:</span> 8.854 &times; 10&#8315;&#185;&#178; C&sup2;/(N&middot;m&sup2;)</li>
+        <li><span class="label">Electric field:</span> E = F/q = kQ/r&sup2;</li>
+        <li><span class="label">Superposition:</span> E_total = &Sigma;E_i (vector sum)</li>
+        <li><span class="label">Electric flux:</span> &Phi; = E &middot; A cos&theta;</li>
+        <li><span class="label">Gauss's Law:</span> &Phi;_total = Q_enc / &epsilon;&sub0;</li>
+      </ul>
+
+      <h4>Electric Fields of Common Geometries</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Source</th><th>Location</th><th>Electric Field E</th></tr></thead>
+          <tbody>
+            <tr><td>Point charge Q</td><td>Distance r</td><td>kQ/r&sup2;</td></tr>
+            <tr><td>Infinite line charge (&lambda;)</td><td>Distance r</td><td>&lambda;/(2&pi;&epsilon;&sub0;r)</td></tr>
+            <tr><td>Infinite plane (&sigma;)</td><td>Any side</td><td>&sigma;/(2&epsilon;&sub0;)</td></tr>
+            <tr><td>Conducting sphere (outside)</td><td>Distance r &gt; R</td><td>Q/(4&pi;&epsilon;&sub0;r&sup2;)</td></tr>
+            <tr><td>Conducting sphere (inside)</td><td>r &lt; R</td><td>0</td></tr>
+            <tr><td>Uniformly charged sphere (inside)</td><td>r &lt; R</td><td>Qr/(4&pi;&epsilon;&sub0;R&sup3;)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>5.2 Electric Potential &amp; Energy</h3>
+      <ul class="formula-list">
+        <li><span class="label">Potential:</span> V = kQ/r (point charge)</li>
+        <li><span class="label">Work done:</span> W = q(V&sub1; - V&sub2;) = q&Delta;V</li>
+        <li><span class="label">Potential energy:</span> U = kq&sub1;q&sub2;/r</li>
+        <li><span class="label">Equipotential surfaces:</span> Perpendicular to E field; W=0 for charge moving along them</li>
+        <li><span class="label">Inside conductor:</span> E = 0; entire conductor at same potential</li>
+        <li><span class="label">Relation E and V:</span> E = -dV/dr</li>
+      </ul>
+
+      <h3>5.3 Capacitors</h3>
+      <ul class="formula-list">
+        <li><span class="label">Capacitance:</span> C = Q/V</li>
+        <li><span class="label">Parallel plate (air):</span> C = &epsilon;&sub0;A/d</li>
+        <li><span class="label">Parallel plate (dielectric):</span> C = k&epsilon;&sub0;A/d, k = dielectric constant</li>
+        <li><span class="label">Series combination:</span> 1/C_eq = 1/C&sub1; + 1/C&sub2; + ... (same Q)</li>
+        <li><span class="label">Parallel combination:</span> C_eq = C&sub1; + C&sub2; + ... (same V)</li>
+        <li><span class="label">Energy stored:</span> U = (1/2)CV&sup2; = Q&sup2;/(2C) = QV/2</li>
+        <li><span class="label">Energy density:</span> u = (1/2)&epsilon;&sub0;E&sup2;</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 6: CURRENT ELECTRICITY -->
+    <section id="current" class="section-card">
+      <h2>6. Current Electricity</h2>
+
+      <h3>6.1 Basic Concepts</h3>
+      <ul class="formula-list">
+        <li><span class="label">Current:</span> I = dQ/dt (A = C/s)</li>
+        <li><span class="label">Current density:</span> J = I/A = &sigma;E</li>
+        <li><span class="label">Ohm's Law:</span> V = IR, J = &sigma;E</li>
+        <li><span class="label">Resistance:</span> R = V/I = &rho;L/A</li>
+        <li><span class="label">Resistivity &rho;:</span> Property of material; units: &Omega;&middot;m</li>
+        <li><span class="label">Conductivity &sigma;:</span> &sigma; = 1/&rho;</li>
+        <li><span class="label">Temp. dependence:</span> &rho; = &rho;&sub0;(1 + &alpha;&Delta;T)</li>
+        <li><span class="label">Power:</span> P = VI = I&sup2;R = V&sup2;/R</li>
+        <li><span class="label">Energy:</span> E = Pt = VIt = I&sup2;Rt</li>
+      </ul>
+
+      <h3>6.2 Circuits</h3>
+      <ul class="formula-list">
+        <li><span class="label">Series resistors:</span> R_eq = R&sub1;+R&sub2;+... (same current I)</li>
+        <li><span class="label">Parallel resistors:</span> 1/R_eq = 1/R&sub1;+1/R&sub2;+... (same voltage V)</li>
+        <li><span class="label">Two parallel resistors:</span> R_eq = R&sub1;R&sub2; / (R&sub1;+R&sub2;)</li>
+        <li><span class="label">EMF and internal resistance:</span> V_terminal = &epsilon; - Ir</li>
+        <li><span class="label">KCL (junction rule):</span> &Sigma;I_in = &Sigma;I_out</li>
+        <li><span class="label">KVL (loop rule):</span> &Sigma;V around any closed loop = 0</li>
+        <li><span class="label">Wheatstone bridge balanced:</span> R&sub1;/R&sub2; = R&sub3;/R&sub4;</li>
+        <li><span class="label">Potentiometer (comparison):</span> V&sub1;/V&sub2; = l&sub1;/l&sub2;</li>
+      </ul>
+
+      <h3>6.3 RC Circuits</h3>
+      <ul class="formula-list">
+        <li><span class="label">Charging capacitor:</span> q(t) = Q&sub0;(1 - e^(-t/&tau;)), V_C = V&sub0;(1 - e^(-t/&tau;))</li>
+        <li><span class="label">Discharging capacitor:</span> q(t) = Q&sub0; e^(-t/&tau;)</li>
+        <li><span class="label">Time constant:</span> &tau; = RC</li>
+        <li><span class="label">At t = &tau;:</span> Capacitor charges to 63% (or discharges to 37%)</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 7: MAGNETISM & EMI -->
+    <section id="magnetism" class="section-card">
+      <h2>7. Magnetism, EMI &amp; AC Circuits</h2>
+
+      <h3>7.1 Magnetic Force</h3>
+      <ul class="formula-list">
+        <li><span class="label">Force on moving charge:</span> F = qv &times; B, |F| = qvB sin&theta;</li>
+        <li><span class="label">Force on current-carrying wire:</span> F = BIL sin&theta;</li>
+        <li><span class="label">Radius of circular path:</span> r = mv/(qB)</li>
+        <li><span class="label">Time period (cyclotron):</span> T = 2&pi;m/(qB) (independent of speed)</li>
+        <li><span class="label">Torque on current loop:</span> &tau; = nBIA sin&theta; = MB sin&theta;</li>
+        <li><span class="label">Magnetic moment:</span> M = nIA</li>
+      </ul>
+
+      <h3>7.2 Biot-Savart Law &amp; Ampere's Law</h3>
+      <ul class="formula-list">
+        <li><span class="label">Biot-Savart:</span> dB = (&mu;&sub0;/4&pi;) I dL sin&theta; / r&sup2;</li>
+        <li><span class="label">&mu;&sub0; (permeability):</span> 4&pi; &times; 10&#8315;&#8311; T&middot;m/A</li>
+        <li><span class="label">Center of circular loop:</span> B = &mu;&sub0;I / (2R)</li>
+        <li><span class="label">Long straight wire:</span> B = &mu;&sub0;I / (2&pi;r)</li>
+        <li><span class="label">Solenoid (inside):</span> B = &mu;&sub0;nI (n = turns/meter)</li>
+        <li><span class="label">Toroid:</span> B = &mu;&sub0;nI (inside only)</li>
+        <li><span class="label">Ampere's Law:</span> &oint; B &middot; dl = &mu;&sub0;I_enc</li>
+        <li><span class="label">Force between wires:</span> F/L = &mu;&sub0;I&sub1;I&sub2; / (2&pi;d) (attractive if same direction)</li>
+      </ul>
+
+      <h3>7.3 Electromagnetic Induction</h3>
+      <ul class="formula-list">
+        <li><span class="label">Faraday's Law:</span> EMF = -d&Phi;/dt (EMF = -N d&Phi;/dt for N turns)</li>
+        <li><span class="label">Magnetic flux:</span> &Phi; = B &middot; A cos&theta;</li>
+        <li><span class="label">Lenz's Law:</span> Induced current opposes the change in flux</li>
+        <li><span class="label">Motional EMF:</span> EMF = Bvl (rod moving in field)</li>
+        <li><span class="label">Self-inductance:</span> EMF = -L dI/dt</li>
+        <li><span class="label">L of solenoid:</span> L = &mu;&sub0;n&sup2;V = &mu;&sub0;n&sup2;Al</li>
+        <li><span class="label">Mutual inductance:</span> EMF&sub2; = -M dI&sub1;/dt</li>
+        <li><span class="label">Energy in inductor:</span> U = (1/2)LI&sup2;</li>
+      </ul>
+
+      <h3>7.4 Transformers &amp; AC Circuits</h3>
+      <ul class="formula-list">
+        <li><span class="label">Ideal transformer:</span> V&sub1;/V&sub2; = N&sub1;/N&sub2; = I&sub2;/I&sub1;</li>
+        <li><span class="label">Inductive reactance:</span> X_L = &omega;L = 2&pi;fL</li>
+        <li><span class="label">Capacitive reactance:</span> X_C = 1/(&omega;C) = 1/(2&pi;fC)</li>
+        <li><span class="label">Impedance:</span> Z = &radic;[R&sup2; + (X_L - X_C)&sup2;]</li>
+        <li><span class="label">Phase angle:</span> tan&phi; = (X_L - X_C)/R</li>
+        <li><span class="label">Resonance frequency:</span> f&sub0; = 1/(2&pi;&radic;(LC))</li>
+        <li><span class="label">At resonance:</span> Z = R (minimum), I = V/R (maximum)</li>
+        <li><span class="label">Quality factor Q:</span> Q = &omega;&sub0;L/R = 1/(&omega;&sub0;CR)</li>
+        <li><span class="label">Average power:</span> P_avg = V_rms I_rms cos&phi;</li>
+        <li><span class="label">RL circuit (time constant):</span> &tau; = L/R</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 8: OPTICS -->
+    <section id="optics" class="section-card">
+      <h2>8. Optics</h2>
+
+      <h3>8.1 Reflection (Mirrors)</h3>
+      <ul class="formula-list">
+        <li><span class="label">Laws of reflection:</span> angle of incidence = angle of reflection</li>
+        <li><span class="label">Mirror formula:</span> 1/v + 1/u = 1/f = 2/R</li>
+        <li><span class="label">Focal length:</span> f = R/2</li>
+        <li><span class="label">Magnification m:</span> m = -v/u = h'/h</li>
+        <li><span class="label">Sign convention:</span> Distances measured from pole; incident direction is +ve</li>
+      </ul>
+
+      <h3>8.2 Refraction &amp; Lenses</h3>
+      <ul class="formula-list">
+        <li><span class="label">Snell's Law:</span> n&sub1; sin&theta;&sub1; = n&sub2; sin&theta;&sub2;</li>
+        <li><span class="label">Refractive index:</span> n = c/v (c = 3&times;10&sup8; m/s)</li>
+        <li><span class="label">Lens formula:</span> 1/v - 1/u = 1/f</li>
+        <li><span class="label">Lens maker's equation:</span> 1/f = (n-1)(1/R&sub1; - 1/R&sub2;)</li>
+        <li><span class="label">Power of lens:</span> P = 1/f (f in metres), unit = Dioptre (D)</li>
+        <li><span class="label">Lenses in contact:</span> P = P&sub1; + P&sub2; + ..., 1/f = 1/f&sub1; + 1/f&sub2; + ...</li>
+        <li><span class="label">Magnification (lens):</span> m = v/u = h'/h</li>
+      </ul>
+
+      <h3>8.3 Total Internal Reflection</h3>
+      <ul class="formula-list">
+        <li><span class="label">Critical angle C:</span> sin C = n&sub2;/n&sub1; (n&sub1; &gt; n&sub2;)</li>
+        <li><span class="label">TIR condition:</span> &theta; &gt; C and light goes from denser to rarer medium</li>
+        <li><span class="label">Applications:</span> Optical fiber, diamond brilliance, mirage</li>
+      </ul>
+
+      <h3>8.4 Prism</h3>
+      <ul class="formula-list">
+        <li><span class="label">Deviation &delta;:</span> &delta; = (i&sub1; + i&sub2;) - A</li>
+        <li><span class="label">At minimum deviation D:</span> n = sin[(A+D)/2] / sin(A/2)</li>
+        <li><span class="label">Thin prism:</span> &delta; = (n-1)A</li>
+        <li><span class="label">Angular dispersion:</span> &delta;_V - &delta;_R = (n_V - n_R)A</li>
+      </ul>
+
+      <h3>8.5 Wave Optics</h3>
+      <ul class="formula-list">
+        <li><span class="label">Young's Double Slit (bright fringe):</span> y_n = n&lambda;D/d</li>
+        <li><span class="label">Fringe width:</span> &beta; = &lambda;D/d</li>
+        <li><span class="label">Dark fringe:</span> y_n = (2n-1)&lambda;D/(2d)</li>
+        <li><span class="label">Single slit (1st dark):</span> a sin&theta; = &lambda;</li>
+        <li><span class="label">Resolving power:</span> &theta;_min = 1.22&lambda;/d</li>
+        <li><span class="label">Malus's Law (polarization):</span> I = I&sub0; cos&sup2;&theta;</li>
+        <li><span class="label">Brewster's angle:</span> tan i_B = n (polarized reflected ray)</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 9: MODERN PHYSICS -->
+    <section id="modern" class="section-card">
+      <h2>9. Modern Physics</h2>
+
+      <h3>9.1 Photoelectric Effect</h3>
+      <ul class="formula-list">
+        <li><span class="label">Einstein's photoelectric eq.:</span> KE_max = hf - &phi; = eV&sub0;</li>
+        <li><span class="label">Planck's constant h:</span> 6.626 &times; 10&#8315;&#179;&#8308; J&middot;s = 4.136 &times; 10&#8315;&#185;&#8309; eV&middot;s</li>
+        <li><span class="label">Threshold frequency:</span> f&sub0; = &phi;/h</li>
+        <li><span class="label">Work function &phi;:</span> Minimum energy to eject an electron</li>
+        <li><span class="label">No effect below:</span> f &lt; f&sub0; regardless of intensity</li>
+        <li><span class="label">Energy of photon:</span> E = hf = hc/&lambda;</li>
+      </ul>
+
+      <h3>9.2 de Broglie Wavelength</h3>
+      <ul class="formula-list">
+        <li><span class="label">de Broglie wavelength:</span> &lambda; = h/p = h/(mv)</li>
+        <li><span class="label">Electron accelerated through V:</span> &lambda; = 1.22/&radic;V nm</li>
+        <li><span class="label">Heisenberg Uncertainty:</span> &Delta;x &middot; &Delta;p &ge; h/(4&pi;)</li>
+      </ul>
+
+      <h3>9.3 Bohr Model of Hydrogen Atom</h3>
+      <div class="formula-box">
+        Orbit radius: r_n = n&sup2; a&sub0; / Z, &nbsp; a&sub0; = 0.529 &#8491; (Bohr radius)<br>
+        Energy: E_n = -13.6 Z&sup2; / n&sup2; eV<br>
+        Speed: v_n = v&sub0; Z/n, &nbsp; v&sub0; = 2.18 &times; 10&sup6; m/s<br>
+        Angular momentum: L_n = n h/(2&pi;) = n&#8463;
+      </div>
+      <ul class="formula-list">
+        <li><span class="label">Condition for orbit:</span> 2&pi;r = n&lambda; (standing wave)</li>
+        <li><span class="label">Photon energy (transition):</span> E = E_higher - E_lower = hf</li>
+        <li><span class="label">Rydberg formula:</span> 1/&lambda; = R_H Z&sup2;(1/n&sub1;&sup2; - 1/n&sub2;&sup2;)</li>
+        <li><span class="label">R_H (Rydberg constant):</span> 1.097 &times; 10&sup7; m&#8315;&#185;</li>
+      </ul>
+
+      <h4>Spectral Series of Hydrogen</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Series</th><th>Transition to n=</th><th>Region</th><th>Visible?</th></tr></thead>
+          <tbody>
+            <tr><td>Lyman</td><td>n = 1</td><td>Ultraviolet</td><td>No</td></tr>
+            <tr><td>Balmer</td><td>n = 2</td><td>Visible + UV</td><td>Partly (H&alpha; is red 656nm)</td></tr>
+            <tr><td>Paschen</td><td>n = 3</td><td>Infrared</td><td>No</td></tr>
+            <tr><td>Brackett</td><td>n = 4</td><td>Infrared</td><td>No</td></tr>
+            <tr><td>Pfund</td><td>n = 5</td><td>Far Infrared</td><td>No</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>9.4 Nuclear Physics</h3>
+      <ul class="formula-list">
+        <li><span class="label">Mass defect:</span> &Delta;m = Z m_p + N m_n - M_nucleus</li>
+        <li><span class="label">Binding energy:</span> BE = &Delta;m &times; 931.5 MeV/u</li>
+        <li><span class="label">E = mc&sup2;:</span> 1 amu = 931.5 MeV</li>
+        <li><span class="label">Alpha decay:</span> &#7484;X&#7480; &rarr; &#7480;&#8315;&#8308;Y&#7484;&#8315;&#178; + &#8308;He&#178;</li>
+        <li><span class="label">Beta minus decay:</span> n &rarr; p + e&#8315; + anti-neutrino</li>
+        <li><span class="label">Beta plus decay:</span> p &rarr; n + e&#8314; + neutrino</li>
+        <li><span class="label">Gamma decay:</span> No change in A or Z; energy released as &gamma; photon</li>
+        <li><span class="label">Radioactive decay law:</span> N(t) = N&sub0; e^(-&lambda;t)</li>
+        <li><span class="label">Activity A:</span> A(t) = A&sub0; e^(-&lambda;t) = &lambda;N</li>
+        <li><span class="label">Half-life T&#189;:</span> T&#189; = 0.693/&lambda;</li>
+        <li><span class="label">After n half-lives:</span> N = N&sub0; (1/2)^n = N&sub0; (1/2)^(t/T&#189;)</li>
+        <li><span class="label">Mean life &tau;:</span> &tau; = 1/&lambda; = T&#189;/0.693</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 10: PHYSICAL CONSTANTS -->
+    <section id="constants" class="section-card">
+      <h2>10. Physical Constants</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Constant</th><th>Symbol</th><th>Value</th><th>Units</th></tr></thead>
+          <tbody>
+            <tr><td>Speed of light</td><td>c</td><td>3.00 &times; 10&sup8;</td><td>m/s</td></tr>
+            <tr><td>Gravitational constant</td><td>G</td><td>6.674 &times; 10&#8315;&#185;&#185;</td><td>N&middot;m&sup2;/kg&sup2;</td></tr>
+            <tr><td>Standard gravity</td><td>g</td><td>9.80665 (use 10 for JEE)</td><td>m/s&sup2;</td></tr>
+            <tr><td>Planck's constant</td><td>h</td><td>6.626 &times; 10&#8315;&#179;&#8308;</td><td>J&middot;s</td></tr>
+            <tr><td>Reduced Planck constant</td><td>&#8463; = h/2&pi;</td><td>1.055 &times; 10&#8315;&#179;&#8308;</td><td>J&middot;s</td></tr>
+            <tr><td>Electron charge</td><td>e</td><td>1.602 &times; 10&#8315;&#185;&#9;</td><td>C</td></tr>
+            <tr><td>Electron mass</td><td>m_e</td><td>9.109 &times; 10&#8315;&#179;&#185;</td><td>kg</td></tr>
+            <tr><td>Proton mass</td><td>m_p</td><td>1.673 &times; 10&#8315;&#178;&#8311;</td><td>kg</td></tr>
+            <tr><td>Neutron mass</td><td>m_n</td><td>1.675 &times; 10&#8315;&#178;&#8311;</td><td>kg</td></tr>
+            <tr><td>Avogadro's number</td><td>N_A</td><td>6.022 &times; 10&sup2;&#179;</td><td>/mol</td></tr>
+            <tr><td>Boltzmann constant</td><td>k_B</td><td>1.381 &times; 10&#8315;&#178;&#179;</td><td>J/K</td></tr>
+            <tr><td>Gas constant</td><td>R</td><td>8.314</td><td>J/(mol&middot;K)</td></tr>
+            <tr><td>Permittivity of free space</td><td>&epsilon;&sub0;</td><td>8.854 &times; 10&#8315;&#185;&#178;</td><td>C&sup2;/(N&middot;m&sup2;)</td></tr>
+            <tr><td>Coulomb constant</td><td>k = 1/(4&pi;&epsilon;&sub0;)</td><td>9.00 &times; 10&sup9;</td><td>N&middot;m&sup2;/C&sup2;</td></tr>
+            <tr><td>Permeability of free space</td><td>&mu;&sub0;</td><td>4&pi; &times; 10&#8315;&#8311; &approx; 1.257 &times; 10&#8315;&#8311;</td><td>T&middot;m/A</td></tr>
+            <tr><td>Stefan-Boltzmann constant</td><td>&sigma;</td><td>5.67 &times; 10&#8315;&#8312;</td><td>W/(m&sup2;&middot;K&sup4;)</td></tr>
+            <tr><td>Bohr radius</td><td>a&sub0;</td><td>5.29 &times; 10&#8315;&#185;&#185;</td><td>m (0.529 &#8491;)</td></tr>
+            <tr><td>Rydberg constant</td><td>R_H</td><td>1.097 &times; 10&sup7;</td><td>m&#8315;&#185;</td></tr>
+            <tr><td>1 eV in Joules</td><td>eV</td><td>1.602 &times; 10&#8315;&#185;&#9;</td><td>J</td></tr>
+            <tr><td>1 atomic mass unit</td><td>u (amu)</td><td>1.661 &times; 10&#8315;&#178;&#8311; kg = 931.5 MeV</td><td>kg / MeV/c&sup2;</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 11: JEE WEIGHTAGE -->
+    <section id="jee-weightage" class="section-card">
+      <h2>11. JEE Physics Chapter Weightage</h2>
+
+      <h3>JEE Main &mdash; Average Marks per Topic (5-year analysis)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Chapter</th><th>Avg. Marks (out of 100)</th><th>Priority</th></tr></thead>
+          <tbody>
+            <tr><td>Mechanics (Kinematics, Laws of Motion, WEP, Rotational)</td><td>25&ndash;30</td><td><span class="badge">Critical</span></td></tr>
+            <tr><td>Electrostatics &amp; Current Electricity</td><td>18&ndash;22</td><td><span class="badge">Critical</span></td></tr>
+            <tr><td>Modern Physics (Photoelectric, Bohr, Nuclear)</td><td>12&ndash;15</td><td><span class="badge">High</span></td></tr>
+            <tr><td>Optics (Ray &amp; Wave)</td><td>8&ndash;12</td><td><span class="badge">High</span></td></tr>
+            <tr><td>Magnetism &amp; Electromagnetic Induction</td><td>10&ndash;14</td><td><span class="badge">High</span></td></tr>
+            <tr><td>Thermodynamics &amp; Kinetic Theory</td><td>8&ndash;10</td><td><span class="badge">Medium</span></td></tr>
+            <tr><td>Waves &amp; Sound</td><td>4&ndash;8</td><td><span class="badge">Medium</span></td></tr>
+            <tr><td>Gravitation</td><td>4&ndash;6</td><td><span class="badge">Medium</span></td></tr>
+            <tr><td>Properties of Matter &amp; Fluid</td><td>3&ndash;5</td><td><span class="badge orange">Low-Med</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>JEE Advanced Physics Focus Areas</h3>
+      <div class="tip"><strong>JEE Advanced</strong> tests conceptual depth, not just formula application. Focus on: rotational mechanics (complex situations), electromagnetism (multi-concept problems), optics (interference + diffraction), and modern physics (Bohr model + nuclear).</div>
+
+      <h3>Common Physics Mistakes in JEE</h3>
+      <ul style="padding-left:1.5rem; line-height:2.2;">
+        <li>Forgetting to use correct sign convention in mirror/lens formula</li>
+        <li>Confusing g variation with height versus depth</li>
+        <li>Wrong direction for magnetic force (use right-hand rule carefully)</li>
+        <li>Forgetting that KE is lost in inelastic collisions</li>
+        <li>Confusing n (turns per meter for solenoid) with N (total turns)</li>
+        <li>Using wrong formula for half-life: N = N_0 (1/2)^(t/T&frac12;) not N = N_0 (1/2)^t</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 12: NEET TIPS -->
+    <section id="neet-tips" class="section-card">
+      <h2>12. NEET Physics &mdash; Tips &amp; Strategy</h2>
+      <p>NEET Physics accounts for <strong>45 questions &times; 4 marks = 180 marks</strong> out of 720 total. Time: 3 hours 20 minutes for the full paper.</p>
+
+      <h3>NEET Physics Chapter Weightage</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Chapter</th><th>Approx. Questions</th><th>Key Focus</th></tr></thead>
+          <tbody>
+            <tr><td>Mechanics (Class 11)</td><td>10&ndash;12</td><td>Kinematics, NLM, Circular, Gravity, Rotational</td></tr>
+            <tr><td>Electrostatics &amp; Current Electricity</td><td>8&ndash;10</td><td>Coulomb, Capacitors, Ohm's law, Kirchhoff</td></tr>
+            <tr><td>Modern Physics</td><td>5&ndash;7</td><td>Photoelectric, Bohr model, Radioactive decay</td></tr>
+            <tr><td>Optics</td><td>4&ndash;6</td><td>Lenses, Mirrors, Wave optics</td></tr>
+            <tr><td>Magnetism &amp; EMI</td><td>4&ndash;6</td><td>Force on charge, Faraday, AC circuits</td></tr>
+            <tr><td>Thermodynamics</td><td>3&ndash;5</td><td>Gas laws, First law, Carnot</td></tr>
+            <tr><td>Waves</td><td>3&ndash;4</td><td>Sound, Doppler, standing waves</td></tr>
+            <tr><td>SHM (Simple Harmonic Motion)</td><td>2&ndash;4</td><td>Spring-mass, pendulum, energy in SHM</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>SHM Formulas (Bonus Section)</h3>
+      <div class="formula-box green">
+        x(t) = A sin(&omega;t + &phi;)<br>
+        v = &omega;&radic;(A&sup2; - x&sup2;), v_max = &omega;A (at x=0)<br>
+        a = -&omega;&sup2;x, a_max = &omega;&sup2;A (at x=&plusmn;A)<br>
+        T = 2&pi;/&omega;<br>
+        Spring: &omega; = &radic;(k/m), T = 2&pi;&radic;(m/k)<br>
+        Pendulum: T = 2&pi;&radic;(l/g) (for small angles)<br>
+        Energy: E_total = (1/2)kA&sup2; = (1/2)m&omega;&sup2;A&sup2; = constant
+      </div>
+
+      <h3>NEET Preparation Strategy</h3>
+      <div class="tip"><strong>NCERT First:</strong> For NEET, NCERT Physics (Class 11 &amp; 12) is the primary source. Every line in NCERT can be asked. Read theory carefully, not just examples.</div>
+      <div class="tip"><strong>Previous Year Papers:</strong> Solve NEET papers from 2015&ndash;2024. Many questions repeat or are slightly modified from previous years.</div>
+      <div class="note"><strong>NEET vs JEE:</strong> NEET tests straightforward formula application; JEE Advanced tests complex multi-concept problems. For NEET, focus on accuracy and speed rather than derivation depth.</div>
+      <div class="important"><strong>Negative marking:</strong> NEET deducts 1 mark per wrong answer. Attempt only when confidence is &gt;70%. Do not guess blindly.</div>
+    </section>
+
+    <!-- SECTION 13: SOLVED PROBLEMS -->
+    <section id="problems" class="section-card">
+      <h2>13. Solved Practice Problems</h2>
+
+      <div class="problem-card">
+        <div class="problem-header">Problem 1 &mdash; Kinematics: Projectile Range</div>
+        <div class="problem-body">
+          <div class="question">A ball is thrown at 45&deg; with initial speed 20 m/s. Find the maximum range (take g = 10 m/s&sup2;).</div>
+          <div class="solution">Given: u = 20 m/s, θ = 45°, g = 10 m/s²
+
+Formula for range: R = u² sin2θ / g
+  sin(2 × 45°) = sin 90° = 1
+
+R = (20)² × 1 / 10
+  = 400 / 10
+  = 40 m
+
+Maximum range occurs at θ = 45°: R_max = u²/g = 400/10 = 40 m</div>
+          <div class="problem-answer">Range = 40 m</div>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-header">Problem 2 &mdash; Work-Energy Theorem</div>
+        <div class="problem-body">
+          <div class="question">A 2 kg block starts from rest and reaches a speed of 6 m/s. What is the net work done on the block?</div>
+          <div class="solution">Given: m = 2 kg, u = 0 (rest), v = 6 m/s
+
+By Work-Energy Theorem:
+  W_net = ΔKE = KE_final - KE_initial
+        = (1/2)mv² - (1/2)mu²
+        = (1/2)(2)(6)² - 0
+        = (1)(36)
+        = 36 J</div>
+          <div class="problem-answer">Net work done = 36 J</div>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-header">Problem 3 &mdash; Capacitors: Energy Stored</div>
+        <div class="problem-body">
+          <div class="question">A parallel plate capacitor has capacitance 10 &mu;F and is charged to 200 V. Find the energy stored.</div>
+          <div class="solution">Given: C = 10 μF = 10 × 10⁻⁶ F, V = 200 V
+
+Energy stored in capacitor:
+  U = (1/2)CV²
+    = (1/2) × (10 × 10⁻⁶) × (200)²
+    = (1/2) × (10 × 10⁻⁶) × 40000
+    = (1/2) × 0.4
+    = 0.2 J</div>
+          <div class="problem-answer">Energy stored = 0.2 J = 200 mJ</div>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-header">Problem 4 &mdash; Modern Physics: Bohr Model</div>
+        <div class="problem-body">
+          <div class="question">Find the energy of an electron in the third orbit (n=3) of hydrogen atom.</div>
+          <div class="solution">For hydrogen atom (Z = 1):
+  E_n = -13.6 Z² / n² eV
+
+For n = 3, Z = 1:
+  E_3 = -13.6 × (1)² / (3)²
+      = -13.6 / 9
+      = -1.51 eV
+
+The negative sign indicates the electron is bound to the nucleus.
+The ionization energy from n=3 is +1.51 eV.</div>
+          <div class="problem-answer">E_3 = -1.51 eV</div>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-header">Problem 5 &mdash; Nuclear Physics: Radioactive Decay</div>
+        <div class="problem-body">
+          <div class="question">The half-life of a radioactive substance is 10 years. After how many years will only 1/8 of the original amount remain?</div>
+          <div class="solution">Given: T½ = 10 years, N/N₀ = 1/8
+
+Using: N = N₀ × (1/2)^(t/T½)
+  1/8 = (1/2)^(t/10)
+  (1/2)³ = (1/2)^(t/10)
+  3 = t/10
+  t = 30 years
+
+Alternatively: 1/8 = (1/2)³, so 3 half-lives are needed.
+  t = 3 × T½ = 3 × 10 = 30 years</div>
+          <div class="problem-answer">30 years (3 half-lives)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section-card">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">What are the most important physics chapters for JEE?</div>
+        <div class="faq-a">The most important chapters for JEE by weightage are: Mechanics (Kinematics, Laws of Motion, WEP, Rotational) at 25&ndash;30%, Electrostatics &amp; Current Electricity at 18&ndash;22%, Modern Physics at 12&ndash;15%, Optics at 8&ndash;12%, and Magnetism/EMI at 10&ndash;14%. Start with Kinematics as it forms the foundation for all other mechanics topics.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is Newton's second law of motion?</div>
+        <div class="faq-a">Newton's second law states F = ma. The net external force on an object equals the product of its mass and acceleration. Both force and acceleration are vectors &mdash; they point in the same direction. The law implies that a larger force produces a larger acceleration, and a heavier object needs more force for the same acceleration. For variable mass systems, F = dp/dt (rate of change of momentum).</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How to remember all physics formulas for JEE?</div>
+        <div class="faq-a">Strategy: (1) Understand derivations &mdash; a derived formula is never forgotten. (2) Create a chapter-wise formula sheet and revise weekly. (3) Practice numericals daily &mdash; formulas get reinforced through use. (4) Use dimensional analysis to check or recall formulas. (5) Group related formulas: all mirror/lens formulas use 1/v + 1/u = 1/f (similar structure). (6) Make mnemonics for constants like R = 8.314 (&ldquo;Eight Three One Four&rdquo;).</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is the escape velocity from Earth?</div>
+        <div class="faq-a">Escape velocity from Earth is approximately 11.2 km/s. Derivation: Set KE = gravitational PE, so (1/2)mv&sup2; = GMm/R, giving v_e = &radic;(2GM/R) = &radic;(2gR). Substituting g = 9.8 m/s&sup2; and R = 6.4&times;10&sup6; m gives 11.2 km/s. Note: v_e = &radic;2 times the orbital velocity at Earth's surface.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is the de Broglie wavelength and why is it important for JEE?</div>
+        <div class="faq-a">The de Broglie wavelength &lambda; = h/p = h/(mv) describes the wave nature of matter. For an electron accelerated through voltage V, &lambda; = 1.22/&radic;V nm (numerically useful for JEE problems). It is important because it underlies Bohr's quantization (n&lambda; = 2&pi;r), electron microscopes, and the wave-particle duality central to quantum mechanics. JEE frequently asks calculations involving this formula and the photoelectric effect together.</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>StudyHub</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="math.html">Mathematics</a></li>
+        <li><a href="physics.html">Physics</a></li>
+        <li><a href="chemistry.html">Chemistry</a></li>
+        <li><a href="biology.html">Biology</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Competitive Exams</h4>
+      <ul>
+        <li><a href="competitive-exams.html">JEE Main &amp; Advanced</a></li>
+        <li><a href="competitive-exams.html">NEET</a></li>
+        <li><a href="competitive-exams.html">Gaokao</a></li>
+        <li><a href="competitive-exams.html">BITSAT</a></li>
+        <li><a href="competitive-exams.html">KVPY</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Physics Chapters</h4>
+      <ul>
+        <li><a href="#mechanics">Mechanics</a></li>
+        <li><a href="#thermodynamics">Thermodynamics</a></li>
+        <li><a href="#electrostatics">Electrostatics</a></li>
+        <li><a href="#optics">Optics</a></li>
+        <li><a href="#modern">Modern Physics</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Other Subjects</h4>
+      <ul>
+        <li><a href="math.html">Math Formulas</a></li>
+        <li><a href="chemistry.html">Chemistry Notes</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="english.html">English Grammar</a></li>
+        <li><a href="gk.html">General Knowledge</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 StudyHub. Free physics formulas and notes for JEE, NEET, and Class 12 students worldwide.</p>
+    <p style="margin-top:0.5rem;font-size:0.8rem;">Mechanics &bull; Electromagnetism &bull; Optics &bull; Modern Physics &bull; All chapters covered.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
