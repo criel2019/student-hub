@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://[username].github.io/student-hub/sitemap.xml
+Sitemap: https://criel2019.github.io/student-hub/sitemap.xml
